@@ -43,9 +43,9 @@ a:hover{color:var(--violet-dim)}
 .backfinder.on{display:block}
 
 /* ---------- front matter ---------- */
-.howto,.sources{padding:36px 0;border-bottom:1px solid var(--border)}
-.howto h2,.sources h2{font-family:var(--sans);font-weight:700;font-size:22px;margin-bottom:14px}
-.howto p,.sources p{max-width:68ch;margin-bottom:10px}
+.howto{padding:36px 0;border-bottom:1px solid var(--border)}
+.howto h2{font-family:var(--sans);font-weight:700;font-size:22px;margin-bottom:14px}
+.howto p{max-width:68ch;margin-bottom:10px}
 .howto p{margin-bottom:8px;max-width:76ch}
 .howto dl{margin-top:6px;max-width:68ch}
 .howto dt{font-family:var(--sans);font-weight:600;font-size:15px;margin-top:12px}
@@ -318,10 +318,7 @@ a.site::after{content:"↗";font-size:.55em;vertical-align:super;margin-left:3px
   .bandlabel,.pseclabel{padding-top:6pt;margin-bottom:4pt}
   .gtable td.tname a{text-decoration:none;border-bottom:none;color:#000}
   a{color:var(--violet-dim);text-decoration:none}
-  .sources a::after{content:" (" attr(href) ")";font-size:8.5pt;color:var(--slate)}
-  .sources{border:none}
-  .sources{page-break-before:always}
-  .mast,.howto,.contents,.chap-open,.sources{position:relative;min-height:9.45in}
+  .mast,.howto,.contents,.chap-open{position:relative;min-height:9.45in}
   .glance{position:relative;min-height:7.5in}
   .ppage{position:relative;min-height:9.5in}
   .ppage.p2{page-break-before:always}

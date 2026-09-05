@@ -717,8 +717,8 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
     _n = CHAPTERS[ci] if ci < len(CHAPTERS) else None
     prevnext = (f'<a class="pn" href="#{slug(_p[1])}"><span>Previous</span><b>{esc(_p[1])}</b></a>'
                 if _p else '<a class="pn" href="#contents"><span>Back to</span><b>Contents</b></a>')
-    prevnext += (f'<a class="pn nx" href="#{slug(_n[1])}"><span>Next</span><b>{esc(_n[1])}</b></a>'
-                 if _n else '<a class="pn nx" href="#sources"><span>Next</span><b>Methodology</b></a>')
+    if _n:
+        prevnext += f'<a class="pn nx" href="#{slug(_n[1])}"><span>Next</span><b>{esc(_n[1])}</b></a>'
     chips = ' &middot; '.join(f'<a class="tlink" href="#{a}">{esc(t)}</a>' for t, a in tool_anchors)
     chapter_html.append(f"""
 <section class="chapter" id="{cslug}" data-chapter="{cslug}">
@@ -831,8 +831,6 @@ for _g in ("Selling", "Building", "Operating"):
             f'<div class="navtools"><a class="navall" href="#{cs}">Chapter overview</a>'
             + "".join(f'<a href="#{a}" data-tool="{a}">{esc(t)}</a>' for t, a in tls)
             + '</div></details></li>')
-nav_links += '<li class="navsec">Reference</li>'
-nav_links += '<li class="navgrp"><a class="navflat" href="#sources">Methodology</a></li>'
 contents_html = ""
 for grp in ("Selling", "Building", "Operating"):
     trs = "".join(f'<tr><td class="cnum num">{n:02d}</td>'
@@ -840,10 +838,6 @@ for grp in ("Selling", "Building", "Operating"):
                   for n, nm, s in contents_rows[grp])
     contents_html += (f'<div class="grp"><span class="eyebrow">{grp}</span>'
                       f'<table>{trs}</table></div>')
-contents_html += ('<div class="grp"><span class="eyebrow">Reference</span>'
-                  '<table>'
-                  '<tr><td class="cnum num"></td><td><a href="#sources">Methodology</a></td></tr>'
-                  '</table></div>')
 
 js = """
 (function(){
@@ -1002,16 +996,6 @@ doc = f"""<!doctype html>
 
 <main>{''.join(chapter_html)}</main>
 
-<section class="sources wrap" id="sources">
-  <h2>Methodology</h2>
-  <p><strong class="pl">The primary sources are linked.</strong> Every tool name at the top of its profile links to that vendor's own site, which is the authority for its pricing, tiers and limits. Each profile also carries a direct link to the page the pricing was read from, so any figure here can be checked at source.</p>
-  <p><strong class="pl">Where the facts come from.</strong> Every fact here comes from the research workbook behind this guide, compiled in August 2026. Where a claim rests on a particular source we name it in the sentence, as with the contract figures given "per Vendr data."</p>
-  <p><strong class="pl">The evidence standard.</strong> We treated vendor pricing pages and documentation as authoritative on what a vendor knows best: its own tiers, limits and feature gates. Anywhere the vendor's account could differ from what teams actually run into, such as real cost, where a tool strains and what leaving it involves, we weighted independent practitioner reports and third-party contract data higher. We used no affiliate or sponsored content.</p>
-  <p><strong class="pl">What this guide does not carry.</strong> The workbook keeps its citations inside the text of each claim rather than as separate metadata. There is no per-claim tag marking a fact as officially documented or user-reported, and no per-claim verification date. We would rather say that plainly than invent the apparatus. Each profile is verified to the edition date in its footer, and where a claim's origin matters we name it in the sentence. So treat the inline attributions as the provenance record, treat every price as accurate to the edition date and no later, and check anything price-critical against the vendor's own page before you commit. Prices in this category moved twice while we were compiling it.</p>
-  <p><strong class="pl">What was selected.</strong> Each category compares six tools plus the do-it-yourself route. We kept lesser-known tools alongside the obvious ones, and left out anything an early-stage company couldn't realistically use.</p>
-  <p><strong class="pl">Limitations.</strong> Pricing and features move fast. Figures carry their dates where the source gives one, and anything price-critical is worth checking against the vendor's current page.</p>
-  {PF}
-</section>
 
 <a class="totop" id="totop" href="#contents" aria-label="Back to contents">&uarr;</a>
 <script>{navjs}</script>
