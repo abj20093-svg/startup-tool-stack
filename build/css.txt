@@ -170,14 +170,6 @@ a.site{color:inherit;text-decoration:none;border-bottom:2px solid var(--violet-l
 a.site:hover{color:var(--violet);border-bottom-color:var(--violet)}
 a.site::after{content:"↗";font-size:.55em;vertical-align:super;margin-left:3px;color:var(--violet)}
 
-/* ---------- previous / next chapter ---------- */
-.chapfoot{display:flex;gap:14px;justify-content:space-between;margin:34px 0 6px;flex-wrap:wrap}
-.pn{flex:1 1 220px;display:block;text-decoration:none;border:1px solid var(--border);border-radius:12px;
-  padding:14px 18px;background:var(--white);transition:border-color .12s,box-shadow .12s}
-.pn:hover{border-color:var(--violet);box-shadow:0 4px 16px rgba(91,76,219,.12)}
-.pn span{font-weight:400;display:block;font-family:var(--sans);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--slate)}
-.pn b{font-family:var(--sans);font-size:15px;color:var(--violet);font-weight:700}
-.pn.nx{text-align:right}
 /* ---------- two-level chapter menu ---------- */
 .navmenu ul{position:absolute;right:0;top:calc(100% + 6px);width:340px;max-height:76vh;overflow:auto;z-index:90;padding:8px}
 .navgrp>details>summary{cursor:pointer;list-style:none;font-family:var(--sans);font-weight:600;font-size:14px;
@@ -221,7 +213,7 @@ a.site::after{content:"↗";font-size:.55em;vertical-align:super;margin-left:3px
 .navgrp.is-active>details>summary::after{color:rgba(255,255,255,.8)}
 .navtools a.is-here{background:var(--violet-light);color:var(--violet-dim);font-weight:600;
   box-shadow:inset 2px 0 0 var(--violet)}
-.railnav .navgrp>details>summary:focus-visible,.pn:focus-visible,a.site:focus-visible{
+.railnav .navgrp>details>summary:focus-visible,a.site:focus-visible{
   outline:2px solid var(--violet);outline-offset:2px}
 /* ---------- reading progress ---------- */
 .progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--violet);z-index:120;
@@ -259,7 +251,6 @@ a.site::after{content:"↗";font-size:.55em;vertical-align:super;margin-left:3px
 
 @media print{.lineup a.tlink{color:var(--ink);border:none}}
 @media print{.progress{display:none !important}}
-@media print{.chapfoot{display:none !important}}
 @media print{a.site{color:var(--ink);border:none}a.site::after{content:""}}
 @media print{.topbar,.jump,.siderail{display:none !important}body{padding-left:0}}
 @media print{

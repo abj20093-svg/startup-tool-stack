@@ -867,12 +867,6 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
   {cont_pages}
 </article>"""
 
-    _p = CHAPTERS[ci-2] if ci > 1 else None
-    _n = CHAPTERS[ci] if ci < len(CHAPTERS) else None
-    prevnext = (f'<a class="pn" href="#{slug(_p[1])}"><span>Previous</span><b>{esc(_p[1])}</b></a>'
-                if _p else '<a class="pn" href="#contents"><span>Back to</span><b>Contents</b></a>')
-    if _n:
-        prevnext += f'<a class="pn nx" href="#{slug(_n[1])}"><span>Next</span><b>{esc(_n[1])}</b></a>'
     chips = ' &middot; '.join(f'<a class="tlink" href="#{a}">{esc(t)}</a>' for t, a in tool_anchors)
     chapter_html.append(f"""
 <section class="chapter" id="{cslug}" data-chapter="{cslug}">
@@ -892,7 +886,6 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
     {PF}
   </div>
   <div class="wrap">{profiles}</div>
-  <nav class="chapfoot wrap">{prevnext}</nav>
 </section>""")
 
     contents_rows[group].append((ci, name, cslug))
