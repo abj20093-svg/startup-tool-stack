@@ -243,7 +243,7 @@ Best when: you've already formed (or will via Atlas/Clerky) and need equity mana
 Avoid if: you just need to incorporate and get an EIN (that's Atlas/Clerky/Northwest's job) or you're a tiny cap table where a spreadsheet suffices; Carta's median real cost climbs to ~$14K+/yr as stakeholders grow.
 
 
-## Manual DIY
+## Self-managed
 
 ### Built for
 The bootstrap route: file with the Secretary of State yourself, buy template docs (Clerky-style or a flat-fee lawyer) instead of Atlas/Clerky. Cheapest cash cost, highest time and error cost.

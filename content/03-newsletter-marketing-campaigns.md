@@ -297,7 +297,7 @@ Best when: you need broad integrations, landing pages, and multichannel marketin
 Avoid if: you're cost-sensitive or a creator; the Jan 2026 free-tier gutting (250 contacts/500 sends) and contact-tiered pricing (Standard ~$100 at 5k) make it pricey; MailerLite is cheaper, Kit better for creators, beehiiv/Substack for pure newsletters.
 
 
-## Manual DIY
+## Self-managed
 
 ### Built for
 Self-hosted broadcasting. Listmonk or Ghost(OSS) on your own box (or a static site) wired to Amazon SES/SMTP. You own the list and the sending. You also own the ops, deliverability, and uptime. Technical founders and small teams at MVP scale who want to own their audience list and dodge per-subscriber pricing, and are comfortable running a server and DNS/email config themselves.

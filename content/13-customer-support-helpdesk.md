@@ -295,7 +295,7 @@ Best when: breadth and enterprise features justify the premium: Suite Team $55, 
 Avoid if: you're a small team where its depth is dead weight and cost (go Help Scout or Freshdesk), you want Intercom's Fin AI resolver in a product messenger (go Intercom), flat pricing (go Crisp), or an open-source self-hosted stack (go Chatwoot).
 
 
-## Manual DIY
+## Self-managed
 
 ### Built for
 Self-hosted / free-tier support stack: a shared Gmail or Google Groups inbox for tickets, optionally self-hosted Chatwoot for chat. Zero license cost, you own the data and the server upkeep.

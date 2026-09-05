@@ -441,7 +441,7 @@ Best when: you take in-person card payments and want a free POS app, hardware, a
 Avoid if: you're pure SaaS/digital with no in-person sales (Stripe for flexibility, an MoR for global tax), you sell internationally and need tax remittance (Paddle/Polar), or you're mobile-IAP (RevenueCat); Square's developer API is thinner than Stripe's.
 
 
-## Manual DIY
+## Self-managed
 
 ### Built for
 Go direct to Stripe's API and write your own billing brain, with no Paddle/Chargebee abstraction. Maximum control and lowest fees, but you inherit every edge case, including sales tax, that a MoR would have absorbed. Technical teams with a backend and someone who understands billing edge cases. Great for a lean MVP charging a few plans; dangerous once tax jurisdictions, proration, and dunning pile up.

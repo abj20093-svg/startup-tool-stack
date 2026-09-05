@@ -279,7 +279,7 @@ Best when: you're building custom auth UX around passwordless magic links, OTP, 
 Avoid if: you want prebuilt drop-in UI components and to avoid building auth screens (Clerk), you're optimizing purely for lowest cost (Better Auth/Supabase Auth), or you need enterprise SSO reselling (WorkOS).
 
 
-## Manual DIY
+## Self-managed
 
 ### Built for
 Skip the auth SaaS: wire authentication yourself with a library (Lucia, Auth.js/NextAuth, SuperTokens self-host, Passport) against your own DB. You own the sessions, tokens, and user table, and every edge case.

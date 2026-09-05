@@ -259,7 +259,7 @@ Best when: you want code-first automation with generous limits. Free gives 100 c
 Avoid if: you're non-technical and want pure drag-and-drop (go Zapier or Make), you need self-hosting and data ownership (go n8n or Activepieces), or your workloads are AI-agent heavy (go Gumloop); Pipedream rewards writing code.
 
 
-## Manual DIY
+## Self-managed
 
 ### Built for
 Own your automation layer: self-host n8n or Activepieces, or skip the tool entirely with scripts + cron + glue code. No per-task Zapier bill, full control, at the price of setup and maintenance hours.

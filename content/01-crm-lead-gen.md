@@ -294,10 +294,10 @@ Ideal for: well-funded Series A+ B2B teams with a dedicated RevOps/SDR org: mid-
 
 Best when: accurate firmographics, intent data, and verified direct-dials materially change your pipeline and you can absorb ~$15k+/yr annual commitments; pick over Apollo specifically when data accuracy and intent signals justify the premium and drive real ROI.
 
-Avoid if: you're pre-seed/seed watching burn; annual-only contracts and five-figure minimums are wrong for early experimentation; use Apollo (self-serve, $49-$79/seat) or Manual DIY (Airtable + Clay) until you have a proven, funded outbound engine.
+Avoid if: you're pre-seed/seed watching burn; annual-only contracts and five-figure minimums are wrong for early experimentation; use Apollo (self-serve, $49-$79/seat) or Self-managed (Airtable + Clay) until you have a proven, funded outbound engine.
 
 
-## Manual DIY
+## Self-managed
 
 ### Built for
 Not a product but a stack you assemble: Airtable/Notion/Sheets as the DB plus AI enrichment scripts, or a self-hosted EspoCRM/Twenty. Maximum control, zero license fee, all the plumbing is on you. Technical or scrappy pre-seed founders at MVP scale (hundreds, not tens of thousands of leads) who value control and near-zero recurring cost over polish, and can tolerate wiring things together themselves.

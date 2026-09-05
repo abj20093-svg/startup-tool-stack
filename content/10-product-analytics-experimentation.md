@@ -277,7 +277,7 @@ Best when: A/B testing and controlled rollouts are central and you want a wareho
 Avoid if: your primary need is behavioral product analytics (funnels, cohorts, retention depth) where Amplitude or Mixpanel lead, or you want session replay and surveys bundled in too (PostHog).
 
 
-## Manual DIY
+## Self-managed
 
 ### Built for
 Self-host the analytics instead of renting it: run PostHog, Umami, or Plausible on your own box, or just log events to Postgres and query with SQL/Metabase. Own your data, dodge event-volume billing. Privacy- and cost-conscious founders who want data on their own servers and are fine doing ops. Great for MVPs and EU/GDPR needs. Not for teams wanting a zero-setup hosted console and instant dashboards.

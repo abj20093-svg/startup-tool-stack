@@ -261,7 +261,7 @@ Best when: you want aggressive growth automation no other tool here bundles: aut
 Avoid if: you're X/Twitter-first (Hypefury dropped X support), visual-led (Buffer, Later), you want minimalist distraction-free writing (Typefully), or automated DMs and reposts feel off-brand; the automation that's its strength can read as spammy.
 
 
-## Manual DIY
+## Self-managed
 
 ### Built for
 The build-it-yourself route: raw platform APIs plus a cron job on a $5 VPS. Beats paid schedulers on cost only if you already ship code and post enough to amortize the one-time setup. Solo technical founders at MVP stage posting to 1-2 channels, who value control and hate recurring fees more than they value a polished UI. Breaks the moment a non-coder needs to touch it.

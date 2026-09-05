@@ -297,7 +297,7 @@ Best when: you want end-to-end type safety and live-updating queries with zero w
 Avoid if: you need raw SQL, existing Postgres tooling/ORMs, or portable standard queries (Neon/Supabase), or a document store at scale (MongoDB Atlas).
 
 
-## Manual DIY
+## Self-managed
 
 ### Built for
 The build-it-yourself lane: rent a raw Linux box, install Postgres (or Supabase's OSS stack) yourself, hand-write SQL and your own API. Max control and zero per-seat fees. You are now the DBA, SRE, and on-call.

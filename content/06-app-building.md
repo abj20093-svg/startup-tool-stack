@@ -46,7 +46,7 @@ Ideal for: non-technical and semi-technical founders shipping a polished full-st
 
 Best when: you want to describe an app in chat and get a React + Supabase full-stack product with auth, database, and clean UI, plus GitHub sync and Supabase integration for when you outgrow the prompt box. Free gives 5 daily/30 monthly credits, Pro $25/mo (100 credits), Business $50/mo. Pick Lovable over Bolt when you want a guided, design-polished full-stack result with tighter backend integration, and over v0 which is frontend-only
 
-Avoid if: you need native mobile apps (FlutterFlow), pixel-level no-code control (Bubble), or you're a strong engineer who'd move faster hand-coding (Manual DIY), and watch credit burn on heavy debugging iteration.
+Avoid if: you need native mobile apps (FlutterFlow), pixel-level no-code control (Bubble), or you're a strong engineer who'd move faster hand-coding (Self-managed), and watch credit burn on heavy debugging iteration.
 
 
 ## Bolt.new
@@ -279,7 +279,7 @@ Best when: you're building a database-driven web app or marketplace with intrica
 Avoid if: you want AI to write real, portable code you own (Lovable, Bolt), you need native mobile (FlutterFlow), or you expect to scale to heavy custom performance; Bubble's workload pricing and platform lock-in can bite at scale.
 
 
-## Manual DIY
+## Self-managed
 
 ### Built for
 Hand-code the product with an AI coding agent (Claude Code, Codex, Cursor) instead of a no-code builder. You own real, portable source from day one. The ceiling is your ability to read and fix what the AI writes. Founders with at least some engineering literacy who want a real, ownable product and custom logic. Wrong tool for a true non-coder. You must be able to review, debug, and deploy what the model generates.

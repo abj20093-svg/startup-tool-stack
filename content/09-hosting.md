@@ -297,7 +297,7 @@ Best when: you're deploying a static site or SPA and value Netlify's mature plug
 Avoid if: you're on Next.js and want first-class SSR/ISR (Vercel), you serve heavy bandwidth and want free egress (Cloudflare Pages), or you need real always-on backends, containers, or databases (Render/Fly.io).
 
 
-## Manual DIY
+## Self-managed
 
 ### Built for
 Own the metal: rent a VPS (Hetzner/DigitalOcean) and run your app with Docker, Coolify, or Caddy instead of a managed PaaS. You get a cheap, unopinionated server and full root, plus all the sysadmin that implies. Founders and devs comfortable with the terminal who want low, predictable cost and full control. Not built for those who want git-push-and-forget. Here you own uptime, patches, and firewall, not a platform.

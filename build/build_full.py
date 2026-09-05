@@ -85,7 +85,8 @@ def cell(r, c):
     raw = str(src.cell(row=r, column=c).value or "").strip()
     if VARIANT and raw:
         raw = "\n".join(VAR_MAP.get(p, p) for p in raw.split("\n"))
-    return fix_names(raw)
+    # keep prose references to the seventh column consistent with its label
+    return fix_names(raw).replace('Manual DIY', 'Self-managed')
 
 def cell_raw(r, c):
     """Original workbook text, never varied: used for the At a glance table and the
@@ -390,7 +391,7 @@ CH1_GLANCE = {
   "price": ("Quote-only", "reportedly ~$15,000/yr to start (3 seats, ~5,000 credits), climbing to $40,000+; median contract ~$32,000/yr per Vendr data."),
   "limit": ("Expensive, quote-gated, 3-seat minimum and add-on-heavy", "a poor fit pre-revenue; annual lock-in, aggressive renewals, thinner international/SMB data, and privacy/compliance overhead."),
  },
- "Manual DIY": {
+ "Self-managed": {
   "choose": ("Technical founders with under ~100 target accounts", "earliest pre-seed, near-zero budget, hands-on, doing founder-led sales personally."),
   "price": ("No license fee", "cost is time: setup hours plus your AI plan and API/token burn for enrichment."),
   "limit": ("Won't scale past small volume without real eng effort", "you own all security, compliance, and dedupe risk; maintenance is a permanent tax you keep paying."),
@@ -403,10 +404,10 @@ CH1_HEADER_PRICE = {
     "Close": ("$9/user/mo", "Solo; Essentials $35, Growth $99, Scale $139."),
     "Apollo": ("Free tier", "then Basic ~$49, Professional ~$79, Organization ~$119/user/mo; cheaper on annual billing."),
     "ZoomInfo": ("Quote-only", "reportedly ~$15,000/yr to start (3 seats, ~5,000 credits), climbing to $40,000+; median contract ~$32,000/yr per Vendr data."),
-    "Manual DIY": ("No license fee", "cost is time: mostly one-time setup hours plus your AI plan and API/token burn for enrichment."),
+    "Self-managed": ("No license fee", "cost is time: mostly one-time setup hours plus your AI plan and API/token burn for enrichment."),
 }
 CH1_PRICING_DROP = {"HubSpot CRM": [1, 2], "Attio": [1], "Pipedrive": [1], "Close": [1],
-                    "Apollo": [1], "ZoomInfo": [3], "Manual DIY": [2]}
+                    "Apollo": [1], "ZoomInfo": [3], "Self-managed": [2]}
 
 # ---------------- mechanical derivations for chapters 2-14 ----------------
 
@@ -505,6 +506,9 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
     is_ch1 = (ci == 1)
     cslug = slug(name)
     tools = [cell(hrow, c) for c in range(3, 10)]
+    # The seventh column is the do-it-internally option. Renamed for the audience;
+    # the workbook keeps its original wording.
+    tools = ["Self-managed" if t.strip().lower() == "manual diy" else t for t in tools]
     labels = {r: fix_names(re.sub(r"^\d+\.\s*", "", str(src.cell(row=r, column=2).value)))
               for r in range(frow, lrow + 1)}
 
@@ -582,7 +586,7 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
         tid = f"tool-{cslug}-{slug(tool)}"
         tool_anchors.append((tool, tid))
         all_tool_ids.add(tid)
-        diy = tool.strip().lower() == "manual diy"
+        diy = tool.strip().lower() in ("manual diy", "self-managed")
         what = cell(r_what, c)
         what_sents = split_sents(what)
         identity = what_sents[0].rstrip(".") if what_sents else ""
@@ -656,7 +660,7 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
                 f'{esc(tool)}&rsquo;s own site</a>. Verified to the edition date above.</div>'
                 if _u else '<div class="provenance">No vendor page: this route is assembled from the components named above.</div>')
         pages_units[-1][1].append(prov)
-        crumb_label = (f"the DIY route · {i+1} of {len(tools)}" if diy
+        crumb_label = (f"the self-managed route · {i+1} of {len(tools)}" if diy
                        else f"tool {i+1} of {len(tools)}")
         price_line = esc(plead)
         avoid_html = xlink_avoid(esc(cap_first(choose["avoid"])), tool, tools, cslug)
@@ -673,10 +677,8 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
         profiles += f"""
 <article class="profile" id="{tid}" data-name="{esc(tool.lower())}" data-cat="{esc((name + ' ' + job).lower())}" data-chapter="{cslug}">
   <div class="ppage p1">
-  <div class="crumb"><b>{esc(name)}</b> · {crumb_label}</div>
   <div class="phead">
     <h4>{esc(tool)}</h4>
-    <p class="identity">{esc(identity)}.</p>
   </div>
   <div class="psec">
     <div class="pseclabel">Built for</div>
@@ -704,9 +706,7 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
     chapter_html.append(f"""
 <section class="chapter" id="{cslug}" data-chapter="{cslug}">
   <div class="chap-open wrap">
-    <p class="eyebrow">{esc(group)} · Chapter {ci:02d} of 14</p>
     <h2>{esc(name)}</h2>
-    <p class="decision">{esc(decision)}</p>
     <p class="lineup"><b>Compared:</b> {chips}</p>
     {PF}
   </div>
@@ -803,7 +803,8 @@ navjs = """
 })();
 """
 
-nav_links = ""
+nav_links = ('<li class="navsec">Start here</li>'
+             '<li class="navgrp"><a class="navflat" href="#contents">Contents</a></li>')
 for _g in ("Selling", "Building", "Operating"):
     nav_links += f'<li class="navsec">{esc(_g)}</li>'
     for n, nm, cs, tls in _gl.get(_g, []):
@@ -952,7 +953,6 @@ doc = f"""<!doctype html>
 <div class="progress" id="progress" aria-hidden="true"></div>
 <aside class="siderail" aria-label="Document navigation">
   <a class="rail-home" href="#contents">The Startup Tool Stack</a>
-  <p class="rail-sub">14 chapters · 84 tools</p>
   <ul class="railnav">{nav_links}</ul>
 </aside>
 
@@ -966,7 +966,6 @@ doc = f"""<!doctype html>
 <header class="mast wrap" id="finder">
   <p class="eyebrow">Tool selection for pre-seed and seed founders</p>
   <h1>The Startup Tool&nbsp;Stack</h1>
-  <p class="sub">Nothing here is ranked or scored, so the call stays yours.</p>
   <p class="byline">Last updated August 2026</p>
   <nav class="contents mastcontents" id="contents" aria-label="Contents">
     <h2>Contents</h2>
@@ -976,8 +975,8 @@ doc = f"""<!doctype html>
 </header>
 
 <section class="howto wrap" id="manual-diy">
-  <h2>What Manual DIY means</h2>
-  <p>Manual DIY isn't a product. It's the version of the job you put together and run yourself. The price is the hours you spend setting it up and the upkeep it needs afterwards. It appears in all 14 chapters, last in each.</p>
+  <h2>What self-managed means</h2>
+  <p>Self-managed isn't a product. It's the version of the job you put together and run yourself. The price is the hours you spend setting it up and the upkeep it needs afterwards. It appears in all 14 chapters, last in each.</p>
   {PF}
 </section>
 
@@ -991,7 +990,6 @@ doc = f"""<!doctype html>
   <p><strong class="pl">The evidence standard.</strong> We treated vendor pricing pages and documentation as authoritative on what a vendor knows best: its own tiers, limits and feature gates. Anywhere the vendor's account could differ from what teams actually run into, such as real cost, where a tool strains and what leaving it involves, we weighted independent practitioner reports and third-party contract data higher. We used no affiliate or sponsored content.</p>
   <p><strong class="pl">What this guide does not carry.</strong> The workbook keeps its citations inside the text of each claim rather than as separate metadata. There is no per-claim tag marking a fact as officially documented or user-reported, and no per-claim verification date. We would rather say that plainly than invent the apparatus. Each profile is verified to the edition date in its footer, and where a claim's origin matters we name it in the sentence. So treat the inline attributions as the provenance record, treat every price as accurate to the edition date and no later, and check anything price-critical against the vendor's own page before you commit. Prices in this category moved twice while we were compiling it.</p>
   <p><strong class="pl">What was selected.</strong> Each category compares six tools plus the do-it-yourself route. We kept lesser-known tools alongside the obvious ones, and left out anything an early-stage company couldn't realistically use.</p>
-  <p><strong class="pl">No rankings.</strong> Tools appear in a fixed order with identical styling. Nothing here is sponsored, affiliated or paid for.</p>
   <p><strong class="pl">Limitations.</strong> Pricing and features move fast. Figures carry their dates where the source gives one, and anything price-critical is worth checking against the vendor's current page.</p>
   {PF}
 </section>

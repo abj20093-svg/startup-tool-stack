@@ -279,7 +279,7 @@ Best when: you'd rather buy the outcome than run the tool: managed US-based book
 Avoid if: you want to DIY cheaply (Wave is free, QBO/Xero from ~$20), or you specifically want a live self-serve burn/runway dashboard you control day to day (go Puzzle).
 
 
-## Manual DIY
+## Self-managed
 
 ### Built for
 Roll-your-own books: a spreadsheet ledger you maintain plus a part-time bookkeeper or CPA pulled in at tax time. Near-zero software cost, works only at low transaction volume and while you're disciplined.

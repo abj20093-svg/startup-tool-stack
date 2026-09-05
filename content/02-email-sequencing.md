@@ -279,7 +279,7 @@ Best when: you run tightly-targeted, permission-based outreach and want native w
 Avoid if: you blast high volumes across hundreds of inboxes on a budget; the per-contacted-prospect pricing punishes scale; go Instantly or Smartlead for flat unlimited sending, or Salesforge for AI-generated personalization at scale.
 
 
-## Manual DIY
+## Self-managed
 
 ### Built for
 Roll your own sender: Amazon SES/Postmark/Resend or a warmed Google Workspace, plus a script that handles cadence, personalization, and reply detection. Raw sending power, none of the cold-outreach guardrails. Technical founders sending low-volume, highly targeted cold email at MVP stage who want to control deliverability and cost, and can write and babysit the sending script themselves.
