@@ -170,7 +170,7 @@ def cell(r, c):
     if VARIANT and raw:
         raw = "\n".join(VAR_MAP.get(p, p) for p in raw.split("\n"))
     # keep prose references to the seventh column consistent with its label
-    return scrub_comparisons(fix_names(raw).replace('Manual DIY', 'Build'))
+    return scrub_comparisons(fix_names(raw).replace('Manual DIY', 'Internal build'))
 
 def cell_raw(r, c):
     """Original workbook text, never varied: used for the At a glance table and the
@@ -532,7 +532,7 @@ CH1_GLANCE = {
   "price": ("Quote-only", "reportedly ~$15,000/yr to start (3 seats, ~5,000 credits), climbing to $40,000+; median contract ~$32,000/yr per Vendr data."),
   "limit": ("Expensive, quote-gated, 3-seat minimum and add-on-heavy", "a poor fit pre-revenue; annual lock-in, aggressive renewals, thinner international/SMB data, and privacy/compliance overhead."),
  },
- "Build": {
+ "Internal build": {
   "choose": ("Technical founders with under ~100 target accounts", "earliest pre-seed, near-zero budget, hands-on, doing founder-led sales personally."),
   "price": ("No license fee", "cost is time: setup hours plus your AI plan and API/token burn for enrichment."),
   "limit": ("Won't scale past small volume without real eng effort", "you own all security, compliance, and dedupe risk; maintenance is a permanent tax you keep paying."),
@@ -545,10 +545,10 @@ CH1_HEADER_PRICE = {
     "Close": ("$9/user/mo", "Solo; Essentials $35, Growth $99, Scale $139."),
     "Apollo": ("Free tier", "then Basic ~$49, Professional ~$79, Organization ~$119/user/mo; cheaper on annual billing."),
     "ZoomInfo": ("Quote-only", "reportedly ~$15,000/yr to start (3 seats, ~5,000 credits), climbing to $40,000+; median contract ~$32,000/yr per Vendr data."),
-    "Build": ("No license fee", "cost is time: mostly one-time setup hours plus your AI plan and API/token burn for enrichment."),
+    "Internal build": ("No license fee", "cost is time: mostly one-time setup hours plus your AI plan and API/token burn for enrichment."),
 }
 CH1_PRICING_DROP = {"HubSpot CRM": [1, 2], "Attio": [1], "Pipedrive": [1], "Close": [1],
-                    "Apollo": [1], "ZoomInfo": [3], "Build": [2]}
+                    "Apollo": [1], "ZoomInfo": [3], "Internal build": [2]}
 
 # ---------------- mechanical derivations for chapters 2-14 ----------------
 
@@ -670,7 +670,7 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
     tools = [cell(hrow, c) for c in range(3, 10)]
     # The seventh column is the do-it-internally option. Renamed for the audience;
     # the workbook keeps its original wording.
-    tools = ["Build" if t.strip().lower() == "manual diy" else t for t in tools]
+    tools = ["Internal build" if t.strip().lower() == "manual diy" else t for t in tools]
     labels = {r: fix_names(re.sub(r"^\d+\.\s*", "", str(src.cell(row=r, column=2).value)))
               for r in range(frow, lrow + 1)}
 
@@ -748,7 +748,7 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
         tid = f"tool-{cslug}-{slug(tool)}"
         tool_anchors.append((tool, tid))
         all_tool_ids.add(tid)
-        diy = tool.strip().lower() in ("manual diy", "self-managed", "build")
+        diy = tool.strip().lower() in ("manual diy", "self-managed", "build", "internal build")
         what = cell(r_what, c)
         what_sents = split_sents(what)
         identity = what_sents[0].rstrip(".") if what_sents else ""
@@ -1127,10 +1127,10 @@ doc = f"""<!doctype html>
 </header>
 
 <section class="howto wrap" id="manual-diy">
-  <h2>Why every chapter ends with a build option</h2>
-  <p>Every chapter closes with a seventh option: building the capability yourself instead of buying it. With AI tools like Claude and Codex, a founder can now stand up a working version of almost anything in this guide.</p>
-  <p>Building yourself covers a wide range. It can be a spreadsheet you keep by hand, a script against an API, a self-hosted open-source app, or a full custom build with an AI agent writing most of the code.</p>
-  <p>We include it in every comparison because the real question is no longer whether you can build it. It is whether the result is reliable, what it costs you in setup and upkeep, and when that trade beats paying for a product. The build pages weigh exactly that.</p>
+  <h2>Why every chapter ends with an internal build</h2>
+  <p>Every chapter closes with a seventh option: an internal build, standing the capability up yourself instead of buying it. With AI tools like Claude and Codex, a founder can now get a working version of almost anything in this guide.</p>
+  <p>An internal build covers a wide range. It can be a spreadsheet you keep by hand, a script against an API, a self-hosted open-source app, or a full custom build with an AI agent writing most of the code.</p>
+  <p>We include it in every comparison because the real question is no longer whether you can build it. It is whether the result is reliable, what it costs you in setup and upkeep, and when that trade beats paying for a product. The internal build pages weigh exactly that.</p>
   {PF}
 </section>
 
