@@ -117,10 +117,6 @@ ul.fb{list-style:none;margin:0;padding:0}
 .band{margin-bottom:18px}
 .bandlabel{break-after:avoid;font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--violet-dim);margin:2px 0 10px}
 .bandlabel::after{content:"";display:block;width:26px;height:2px;border-radius:1px;background:var(--violet);margin-top:5px}
-.bandlabel.bl-stat{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
-.bandlabel.bl-stat::after{display:none}
-.bandlabel.bl-stat>span:first-child::after{content:"";display:block;width:26px;height:2px;border-radius:1px;background:var(--violet);margin-top:5px}
-.bstat{font-family:var(--sans);font-weight:600;font-size:13px;letter-spacing:0;text-transform:none;color:var(--ink);background:var(--off);border:1px solid var(--border);border-radius:7px;padding:3px 9px}
 .runhead{display:none}
 .pfoot{font-weight:400;display:none}
 
@@ -287,7 +283,6 @@ a.site::after{content:"↗";font-size:.55em;vertical-align:super;margin-left:3px
   .ledger{break-inside:avoid;print-color-adjust:exact;-webkit-print-color-adjust:exact}
   .pcell{print-color-adjust:exact;-webkit-print-color-adjust:exact}
   .pseclabel{print-color-adjust:exact;-webkit-print-color-adjust:exact}
-  .bstat{print-color-adjust:exact;-webkit-print-color-adjust:exact}
   .psec{break-inside:avoid}
   .bands{display:block;margin-top:14pt}
   .bands .tcol{display:block}

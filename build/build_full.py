@@ -799,11 +799,7 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
                 fh = f'<div class="factor">{body}</div>'
                 est = 16 + para_est(txt)
                 if j == 0 and not (band == "What it does" and what_rest):
-                    if band == "Cost" and plead:
-                        fh = (f'<div class="bandlabel bl-stat"><span>{esc(band)}</span>'
-                              f'<span class="bstat num">{esc(plead)}</span></div>') + fh
-                    else:
-                        fh = f'<div class="bandlabel">{esc(band)}</div>' + fh
+                    fh = f'<div class="bandlabel">{esc(band)}</div>' + fh
                     est += 22
                 units.append((est, fh))
         for label, r in (("Where it stands out", r_stands), ("Limitations", r_limits)):
