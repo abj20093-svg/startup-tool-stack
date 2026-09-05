@@ -80,7 +80,8 @@ table.gtable{width:100%;border-collapse:separate;border-spacing:0;border:1px sol
 .phead{margin-top:8px;margin-bottom:16px}
 .phead h4{font-family:var(--sans);font-weight:700;font-size:24px;letter-spacing:-.016em}
 .psec{margin-top:22px;max-width:none}
-.pseclabel{font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--violet-dim);background:var(--violet-light);display:inline-block;padding:3px 9px;border-radius:6px;margin-bottom:9px}
+.pseclabel{font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--violet-dim);margin:2px 0 10px}
+.pseclabel::after{content:"";display:block;width:26px;height:2px;border-radius:1px;background:var(--violet);margin-top:5px}
 .psec p{max-width:70ch;margin-bottom:8px}
 b,strong{font-weight:600}
 .pl{font-family:var(--sans);font-weight:600;font-size:15px}
@@ -282,7 +283,6 @@ a.site::after{content:"↗";font-size:.55em;vertical-align:super;margin-left:3px
   .factor:last-child{margin-bottom:0}
   .ledger{break-inside:avoid;print-color-adjust:exact;-webkit-print-color-adjust:exact}
   .pcell{print-color-adjust:exact;-webkit-print-color-adjust:exact}
-  .pseclabel{print-color-adjust:exact;-webkit-print-color-adjust:exact}
   .psec{break-inside:avoid}
   .bands{display:block;margin-top:14pt}
   .bands .tcol{display:block}

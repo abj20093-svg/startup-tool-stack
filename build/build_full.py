@@ -849,7 +849,7 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
   </div>
   <div class="psec">
     <div class="pseclabel">Built for</div>
-    {bullets(built, where=f"{name}/{tool}/Built for", with_lead=False)}
+    {bullets(built, where=f"{name}/{tool}/Built for")}
   </div>
   <div class="ledger">
     <div class="lhead">Choose this if you are</div>
