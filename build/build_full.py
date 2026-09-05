@@ -677,12 +677,6 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
                     cur, col, acc, cap = [[], []], 0, 0, capN
             cur[col].append(uh); acc += est
         pages_units.append(cur)
-        _u = TOOL_URLS.get(tool.lower())
-        prov = (f'<div class="provenance">Pricing and limits read from '
-                f'<a class="site" href="{_u}" target="_blank" rel="noopener noreferrer">'
-                f'{esc(tool)}&rsquo;s own site</a>. Verified to the edition date above.</div>'
-                if _u else '<div class="provenance">No vendor page: this route is assembled from the components named above.</div>')
-        pages_units[-1][1].append(prov)
         crumb_label = (f"the build route · {i+1} of {len(tools)}" if diy
                        else f"tool {i+1} of {len(tools)}")
         price_line = esc(plead)
@@ -1016,12 +1010,6 @@ doc = f"""<!doctype html>
   <p><strong class="pl">What this guide does not carry.</strong> The workbook keeps its citations inside the text of each claim rather than as separate metadata. There is no per-claim tag marking a fact as officially documented or user-reported, and no per-claim verification date. We would rather say that plainly than invent the apparatus. Each profile is verified to the edition date in its footer, and where a claim's origin matters we name it in the sentence. So treat the inline attributions as the provenance record, treat every price as accurate to the edition date and no later, and check anything price-critical against the vendor's own page before you commit. Prices in this category moved twice while we were compiling it.</p>
   <p><strong class="pl">What was selected.</strong> Each category compares six tools plus the do-it-yourself route. We kept lesser-known tools alongside the obvious ones, and left out anything an early-stage company couldn't realistically use.</p>
   <p><strong class="pl">Limitations.</strong> Pricing and features move fast. Figures carry their dates where the source gives one, and anything price-critical is worth checking against the vendor's current page.</p>
-  {PF}
-</section>
-
-<section class="updatelog wrap" id="updates">
-  <h2>Update log</h2>
-  <p class="num">August 2026, first edition. All 14 chapters.</p>
   {PF}
 </section>
 

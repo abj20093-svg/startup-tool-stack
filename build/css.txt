@@ -43,8 +43,8 @@ a:hover{color:var(--violet-dim)}
 .backfinder.on{display:block}
 
 /* ---------- front matter ---------- */
-.howto,.sources,.updatelog{padding:36px 0;border-bottom:1px solid var(--border)}
-.howto h2,.sources h2,.updatelog h2{font-family:var(--sans);font-weight:700;font-size:22px;margin-bottom:14px}
+.howto,.sources{padding:36px 0;border-bottom:1px solid var(--border)}
+.howto h2,.sources h2{font-family:var(--sans);font-weight:700;font-size:22px;margin-bottom:14px}
 .howto p,.sources p{max-width:68ch;margin-bottom:10px}
 .howto p{margin-bottom:8px;max-width:76ch}
 .howto dl{margin-top:6px;max-width:68ch}
@@ -119,7 +119,6 @@ b,strong{font-weight:600}
 .factor p{font-size:15px;line-height:1.48;margin-bottom:6px}
 .runhead{display:none}
 .pfoot{font-weight:400;display:none}
-.provenance{font-weight:400;margin-top:20px;border-top:1px solid var(--border);padding-top:8px;font-family:var(--sans);font-size:12.5px;color:var(--slate)}
 
 /* filtered-out state */
 .hidden-by-filter{display:none}
@@ -300,8 +299,7 @@ a.site::after{content:"↗";font-size:.55em;vertical-align:super;margin-left:3px
   .bandlabel{break-after:avoid}
   .band:last-child{margin-bottom:0}
   .factor:last-child{margin-bottom:0}
-  .provenance{margin-top:7pt;padding-top:5pt;font-size:8pt}
-  .ledger{break-inside:avoid}
+    .ledger{break-inside:avoid}
   .psec{break-inside:avoid}
   .bands{display:block;margin-top:14pt}
   .bands .tcol{display:block}
@@ -321,10 +319,9 @@ a.site::after{content:"↗";font-size:.55em;vertical-align:super;margin-left:3px
   .gtable td.tname a{text-decoration:none;border-bottom:none;color:#000}
   a{color:var(--violet-dim);text-decoration:none}
   .sources a::after{content:" (" attr(href) ")";font-size:8.5pt;color:var(--slate)}
-  .sources,.updatelog{border:none}
+  .sources{border:none}
   .sources{page-break-before:always}
-  .updatelog{page-break-before:always}
-  .mast,.howto,.contents,.chap-open,.sources,.updatelog{position:relative;min-height:9.45in}
+  .mast,.howto,.contents,.chap-open,.sources{position:relative;min-height:9.45in}
   .glance{position:relative;min-height:7.5in}
   .ppage{position:relative;min-height:9.5in}
   .ppage.p2{page-break-before:always}
