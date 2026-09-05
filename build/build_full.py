@@ -799,7 +799,11 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
                 fh = f'<div class="factor">{body}</div>'
                 est = 16 + para_est(txt)
                 if j == 0 and not (band == "What it does" and what_rest):
-                    fh = f'<div class="bandlabel">{esc(band)}</div>' + fh
+                    if band == "Cost" and plead:
+                        fh = (f'<div class="bandlabel bl-stat"><span>{esc(band)}</span>'
+                              f'<span class="bstat num">{esc(plead)}</span></div>') + fh
+                    else:
+                        fh = f'<div class="bandlabel">{esc(band)}</div>' + fh
                     est += 22
                 units.append((est, fh))
         for label, r in (("Where it stands out", r_stands), ("Limitations", r_limits)):
@@ -855,8 +859,8 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
     <div class="lhead">Choose this if you are</div>
     <div class="ideal">{bullets(ideal_t, where=f"{name}/{tool}/Ideal", with_lead=False)}</div>
     <div class="pair">
-      {f'<div class="cellL"><div class="plabel">Best when</div>{bullets(cap_first(choose["best"]), where=f"{name}/{tool}/Best", with_lead=False)}</div>' if choose["best"].strip() else ''}
-      {f'<div><div class="plabel">Avoid if</div>{bullets(cap_first(choose["avoid"]), where=f"{name}/{tool}/Avoid", with_lead=False)}</div>' if choose["avoid"].strip() else ''}
+      {f'<div class="pcell go"><div class="plabel">Best when</div>{bullets(cap_first(choose["best"]), where=f"{name}/{tool}/Best", with_lead=False)}</div>' if choose["best"].strip() else ''}
+      {f'<div class="pcell stop"><div class="plabel">Avoid if</div>{bullets(cap_first(choose["avoid"]), where=f"{name}/{tool}/Avoid", with_lead=False)}</div>' if choose["avoid"].strip() else ''}
     </div>
   </div>
   <div class="bands"><div class="tcol">{"".join(p1c1)}</div><div class="tcol">{"".join(p1c2)}</div></div>{PF}</div>
