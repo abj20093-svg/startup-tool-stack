@@ -3,7 +3,7 @@
   --violet:#5B4CDB; --violet-dim:#3A2D8A; --violet-deep:#2D246C; --violet-light:#EEEBFB;
   --ink:#17143A; --ink-2:#44415E; --slate:#6E6B85; --slate-2:#9B98B0;
   --white:#FFF; --off:#F7F6FC; --surface:#F2F1F9; --border:#E7E5F1; --border-d:#D6D3E6;
-  --clay:#9A4326; --clay-light:#FBF4F0;
+  --rose:#B42B54; --rose-light:#FBF1F5;
   --col:620px;
   --sans:'Inter',-apple-system,"SF Pro Text","Helvetica Neue","Segoe UI",system-ui,sans-serif;
 }
@@ -93,13 +93,13 @@ b,strong{font-weight:600}
 .ledger .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
 .pcell{border-radius:10px;padding:13px 15px}
 .pcell.go{background:var(--violet-light)}
-.pcell.stop{background:var(--clay-light)}
+.pcell.stop{background:var(--rose-light)}
 .pcell.go .plabel{color:var(--violet-dim)}
-.pcell.stop .plabel{color:var(--clay)}
+.pcell.stop .plabel{color:var(--rose)}
 .ledger .plabel{font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
 .ledger p{margin-bottom:8px}
 .pcell .fb>li::before{background:var(--violet-dim)}
-.pcell.stop .fb>li::before{background:var(--clay)}
+.pcell.stop .fb>li::before{background:var(--rose)}
 .pcell .fb>li:last-child{margin-bottom:0}
 
 /* factor bands */
