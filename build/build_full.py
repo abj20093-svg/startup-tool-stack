@@ -86,7 +86,7 @@ def cell(r, c):
     if VARIANT and raw:
         raw = "\n".join(VAR_MAP.get(p, p) for p in raw.split("\n"))
     # keep prose references to the seventh column consistent with its label
-    return fix_names(raw).replace('Manual DIY', 'Self-managed')
+    return fix_names(raw).replace('Manual DIY', 'Build')
 
 def cell_raw(r, c):
     """Original workbook text, never varied: used for the At a glance table and the
@@ -391,7 +391,7 @@ CH1_GLANCE = {
   "price": ("Quote-only", "reportedly ~$15,000/yr to start (3 seats, ~5,000 credits), climbing to $40,000+; median contract ~$32,000/yr per Vendr data."),
   "limit": ("Expensive, quote-gated, 3-seat minimum and add-on-heavy", "a poor fit pre-revenue; annual lock-in, aggressive renewals, thinner international/SMB data, and privacy/compliance overhead."),
  },
- "Self-managed": {
+ "Build": {
   "choose": ("Technical founders with under ~100 target accounts", "earliest pre-seed, near-zero budget, hands-on, doing founder-led sales personally."),
   "price": ("No license fee", "cost is time: setup hours plus your AI plan and API/token burn for enrichment."),
   "limit": ("Won't scale past small volume without real eng effort", "you own all security, compliance, and dedupe risk; maintenance is a permanent tax you keep paying."),
@@ -404,10 +404,10 @@ CH1_HEADER_PRICE = {
     "Close": ("$9/user/mo", "Solo; Essentials $35, Growth $99, Scale $139."),
     "Apollo": ("Free tier", "then Basic ~$49, Professional ~$79, Organization ~$119/user/mo; cheaper on annual billing."),
     "ZoomInfo": ("Quote-only", "reportedly ~$15,000/yr to start (3 seats, ~5,000 credits), climbing to $40,000+; median contract ~$32,000/yr per Vendr data."),
-    "Self-managed": ("No license fee", "cost is time: mostly one-time setup hours plus your AI plan and API/token burn for enrichment."),
+    "Build": ("No license fee", "cost is time: mostly one-time setup hours plus your AI plan and API/token burn for enrichment."),
 }
 CH1_PRICING_DROP = {"HubSpot CRM": [1, 2], "Attio": [1], "Pipedrive": [1], "Close": [1],
-                    "Apollo": [1], "ZoomInfo": [3], "Self-managed": [2]}
+                    "Apollo": [1], "ZoomInfo": [3], "Build": [2]}
 
 # ---------------- mechanical derivations for chapters 2-14 ----------------
 
@@ -482,6 +482,27 @@ def derive_limit(limit_text):
     pre, lead, _d, rest = derive_lead(limit_text.split("\n")[0].strip())
     return ((pre + lead).strip(), rest)
 
+
+def scrub_rivals(text, self_tool, tools):
+    """Drop competitor mentions from the pitch sections. Rival names
+    usually arrive as parenthetical asides, so those are excised first,
+    keeping the sentence they decorate; only a clause that still names
+    a rival after that is dropped whole."""
+    if not text:
+        return text
+    rivals = [t for t in tools if t != self_tool]
+    pat = re.compile(r"\b(" + "|".join(re.escape(t) for t in rivals) + r")\b")
+    text = re.sub(r"\s*\(([^()]*)\)",
+                  lambda m: "" if pat.search(m.group(1)) else m.group(0), text)
+    parts = re.split(r"(?<=[.!?;])\s+", text.strip())
+    kept = [p for p in parts if not pat.search(p)]
+    out = " ".join(kept)
+    out = re.sub(r"\s+,", ",", re.sub(r"\s{2,}", " ", out)).strip().rstrip(";,")
+    if out and out[-1] not in ".!?":
+        out += "."
+    return out
+
+
 def xlink_avoid(text_html, self_tool, tools, cslug):
     out = text_html
     for other in sorted(tools, key=len, reverse=True):
@@ -508,7 +529,7 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
     tools = [cell(hrow, c) for c in range(3, 10)]
     # The seventh column is the do-it-internally option. Renamed for the audience;
     # the workbook keeps its original wording.
-    tools = ["Self-managed" if t.strip().lower() == "manual diy" else t for t in tools]
+    tools = ["Build" if t.strip().lower() == "manual diy" else t for t in tools]
     labels = {r: fix_names(re.sub(r"^\d+\.\s*", "", str(src.cell(row=r, column=2).value)))
               for r in range(frow, lrow + 1)}
 
@@ -586,7 +607,7 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
         tid = f"tool-{cslug}-{slug(tool)}"
         tool_anchors.append((tool, tid))
         all_tool_ids.add(tid)
-        diy = tool.strip().lower() in ("manual diy", "self-managed")
+        diy = tool.strip().lower() in ("manual diy", "self-managed", "build")
         what = cell(r_what, c)
         what_sents = split_sents(what)
         identity = what_sents[0].rstrip(".") if what_sents else ""
@@ -597,7 +618,9 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
                              if re.sub(r"[^a-z0-9]", "", x.lower()) not in _others).strip()
         plead, pdetail = header_price[tool]
         choose = parse_choose(cell(r_choose, c))
-        built = strip_prefix(cell(r_built, c))
+        for _k in ("ideal", "best", "avoid"):
+            choose[_k] = scrub_rivals(choose[_k], tool, tools)
+        built = scrub_rivals(strip_prefix(cell(r_built, c)), tool, tools)
 
         CPL, LH = 49, 15
         def para_est(t, cpl=CPL):
@@ -660,7 +683,7 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
                 f'{esc(tool)}&rsquo;s own site</a>. Verified to the edition date above.</div>'
                 if _u else '<div class="provenance">No vendor page: this route is assembled from the components named above.</div>')
         pages_units[-1][1].append(prov)
-        crumb_label = (f"the self-managed route · {i+1} of {len(tools)}" if diy
+        crumb_label = (f"the build route · {i+1} of {len(tools)}" if diy
                        else f"tool {i+1} of {len(tools)}")
         price_line = esc(plead)
         avoid_html = xlink_avoid(esc(cap_first(choose["avoid"])), tool, tools, cslug)
@@ -688,8 +711,8 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
     <div class="lhead">Choose this if you are</div>
     <p class="ideal">{esc(ideal_t)}</p>
     <div class="pair">
-      <div class="cellL"><div class="plabel">Best when</div><p>{esc(cap_first(choose["best"]))}</p></div>
-      <div><div class="plabel">Avoid if</div><p>{avoid_html}</p></div>
+      {f'<div class="cellL"><div class="plabel">Best when</div><p>{esc(cap_first(choose["best"]))}</p></div>' if choose["best"].strip() else ''}
+      {f'<div><div class="plabel">Avoid if</div><p>{avoid_html}</p></div>' if choose["avoid"].strip() else ''}
     </div>
   </div>
   <div class="bands"><div class="tcol">{"".join(p1c1)}</div><div class="tcol">{"".join(p1c2)}</div></div>{PF}</div>
@@ -975,8 +998,10 @@ doc = f"""<!doctype html>
 </header>
 
 <section class="howto wrap" id="manual-diy">
-  <h2>What self-managed means</h2>
-  <p>Self-managed isn't a product. It's the version of the job you put together and run yourself. The price is the hours you spend setting it up and the upkeep it needs afterwards. It appears in all 14 chapters, last in each.</p>
+  <h2>Why every chapter ends with a build option</h2>
+  <p>Every chapter closes with a seventh option: building the capability yourself instead of buying it. With AI tools like Claude and Codex, a founder can now stand up a working version of almost anything in this guide.</p>
+  <p>Building yourself covers a wide range. It can be a spreadsheet you keep by hand, a script against an API, a self-hosted open-source app, or a full custom build with an AI agent writing most of the code.</p>
+  <p>We include it in every comparison because the real question is no longer whether you can build it. It is whether the result is reliable, what it costs you in setup and upkeep, and when that trade beats paying for a product. The build pages weigh exactly that.</p>
   {PF}
 </section>
 

@@ -1,0 +1,982 @@
+RIVAL-MENTION SCRUB — what was removed from the pitch sections
+======================================================================
+
+[hubspot crm / Best when]
+  WAS: You're building a combined marketing+sales motion and want CRM, forms, email, and reporting under one roof. Pick over Attio/Pipedrive because the free tier is usable and Sales Hub Starter is just $7/seat on annual billing ($20 month-to-month) before you commit real budget.
+  NOW: You're building a combined marketing+sales motion and want CRM, forms, email, and reporting under one roof.
+
+[hubspot crm / Avoid if]
+  WAS: You're a pure high-volume outbound shop or watching every dollar; Professional jumps to $90/seat plus a $1,500 onboarding fee and contact-tiered Marketing Hub balloons fast. Go Pipedrive for a cheaper pipeline or Attio for a flexible data model.
+  NOW: You're a pure high-volume outbound shop or watching every dollar; Professional jumps to $90/seat plus a $1,500 onboarding fee and contact-tiered Marketing Hub balloons fast.
+
+[hubspot crm / Built for]
+  WAS: Growing SMBs and mid-market teams with combined marketing and sales staff of mixed technical skill, running the full funnel from lead capture through deal close in one system.Best fit: when you're outgrowing spreadsheets and want CRM, marketing, and support unified instead of stitched together, and 
+  NOW: Growing SMBs and mid-market teams with combined marketing and sales staff of mixed technical skill, running the full funnel from lead capture through deal close in one system. Best fit: when you're outgrowing spreadsheets and want CRM, marketing, and support unified instead of stitched together, and
+
+[attio / Best when]
+  WAS: You want to sync product usage data, get real-time bidirectional Gmail/Calendar sync, and build custom workflows. Pick over HubSpot/Pipedrive because the data model bends to you instead of forcing deal-stage rigidity; Plus is $35/seat and Pro $79/seat (annual).
+  NOW: You want to sync product usage data, get real-time bidirectional Gmail/Calendar sync, and build custom workflows. Plus is $35/seat and Pro $79/seat (annual).
+
+[attio / Avoid if]
+  WAS: You need turnkey marketing automation, plug-and-play sales templates, or a native dialer out of the box, or you're wary of the AI/enrichment credit metering added in 2026; HubSpot is batteries-included and Close bundles calling.
+  NOW: You need turnkey marketing automation, plug-and-play sales templates, or a native dialer out of the box, or you're wary of the AI/enrichment credit metering added in 2026.
+
+[attio / Built for]
+  WAS: Startups and modern go-to-market teams whose product-minded operators are comfortable configuring their own data models and workflows around custom objects.Best fit: early-to-growth companies that find legacy CRMs rigid and want a fast, flexible system they shape themselves instead of adapting to.
+  NOW: Startups and modern go-to-market teams whose product-minded operators are comfortable configuring their own data models and workflows around custom objects. Best fit: early-to-growth companies that find legacy CRMs rigid and want a fast, flexible system they shape themselves instead of adapting to.
+
+[pipedrive / Best when]
+  WAS: You have an inbound/outbound sales motion and just want to drag deals across stages without complexity. Pick over HubSpot/Attio because Lite is $14/seat and the drag-and-drop pipeline is quick to learn; Growth $39, Premium $49/seat.
+  NOW: You have an inbound/outbound sales motion and just want to drag deals across stages without complexity. Growth $39, Premium $49/seat.
+
+[pipedrive / Avoid if]
+  WAS: You need a rich contact database, native enrichment, or real marketing automation; Pipedrive is thin there and add-ons stack up. Go HubSpot for all-in-one, Apollo for data+outreach, or Attio for custom data modeling.
+  NOW: You need a rich contact database, native enrichment, or real marketing automation; Pipedrive is thin there and add-ons stack up.
+
+[pipedrive / Built for]
+  WAS: Small sales teams and solo founders, non-technical reps managing a visual pipeline of deals with straightforward activity tracking.Best fit: when you want an affordable, pipeline-first CRM that's quick to set up and doesn't need marketing or support modules bolted on.
+  NOW: Small sales teams and solo founders, non-technical reps managing a visual pipeline of deals with straightforward activity tracking. Best fit: when you want an affordable, pipeline-first CRM that's quick to set up and doesn't need marketing or support modules bolted on.
+
+[close / Best when]
+  WAS: You're running high-volume calling and want the Power Dialer, SMS, and email sequencing built directly into the CRM with no Aircall bolt-on. Pick over Pipedrive/HubSpot because calling is truly native; Solo $9, Essentials $35, Growth $99/user/mo on annual billing.
+  NOW: You're running high-volume calling and want the Power Dialer, SMS, and email sequencing built directly into the CRM with no Aircall bolt-on. Solo $9, Essentials $35, Growth $99/user/mo on annual billing.
+
+[close / Avoid if]
+  WAS: You're product-led or marketing-driven with little outbound calling, or the usage-based calling costs on top of seat price scare you; Close bills calling à la carte (outbound ~$0.02/min, phone numbers from ~$1/mo, premium IVR/routing numbers charged by usage) rather than a fixed markup; Attio suits 
+  NOW: You're product-led or marketing-driven with little outbound calling, or the usage-based calling costs on top of seat price scare you; Close bills calling à la carte (outbound ~$0.02/min, phone numbers from ~$1/mo, premium IVR/routing numbers charged by usage) rather than a fixed markup.
+
+[close / Built for]
+  WAS: High-velocity inside-sales teams at SMBs and startups, reps who live in calls and email, running outbound with built-in calling and SMS.Best fit: small teams whose primary motion is phone-and-email selling and want dialer, inbox, and CRM in one place instead of separate tools.
+  NOW: High-velocity inside-sales teams at SMBs and startups, reps who live in calls and email, running outbound with built-in calling and SMS. Best fit: small teams whose primary motion is phone-and-email selling and want dialer, inbox, and CRM in one place instead of separate tools.
+
+[apollo / Best when]
+  WAS: You need to source leads from 240M+ contacts, enrich, and run sequences without buying ZoomInfo plus a separate sequencer. Pick over ZoomInfo because Basic is $49 and Professional $79/seat versus ZoomInfo's five-figure contracts. The free tier gives 100 email credits/mo.
+  NOW: The free tier gives 100 email credits/mo.
+
+[apollo / Avoid if]
+  WAS: You need pristine, deeply-verified enterprise data or accurate direct-dials at scale; mobile and export credits are capped and data quality trails ZoomInfo; go ZoomInfo for depth, Close for calling.
+  NOW: You need pristine, deeply-verified enterprise data or accurate direct-dials at scale.
+
+[apollo / Built for]
+  WAS: Startup and SMB sales teams whose SDRs blend prospecting with outreach, sourcing B2B contacts and running sequences from a single database.Best fit: budget-conscious teams that want a contact database plus email sequencing combined, without paying separately for data and outreach tools.
+  NOW: Startup and SMB sales teams whose SDRs blend prospecting with outreach, sourcing B2B contacts and running sequences from a single database. Best fit: budget-conscious teams that want a contact database plus email sequencing combined, without paying separately for data and outreach tools.
+
+[zoominfo / Best when]
+  WAS: Accurate firmographics, intent data, and verified direct-dials materially change your pipeline and you can absorb ~$15k+/yr annual commitments; pick over Apollo specifically when data accuracy and intent signals justify the premium and drive real ROI.
+  NOW: Accurate firmographics, intent data, and verified direct-dials materially change your pipeline and you can absorb ~$15k+/yr annual commitments.
+
+[zoominfo / Avoid if]
+  WAS: You're pre-seed/seed watching burn; annual-only contracts and five-figure minimums are wrong for early experimentation; use Apollo (self-serve, $49-$79/seat) or Self-managed (Airtable + Clay) until you have a proven, funded outbound engine.
+  NOW: You're pre-seed/seed watching burn; annual-only contracts and five-figure minimums are wrong for early experimentation.
+
+[zoominfo / Built for]
+  WAS: Mid-market and enterprise sales and marketing orgs with dedicated RevOps staff, sourcing high-accuracy B2B data with intent signals and deep integrations.Best fit: larger teams with real budget that need broad firmographic coverage and intent data beyond what lighter tools like Apollo provide.
+  NOW: Mid-market and enterprise sales and marketing orgs with dedicated RevOps staff, sourcing high-accuracy B2B data with intent signals and deep integrations.
+
+[instantly / Avoid if]
+  WAS: You want tight CRM or multichannel (LinkedIn + calling), or hate that leads and CRM are billed as separate products inflating the invoice; lemlist for multichannel, Smartlead for agency inbox management.
+  NOW: You want tight CRM or multichannel (LinkedIn + calling), or hate that leads and CRM are billed as separate products inflating the invoice.
+
+[instantly / Built for]
+  WAS: Agencies and solo outbound operators, growth marketers running cold email at volume across many inboxes with deliverability and warmup tooling and a lead database.Best fit: high-volume senders who prioritize inbox rotation and low cost over deep CRM integration or per-client reporting.
+  NOW: Agencies and solo outbound operators, growth marketers running cold email at volume across many inboxes with deliverability and warmup tooling and a lead database. Best fit: high-volume senders who prioritize inbox rotation and low cost over deep CRM integration or per-client reporting.
+
+[smartlead / Best when]
+  WAS: You run outbound for multiple brands and need unlimited mailboxes, inbox rotation, and a master inbox with strong API/webhooks. Pick over Instantly when whitelabel and agency client management matter, with Unlimited plans at $174 (Smart) and $379 (Prime); Base $39 (2k leads/6k emails), Pro $94 (90,0
+  NOW: You run outbound for multiple brands and need unlimited mailboxes, inbox rotation, and a master inbox with strong API/webhooks. Base $39 (2k leads/6k emails), Pro $94 (90,000 sends/mo, 30k leads).
+
+[smartlead / Avoid if]
+  WAS: You're a solo founder with one domain and modest volume. You'll overpay for agency features; SalesHandy or QuickMail are leaner and Salesforge is cheaper for a single workspace.
+  NOW: You're a solo founder with one domain and modest volume. You'll overpay for agency features.
+
+[smartlead / Built for]
+  WAS: Agencies and outbound teams whose technical operators manage many client accounts, scaling cold email with unlimited inboxes and API-driven automation.Best fit: agencies running campaigns for multiple clients that need white-label reporting and heavy programmatic control via API.
+  NOW: Agencies and outbound teams whose technical operators manage many client accounts, scaling cold email with unlimited inboxes and API-driven automation. Best fit: agencies running campaigns for multiple clients that need white-label reporting and heavy programmatic control via API.
+
+[saleshandy / Best when]
+  WAS: You want the lowest entry into serious volume (Starter $25 with 6k emails/2k prospects, then Pro $69 leaps to 150k emails/30k prospects with unlimited email accounts and no per-seat charge). Pick over Instantly/Smartlead purely on price-per-volume for a simple sequencing need.
+  NOW: You want the lowest entry into serious volume (Starter $25 with 6k emails/2k prospects, then Pro $69 leaps to 150k emails/30k prospects with unlimited email accounts and no per-seat charge).
+
+[saleshandy / Avoid if]
+  WAS: You need advanced deliverability tooling, multichannel, or polished agency whitelabel. It's more utilitarian; QuickMail for deliverability-first placement, lemlist for LinkedIn + email, Smartlead for multi-client agencies.
+  NOW: You need advanced deliverability tooling, multichannel, or polished agency whitelabel. It's more utilitarian.
+
+[saleshandy / Built for]
+  WAS: Small teams and individual sellers, non-technical users running cold email sequences with basic deliverability and tracking on a tight budget.Best fit: early-stage senders wanting simple, affordable sequencing without the agency-scale volume and complexity of Smartlead or Instantly.
+  NOW: Small teams and individual sellers, non-technical users running cold email sequences with basic deliverability and tracking on a tight budget.
+
+[quickmail / Best when]
+  WAS: Your number-one problem is landing in the primary inbox and you want native MailFlow warmup, inbox rotation, and deliverability tooling baked in from ~$49/mo. Pick over SalesHandy/Instantly when placement quality outweighs raw price and you value its 4.7/5 G2 sending reputation.
+  NOW: Your number-one problem is landing in the primary inbox and you want native MailFlow warmup, inbox rotation, and deliverability tooling baked in from ~$49/mo.
+
+[quickmail / Avoid if]
+  WAS: You're purely price-shopping high volume or want built-in lead data and AI personalization; SalesHandy is cheaper per email, Apollo bundles the data, and Salesforge/Instantly push AI plus unlimited inboxes harder.
+  NOW: You're purely price-shopping high volume or want built-in lead data and AI personalization.
+
+[quickmail / Built for]
+  WAS: Small B2B teams and founders, hands-on operators running cold outreach with auto-follow-ups and deliverability monitoring.Best fit: established senders who value inbox rotation and reliable warmup for steady, moderate-volume campaigns instead of mass sending.
+  NOW: Small B2B teams and founders, hands-on operators running cold outreach with auto-follow-ups and deliverability monitoring. Best fit: established senders who value inbox rotation and reliable warmup for steady, moderate-volume campaigns instead of mass sending.
+
+[salesforge / Best when]
+  WAS: You want the lowest-cost unlimited-inbox plan with AI-written sequences and included Warmforge warmup (Pro $40 annual-billed with 5k emails and unlimited mailboxes, Growth $80 with unlimited users and 50k emails). Pick over Instantly/Smartlead on raw price for unlimited inboxes plus its "Agent Frank
+  NOW: You want the lowest-cost unlimited-inbox plan with AI-written sequences and included Warmforge warmup (Pro $40 annual-billed with 5k emails and unlimited mailboxes, Growth $80 with unlimited users and 50k emails).
+
+[salesforge / Avoid if]
+  WAS: You want a long deliverability track record or mature reply/CRM management. It's newer than QuickMail/Smartlead. Go QuickMail for placement pedigree, lemlist for polished multichannel, Instantly for the larger ecosystem.
+  NOW: You want a long deliverability track record or mature reply/CRM management.
+
+[salesforge / Built for]
+  WAS: Outbound teams and agencies whose operators are comfortable with AI tooling, generating and personalizing cold email at scale across many mailboxes.Best fit: senders who want AI-written personalization and mailbox management combined, and are betting on automation-first workflows over manual copywri
+  NOW: Outbound teams and agencies whose operators are comfortable with AI tooling, generating and personalizing cold email at scale across many mailboxes. Best fit: senders who want AI-written personalization and mailbox management combined, and are betting on automation-first workflows over manual copywr
+
+[woodpecker / Best when]
+  WAS: You run tightly-targeted, permission-based outreach and want native warmup, inbox rotation, HubSpot/Pipedrive two-way sync, and an Agency Panel out of the box. Pick it over Instantly/Smartlead when reputation and CRM depth matter more than raw send volume, over SalesHandy/QuickMail for its multichan
+  NOW: You run tightly-targeted, permission-based outreach and want native warmup, inbox rotation, HubSpot/Pipedrive two-way sync, and an Agency Panel out of the box.
+
+[woodpecker / Avoid if]
+  WAS: You blast high volumes across hundreds of inboxes on a budget; the per-contacted-prospect pricing punishes scale; go Instantly or Smartlead for flat unlimited sending, or Salesforge for AI-generated personalization at scale.
+  NOW: You blast high volumes across hundreds of inboxes on a budget; the per-contacted-prospect pricing punishes scale.
+
+[woodpecker / Built for]
+  WAS: Small agencies and B2B SMBs, non-technical sales users running cold email and follow-ups with a focus on deliverability and reply detection.Best fit: EU-based or privacy-conscious teams wanting steady, human-paced sending over the aggressive high-volume tactics of Instantly or Smartlead.
+  NOW: Small agencies and B2B SMBs, non-technical sales users running cold email and follow-ups with a focus on deliverability and reply detection.
+
+[beehiiv / Avoid if]
+  WAS: You're a solo writer who just wants to publish and charge readers with minimal overhead, or you'll balk at the 2,500-sub free cliff; Substack (free, 10% cut) or Kit (10k free subs) are simpler starting points.
+  NOW: You're a solo writer who just wants to publish and charge readers with minimal overhead, or you'll balk at the 2,500-sub free cliff.
+
+[beehiiv / Built for]
+  WAS: Newsletter creators and media startups, growth-focused writers publishing and monetizing email newsletters with built-in ads, referrals, and audience analytics.Best fit: creators treating the newsletter as a business who want growth and monetization tools without stitching together separate services
+  NOW: Newsletter creators and media startups, growth-focused writers publishing and monetizing email newsletters with built-in ads, referrals, and audience analytics. Best fit: creators treating the newsletter as a business who want growth and monetization tools without stitching together separate service
+
+[kit / Best when]
+  WAS: You want visual automations, tagging, a free tier up to 10k subscribers, and creator commerce (products, referral system). Pick over Mailchimp/MailerLite because creator tooling and deliverability are stronger, but Creator from $39/mo (1k subs), Creator Pro from $79 adds subscriber scoring and refer
+  NOW: You want visual automations, tagging, a free tier up to 10k subscribers, and creator commerce (products, referral system).
+
+[kit / Avoid if]
+  WAS: You're highly price-sensitive at small list sizes (the 2025 hike pushed Creator to a ~$33+ minimum) or want an owned blog/site; MailerLite is cheaper per sub, Ghost gives you a full owned publication, beehiiv gives media-growth tooling.
+  NOW: You're highly price-sensitive at small list sizes (the 2025 hike pushed Creator to a ~$33+ minimum) or want an owned blog/site.
+
+[kit / Built for]
+  WAS: Professional creators and course sellers, non-technical solo operators running email marketing with automations, subscriber tagging, and simple commerce.Best fit: creators selling digital products who need behavioral automations and paid recommendations beyond basic broadcasting.
+  NOW: Professional creators and course sellers, non-technical solo operators running email marketing with automations, subscriber tagging, and simple commerce. Best fit: creators selling digital products who need behavioral automations and paid recommendations beyond basic broadcasting.
+
+[ghost / Best when]
+  WAS: You want a full website + newsletter + paid memberships you fully own and to keep 100% of subscription revenue (only Stripe fees). Pick over Substack/beehiiv once you earn more than ~$290/mo, where Ghost Pro's flat fee beats Substack's 10%. Starter $18 (free members only), Publisher $29 (paid member
+  NOW: You want a full website + newsletter + paid memberships you fully own and to keep 100% of subscription revenue (only Stripe fees). Starter $18 (free members only), Publisher $29 (paid memberships), Business $199.
+
+[ghost / Avoid if]
+  WAS: You want a built-in discovery/growth network, or you're non-technical and Starter's default-theme and free-only limits frustrate you; Substack has the network and recommendations, beehiiv has Boosts and referrals.
+  NOW: You want a built-in discovery/growth network, or you're non-technical and Starter's default-theme and free-only limits frustrate you.
+
+[ghost / Built for]
+  WAS: Independent publishers and developers, technically comfortable writers running a website plus membership newsletter with paid subscriptions on open-source software.Best fit: creators wanting to own their full publishing stack and site, and willing to self-host or pay for managed hosting.
+  NOW: Independent publishers and developers, technically comfortable writers running a website plus membership newsletter with paid subscriptions on open-source software. Best fit: creators wanting to own their full publishing stack and site, and willing to self-host or pay for managed hosting.
+
+[mailerlite / Best when]
+  WAS: You want a low price-per-subscriber with a drag-and-drop builder, automations, and a free plan (now 250 subs / 2,500 sends). Pick over Mailchimp/Kit because it's cheaper (Comfort from ~$12 at 500 subs, Power from ~$25) for comparable features.
+  NOW: You want a low price-per-subscriber with a drag-and-drop builder, automations, and a free plan (now 250 subs / 2,500 sends).
+
+[mailerlite / Avoid if]
+  WAS: You need deep creator commerce, a media-growth network, or an owned publishing site; Kit is stronger for creators, beehiiv for newsletter growth/monetization, Ghost for an owned site. Note the 2026 plan renames (now Comfort and Power) and 10-30% price bump.
+  NOW: You need deep creator commerce, a media-growth network, or an owned publishing site; Note the 2026 plan renames (now Comfort and Power) and 10-30% price bump.
+
+[mailerlite / Built for]
+  WAS: Small businesses and solo creators, non-technical marketers sending newsletters and automations with landing pages on a generous free tier.Best fit: budget-conscious senders who want clean, easy campaign tools without the creator-monetization focus of beehiiv or Kit.
+  NOW: Small businesses and solo creators, non-technical marketers sending newsletters and automations with landing pages on a generous free tier.
+
+[substack / Best when]
+  WAS: You want to start free, publish instantly, and tap network effects (recommendations, Notes, discovery) with no monthly fee. Pick over beehiiv/Ghost when reach and simplicity matter and you'd rather trade 10% of revenue than pay for or manage anything, but you keep ~$8.40 on a $10 sub after fees.
+  NOW: You want to start free, publish instantly, and tap network effects (recommendations, Notes, discovery) with no monthly fee.
+
+[substack / Avoid if]
+  WAS: Your list is large and paid (10% of revenue dwarfs a flat SaaS fee) or you want to own your platform, data, and design; move to Ghost (0% cut, fully owned) or beehiiv (better growth/monetization tooling).
+  NOW: Your list is large and paid (10% of revenue dwarfs a flat SaaS fee) or you want to own your platform, data, and design.
+
+[substack / Built for]
+  WAS: Individual writers and journalists, non-technical creators publishing free and paid newsletters with near-zero setup and built-in discovery.Best fit: writers who want the fastest path to a paid newsletter and audience network, accepting a revenue cut and limited customization.
+  NOW: Individual writers and journalists, non-technical creators publishing free and paid newsletters with near-zero setup and built-in discovery. Best fit: writers who want the fastest path to a paid newsletter and audience network, accepting a revenue cut and limited customization.
+
+[mailchimp / Best when]
+  WAS: You need broad integrations, landing pages, and multichannel marketing on a single well-known platform and want CRM, ads, and ecommerce under one roof instead of a pure email tool. Pick over MailerLite/Kit when breadth of integrations and template library matters most. Essentials from $13, Standard 
+  NOW: You need broad integrations, landing pages, and multichannel marketing on a single well-known platform and want CRM, ads, and ecommerce under one roof instead of a pure email tool. Essentials from $13, Standard from $20 (500 contacts).
+
+[mailchimp / Avoid if]
+  WAS: You're cost-sensitive or a creator; the Jan 2026 free-tier gutting (250 contacts/500 sends) and contact-tiered pricing (Standard ~$100 at 5k) make it pricey; MailerLite is cheaper, Kit better for creators, beehiiv/Substack for pure newsletters.
+  NOW: You're cost-sensitive or a creator; the Jan 2026 free-tier gutting (250 contacts/500 sends) and contact-tiered pricing (Standard ~$100 at 5k) make it pricey.
+
+[mailchimp / Built for]
+  WAS: Small-to-mid businesses and e-commerce sellers, general marketers running email campaigns, automations, and audience management with broad integrations.Best fit: established SMBs wanting a general-purpose marketing platform with commerce integrations, instead of a creator- or newsletter-first tool.
+  NOW: Small-to-mid businesses and e-commerce sellers, general marketers running email campaigns, automations, and audience management with broad integrations. Best fit: established SMBs wanting a general-purpose marketing platform with commerce integrations, instead of a creator- or newsletter-first tool.
+
+[buffer / Best when]
+  WAS: You post to a mix of LinkedIn, Instagram, TikTok and X and want predictable per-channel pricing. Free covers 3 channels/10 posts each, Essentials runs ~$5-6/channel/mo with volume discounts down to $1/channel past 51. Pick Buffer over Metricool when you want the cleanest queue UI without paying for 
+  NOW: You post to a mix of LinkedIn, Instagram, TikTok and X and want predictable per-channel pricing. Free covers 3 channels/10 posts each, Essentials runs ~$5-6/channel/mo with volume discounts down to $1/channel past 51.
+
+[buffer / Avoid if]
+  WAS: Your whole game is X threads and build-in-public growth (go Typefully; Hypefury no longer supports X), or you need agency-grade analytics and a unified inbox (go Metricool); Buffer's reporting is thin and per-channel costs balloon at high channel counts.
+  NOW: Buffer's reporting is thin and per-channel costs balloon at high channel counts.
+
+[buffer / Built for]
+  WAS: Solo creators, small businesses, and lean marketing teams who want a simple, reliable queue across Instagram, LinkedIn, X, Facebook, and TikTok without a steep learning curve.Best fit: When you need dependable set-and-forget scheduling and clean basic analytics, not deep engagement automation or hea
+  NOW: Solo creators, small businesses, and lean marketing teams who want a simple, reliable queue across Instagram, LinkedIn, X, Facebook, and TikTok without a steep learning curve. Best fit: When you need dependable set-and-forget scheduling and clean basic analytics, not deep engagement automation or he
+
+[typefully / Best when]
+  WAS: Your distribution IS writing: thread composing, tweet scheduling, AI ghostwriting drafts, and X-native analytics. Free gives 15 posts/mo and paid runs from ~$8/mo (Pro, annual) to ~$16/mo (Business, annual), bundled into "social sets". Pick Typefully over Hypefury when you want a calm distraction-fr
+  NOW: Your distribution IS writing: thread composing, tweet scheduling, AI ghostwriting drafts, and X-native analytics. Free gives 15 posts/mo and paid runs from ~$8/mo (Pro, annual) to ~$16/mo (Business, annual), bundled into "social sets".
+
+[typefully / Avoid if]
+  WAS: You're Instagram/TikTok/visual-led (go Later), managing many client brands with reporting needs (go Metricool), or you want monetization-oriented growth automation (go Hypefury, though it no longer supports X).
+  NOW: (empty)
+
+[typefully / Built for]
+  WAS: Writers, founders, and X/Twitter-first creators, often solo, who draft threads and long-form posts and value a distraction-free composer.Best fit: When your growth runs through X and LinkedIn text content and you want thread scheduling plus analytics, not a broad multi-network visual planner.
+  NOW: Writers, founders, and X/Twitter-first creators, often solo, who draft threads and long-form posts and value a distraction-free composer. Best fit: When your growth runs through X and LinkedIn text content and you want thread scheduling plus analytics, not a broad multi-network visual planner.
+
+[later / Best when]
+  WAS: You need a drag-and-drop visual content calendar, grid preview, Link-in-bio, best-time-to-post, and a UGC/media library. Later's ~$25/mo Starter tier and up is built around visual planning that Buffer and Typefully simply lack. Pick Later over Buffer when feed aesthetics and media-asset workflow mat
+  NOW: You need a drag-and-drop visual content calendar, grid preview, Link-in-bio, best-time-to-post, and a UGC/media library.
+
+[later / Avoid if]
+  WAS: You're a text-first build-in-public founder (go Typefully or Hypefury), price-sensitive and multi-platform (Buffer's per-channel model is cheaper), or you need unified cross-network analytics plus paid-ads reporting (go Metricool).
+  NOW: (empty)
+
+[later / Built for]
+  WAS: Instagram- and visually-driven brands, e-commerce sellers, and small social teams who plan feeds around images, reels, and link-in-bio.Best fit: When visual grid planning, media library, and link-in-bio matter more than text-heavy scheduling or advanced cross-network reporting.
+  NOW: Instagram- and visually-driven brands, e-commerce sellers, and small social teams who plan feeds around images, reels, and link-in-bio. Best fit: When visual grid planning, media library, and link-in-bio matter more than text-heavy scheduling or advanced cross-network reporting.
+
+[publer / Best when]
+  WAS: You want bulk/CSV scheduling, watermarks, an AI assistant, auto-recycling, and 10+ platforms (Google Business, Mastodon, Bluesky included) at low cost: Free covers 3 accounts, Professional is ~$5/mo for the first account then ~$4 each additional, undercutting Buffer at scale. Pick Publer over Buffer
+  NOW: (empty)
+
+[publer / Avoid if]
+  WAS: You specifically want creator-growth automation like auto-DMs and evergreen reposts (Hypefury, which no longer supports X), a polished visual IG planner (Later), or an agency reporting suite with paid-ads tracking (Metricool); Publer's analytics are functional but unremarkable.
+  NOW: Publer's analytics are functional but unremarkable.
+
+[publer / Built for]
+  WAS: Budget-conscious freelancers, agencies, and SMBs, low-to-mid technical, managing many accounts across most major networks with bulk scheduling and workspaces.Best fit: When you want the widest network coverage and power features per dollar, and can trade a busier interface for cheaper multi-account 
+  NOW: Budget-conscious freelancers, agencies, and SMBs, low-to-mid technical, managing many accounts across most major networks with bulk scheduling and workspaces. Best fit: When you want the widest network coverage and power features per dollar, and can trade a busier interface for cheaper multi-account
+
+[metricool / Best when]
+  WAS: You want scheduling PLUS unified analytics, competitor benchmarking, and Google/Meta/TikTok ads management in one dashboard. Free covers 1 brand, Starter ~$20-36/mo (up to 10 brands), Advanced from ~$53/mo (up to 50 brands). Pick Metricool over Buffer/Publer when reporting and ad-ROI tracking drive 
+  NOW: You want scheduling PLUS unified analytics, competitor benchmarking, and Google/Meta/TikTok ads management in one dashboard. Free covers 1 brand, Starter ~$20-36/mo (up to 10 brands), Advanced from ~$53/mo (up to 50 brands).
+
+[metricool / Avoid if]
+  WAS: You just need a simple posting queue (Buffer or Publer are cheaper and simpler), you're purely X-growth focused (Typefully; Hypefury dropped X support), or you're a solo creator who'll never open the analytics; you'd overpay for unused reporting.
+  NOW: You'd overpay for unused reporting.
+
+[metricool / Built for]
+  WAS: Data-minded marketers, small agencies, and consultants who need scheduling plus genuine cross-channel analytics, including ads and competitor tracking.Best fit: When reporting and measurement drive decisions and you want publishing and analytics in one tool, not a posting-first scheduler with shallo
+  NOW: Data-minded marketers, small agencies, and consultants who need scheduling plus genuine cross-channel analytics, including ads and competitor tracking. Best fit: When reporting and measurement drive decisions and you want publishing and analytics in one tool, not a posting-first scheduler with shall
+
+[hypefury / Best when]
+  WAS: You want aggressive growth automation no other tool here bundles: auto-reposts of top posts, evergreen recycling, auto-DMs to engagers, post-to-lead funnels, inspiration posts. Flexible $6/mo per channel or Full $19/mo for all channels (no free plan, 7-day trial). Pick Hypefury over Typefully when g
+  NOW: You want aggressive growth automation no other tool here bundles: auto-reposts of top posts, evergreen recycling, auto-DMs to engagers, post-to-lead funnels, inspiration posts. Flexible $6/mo per channel or Full $19/mo for all channels (no free plan, 7-day trial).
+
+[hypefury / Avoid if]
+  WAS: You're X/Twitter-first (Hypefury dropped X support), visual-led (Buffer, Later), you want minimalist distraction-free writing (Typefully), or automated DMs and reposts feel off-brand; the automation that's its strength can read as spammy.
+  NOW: The automation that's its strength can read as spammy.
+
+[hypefury / Built for]
+  WAS: Creators on Threads, Bluesky, LinkedIn, Instagram and TikTok (X/Twitter support was dropped), typically solo builders and audience-growth hackers, comfortable with automation who want to monetize a following.Best fit: When you want aggressive growth automation (auto-reposts, evergreen recycling, DM 
+  NOW: Creators on Threads, Bluesky, LinkedIn, Instagram and TikTok (X/Twitter support was dropped), typically solo builders and audience-growth hackers, comfortable with automation who want to monetize a following. Best fit: When you want aggressive growth automation (auto-reposts, evergreen recycling, DM
+
+[stripe / Best when]
+  WAS: You're building custom billing (usage-based, metered, complex subscriptions, or marketplaces via Connect) and want the deepest ecosystem (Stripe Tax, Billing, Radar, Invoicing) at a 2.9% + 30¢ base. Pick Stripe over Paddle/Polar/Lemon Squeezy when you need control and lower base fees and will regist
+  NOW: You're building custom billing (usage-based, metered, complex subscriptions, or marketplaces via Connect) and want the deepest ecosystem (Stripe Tax, Billing, Radar, Invoicing) at a 2.9% + 30¢ base.
+
+[stripe / Avoid if]
+  WAS: You sell globally and don't want to become a tax filer in dozens of jurisdictions. A Merchant of Record (Paddle, Polar, Lemon Squeezy) remits tax for you; or you're mobile in-app subscription-led (RevenueCat) or in-person retail (Square).
+  NOW: You sell globally and don't want to become a tax filer in dozens of jurisdictions.
+
+[stripe / Built for]
+  WAS: Engineering-led startups through large enterprises with developers who want programmable payments, subscriptions, and financial infrastructure via its APIs.Best fit: When you have technical resources and need maximum flexibility and global coverage, and are willing to handle sales-tax and merchant-o
+  NOW: Engineering-led startups through large enterprises with developers who want programmable payments, subscriptions, and financial infrastructure via its APIs. Best fit: When you have technical resources and need maximum flexibility and global coverage, and are willing to handle sales-tax and merchant-
+
+[paddle / Best when]
+  WAS: You're a B2B/B2C software company wanting a Merchant of Record that becomes the legal seller (handling global tax registration and remittance, fraud, chargebacks, and localized checkout) for a flat 5% + 50¢, no monthly fee. Pick Paddle over Stripe when tax compliance and dunning are worth the higher
+  NOW: You're a B2B/B2C software company wanting a Merchant of Record that becomes the legal seller (handling global tax registration and remittance, fraud, chargebacks, and localized checkout) for a flat 5% + 50¢, no monthly fee.
+
+[paddle / Avoid if]
+  WAS: You want the lowest fees and will handle tax (Stripe), you're an indie wanting a cheaper dev-friendly MoR (Polar's paid tiers drop to 3.4%), or you sell mobile in-app (RevenueCat) or in person (Square).
+  NOW: (empty)
+
+[paddle / Built for]
+  WAS: SaaS and software companies, often small teams without a finance department, who want a merchant of record handling global tax, compliance, and billing.Best fit: When selling software worldwide and you want VAT/sales-tax and fraud offloaded, accepting less low-level control than a raw payments API g
+  NOW: SaaS and software companies, often small teams without a finance department, who want a merchant of record handling global tax, compliance, and billing. Best fit: When selling software worldwide and you want VAT/sales-tax and fraud offloaded, accepting less low-level control than a raw payments API 
+
+[polar / Best when]
+  WAS: You're selling digital products, SaaS, or usage-based software and want MoR tax handling plus a clean API, and volume justifies its rate-reducing tiers (5% + 50¢ free, dropping to 3.8% on Pro $20/mo, 3.6% on Growth, 3.4% on Scale), cheaper than flat-5% Paddle/Lemon Squeezy at scale. Pick Polar over 
+  NOW: (empty)
+
+[polar / Avoid if]
+  WAS: You need enterprise procurement trust and maturity (Paddle), you're a raw dev wanting Stripe's full flexibility and lower base rate, or you're mobile-IAP (RevenueCat) or in-person (Square).
+  NOW: (empty)
+
+[polar / Built for]
+  WAS: Indie developers and open-source maintainers, highly technical and small, monetizing digital products, subscriptions, and usage with a developer-first merchant of record.Best fit: When you're a solo dev or tiny team wanting modern DX and MoR tax handling, over a heavier enterprise billing platform.
+  NOW: Indie developers and open-source maintainers, highly technical and small, monetizing digital products, subscriptions, and usage with a developer-first merchant of record. Best fit: When you're a solo dev or tiny team wanting modern DX and MoR tax handling, over a heavier enterprise billing platform.
+
+[lemon squeezy / Best when]
+  WAS: You want the fastest no-code path to a global storefront with MoR tax handling, license keys, and built-in affiliate and email tools: 5% + 50¢ plus surcharges (1.5% international cards, 1.5% PayPal, 0.5% subscriptions). Now Stripe-owned so it's a polished, stable pick. Choose Lemon Squeezy over Pola
+  NOW: You want the fastest no-code path to a global storefront with MoR tax handling, license keys, and built-in affiliate and email tools: 5% + 50¢ plus surcharges (1.5% international cards, 1.5% PayPal, 0.5% subscriptions).
+
+[lemon squeezy / Avoid if]
+  WAS: Your volume is high enough that Polar's tiered 3.4-3.8% beats LS's flat-plus-surcharges, you need deep custom billing (Stripe), or you're mobile-IAP (RevenueCat) or brick-and-mortar (Square).
+  NOW: (empty)
+
+[lemon squeezy / Built for]
+  WAS: Solo founders and small teams selling digital products, SaaS, and licenses who want an all-in-one merchant of record with minimal setup.Best fit: When you want fast, low-code global selling with tax handled, and don't need deep API customization or enterprise-scale billing logic.
+  NOW: Solo founders and small teams selling digital products, SaaS, and licenses who want an all-in-one merchant of record with minimal setup. Best fit: When you want fast, low-code global selling with tax handled, and don't need deep API customization or enterprise-scale billing logic.
+
+[revenuecat / Best when]
+  WAS: You ship iOS/Android and need to manage subscriptions, entitlements, receipt validation, paywalls, and cross-platform subscriber analytics without building StoreKit/Billing plumbing (free up to $2,500 monthly tracked revenue, then 1% of MTR). Pick RevenueCat over Stripe/Paddle/Polar/Lemon Squeezy be
+  NOW: You ship iOS/Android and need to manage subscriptions, entitlements, receipt validation, paywalls, and cross-platform subscriber analytics without building StoreKit/Billing plumbing (free up to $2,500 monthly tracked revenue, then 1% of MTR). The stores are your processor and RevenueCat sits on top.
+
+[revenuecat / Avoid if]
+  WAS: You sell web/desktop SaaS or digital goods (use Stripe or an MoR), you process payments outside the app stores, or you're pre-revenue and want to avoid another SDK, though the free tier makes early adoption low-risk.
+  NOW: (empty)
+
+[revenuecat / Built for]
+  WAS: Mobile app developers and product teams, technical, running iOS/Android subscriptions who need cross-platform in-app purchase infrastructure and subscription analytics.Best fit: When your revenue is app-store IAP and you need to manage entitlements and metrics across platforms, not general web card 
+  NOW: Mobile app developers and product teams, technical, running iOS/Android subscriptions who need cross-platform in-app purchase infrastructure and subscription analytics. Best fit: When your revenue is app-store IAP and you need to manage entitlements and metrics across platforms, not general web card
+
+[square / Best when]
+  WAS: You take in-person card payments and want a free POS app, hardware, and unified online+offline inventory (2.6% + 15¢ tapped/dipped in person, ~2.9% + 30¢ online, free POS software). Pick Square over Stripe when the card-present counter/on-the-go experience and integrated POS/hardware matter, and ove
+  NOW: You take in-person card payments and want a free POS app, hardware, and unified online+offline inventory (2.6% + 15¢ tapped/dipped in person, ~2.9% + 30¢ online, free POS software).
+
+[square / Avoid if]
+  WAS: You're pure SaaS/digital with no in-person sales (Stripe for flexibility, an MoR for global tax), you sell internationally and need tax remittance (Paddle/Polar), or you're mobile-IAP (RevenueCat); Square's developer API is thinner than Stripe's.
+  NOW: (empty)
+
+[square / Built for]
+  WAS: Brick-and-mortar retailers, restaurants, and service businesses, non-technical owners, needing point-of-sale hardware plus integrated online payments.Best fit: When you sell in person and want POS, inventory, and payments bundled, instead of a developer-first API for a software product.
+  NOW: Brick-and-mortar retailers, restaurants, and service businesses, non-technical owners, needing point-of-sale hardware plus integrated online payments. Best fit: When you sell in person and want POS, inventory, and payments bundled, instead of a developer-first API for a software product.
+
+[lovable / Best when]
+  WAS: You want to describe an app in chat and get a React + Supabase full-stack product with auth, database, and clean UI, plus GitHub sync and Supabase integration for when you outgrow the prompt box. Free gives 5 daily/30 monthly credits, Pro $25/mo (100 credits), Business $50/mo. Pick Lovable over Bolt
+  NOW: You want to describe an app in chat and get a React + Supabase full-stack product with auth, database, and clean UI, plus GitHub sync and Supabase integration for when you outgrow the prompt box. Free gives 5 daily/30 monthly credits, Pro $25/mo (100 credits), Business $50/mo.
+
+[lovable / Avoid if]
+  WAS: You need native mobile apps (FlutterFlow), pixel-level no-code control (Bubble), or you're a strong engineer who'd move faster hand-coding (Self-managed), and watch credit burn on heavy debugging iteration.
+  NOW: (empty)
+
+[lovable / Built for]
+  WAS: Non-technical founders and product people prototyping full-stack web apps through natural-language prompts, generating React front ends with backend integration.Best fit: When you want to describe an app and get a working, editable codebase fast, over hand-coding or a purely visual no-code builder.
+  NOW: Non-technical founders and product people prototyping full-stack web apps through natural-language prompts, generating React front ends with backend integration. Best fit: When you want to describe an app and get a working, editable codebase fast, over hand-coding or a purely visual no-code builder.
+
+[bolt.new / Best when]
+  WAS: You want to generate AND run a full app entirely in the browser (StackBlitz WebContainers), pick your framework, and edit files directly (Free 1M tokens/mo with a 300K daily cap, Pro $25/mo with ~10M tokens, Teams $30/member). Pick Bolt over Lovable when you want raw control over framework choice an
+  NOW: You want to generate AND run a full app entirely in the browser (StackBlitz WebContainers), pick your framework, and edit files directly (Free 1M tokens/mo with a 300K daily cap, Pro $25/mo with ~10M tokens, Teams $30/member).
+
+[bolt.new / Avoid if]
+  WAS: You want maximum design polish and hand-holding (Lovable), native mobile (FlutterFlow), pure UI components (v0), or you'd burn tokens fast on debugging loops; Bolt's token model gets expensive on complex apps.
+  NOW: Bolt's token model gets expensive on complex apps.
+
+[bolt.new / Built for]
+  WAS: Developers and technical tinkerers who want AI to scaffold and run full-stack apps in an in-browser environment with live preview and deploy.Best fit: When you want prompt-driven generation you can immediately edit and ship in-browser, not a managed no-code platform hiding the code.
+  NOW: Developers and technical tinkerers who want AI to scaffold and run full-stack apps in an in-browser environment with live preview and deploy. Best fit: When you want prompt-driven generation you can immediately edit and ship in-browser, not a managed no-code platform hiding the code.
+
+[replit / Best when]
+  WAS: You want Agent 3 to build autonomously WHILE you retain a dev environment (terminal, packages, databases, deployments, collaboration) so you can graduate from prompting to actual coding without leaving; Core $20/mo includes ~$25 usage credits, Agent 3 runs up to 200 min autonomously. Pick Replit ove
+  NOW: You want Agent 3 to build autonomously WHILE you retain a dev environment (terminal, packages, databases, deployments, collaboration) so you can graduate from prompting to actual coding without leaving; Core $20/mo includes ~$25 usage credits, Agent 3 runs up to 200 min autonomously.
+
+[replit / Avoid if]
+  WAS: You want the slickest no-code full-stack UX (Lovable), native mobile (FlutterFlow), or you're non-technical and the IDE surface overwhelms. The power comes with more complexity than pure prompt builders.
+  NOW: The power comes with more complexity than pure prompt builders.
+
+[replit / Built for]
+  WAS: Developers, students, and teams wanting a full cloud IDE with AI agent, hosting, and collaboration across many languages, well beyond web alone.Best fit: When you need a coding environment plus AI assistance and deployment, not a single-purpose app generator or visual builder.
+  NOW: Developers, students, and teams wanting a full cloud IDE with AI agent, hosting, and collaboration across many languages, well beyond web alone. Best fit: When you need a coding environment plus AI assistance and deployment, not a single-purpose app generator or visual builder.
+
+[flutterflow / Best when]
+  WAS: You want a visual builder that outputs actual Flutter code, with Firebase/Supabase integration, custom functions, and App Store/Play Store deployment, the only tool here purpose-built for cross-platform native mobile; ~$39/mo Basic up through Growth/Business tiers. Pick FlutterFlow over Lovable/Bolt
+  NOW: You want a visual builder that outputs actual Flutter code, with Firebase/Supabase integration, custom functions, and App Store/Play Store deployment, the only tool here purpose-built for cross-platform native mobile; ~$39/mo Basic up through Growth/Business tiers.
+
+[flutterflow / Avoid if]
+  WAS: You're building a web-first SaaS (Lovable, Bolt, Replit), you want pure prompt-to-app with no visual-builder learning curve, or you need complex backend logic better hand-coded; FlutterFlow's strength is the mobile UI layer, and deep logic still means custom code.
+  NOW: FlutterFlow's strength is the mobile UI layer, and deep logic still means custom code.
+
+[flutterflow / Built for]
+  WAS: Product teams and semi-technical builders creating cross-platform mobile and web apps visually on Flutter, with custom code when needed.Best fit: When you specifically want native iOS/Android apps from a visual builder with real Flutter export, over web-only generators or heavy hand-coding.
+  NOW: Product teams and semi-technical builders creating cross-platform mobile and web apps visually on Flutter, with custom code when needed. Best fit: When you specifically want native iOS/Android apps from a visual builder with real Flutter export, over web-only generators or heavy hand-coding.
+
+[v0 / Best when]
+  WAS: You want to generate clean, production-ready React + shadcn/ui + Tailwind components from prompts or screenshots and paste them into an existing Next.js codebase. The cleanest frontend output of this group, Plus $30/user/mo (the old $20 Premium is legacy-only). Pick v0 over Lovable/Bolt/Replit when 
+  NOW: You want to generate clean, production-ready React + shadcn/ui + Tailwind components from prompts or screenshots and paste them into an existing Next.js codebase. The cleanest frontend output of this group, Plus $30/user/mo (the old $20 Premium is legacy-only).
+
+[v0 / Avoid if]
+  WAS: You need a full-stack app with auth/DB/backend (Lovable, Bolt, Replit), native mobile (FlutterFlow), or a no-code database-backed tool (Bubble); v0 hands you the front end and leaves the rest of the product to you.
+  NOW: V0 hands you the front end and leaves the rest of the product to you.
+
+[v0 / Built for]
+  WAS: Front-end developers and designers, technical, generating React and Tailwind UI components and pages from prompts within the Vercel ecosystem.Best fit: When you need polished UI and component code to drop into a Next.js project, not a full backend or standalone no-code app.
+  NOW: Front-end developers and designers, technical, generating React and Tailwind UI components and pages from prompts within the Vercel ecosystem. Best fit: When you need polished UI and component code to drop into a Next.js project, not a full backend or standalone no-code app.
+
+[bubble / Best when]
+  WAS: You're building a database-driven web app or marketplace with intricate workflows and want a mature visual builder with a huge plugin ecosystem, a managed no-code platform instead of AI-generated code you then maintain. Pricing runs on workload-unit tiers (Starter ~$29/mo up through Growth/Team); pi
+  NOW: You're building a database-driven web app or marketplace with intricate workflows and want a mature visual builder with a huge plugin ecosystem, a managed no-code platform instead of AI-generated code you then maintain. Pricing runs on workload-unit tiers (Starter ~$29/mo up through Growth/Team).
+
+[bubble / Avoid if]
+  WAS: You want AI to write real, portable code you own (Lovable, Bolt), you need native mobile (FlutterFlow), or you expect to scale to heavy custom performance; Bubble's workload pricing and platform lock-in can bite at scale.
+  NOW: Bubble's workload pricing and platform lock-in can bite at scale.
+
+[bubble / Built for]
+  WAS: Non-technical founders and operators building complex, database-backed web apps visually, without writing code, often for MVPs and internal tools.Best fit: When you need a mature visual platform with workflows and a database and can invest in learning it, over lighter AI code generators.
+  NOW: Non-technical founders and operators building complex, database-backed web apps visually, without writing code, often for MVPs and internal tools. Best fit: When you need a mature visual platform with workflows and a database and can invest in learning it, over lighter AI code generators.
+
+[supabase / Best when]
+  WAS: You need real SQL with joins, row-level-security policies, and a hosted Postgres you won't outgrow: the free tier gives 500MB DB, 50k MAU, and 2 projects (which auto-pause after ~1 week idle), while Pro at $25/mo bumps you to 8GB DB, 100k MAU, and $10 compute credit; pick it over Firebase when you r
+  NOW: You need real SQL with joins, row-level-security policies, and a hosted Postgres you won't outgrow: the free tier gives 500MB DB, 50k MAU, and 2 projects (which auto-pause after ~1 week idle), while Pro at $25/mo bumps you to 8GB DB, 100k MAU, and $10 compute credit.
+
+[supabase / Avoid if]
+  WAS: You're a mobile-first app leaning on Google's ecosystem and offline sync (go Firebase), or you only want raw serverless Postgres with per-branch previews (go Neon).
+  NOW: (empty)
+
+[supabase / Built for]
+  WAS: Seed-to-Series-A teams and full-stack JS/TS developers who want a Postgres database with built-in auth, storage, and realtime instead of stitching separate services together, primarily to ship a relational-backed web or mobile app fast.Best fit: when you want open-source Postgres you can self-host l
+  NOW: Seed-to-Series-A teams and full-stack JS/TS developers who want a Postgres database with built-in auth, storage, and realtime instead of stitching separate services together, primarily to ship a relational-backed web or mobile app fast. Best fit: when you want open-source Postgres you can self-host 
+
+[firebase / Best when]
+  WAS: You're shipping iOS/Android or a realtime chat/presence app and want Firestore's client-side offline cache and instant listeners. Spark free covers 50k reads / 20k writes / 20k deletes per day, 1GiB stored, and 2M Cloud Functions calls/month, and it hard-blocks instead of bills you when quotas hit; 
+  NOW: You're shipping iOS/Android or a realtime chat/presence app and want Firestore's client-side offline cache and instant listeners. Spark free covers 50k reads / 20k writes / 20k deletes per day, 1GiB stored, and 2M Cloud Functions calls/month, and it hard-blocks instead of bills you when quotas hit.
+
+[firebase / Avoid if]
+  WAS: You need relational joins, complex queries, or transactions across tables (Supabase/Neon), or you fear Blaze's pay-as-you-go read/write metering ($0.06 per 100k reads) spiking unpredictably at scale.
+  NOW: (empty)
+
+[firebase / Built for]
+  WAS: Solo developers and early startups, often mobile-first with light backend experience, who want a fully managed NoSQL backend with auth, hosting, and push notifications out of the box.Best fit: real-time mobile apps and MVPs where document data and Google's managed infrastructure beat running your ow
+  NOW: Solo developers and early startups, often mobile-first with light backend experience, who want a fully managed NoSQL backend with auth, hosting, and push notifications out of the box. Best fit: real-time mobile apps and MVPs where document data and Google's managed infrastructure beat running your o
+
+[neon / Best when]
+  WAS: You want a Postgres that scales to zero and forks a full copy of prod for every PR/preview like Git branches. The free plan gives up to 100 projects, 0.5GB storage and 100 compute-hours each, and paid compute is usage-based ($0.106/CU-hour on Launch, $0.222 on Scale) with no monthly minimum. Since D
+  NOW: You want a Postgres that scales to zero and forks a full copy of prod for every PR/preview like Git branches. The free plan gives up to 100 projects, 0.5GB storage and 100 compute-hours each, and paid compute is usage-based ($0.106/CU-hour on Launch, $0.222 on Scale) with no monthly minimum. Since D
+
+[neon / Avoid if]
+  WAS: You want auth/storage/realtime included (Supabase or Convex), or you need embedded/edge-local reads per tenant (Turso).
+  NOW: (empty)
+
+[neon / Built for]
+  WAS: Developers and teams wanting serverless Postgres with database branching, comfortable with SQL and any modern Postgres client, primarily to spin up per-branch preview databases in CI/CD.Best fit: when you need autoscaling, scale-to-zero Postgres with Git-like branches, versus Supabase's all-in-one b
+  NOW: Developers and teams wanting serverless Postgres with database branching, comfortable with SQL and any modern Postgres client, primarily to spin up per-branch preview databases in CI/CD.
+
+[turso / Best when]
+  WAS: You're doing database-per-tenant at scale or serving read-heavy globally-distributed users: libSQL replicates SQLite to the edge with no cold starts, and the free tier covers 100 databases, 5GB storage and 500M row reads/month, with Developer at $4.99/mo and Scaler at $24.92/mo. Choose it over Neon 
+  NOW: You're doing database-per-tenant at scale or serving read-heavy globally-distributed users: libSQL replicates SQLite to the edge with no cold starts, and the free tier covers 100 databases, 5GB storage and 500M row reads/month, with Developer at $4.99/mo and Scaler at $24.92/mo.
+
+[turso / Avoid if]
+  WAS: You need heavy concurrent writes, Postgres extensions/features, or a single large shared database (Neon/Supabase), or a document model (MongoDB Atlas).
+  NOW: (empty)
+
+[turso / Built for]
+  WAS: Developers building edge and local-first apps who want SQLite (libSQL) replicated close to users, primarily for low-latency reads at the edge and embedded or offline sync.Best fit: read-heavy, globally distributed apps needing many per-tenant databases, versus a single centralized Postgres or Mongo 
+  NOW: Developers building edge and local-first apps who want SQLite (libSQL) replicated close to users, primarily for low-latency reads at the edge and embedded or offline sync. Best fit: read-heavy, globally distributed apps needing many per-tenant databases, versus a single centralized Postgres or Mongo
+
+[mongodb atlas / Best when]
+  WAS: Your entities are nested/variable (catalogs, events, user profiles with sparse fields) and you'll lean on aggregation pipelines and horizontal sharding: the free M0 cluster gives 512MB, the Flex tier caps at $30/mo, and dedicated M10 starts ~$0.08/hr (~$58/mo) climbing with RAM. Pick it over Supabas
+  NOW: Your entities are nested/variable (catalogs, events, user profiles with sparse fields) and you'll lean on aggregation pipelines and horizontal sharding: the free M0 cluster gives 512MB, the Flex tier caps at $30/mo, and dedicated M10 starts ~$0.08/hr (~$58/mo) climbing with RAM.
+
+[mongodb atlas / Avoid if]
+  WAS: Your data is relational with joins and constraints (Neon/Supabase), or you want a full BaaS with auth/realtime baked in (Supabase/Convex).
+  NOW: (empty)
+
+[mongodb atlas / Built for]
+  WAS: Teams from startup to enterprise and developers preferring document/NoSQL modeling at any technical level, primarily for flexible-schema apps, search, and analytics on managed MongoDB across clouds.Best fit: when data is document-shaped and evolving and you need mature scaling, sharding, and full-te
+  NOW: Teams from startup to enterprise and developers preferring document/NoSQL modeling at any technical level, primarily for flexible-schema apps, search, and analytics on managed MongoDB across clouds. Best fit: when data is document-shaped and evolving and you need mature scaling, sharding, and full-t
+
+[convex / Best when]
+  WAS: You want end-to-end type safety and live-updating queries with zero websocket plumbing: write server functions in TS and the client re-renders automatically. Free covers up to 6 devs, 1M function calls, 20 GB-hours compute, 0.5GB database and 1GB file storage, Pro at $25/mo. Choose it over Firebase 
+  NOW: You want end-to-end type safety and live-updating queries with zero websocket plumbing: write server functions in TS and the client re-renders automatically. Free covers up to 6 devs, 1M function calls, 20 GB-hours compute, 0.5GB database and 1GB file storage, Pro at $25/mo.
+
+[convex / Avoid if]
+  WAS: You need raw SQL, existing Postgres tooling/ORMs, or portable standard queries (Neon/Supabase), or a document store at scale (MongoDB Atlas).
+  NOW: (empty)
+
+[convex / Built for]
+  WAS: Full-stack TypeScript developers at early-stage startups who want a reactive backend bundling database, server functions, and realtime into one strongly typed platform.Best fit: TS-first apps needing live-updating queries and server logic without managing a separate database, API layer, and websocke
+  NOW: Full-stack TypeScript developers at early-stage startups who want a reactive backend bundling database, server functions, and realtime into one strongly typed platform. Best fit: TS-first apps needing live-updating queries and server logic without managing a separate database, API layer, and websock
+
+[clerk / Best when]
+  WAS: You're on React/Next and want prebuilt SignIn components, user profiles, and B2B org management without building screens. The free tier is 50k MRU (monthly retained users, a narrower unit than the MAU rivals meter, so bills run lower), Pro is $25/mo, Business $300/mo. Choose it over Auth0 when you w
+  NOW: You're on React/Next and want prebuilt SignIn components, user profiles, and B2B org management without building screens. The free tier is 50k MRU (monthly retained users, a narrower unit than the MAU rivals meter, so bills run lower), Pro is $25/mo, Business $300/mo.
+
+[clerk / Avoid if]
+  WAS: You're not in the React/Next ecosystem, need turnkey enterprise SSO/SCIM reselling (go WorkOS), or want to fully own user data with no per-user fees (Better Auth).
+  NOW: (empty)
+
+[clerk / Built for]
+  WAS: Startups and product teams on React/Next.js who want prebuilt auth UI, user management, and organizations dropped in fast with low-to-mid backend effort.Best fit: B2C and B2B SaaS wanting polished drop-in components and multi-tenant orgs quickly, versus hand-wiring flows or configuring a heavier ide
+  NOW: Startups and product teams on React/Next.js who want prebuilt auth UI, user management, and organizations dropped in fast with low-to-mid backend effort. Best fit: B2C and B2B SaaS wanting polished drop-in components and multi-tenant orgs quickly, versus hand-wiring flows or configuring a heavier id
+
+[auth0 / Best when]
+  WAS: You need proven SOC2/HIPAA posture, many identity providers, and features like audit-log streaming to Datadog/Splunk and per-org RBAC: the free plan covers 25k MAU (now bundling one enterprise SSO connection and SCIM) across Auth0's public-cloud regions (US, EU, UK, AU, JP, CA), B2C Essentials start
+  NOW: You need proven SOC2/HIPAA posture, many identity providers, and features like audit-log streaming to Datadog/Splunk and per-org RBAC: the free plan covers 25k MAU (now bundling one enterprise SSO connection and SCIM) across Auth0's public-cloud regions (US, EU, UK, AU, JP, CA), B2C Essentials start
+
+[auth0 / Avoid if]
+  WAS: You're cost-sensitive and early; pricing climbs steeply past the free tier (go Supabase Auth or Better Auth), or your one real need is selling SSO to enterprise buyers, where WorkOS's per-connection model fits better.
+  NOW: You're cost-sensitive and early.
+
+[auth0 / Built for]
+  WAS: Mid-market to enterprise teams and security-conscious engineers needing broad protocol support, extensible rules/actions, and compliance across any stack or language.Best fit: complex identity needs (many connections, enterprise SSO, fine-grained extensibility) where breadth and maturity outweigh hi
+  NOW: Mid-market to enterprise teams and security-conscious engineers needing broad protocol support, extensible rules/actions, and compliance across any stack or language. Best fit: complex identity needs (many connections, enterprise SSO, fine-grained extensibility) where breadth and maturity outweigh h
+
+[supabase auth / Best when]
+  WAS: You want auth integrated with RLS policies so authorization lives in the database: free covers 50k MAU (bundled into the same $0/$25 Supabase plan), no separate vendor or bill. Choose it over Clerk/Auth0 when you value one integrated stack and data ownership over prebuilt UI, and over Better Auth wh
+  NOW: You want auth integrated with RLS policies so authorization lives in the database: free covers 50k MAU (bundled into the same $0/$25 Supabase plan), no separate vendor or bill.
+
+[supabase auth / Avoid if]
+  WAS: You're not on Supabase (the integration is the whole point), need polished prebuilt auth components and org management (Clerk), or require enterprise SAML/SCIM connections sold per-customer (WorkOS).
+  NOW: (empty)
+
+[supabase auth / Built for]
+  WAS: Teams already on Supabase Postgres wanting authentication tied directly to their database with row-level security, in a JS/TS-friendly workflow.Best fit: when you're inside the Supabase stack and want auth, RLS, and data living in one project, not adding a separate identity vendor.
+  NOW: Teams already on Supabase Postgres wanting authentication tied directly to their database with row-level security, in a JS/TS-friendly workflow. Best fit: when you're inside the Supabase stack and want auth, RLS, and data living in one project, not adding a separate identity vendor.
+
+[workos / Best when]
+  WAS: A big customer says they need SSO with Okta/Entra and SCIM provisioning and you must ship it fast: AuthKit is free up to 1M MAU for core auth, and enterprise SSO uses per-connection volume tiers ($125/connection at 1-15, sliding to $50 at 101-200), with Directory Sync a separate identically-priced S
+  NOW: A big customer says they need SSO with Okta/Entra and SCIM provisioning and you must ship it fast: AuthKit is free up to 1M MAU for core auth, and enterprise SSO uses per-connection volume tiers ($125/connection at 1-15, sliding to $50 at 101-200), with Directory Sync a separate identically-priced S
+
+[workos / Avoid if]
+  WAS: You're building consumer B2C auth (Clerk/Supabase are far cheaper), or you'll have many tiny enterprise customers. The per-connection pricing (doubled if you need SCIM too) becomes brutal.
+  NOW: The per-connection pricing (doubled if you need SCIM too) becomes brutal.
+
+[workos / Built for]
+  WAS: B2B SaaS companies moving upmarket whose engineers need enterprise features (SSO/SAML, SCIM directory sync, audit logs) bolted onto an existing auth setup.Best fit: when your app already has login and you now need SAML and SCIM to close enterprise deals, versus replacing your whole auth stack.
+  NOW: B2B SaaS companies moving upmarket whose engineers need enterprise features (SSO/SAML, SCIM directory sync, audit logs) bolted onto an existing auth setup. Best fit: when your app already has login and you now need SAML and SCIM to close enterprise deals, versus replacing your whole auth stack.
+
+[better auth / Best when]
+  WAS: You want a framework-agnostic, open-source, TypeScript-native auth library you self-host: free forever, users in your own database, plugins for MFA/passkeys/orgs, and no billing that scales with success. Choose it over hosted Clerk/Auth0/Stytch when data ownership and zero marginal cost matter, and 
+  NOW: You want a framework-agnostic, open-source, TypeScript-native auth library you self-host: free forever, users in your own database, plugins for MFA/passkeys/orgs, and no billing that scales with success.
+
+[better auth / Avoid if]
+  WAS: You don't want to own security patching, session hardening, and breach risk (hosted Clerk/Supabase remove that burden), or you need turnkey enterprise SSO/SCIM connections out of the box (WorkOS).
+  NOW: (empty)
+
+[better auth / Built for]
+  WAS: TypeScript developers who want a framework-agnostic, open-source, self-hosted auth library with full ownership of code and user data.Best fit: teams that want auth living in their own database and codebase with no per-MAU billing, versus a hosted identity service.
+  NOW: TypeScript developers who want a framework-agnostic, open-source, self-hosted auth library with full ownership of code and user data. Best fit: teams that want auth living in their own database and codebase with no per-MAU billing, versus a hosted identity service.
+
+[stytch / Best when]
+  WAS: You're building custom auth UX around passwordless magic links, OTP, passkeys, or WebAuthn and want fraud/device intelligence via API instead of prebuilt screens. Free covers 10k MAU (plus 5 SSO/SCIM connections), then roughly $0.05/MAU. Choose it over Clerk when you want a headless API you fully co
+  NOW: You're building custom auth UX around passwordless magic links, OTP, passkeys, or WebAuthn and want fraud/device intelligence via API instead of prebuilt screens. Free covers 10k MAU (plus 5 SSO/SCIM connections), then roughly $0.05/MAU.
+
+[stytch / Avoid if]
+  WAS: You want prebuilt drop-in UI components and to avoid building auth screens (Clerk), you're optimizing purely for lowest cost (Better Auth/Supabase Auth), or you need enterprise SSO reselling (WorkOS).
+  NOW: (empty)
+
+[stytch / Built for]
+  WAS: Developers building passwordless and fraud-resistant flows who want APIs for magic links, passkeys, OTP, and device fingerprinting over prebuilt UI.Best fit: when auth is a core product surface needing embedded, API-first passwordless and bot/fraud protection, versus drop-in component kits.
+  NOW: Developers building passwordless and fraud-resistant flows who want APIs for magic links, passkeys, OTP, and device fingerprinting over prebuilt UI. Best fit: when auth is a core product surface needing embedded, API-first passwordless and bot/fraud protection, versus drop-in component kits.
+
+[vercel / Best when]
+  WAS: You're on Next.js (or a modern frontend) and want git-push deploys, per-PR preview environments, and edge functions with a smooth workflow: Hobby is free, Pro is $20/user/mo including 1TB fast data transfer and 10M edge requests, with overage at $0.15/GB. Choose it over Netlify for first-class Next.
+  NOW: You're on Next.js (or a modern frontend) and want git-push deploys, per-PR preview environments, and edge functions with a smooth workflow: Hobby is free, Pro is $20/user/mo including 1TB fast data transfer and 10M edge requests, with overage at $0.15/GB.
+
+[vercel / Avoid if]
+  WAS: You need always-on stateful backends, containers, or databases (serverless-only; go Render/Railway/Fly), or you serve heavy bandwidth where $0.15/GB overages hurt (Cloudflare Pages has free egress).
+  NOW: You need always-on stateful backends, containers, or databases (serverless-only.
+
+[vercel / Built for]
+  WAS: Frontend and full-stack JS/TS teams, especially Next.js users, wanting zero-config Git deploys, preview environments, and edge/serverless functions.Best fit: Next.js and modern frontend apps where developer experience, per-PR previews, and a global CDN matter more than raw infra control.
+  NOW: Frontend and full-stack JS/TS teams, especially Next.js users, wanting zero-config Git deploys, preview environments, and edge/serverless functions. Best fit: Next.js and modern frontend apps where developer experience, per-PR previews, and a global CDN matter more than raw infra control.
+
+[render / Best when]
+  WAS: You want web services, managed Postgres, cron jobs, and background workers with pricing you can predict and no surprise metering. It's the only one of Render/Railway/Fly with a permanent free tier (512MB, sleeps with cold starts, no card), and Starter is $7/mo always-on. Choose it over Railway when 
+  NOW: You want web services, managed Postgres, cron jobs, and background workers with pricing you can predict and no surprise metering.
+
+[render / Avoid if]
+  WAS: You want cheapest metered pay-per-second for low-traffic apps (Railway often runs $10-15 vs Render's $21-34 for web+DB+worker), or you're frontend-only (Vercel/Cloudflare).
+  NOW: (empty)
+
+[render / Built for]
+  WAS: Small-to-mid teams wanting a Heroku-style PaaS for web services, background workers, cron jobs, and managed Postgres without touching Kubernetes.Best fit: full-stack apps needing long-running services and databases with simple config, versus frontend-first or function-only platforms.
+  NOW: Small-to-mid teams wanting a Heroku-style PaaS for web services, background workers, cron jobs, and managed Postgres without touching Kubernetes. Best fit: full-stack apps needing long-running services and databases with simple config, versus frontend-first or function-only platforms.
+
+[railway / Best when]
+  WAS: You run a web service plus database plus worker at modest traffic and want to pay only for what actually runs. There's only a tiny free tier ($1 of monthly usage credits, plus a one-time $5 trial credit) before the $5/mo Hobby plan, but per-second billing means a full backend often lands around $10-
+  NOW: You run a web service plus database plus worker at modest traffic and want to pay only for what actually runs.
+
+[railway / Avoid if]
+  WAS: You need a meaningful free tier (Render), you're hosting a static frontend (Cloudflare Pages/Vercel), or you want globally-distributed containers with persistent volumes (Fly.io).
+  NOW: (empty)
+
+[railway / Built for]
+  WAS: Indie developers and early startups wanting the fastest path from repo to running services and databases, with usage-based pricing and a clean dashboard.Best fit: quick full-stack deploys and prototypes where you want containers, databases, and env vars managed together with minimal setup.
+  NOW: Indie developers and early startups wanting the fastest path from repo to running services and databases, with usage-based pricing and a clean dashboard. Best fit: quick full-stack deploys and prototypes where you want containers, databases, and env vars managed together with minimal setup.
+
+[cloudflare pages / Best when]
+  WAS: You're serving a high-traffic static site or SPA and want unlimited free bandwidth and requests at any scale, with Workers for edge logic. The free tier is uniquely uncapped on bandwidth (500 builds/mo), so a viral frontend costs nothing in egress. Choose it over Vercel/Netlify precisely when bandwi
+  NOW: You're serving a high-traffic static site or SPA and want unlimited free bandwidth and requests at any scale, with Workers for edge logic. The free tier is uniquely uncapped on bandwidth (500 builds/mo), so a viral frontend costs nothing in egress.
+
+[cloudflare pages / Avoid if]
+  WAS: You need long-running stateful backends, containers, or a traditional Node server with persistent processes (go Fly.io or Render), or deep Next.js SSR features (Vercel).
+  NOW: (empty)
+
+[cloudflare pages / Built for]
+  WAS: Developers deploying static sites and edge apps who want tight pairing with Workers on Cloudflare's global network, in a JS/TS-friendly workflow.Best fit: JAMstack and edge-first apps that lean on Workers, KV, R2, and D1 at the edge, versus origin-based serverless hosts.
+  NOW: Developers deploying static sites and edge apps who want tight pairing with Workers on Cloudflare's global network, in a JS/TS-friendly workflow. Best fit: JAMstack and edge-first apps that lean on Workers, KV, R2, and D1 at the edge, versus origin-based serverless hosts.
+
+[fly.io / Best when]
+  WAS: You need real containers deployed to multiple global regions with persistent storage (even a database or stateful service), billed per-second with no base plan fee (a shared-cpu-1x/256MB runs ~$2/mo at 24/7. No free tier, just a short trial). Choose it over Render/Railway when multi-region latency a
+  NOW: You need real containers deployed to multiple global regions with persistent storage (even a database or stateful service), billed per-second with no base plan fee (a shared-cpu-1x/256MB runs ~$2/mo at 24/7. No free tier, just a short trial).
+
+[fly.io / Avoid if]
+  WAS: You want managed hand-holding and a free tier (Render), a static frontend (Cloudflare/Vercel), or you'd rather not think about regions and volumes at all (Railway).
+  NOW: (empty)
+
+[fly.io / Built for]
+  WAS: Engineers who want to run full Docker containers and VMs close to users in multiple regions, comfortable managing more infrastructure themselves.Best fit: latency-sensitive or stateful apps needing multi-region containers and persistent volumes, versus higher-level PaaS abstractions that hide the ma
+  NOW: Engineers who want to run full Docker containers and VMs close to users in multiple regions, comfortable managing more infrastructure themselves. Best fit: latency-sensitive or stateful apps needing multi-region containers and persistent volumes, versus higher-level PaaS abstractions that hide the m
+
+[netlify / Best when]
+  WAS: You're deploying a static site or SPA and value Netlify's mature plugin marketplace, form handling, and add-ons: free covers 300 credits/month (bandwidth draws them down at 20 credits/GB, so ~15GB at most), Pro is $20/mo flat with unlimited seats (Netlify removed per-seat pricing in April 2026). Cho
+  NOW: You're deploying a static site or SPA and value Netlify's mature plugin marketplace, form handling, and add-ons: free covers 300 credits/month (bandwidth draws them down at 20 credits/GB, so ~15GB at most), Pro is $20/mo flat with unlimited seats (Netlify removed per-seat pricing in April 2026).
+
+[netlify / Avoid if]
+  WAS: You're on Next.js and want first-class SSR/ISR (Vercel), you serve heavy bandwidth and want free egress (Cloudflare Pages), or you need real always-on backends, containers, or databases (Render/Fly.io).
+  NOW: (empty)
+
+[netlify / Built for]
+  WAS: Frontend teams and agencies building JAMstack sites who want Git-based deploys, deploy previews, and serverless functions with minimal config.Best fit: static and hybrid marketing or content sites where build pipeline and CDN simplicity lead, versus app-platform hosts running long-lived servers.
+  NOW: Frontend teams and agencies building JAMstack sites who want Git-based deploys, deploy previews, and serverless functions with minimal config. Best fit: static and hybrid marketing or content sites where build pipeline and CDN simplicity lead, versus app-platform hosts running long-lived servers.
+
+[posthog / Best when]
+  WAS: You want one tool covering funnels, retention, replays, and A/B tests instead of stitching several. The free tier is a fat 1M events/month with no base fee, and everything's in one dashboard. Choose it over Amplitude/Mixpanel when you also want replay and flags bundled, and over Statsig when analyti
+  NOW: You want one tool covering funnels, retention, replays, and A/B tests instead of stitching several. The free tier is a fat 1M events/month with no base fee, and everything's in one dashboard.
+
+[posthog / Avoid if]
+  WAS: PostHog's identified-event pricing (identified events can cost up to ~4x anonymous) surprises you at scale, or you need the polished enterprise-grade behavioral depth and org controls of Amplitude for a large analytics team.
+  NOW: (empty)
+
+[posthog / Built for]
+  WAS: Product and engineering teams wanting analytics, session replay, feature flags, and experiments in one open-source, self-hostable platform.Best fit: startups wanting an all-in-one product suite they can self-host and keep data in, versus buying separate analytics and feature-flag tools.
+  NOW: Product and engineering teams wanting analytics, session replay, feature flags, and experiments in one open-source, self-hostable platform. Best fit: startups wanting an all-in-one product suite they can self-host and keep data in, versus buying separate analytics and feature-flag tools.
+
+[amplitude / Best when]
+  WAS: Understanding user behavior is central and you want extensive cohorting/funnel/retention analysis, now with feature flags and session replay bundled. The free plan gives 2M events/month (10K session replays included), Plus starts at $0 usage-based with the first 2M events free, and pricing is event-
+  NOW: Understanding user behavior is central and you want extensive cohorting/funnel/retention analysis, now with feature flags and session replay bundled. The free plan gives 2M events/month (10K session replays included), Plus starts at $0 usage-based with the first 2M events free, and pricing is event-
+
+[amplitude / Avoid if]
+  WAS: High event volumes could make usage-based bills climb, or you want an all-in-one cheap tool with replay+flags (PostHog).
+  NOW: (empty)
+
+[amplitude / Built for]
+  WAS: Product managers and growth teams at scaling companies needing deep behavioral analytics, funnels, retention, and cohorting across web and mobile.Best fit: data-driven product orgs doing serious funnel and retention analysis where analytical depth and governance outweigh lighter, faster tools.
+  NOW: Product managers and growth teams at scaling companies needing deep behavioral analytics, funnels, retention, and cohorting across web and mobile. Best fit: data-driven product orgs doing serious funnel and retention analysis where analytical depth and governance outweigh lighter, faster tools.
+
+[mixpanel / Best when]
+  WAS: You value forecastable costs and snappy self-serve reports; since switching fully to event-based pricing (Feb 2025), bills scale cleanly with volume: free covers 1M events, then Growth is usage-based at about $0.28 per 1,000 events above the free 1M (e.g. ~$140/mo at 1.5M events), with 20K session r
+  NOW: You value forecastable costs and snappy self-serve reports; since switching fully to event-based pricing (Feb 2025), bills scale cleanly with volume: free covers 1M events, then Growth is usage-based at about $0.28 per 1,000 events above the free 1M (e.g. ~$140/mo at 1.5M events), with 20K session r
+
+[mixpanel / Avoid if]
+  WAS: You need session replay and feature flags bundled in (PostHog), or your team wants Amplitude's deeper enterprise behavioral modeling for large-scale analysis.
+  NOW: (empty)
+
+[mixpanel / Built for]
+  WAS: Product and marketing teams wanting event-based analytics with fast, self-serve reports, funnels, and dashboards at a low learning curve.Best fit: teams wanting quick event tracking and interactive reports without heavy setup, versus Amplitude's deeper but heavier analytical suite.
+  NOW: Product and marketing teams wanting event-based analytics with fast, self-serve reports, funnels, and dashboards at a low learning curve.
+
+[google analytics / Avoid if]
+  WAS: You need real product analytics (user-level event streams, precise funnels, cohorts, and retention), because GA4 samples data and isn't built for in-app behavioral analysis; go PostHog, Mixpanel, or Amplitude for anything past marketing measurement.
+  NOW: You need real product analytics (user-level event streams, precise funnels, cohorts, and retention), because GA4 samples data and isn't built for in-app behavioral analysis.
+
+[heap / Avoid if]
+  WAS: You want that same autocapture with transparent, cheaper, all-in-one pricing (PostHog also autocaptures and bundles replay/flags), or you prefer predictable event-based billing and mature reporting (Mixpanel); Heap's differentiation is thinner now that rivals autocapture too.
+  NOW: Heap's differentiation is thinner now that rivals autocapture too.
+
+[heap / Built for]
+  WAS: Product and growth teams wanting autocapture of every interaction so events can be analyzed retroactively without pre-instrumenting the app.Best fit: teams that don't want to define events upfront and value retroactive analysis, versus manual event tracking that misses what you forgot to log.
+  NOW: Product and growth teams wanting autocapture of every interaction so events can be analyzed retroactively without pre-instrumenting the app. Best fit: teams that don't want to define events upfront and value retroactive analysis, versus manual event tracking that misses what you forgot to log.
+
+[statsig / Best when]
+  WAS: A/B testing and controlled rollouts are central and you want a warehouse-grade experimentation platform with product analytics attached. The free tier is large: 2M events/month, unlimited flag and config checks, 50K session replays and unlimited seats; Pro ($150/mo) includes 5M events with $0.05 per
+  NOW: A/B testing and controlled rollouts are central and you want a warehouse-grade experimentation platform with product analytics attached. The free tier is large: 2M events/month, unlimited flag and config checks, 50K session replays and unlimited seats; Pro ($150/mo) includes 5M events with $0.05 per
+
+[statsig / Avoid if]
+  WAS: Your primary need is behavioral product analytics (funnels, cohorts, retention depth) where Amplitude or Mixpanel lead, or you want session replay and surveys bundled in too (PostHog).
+  NOW: (empty)
+
+[statsig / Built for]
+  WAS: Engineering and product teams running feature flags, experiments, and A/B tests at scale, with a warehouse-native deployment option.Best fit: experimentation-heavy orgs needing a rigorous stats engine and gradual rollouts, versus analytics-first tools that treat testing as an add-on.
+  NOW: Engineering and product teams running feature flags, experiments, and A/B tests at scale, with a warehouse-native deployment option. Best fit: experimentation-heavy orgs needing a rigorous stats engine and gradual rollouts, versus analytics-first tools that treat testing as an add-on.
+
+[stripe atlas / Best when]
+  WAS: You value the bundled ecosystem. $500 one-time covers formation, the $90 DE state fee, EIN, founder stock issuance with an 83(b) workflow, and year-one registered agent ($100/yr after), plus ~$2,500 Stripe credits and $50K+ in Mercury/AWS/Xero perks. Pick it over Clerky when you want turnkey banking
+  NOW: You value the bundled ecosystem. $500 one-time covers formation, the $90 DE state fee, EIN, founder stock issuance with an 83(b) workflow, and year-one registered agent ($100/yr after), plus ~$2,500 Stripe credits and $50K+ in Mercury/AWS/Xero perks.
+
+[stripe atlas / Avoid if]
+  WAS: You need attorney-grade, negotiable financing docs (go Clerky) or the cheapest private LLC (go Northwest); Atlas now forms both a C-corp and an LLC, but only in Delaware.
+  NOW: Atlas now forms both a C-corp and an LLC, but only in Delaware.
+
+[stripe atlas / Built for]
+  WAS: Pre-seed and seed founders, often solo or a small technical team, forming a Delaware C-corp to raise venture money and issue equity.Best fit: the right call when you want a fast, standardized C-corp with a bank account and Stripe payments wired in, versus law-firm-grade or state-flexible setups.
+  NOW: Pre-seed and seed founders, often solo or a small technical team, forming a Delaware C-corp to raise venture money and issue equity. Best fit: the right call when you want a fast, standardized C-corp with a bank account and Stripe payments wired in, versus law-firm-grade or state-flexible setups.
+
+[clerky / Best when]
+  WAS: Legal correctness beats onboarding polish. $427 per-use incorporation (+ state fees) or an $819 Company Lifetime Package bundling expedited filing, year-one registered agent, annual-report reminders and lifetime document workflows. Choose it over Stripe Atlas when your bottleneck is airtight, YC/att
+  NOW: Legal correctness beats onboarding polish. $427 per-use incorporation (+ state fees) or an $819 Company Lifetime Package bundling expedited filing, year-one registered agent, annual-report reminders and lifetime document workflows.
+
+[clerky / Avoid if]
+  WAS: You want the banking-and-perks bundle (go Atlas), a non-resident package with a US address (go Firstbase/doola), or just cheap registered-agent service (go Northwest).
+  NOW: (empty)
+
+[clerky / Built for]
+  WAS: First-time startup founders and their lawyers handling C-corp formation, 83(b) elections, SAFEs, and equity paperwork with legal precision.Best fit: pick it over Atlas when clean, VC-ready cap-table and financing documents matter more than speed or bundled banking.
+  NOW: First-time startup founders and their lawyers handling C-corp formation, 83(b) elections, SAFEs, and equity paperwork with legal precision. Best fit: pick it over Atlas when clean, VC-ready cap-table and financing documents matter more than speed or bundled banking.
+
+[firstbase / Best when]
+  WAS: You're overseas and want state filing fees baked into one $399 one-time price (EIN expedited, core docs, RA ~$299/yr after), with an optional non-resident tax filing at ~$899/yr that undercuts doola's $1,999 tier. Pick it over doola when you prefer a one-time formation fee over a recurring $297/yr s
+  NOW: (empty)
+
+[firstbase / Avoid if]
+  WAS: You're US-based and VC-track (Atlas/Clerky fit better and unlock banking perks) or you just want the cheapest private US LLC (Northwest at ~$575+ over 5 years).
+  NOW: (empty)
+
+[firstbase / Built for]
+  WAS: Non-US and remote founders incorporating a US LLC or C-corp remotely, plus small teams wanting ongoing compliance handled.Best fit: choose it when you need US entity plus EIN, registered agent, and tax filings managed for a foreign or distributed founder, not just the initial filing.
+  NOW: Non-US and remote founders incorporating a US LLC or C-corp remotely, plus small teams wanting ongoing compliance handled. Best fit: choose it when you need US entity plus EIN, registered agent, and tax filings managed for a foreign or distributed founder, not just the initial filing.
+
+[doola / Best when]
+  WAS: You'd rather pay $297/yr (+ state fees) to keep formation, EIN, registered agent, a US business address and a Mercury banking intro bundled and renewing automatically, and may add a $1,999 tax tier. Choose it over Firstbase when you want an all-in annual compliance subscription over a one-time $399 
+  NOW: You'd rather pay $297/yr (+ state fees) to keep formation, EIN, registered agent, a US business address and a Mercury banking intro bundled and renewing automatically, and may add a $1,999 tax tier.
+
+[doola / Avoid if]
+  WAS: You want state fees included up front and cheaper tax filing (go Firstbase's $399 + $899 tax), or you're a US founder raising VC and need a C-corp with a real cap table (go Atlas/Carta).
+  NOW: (empty)
+
+[doola / Built for]
+  WAS: Solopreneurs, e-commerce sellers, and international founders forming a US LLC on a budget with bookkeeping and tax add-ons.Best fit: the low-cost pick for a simple LLC and compliance when you are not raising venture capital and want an affordable all-in-one.
+  NOW: Solopreneurs, e-commerce sellers, and international founders forming a US LLC on a budget with bookkeeping and tax add-ons. Best fit: the low-cost pick for a simple LLC and compliance when you are not raising venture capital and want an affordable all-in-one.
+
+[northwest registered agent / Best when]
+  WAS: Cost and privacy dominate: roughly $39 + state fee to form and $125/yr for registered agent (about $575+ all-in over five years), with Northwest listing its own address to keep yours off public records; pick it over Firstbase/doola when you're a US resident who doesn't need their non-resident scaffo
+  NOW: Cost and privacy dominate: roughly $39 + state fee to form and $125/yr for registered agent (about $575+ all-in over five years), with Northwest listing its own address to keep yours off public records.
+
+[northwest registered agent / Avoid if]
+  WAS: You're raising venture money and need a Delaware C-corp with 83(b) and a cap table (go Atlas then Carta), or you want banking credits and perks bundled (go Atlas).
+  NOW: (empty)
+
+[northwest registered agent / Built for]
+  WAS: Founders and small businesses in any US state needing registered-agent service and LLC or corp filing with strong privacy and human support.Best fit: best when registered agent and privacy across states is the priority, rather than a startup-specific equity or fundraising toolkit.
+  NOW: Founders and small businesses in any US state needing registered-agent service and LLC or corp filing with strong privacy and human support. Best fit: best when registered agent and privacy across states is the priority, rather than a startup-specific equity or fundraising toolkit.
+
+[carta / Best when]
+  WAS: You've already formed (or will via Atlas/Clerky) and need equity managed properly. Carta Launch is free up to 25 stakeholders and $1M raised, then custom-quoted paid early-stage tiers (no public flat monthly price like "$599/mo"; standalone 409As from ~$3,500) as you grow; choose it over the pure fo
+  NOW: Carta Launch is free up to 25 stakeholders and $1M raised, then custom-quoted paid early-stage tiers (no public flat monthly price like "$599/mo"; standalone 409As from ~$3,500) as you grow; choose it over the pure formation tools when your real problem is tracking ownership, SAFEs converting, and v
+
+[carta / Avoid if]
+  WAS: You just need to incorporate and get an EIN (that's Atlas/Clerky/Northwest's job) or you're a tiny cap table where a spreadsheet suffices; Carta's median real cost climbs to ~$14K+/yr as stakeholders grow.
+  NOW: Carta's median real cost climbs to ~$14K+/yr as stakeholders grow.
+
+[carta / Built for]
+  WAS: Funded startups and their finance leads managing cap tables, 409A valuations, equity grants, and investor reporting after incorporation.Best fit: adopt it once you have real equity to administer and investors to report to, not for the day-one filing itself.
+  NOW: Funded startups and their finance leads managing cap tables, 409A valuations, equity grants, and investor reporting after incorporation. Best fit: adopt it once you have real equity to administer and investors to report to, not for the day-one filing itself.
+
+[quickbooks online / Best when]
+  WAS: Universal accountant support and ecosystem depth matter more than startup-specific features: paid tiers Simple Start $38, Essentials $85, Plus $140 and Advanced $340/mo after the Aug 1, 2026 hike (Intuit's QuickBooks Free is a separate $0 product), with the deepest app marketplace and payroll/paymen
+  NOW: Universal accountant support and ecosystem depth matter more than startup-specific features: paid tiers Simple Start $38, Essentials $85, Plus $140 and Advanced $340/mo after the Aug 1, 2026 hike (Intuit's QuickBooks Free is a separate $0 product), with the deepest app marketplace and payroll/paymen
+
+[quickbooks online / Avoid if]
+  WAS: You're VC-backed and need daily runway, simultaneous cash+accrual GAAP books and SaaS rev-rec (go Puzzle), or you're pre-revenue and want free (go Wave or QuickBooks Free).
+  NOW: (empty)
+
+[quickbooks online / Built for]
+  WAS: Small businesses and their bookkeepers or accountants who want the US-standard general ledger, invoicing, payroll, and tax-ready books.Best fit: the safe default when you need an accountant who already knows the tool and deep third-party integrations, over leaner or newer options.
+  NOW: Small businesses and their bookkeepers or accountants who want the US-standard general ledger, invoicing, payroll, and tax-ready books. Best fit: the safe default when you need an accountant who already knows the tool and deep third-party integrations, over leaner or newer options.
+
+[xero / Best when]
+  WAS: Collaboration and global basics drive the choice. Plans from ~$25/mo with unlimited users at no extra charge (versus QBO's tier-gated user counts), strong multi-currency and bank-feed support on higher tiers. Pick it over QuickBooks when several teammates or an overseas contractor accountant all nee
+  NOW: Collaboration and global basics drive the choice. Plans from ~$25/mo with unlimited users at no extra charge (versus QBO's tier-gated user counts), strong multi-currency and bank-feed support on higher tiers.
+
+[xero / Avoid if]
+  WAS: You specifically need the widest US CPA familiarity (QBO wins there) or startup-native accrual/runway/rev-rec built in (go Puzzle); Xero's US bookkeeper pool is thinner than QBO's.
+  NOW: Xero's US bookkeeper pool is thinner than QBO's.
+
+[xero / Built for]
+  WAS: Small businesses and accounting firms, strong outside the US, wanting clean double-entry books, unlimited users, and a broad app ecosystem.Best fit: choose it over QuickBooks for better multi-user pricing and international workflows, especially outside North America.
+  NOW: Small businesses and accounting firms, strong outside the US, wanting clean double-entry books, unlimited users, and a broad app ecosystem. Best fit: choose it over QuickBooks for better multi-user pricing and international workflows, especially outside North America.
+
+[wave / Best when]
+  WAS: You're keeping costs at zero and volume is low. Core accounting and unlimited invoicing are free, with Pro at $19/mo adding bank feeds and multi-user access (receipt scanning is a separate add-on at $8-11/mo). Choose it over Zoho Books when you want genuinely free over a $15 Standard plan, and over 
+  NOW: You're keeping costs at zero and volume is low. Core accounting and unlimited invoicing are free, with Pro at $19/mo adding bank feeds and multi-user access (receipt scanning is a separate add-on at $8-11/mo).
+
+[wave / Avoid if]
+  WAS: You need burn/runway and accrual GAAP for a raise (go Puzzle), inventory tracking (go Zoho Books Professional at $40), or the CPA-universal standard for a growing team (go QuickBooks); Wave's reporting and integrations are thin.
+  NOW: Wave's reporting and integrations are thin.
+
+[wave / Built for]
+  WAS: Freelancers, sole proprietors, and very small businesses wanting free invoicing and basic accounting with minimal bookkeeping knowledge.Best fit: the right call when budget is zero and needs are simple, before you outgrow it into QuickBooks or Xero.
+  NOW: Freelancers, sole proprietors, and very small businesses wanting free invoicing and basic accounting with minimal bookkeeping knowledge.
+
+[puzzle / Best when]
+  WAS: You need startup-native accounting QBO and Xero were never built for: AI-native with simultaneous cash and accrual books, daily burn/runway, and SaaS revenue recognition. Starter is free for the first 2 months, then $30/mo (1 seat), Core $72 (5 seats), Complete $120 and Scale $360 (unlimited seats; 
+  NOW: Starter is free for the first 2 months, then $30/mo (1 seat), Core $72 (5 seats), Complete $120 and Scale $360 (unlimited seats; ~17% off annually).
+
+[puzzle / Avoid if]
+  WAS: You're a non-venture SMB where a bookkeeper's QBO familiarity matters more (go QuickBooks), you want free forever (go Wave), or you'd rather outsource the work entirely to humans (go Pilot).
+  NOW: (empty)
+
+[puzzle / Built for]
+  WAS: Startup founders and finance-savvy operators who want accrual-based, real-time books built for venture metrics and runway.Best fit: pick it over QuickBooks when you are a tech startup wanting modern, automated accounting tied to burn and runway instead of legacy small-business books.
+  NOW: Startup founders and finance-savvy operators who want accrual-based, real-time books built for venture metrics and runway. Best fit: pick it over QuickBooks when you are a tech startup wanting modern, automated accounting tied to burn and runway instead of legacy small-business books.
+
+[zoho books / Best when]
+  WAS: Value and inventory drive the pick: free under $50K annual revenue, Standard $15/mo, Professional $40/mo (unlocks inventory), scaling to $120 Elite and $240 Ultimate, with tight Zoho CRM/Inventory/Mail integration; choose it over Wave when you want more usable free functionality and inventory that W
+  NOW: Value and inventory drive the pick: free under $50K annual revenue, Standard $15/mo, Professional $40/mo (unlocks inventory), scaling to $120 Elite and $240 Ultimate, with tight Zoho CRM/Inventory/Mail integration.
+
+[zoho books / Avoid if]
+  WAS: Your accountant expects QuickBooks (go QBO), you're a venture startup needing accrual burn/runway (go Puzzle), or you want a truly zero-cost invoicing-first tool (Wave's free tier is simpler).
+  NOW: (empty)
+
+[zoho books / Built for]
+  WAS: Small and mid-size businesses already using or considering the Zoho suite, wanting affordable accounting with automation and inventory.Best fit: best when you want a low-cost, feature-rich ledger that plugs into Zoho CRM and apps, over standalone incumbents.
+  NOW: Small and mid-size businesses already using or considering the Zoho suite, wanting affordable accounting with automation and inventory. Best fit: best when you want a low-cost, feature-rich ledger that plugs into Zoho CRM and apps, over standalone incumbents.
+
+[pilot / Best when]
+  WAS: You'd rather buy the outcome than run the tool: managed US-based bookkeepers on accrual basis, with an Essentials tier around $99/mo for very low-expense companies stepping up to Core at ~$499+/mo (rising with monthly spend), plus optional tax and CFO services; choose Pilot over Puzzle/QBO/Xero when
+  NOW: You'd rather buy the outcome than run the tool: managed US-based bookkeepers on accrual basis, with an Essentials tier around $99/mo for very low-expense companies stepping up to Core at ~$499+/mo (rising with monthly spend), plus optional tax and CFO services.
+
+[pilot / Avoid if]
+  WAS: You want to DIY cheaply (Wave is free, QBO/Xero from ~$20), or you specifically want a live self-serve burn/runway dashboard you control day to day (go Puzzle).
+  NOW: (empty)
+
+[pilot / Built for]
+  WAS: Funded startups and growing companies that want to outsource bookkeeping to a human team rather than run software themselves.Best fit: choose it when you would rather hand off monthly close, tax, and CFO support than do the books in-house.
+  NOW: Funded startups and growing companies that want to outsource bookkeeping to a human team rather than run software themselves. Best fit: choose it when you would rather hand off monthly close, tax, and CFO support than do the books in-house.
+
+[intercom / Best when]
+  WAS: You want Fin wired into the messenger: seats at $29/$85/$132 per agent/mo (Essential/Advanced/Expert, annual) plus Fin at $0.99 per resolution. Choose it over Help Scout/Zendesk when AI deflection and product tours/proactive messaging are the point, not just a shared inbox.
+  NOW: You want Fin wired into the messenger: seats at $29/$85/$132 per agent/mo (Essential/Advanced/Expert, annual) plus Fin at $0.99 per resolution.
+
+[intercom / Avoid if]
+  WAS: Costs must be predictable and you're volume-heavy; Fin's per-resolution meter makes bills climb (8 agents + ~2,100 resolutions ≈ $2,800/mo); for calmer email support go Help Scout, for flat-rate go Crisp, and for open-source control go Chatwoot.
+  NOW: Costs must be predictable and you're volume-heavy; Fin's per-resolution meter makes bills climb (8 agents + ~2,100 resolutions ≈ $2,800/mo).
+
+[intercom / Built for]
+  WAS: Product-led SaaS companies with support and success teams wanting in-app messaging, AI resolution, and proactive engagement.Best fit: the pick when live chat, in-product onboarding, and an AI agent like Fin matter more than classic ticket queues, and you can pay for it.
+  NOW: Product-led SaaS companies with support and success teams wanting in-app messaging, AI resolution, and proactive engagement. Best fit: the pick when live chat, in-product onboarding, and an AI agent like Fin matter more than classic ticket queues, and you can pay for it.
+
+[help scout / Best when]
+  WAS: You value a clean shared inbox over a sprawling ticketing suite: Standard $25, Plus $45, Pro $75 per user/mo (monthly; roughly 16% less billed annually) with an AI Answers add-on at $0.75 per resolution, staying affordable up to ~25 agents; choose it over Intercom when you don't need Fin-grade AI or
+  NOW: You value a clean shared inbox over a sprawling ticketing suite: Standard $25, Plus $45, Pro $75 per user/mo (monthly; roughly 16% less billed annually) with an AI Answers add-on at $0.75 per resolution, staying affordable up to ~25 agents.
+
+[help scout / Avoid if]
+  WAS: You need the strongest AI deflection (go Intercom's Fin), enterprise routing/CSAT/WFM depth at scale (go Zendesk), a free self-hostable option (go Chatwoot), or flat non-per-seat billing for a big team (go Crisp).
+  NOW: (empty)
+
+[help scout / Built for]
+  WAS: Small to mid-size teams wanting a shared inbox and simple help center without the complexity or price of enterprise tools.Best fit: right when email-centric, human support with light automation is the goal, over heavier chat-first or enterprise suites.
+  NOW: Small to mid-size teams wanting a shared inbox and simple help center without the complexity or price of enterprise tools. Best fit: right when email-centric, human support with light automation is the goal, over heavier chat-first or enterprise suites.
+
+[freshdesk / Best when]
+  WAS: Budget per agent is the deciding factor: free for 1-2 agents for 6 months, then Growth $19, Pro $55, Enterprise $89 per agent/mo (annual), with a Freddy AI Copilot add-on at ~$29/agent. Choose it over Zendesk when you want comparable ticketing, SLAs and automation at a materially lower seat price, a
+  NOW: Budget per agent is the deciding factor: free for 1-2 agents for 6 months, then Growth $19, Pro $55, Enterprise $89 per agent/mo (annual), with a Freddy AI Copilot add-on at ~$29/agent.
+
+[freshdesk / Avoid if]
+  WAS: You want stronger AI deflection and product messaging (go Intercom), a truly free self-hosted stack (go Chatwoot), or flat workspace pricing instead of per-agent (go Crisp).
+  NOW: (empty)
+
+[freshdesk / Built for]
+  WAS: Growing support teams wanting a full ticketing helpdesk with multichannel, automations, and tiered pricing that scales.Best fit: choose it over Zendesk when you want comparable ticketing at friendlier pricing for a mid-market team.
+  NOW: Growing support teams wanting a full ticketing helpdesk with multichannel, automations, and tiered pricing that scales.
+
+[crisp / Best when]
+  WAS: Predictable flat-rate billing wins: Mini at $45/mo flat for 4 seats and Essentials at $95/mo for 10 seats, bundling live chat, shared inbox, chatbot and a CRM without per-agent fees, cutting costs 50-67% versus per-seat rivals for teams that size. Choose it over Freshdesk/Zendesk/Intercom when addin
+  NOW: Predictable flat-rate billing wins: Mini at $45/mo flat for 4 seats and Essentials at $95/mo for 10 seats, bundling live chat, shared inbox, chatbot and a CRM without per-agent fees, cutting costs 50-67% versus per-seat rivals for teams that size.
+
+[crisp / Avoid if]
+  WAS: You want Intercom's Fin for AI deflection, enterprise routing/reporting/WFM (go Zendesk), the personal email experience for a tiny team (go Help Scout), or full source-code control and self-hosting (go Chatwoot).
+  NOW: (empty)
+
+[crisp / Built for]
+  WAS: Startups and small businesses wanting an affordable all-in-one chat, shared inbox, and chatbot widget on their site.Best fit: the budget-friendly live-chat-first choice for small teams, versus pricier Intercom or ticket-heavy incumbents.
+  NOW: Startups and small businesses wanting an affordable all-in-one chat, shared inbox, and chatbot widget on their site.
+
+[chatwoot / Best when]
+  WAS: Data ownership and cost-at-scale matter: free open-source Community edition to self-host, or cloud tiers Startups $19, Business $39, Enterprise $99 per agent/mo, with an omnichannel inbox and Captain AI credits. Choose it over Crisp/Help Scout when you want to run it on your own infrastructure and a
+  NOW: Data ownership and cost-at-scale matter: free open-source Community edition to self-host, or cloud tiers Startups $19, Business $39, Enterprise $99 per agent/mo, with an omnichannel inbox and Captain AI credits.
+
+[chatwoot / Avoid if]
+  WAS: You don't want to run and maintain servers/updates (go Crisp or Help Scout for hosted simplicity) or you need turnkey AI deflection out of the box (go Intercom's Fin).
+  NOW: (empty)
+
+[chatwoot / Built for]
+  WAS: Engineering-minded teams wanting an open-source, self-hostable support inbox for chat, email, and social channels.Best fit: pick it when data control, self-hosting, or avoiding per-seat SaaS fees outweighs turnkey convenience.
+  NOW: Engineering-minded teams wanting an open-source, self-hostable support inbox for chat, email, and social channels. Best fit: pick it when data control, self-hosting, or avoiding per-seat SaaS fees outweighs turnkey convenience.
+
+[zendesk / Best when]
+  WAS: Breadth and enterprise features justify the premium: Suite Team $55, Professional $115 per agent/mo, Enterprise custom, with a Copilot AI add-on at ~$50/agent. A realistic mid-market all-in lands $165-$265/agent once QA/WFM/AI stack up. Choose it over Freshdesk/Help Scout when you genuinely need adv
+  NOW: Breadth and enterprise features justify the premium: Suite Team $55, Professional $115 per agent/mo, Enterprise custom, with a Copilot AI add-on at ~$50/agent. A realistic mid-market all-in lands $165-$265/agent once QA/WFM/AI stack up.
+
+[zendesk / Avoid if]
+  WAS: You're a small team where its depth is dead weight and cost (go Help Scout or Freshdesk), you want Intercom's Fin AI resolver in a product messenger (go Intercom), flat pricing (go Crisp), or an open-source self-hosted stack (go Chatwoot).
+  NOW: (empty)
+
+[zapier / Best when]
+  WAS: Breadth of 9,000+ integrations and ease matter most. Free gives 100 tasks/mo (two-step Zaps), Professional from $19.99/mo (750 tasks) billed annually (about $29.99 monthly), Team from $69/mo annually (about $103.50 monthly). A task is one successful action, so triggers and filters are free. Choose i
+  NOW: Breadth of 9,000+ integrations and ease matter most. Free gives 100 tasks/mo (two-step Zaps), Professional from $19.99/mo (750 tasks) billed annually (about $29.99 monthly), Team from $69/mo annually (about $103.50 monthly). A task is one successful action, so triggers and filters are free.
+
+[zapier / Avoid if]
+  WAS: Your workflows are multi-step and high-volume; per-task billing balloons versus Make's credits or n8n's per-execution model (go Make or n8n), or you want to self-host free (go n8n/Activepieces).
+  NOW: Your workflows are multi-step and high-volume.
+
+[make / Best when]
+  WAS: You want a rich drag-and-drop canvas with cheap runs: Free (1,000 credits/mo) then Core $12, Pro $21, Teams $38/mo, all paid plans starting at 10,000 credits (Make moved from "operations" to "credits" on Aug 27 2025); routers, iterators and error handling make complex logic visual; choose it over Za
+  NOW: You want a rich drag-and-drop canvas with cheap runs: Free (1,000 credits/mo) then Core $12, Pro $21, Teams $38/mo, all paid plans starting at 10,000 credits (Make moved from "operations" to "credits" on Aug 27 2025); routers, iterators and error handling make complex logic visual.
+
+[make / Avoid if]
+  WAS: You want per-workflow-execution billing regardless of module count or full self-hosting (go n8n), unlimited self-hosted flows (go Activepieces), or the very largest app catalog and simplest UX (go Zapier).
+  NOW: (empty)
+
+[make / Built for]
+  WAS: Operators and semi-technical builders wanting visual, branching automations with more logic and lower per-operation cost than Zapier.Best fit: choose it when workflows get complex and multi-step and you want a visual canvas cheaper than Zapier at volume.
+  NOW: (empty)
+
+[n8n / Best when]
+  WAS: Complex, high-volume workflows make per-step billing painful. One execution = one full workflow run no matter how many nodes, so a 30-step flow costs the same as a 3-step one. Cloud is $24/mo Starter or $60/mo Pro, and the Community edition is free to self-host with code nodes and AI/LLM building bl
+  NOW: Complex, high-volume workflows make per-step billing painful. One execution = one full workflow run no matter how many nodes, so a 30-step flow costs the same as a 3-step one. Cloud is $24/mo Starter or $60/mo Pro, and the Community edition is free to self-host with code nodes and AI/LLM building bl
+
+[n8n / Avoid if]
+  WAS: You're non-technical and want the easiest UX and biggest app library (go Zapier), a purely visual cloud canvas (go Make), or a fully MIT-licensed self-host (go Activepieces).
+  NOW: (empty)
+
+[n8n / Built for]
+  WAS: Developers and technical teams wanting an open-source, self-hostable automation platform with code nodes and full data control.Best fit: pick it when self-hosting, custom code, and unlimited executions beat the convenience of hosted no-code tools.
+  NOW: Developers and technical teams wanting an open-source, self-hostable automation platform with code nodes and full data control. Best fit: pick it when self-hosting, custom code, and unlimited executions beat the convenience of hosted no-code tools.
+
+[activepieces / Best when]
+  WAS: Predictable billing and no self-hosted run caps dominate: self-host free for unlimited, production-ready flows, or managed cloud tiers (free single-user, Plus $16/mo and Team $166/mo, billed yearly, credit-based). Choose it over Make when you want free, run-unlimited self-hosting, and over n8n when 
+  NOW: Predictable billing and no self-hosted run caps dominate: self-host free for unlimited, production-ready flows, or managed cloud tiers (free single-user, Plus $16/mo and Team $166/mo, billed yearly, credit-based).
+
+[activepieces / Avoid if]
+  WAS: You need the broadest connector catalog and consumer-grade polish (go Zapier), the most mature visual scenario tooling (go Make), or the largest self-hosted community and node library today (go n8n).
+  NOW: (empty)
+
+[activepieces / Built for]
+  WAS: Developers and small teams wanting an open-source, MIT-licensed automation tool with AI steps and a simpler self-hosted setup.Best fit: the right call when you want an open n8n alternative that is lighter to run and extend, without enterprise licensing.
+  NOW: Developers and small teams wanting an open-source, MIT-licensed automation tool with AI steps and a simpler self-hosted setup.
+
+[gumloop / Best when]
+  WAS: The job is AI automation, not integrations: a node-based canvas purpose-built for LLM steps, web scraping and document processing with Pro at $37/mo. Choose it over Zapier/Make when your flows are dominated by AI reasoning and unstructured-data tasks that those tools bolt on awkwardly, and over n8n/
+  NOW: The job is AI automation, not integrations: a node-based canvas purpose-built for LLM steps, web scraping and document processing with Pro at $37/mo.
+
+[gumloop / Avoid if]
+  WAS: You mainly need broad SaaS connectors and CRUD syncing (go Zapier or Make), execution-based pricing for step-heavy classic workflows (go n8n), or a free self-hosted open-source base (go Activepieces/n8n); Gumloop's strength is AI, not connector breadth.
+  NOW: Gumloop's strength is AI, not connector breadth.
+
+[gumloop / Built for]
+  WAS: Operators and growth teams building AI-heavy automations for scraping, enrichment, and content workflows on a visual canvas.Best fit: choose it when your automations center on LLM steps and data pipelines rather than plain app-to-app connectors.
+  NOW: Operators and growth teams building AI-heavy automations for scraping, enrichment, and content workflows on a visual canvas. Best fit: choose it when your automations center on LLM steps and data pipelines rather than plain app-to-app connectors.
+
+[pipedream / Best when]
+  WAS: You want code-first automation with generous limits. Free gives 100 credits/day, Basic $29/mo, Advanced $99/mo, and billing is by execution time (~1 credit ≈ 30s at 256MB), so a typical run is about one credit regardless of steps. Choose it over Zapier/Make when you'd rather write Node/Python inline
+  NOW: You want code-first automation with generous limits. Free gives 100 credits/day, Basic $29/mo, Advanced $99/mo, and billing is by execution time (~1 credit ≈ 30s at 256MB), so a typical run is about one credit regardless of steps.
+
+[pipedream / Avoid if]
+  WAS: You're non-technical and want pure drag-and-drop (go Zapier or Make), you need self-hosting and data ownership (go n8n or Activepieces), or your workloads are AI-agent heavy (go Gumloop); Pipedream rewards writing code.
+  NOW: Pipedream rewards writing code.
+
+[pipedream / Built for]
+  WAS: Developers wanting a code-first automation platform with generous free executions, hosted functions, and thousands of API integrations.Best fit: pick it when you are comfortable writing Node or Python glue and want developer-grade workflows over pure no-code tools.
+  NOW: Developers wanting a code-first automation platform with generous free executions, hosted functions, and thousands of API integrations. Best fit: pick it when you are comfortable writing Node or Python glue and want developer-grade workflows over pure no-code tools.
