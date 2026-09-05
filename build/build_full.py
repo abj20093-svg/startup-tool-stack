@@ -955,7 +955,6 @@ navjs = """
 
   /* ---- reading progress + back-to-top ---- */
   var bar = document.getElementById('progress');
-  var top = document.getElementById('totop');
   var ticking = false;
   function onScroll(){
     if (ticking) return;
@@ -965,7 +964,6 @@ navjs = """
       var max = h.scrollHeight - h.clientHeight;
       var pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
       if (bar) bar.style.width = pct.toFixed(2) + '%';
-      if (top) top.classList.toggle('on', h.scrollTop > 900);
       ticking = false;
     });
   }
@@ -1151,7 +1149,6 @@ doc = f"""<!doctype html>
 <main>{''.join(chapter_html)}</main>
 
 
-<a class="totop" id="totop" href="#contents" aria-label="Back to contents">&uarr;</a>
 <script>{navjs}</script>
 </body>
 </html>"""

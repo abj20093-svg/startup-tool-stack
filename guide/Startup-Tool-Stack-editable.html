@@ -230,13 +230,6 @@ a.site::after{content:"↗";font-size:.55em;vertical-align:super;margin-left:3px
 /* ---------- reading progress ---------- */
 .progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--violet);z-index:120;
   transition:width .08s linear}
-/* ---------- back to top ---------- */
-.totop{position:fixed;right:24px;bottom:24px;z-index:100;display:grid;place-items:center;
-  width:44px;height:44px;border-radius:50%;background:var(--violet);color:#fff;text-decoration:none;
-  font-size:17px;box-shadow:0 6px 20px rgba(91,76,219,.32);opacity:0;pointer-events:none;
-  transform:translateY(8px);transition:opacity .18s,transform .18s}
-.totop.on{opacity:1;pointer-events:auto;transform:none}
-.totop:hover{background:var(--violet-dim)}
 
 /* ---------- purple navigation rail (scoped so the top-bar menu stays light) ---------- */
 @media screen and (min-width:1000px){
@@ -269,7 +262,7 @@ a.site::after{content:"↗";font-size:.55em;vertical-align:super;margin-left:3px
 .phead + .psec > .pseclabel{margin-top:0}
 
 @media print{.lineup a.tlink{color:var(--ink);border:none}}
-@media print{.progress,.totop{display:none !important}}
+@media print{.progress{display:none !important}}
 @media print{.chapfoot{display:none !important}}
 @media print{a.site{color:var(--ink);border:none}a.site::after{content:""}}
 @media print{.topbar,.jump,.siderail{display:none !important}body{padding-left:0}}
@@ -2632,7 +2625,6 @@ a.site::after{content:"↗";font-size:.55em;vertical-align:super;margin-left:3px
 </section></main>
 
 
-<a class="totop" id="totop" href="#contents" aria-label="Back to contents">&uarr;</a>
 <script>
 (function(){
   var rail = document.querySelector('.siderail');
@@ -2685,7 +2677,6 @@ a.site::after{content:"↗";font-size:.55em;vertical-align:super;margin-left:3px
 
   /* ---- reading progress + back-to-top ---- */
   var bar = document.getElementById('progress');
-  var top = document.getElementById('totop');
   var ticking = false;
   function onScroll(){
     if (ticking) return;
@@ -2695,7 +2686,6 @@ a.site::after{content:"↗";font-size:.55em;vertical-align:super;margin-left:3px
       var max = h.scrollHeight - h.clientHeight;
       var pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
       if (bar) bar.style.width = pct.toFixed(2) + '%';
-      if (top) top.classList.toggle('on', h.scrollTop > 900);
       ticking = false;
     });
   }
