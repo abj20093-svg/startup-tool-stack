@@ -92,6 +92,12 @@ b,strong{font-weight:600}
 .bands .tcol{display:contents}
 .bands.b2{margin-top:0}
 .factor{break-inside:avoid}
+ul.fb{list-style:none;margin:0;padding:0}
+.fb>li{position:relative;padding-left:15px;margin:0 0 8px;font-size:15px}
+.fb>li::before{content:"";position:absolute;left:1px;top:.5em;width:5px;height:5px;border-radius:50%;background:var(--violet)}
+.fb>li>ul{list-style:none;margin:4px 0 2px;padding:0}
+.fb>li>ul>li{position:relative;padding-left:13px;margin:0 0 4px;font-size:14px;color:var(--ink-2)}
+.fb>li>ul>li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:2px;background:var(--border-d)}
 .factor p{max-width:70ch}
 .bandlabel{break-after:avoid}
 .band{margin-bottom:18px}
@@ -286,6 +292,10 @@ a.site::after{content:"↗";font-size:.55em;vertical-align:super;margin-left:3px
   .bands .tcol:first-child{margin-right:3%}
   .band{margin-bottom:11pt}
   .factor{margin-bottom:12pt}
+  .fb>li{font-size:10.5pt;margin:0 0 4pt;padding-left:11pt}
+  .fb>li::before{width:3.5pt;height:3.5pt;left:1pt}
+  .fb>li>ul>li{font-size:9.5pt;margin:0 0 2.5pt;padding-left:9pt}
+  .fb>li>ul>li::before{width:4pt;height:1.2pt}
   .factor p{font-size:10.5pt;line-height:1.42}
   .phead h4{font-size:17pt}
     .psec{margin-top:12pt}

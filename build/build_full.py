@@ -81,17 +81,101 @@ def fix_names(t):
     t = re.sub(r"(?i)\b(pre-seed)\s*→\s*(seed|series\s+a)\b", r"\1 to \2", t)
     return t
 
+
+# Comparisons naming a same-chapter rival are rewritten to stand alone; the
+# rival's own facts live in its own profile. Platform/ownership facts
+# (Polar-on-Stripe, the Lemon Squeezy acquisition) are kept as information.
+RIVAL_EDITS = [
+ (", the longest public track record in this group (ZoomInfo, the other public company here, listed in 2020),", ", the longest public track record in this group,"),
+ ("Cheaper tools (Apollo, Clay) suffice for early prospecting.", "Cheaper prospecting tools suffice at the early stage."),
+ ("Salesforge/lemlist push harder on AI-written, per-prospect personalization at scale.", "AI-written, per-prospect personalization at scale is not the core bet here."),
+ ("Steeper than SalesHandy for a first-timer.", "Steep for a first-timer."),
+ (" (below Instantly's ~94%)", ", below the best result in this group"),
+ ("not a personalization-at-scale engine like Salesforge", "not a personalization-at-scale engine"),
+ ("AI features are lighter than Salesforge/Instantly; QuickMail bets", "AI features are light; QuickMail bets"),
+ ("a shorter public track record than Instantly/QuickMail", "a shorter public track record"),
+ ("depth of manual branching is lighter than Smartlead's API-driven flows", "depth of manual branching is lighter"),
+ ("Ecosystem is younger/smaller than Smartlead's but coherent.", "Ecosystem is younger and smaller but coherent."),
+ ("Smaller community and fewer playbooks than Instantly/Smartlead.", "Smaller community and fewer public playbooks."),
+ ('less "unlimited-scale" than Instantly/Smartlead', 'not built for "unlimited-scale" volume'),
+ ("Not as AI-heavy as Salesforge/Smartlead's fully AI-generated personalization at scale.", "Not AI-heavy; fully AI-generated personalization at scale is not the focus."),
+ ("at high volume vs Instantly/Smartlead's flat unlimited sending", "at high volume"),
+ ("Lighter marketing automation than Kit, and it", "Marketing automation is light, and it"),
+ ("pricing below Mailchimp and Kit for comparable features", "pricing at the low end of this group for comparable features"),
+ ("but no discovery/referral network like Substack, but you drive traffic yourself", "but there is no built-in discovery or referral network; you drive traffic yourself"),
+ ("More design/branding control than Substack, but the interface", "Strong design and branding control, but the interface"),
+ ("not deep reporting and is lighter than Metricool's analytics, a known tradeoff", "not deep reporting, a known tradeoff"),
+ ("Analytics stay basic next to Metricool's, and", "Analytics stay basic, and"),
+ ("No free plan (Hypefury also lacks one)", "No free plan"),
+ (", but lighter than Metricool's reporting", ""),
+ ("without the demographic, competitor and hashtag depth Metricool includes", "without deeper demographic, competitor or hashtag reporting"),
+ ("Analytics are lighter than Metricool's, lacking the same demographic, competitor and hashtag depth.", "Analytics cover the basics, without deep demographic, competitor or hashtag reporting."),
+ ("Fewer third-party integrations than Stripe.", "A smaller third-party integration ecosystem."),
+ ("higher than assembling Stripe Billing plus separate processing", "higher than assembling billing tools plus separate processing yourself"),
+ ("a shorter track record than Paddle's, and Stripe's holds", "a shorter track record, and Stripe's holds"),
+ ("less no-code hand-holding than Lemon Squeezy or Gumroad", "little no-code hand-holding"),
+ ("Subscription depth is narrower than Stripe's, and", "Subscription depth is narrow, and"),
+ ("faster than Paddle's monthly cycle but slower and fee-bearing compared with a direct processor", "slower and fee-bearing compared with a direct processor"),
+ ("Day-to-day holds are less reported than Paddle, yet", "Day-to-day holds are rarely reported, yet"),
+ ("Integrations narrower than Stripe.", "The integration catalog is narrow."),
+ ("or configurable dunning schedules like Stripe Billing", "or configurable dunning schedules"),
+ ("Narrower global reach than Stripe or Adyen, mostly", "Narrow global reach, mostly"),
+ ("well-documented but less deep than Stripe's developer tooling", "well-documented, though developer tooling is not its main strength"),
+ ("No per-dispute fee (vs Stripe's $15), but", "No per-dispute fee, but"),
+ ("Fewer third-party dev libraries and plugins than Stripe's ecosystem.", "A smaller ecosystem of third-party dev libraries and plugins."),
+ ("Stripe has no comparable card-present + POS + hardware stack.", "No online-first processor pairs card-present, POS and first-party hardware this tightly."),
+ ("Higher online rates than Stripe on the free plan.", "Online rates on the free plan are at the high end of this group."),
+ (", though newer than Okta-owned Auth0,", ","),
+ ("takes more effort than Clerk's drop-in approach", "takes more effort than a drop-in approach"),
+ ("more configuration than a drop-in tool like Clerk", "more configuration than a drop-in tool"),
+ ("it ships with less pre-built UI than Clerk.", "it ships with less pre-built UI."),
+ ("Ships with less pre-built UI than Clerk, so you build", "Ships with less pre-built UI, so you build"),
+ ("100K users cost roughly $1,000/mo on Clerk, a gap driven by the per-user rate.", "Per-user pricing elsewhere can reach roughly $1,000/mo at 100K users."),
+ ("versus roughly $1,000/mo on Clerk, while keeping", "a fraction of per-user pricing at that scale, while keeping"),
+ ("less turnkey/polished than Clerk's out-of-the-box components", "less turnkey than the most polished component kits"),
+ ("Younger than Auth0 but mature and actively shipping.", "A younger vendor, but mature and actively shipping."),
+ ("Drop-in UI is less polished than Clerk, and it has fewer legacy turnkey integrations/extensions than Auth0's older ecosystem.", "Drop-in UI is less polished, and it has fewer legacy turnkey integrations and extensions than older ecosystems."),
+ ("Unlike Render, there is no ongoing free option.", "There is no ongoing free option."),
+ ("Slower than Vercel.", "Slower than the fastest host here."),
+ ("Serverless cold starts run ~3s+ (versus Vercel's ~1s), edge function cold starts ~28ms (vs ~12ms), and ~90ms average TTFB (vs ~70ms).", "Serverless cold starts run ~3s+, edge function cold starts ~28ms, and average TTFB ~90ms in 2026 benchmarks."),
+ ("16+ edge locations versus Vercel's 100+, so distant users", "16+ edge locations, a comparatively small network, so distant users"),
+ ("solid but fewer points of presence than Vercel (100+) or Cloudflare (300+), so users", "solid but a modest network by CDN standards, so users"),
+ ("Surface price is close to Vercel's, but", "Surface price is in line with this group, but"),
+ ("more predictable than Vercel's bandwidth/invocation overages", "more predictable than bandwidth- and invocation-metered billing"),
+ ("it allows commercial use, unlike Vercel's Hobby tier", "its free tier allows commercial use"),
+ ("Lower lock-in than Vercel.", "Lock-in is low."),
+ ("allows commercial use (unlike Vercel), and background functions", "allows commercial use, and background functions"),
+ ("Slower serverless cold starts (~3s) and far fewer edge locations (16+) than Vercel.", "Slower serverless cold starts (~3s) and a small edge network (16+ locations)."),
+ ("so the latest Next.js features tend to land on Vercel first", "so the latest Next.js features tend to arrive late here"),
+ ("as an alternative to Intercom, Zendesk and Salesforce Service Cloud for teams", "as a self-hosted alternative to the big hosted suites for teams"),
+ ("Simpler tools (Intercom, Freshdesk, Help Scout) are cheaper", "Simpler tools are cheaper"),
+ ("though it carries lighter enterprise-contract tooling than Paddle", "though enterprise-contract tooling is light"),
+ ("Reach is built into the edge model, not something you provision.", "Reach is built into the edge model, not something you provision. The network spans 100+ edge locations; 2026 benchmarks measured ~1s serverless cold starts, ~12ms edge-function cold starts and ~70ms average TTFB."),
+]
+_RIVAL_HITS = set()
+def scrub_comparisons(t):
+    if not t:
+        return t
+    for _i, (_old, _new) in enumerate(RIVAL_EDITS):
+        if _old in t:
+            t = t.replace(_old, _new); _RIVAL_HITS.add(_i)
+        else:
+            _alt = _old.replace("'", "’")
+            if _alt != _old and _alt in t:
+                t = t.replace(_alt, _new.replace("'", "’")); _RIVAL_HITS.add(_i)
+    return t
+
 def cell(r, c):
     raw = str(src.cell(row=r, column=c).value or "").strip()
     if VARIANT and raw:
         raw = "\n".join(VAR_MAP.get(p, p) for p in raw.split("\n"))
     # keep prose references to the seventh column consistent with its label
-    return fix_names(raw).replace('Manual DIY', 'Build')
+    return scrub_comparisons(fix_names(raw).replace('Manual DIY', 'Build'))
 
 def cell_raw(r, c):
     """Original workbook text, never varied: used for the At a glance table and the
     header price line, which the brief excludes from prose changes."""
-    return fix_names(str(src.cell(row=r, column=c).value or "").strip())
+    return scrub_comparisons(fix_names(str(src.cell(row=r, column=c).value or "").strip()))
 
 def slug(name):
     return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
@@ -316,6 +400,63 @@ def prose(t, where="", with_lead=True, force_lead=False):
                 continue
         out.append(f"<p>{esc(p)}</p>")
     return "".join(out)
+
+
+
+def _split_semis(s):
+    """Split on '; ' only at paren depth zero."""
+    parts, depth, start = [], 0, 0
+    i = 0
+    while i < len(s):
+        ch = s[i]
+        if ch in "([":
+            depth += 1
+        elif ch in ")]":
+            depth = max(0, depth - 1)
+        elif ch == ";" and depth == 0 and i + 1 < len(s) and s[i + 1] == " ":
+            parts.append(s[start:i])
+            start = i + 2
+            i += 1
+        i += 1
+    parts.append(s[start:])
+    return parts
+
+def _sub_items(rest):
+    items = []
+    for s in split_sents(rest or ""):
+        for seg in _split_semis(s):
+            seg = seg.strip().rstrip(";")
+            if not seg:
+                continue
+            if seg[-1] not in ".!?":
+                seg += "."
+            items.append(cap_first(seg))
+    return items
+
+def bullets(t, where="", with_lead=True):
+    """Factor text as a bulleted list: the lead claim is the bullet, the
+    remaining sentences are its sub-bullets."""
+    paras = [p.strip() for p in t.split("\n") if p.strip()]
+    lis = []
+    for i, p in enumerate(paras):
+        p = na_fix(p, where) if i == 0 else p
+        if p.startswith("Not applicable"):
+            m = re.match(r"^(Not applicable[^:—]*)\s*[:—]\s*(.*)$", p, re.S)
+            head, rest = (m.group(1), m.group(2)) if m else (p, "")
+            head_html = f'<span class="na">{esc(head.strip())}</span>'
+            subs = _sub_items(rest.strip())
+        elif with_lead:
+            pre, lead, delim, rest = derive_lead(p, where)
+            lead_txt = lead.rstrip(".") + "."
+            head_html = (esc(pre) if pre else "") + f'<strong class="pl">{esc(lead_txt)}</strong>'
+            subs = _sub_items(rest)
+        else:
+            ss = split_sents(p)
+            head_html = esc(ss[0]) if ss else esc(p)
+            subs = _sub_items(" ".join(ss[1:]))
+        sub_html = ("<ul>" + "".join(f"<li>{esc(s)}</li>" for s in subs) + "</ul>") if subs else ""
+        lis.append(f"<li>{head_html}{sub_html}</li>")
+    return f'<ul class="fb">{"".join(lis)}</ul>'
 
 def parse_choose(t):
     parts = {"ideal": "", "best": "", "avoid": ""}
@@ -624,7 +765,16 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
 
         CPL, LH = 49, 15
         def para_est(t, cpl=CPL):
-            return sum(math.ceil(len(p) / cpl) * LH + 4 for p in t.split("\n") if p.strip())
+            tot = 0
+            for p in t.split("\n"):
+                p = p.strip()
+                if not p:
+                    continue
+                for k, s in enumerate(split_sents(p)):
+                    eff = cpl if k == 0 else max(cpl - 5, 20)
+                    tot += math.ceil(len(s) / eff) * LH + 7
+                tot += 4
+            return tot
 
         seen_sents = set()
         for _pre in (identity, built, choose["ideal"], choose["best"], choose["avoid"]):
@@ -638,14 +788,14 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
                 units.append((16 + 22 + para_est(what_rest),
                               f'<div class="bandlabel">{esc(band)}</div>'
                               f'<div class="factor">'
-                              f'{prose(dedup_against(what_rest, seen_sents, f"{name}/{tool}/What it is"), where=f"{name}/{tool}/What it is", force_lead=True)}</div>'))
+                              f'{bullets(dedup_against(what_rest, seen_sents, f"{name}/{tool}/What it is"), where=f"{name}/{tool}/What it is")}</div>'))
             for j, r in enumerate(rows_in):
                 txt = cell(r, c)
                 if r == r_price and price_drop[tool]:
                     ss = split_sents(txt)
                     txt = " ".join(s for k, s in enumerate(ss, 1) if k not in price_drop[tool])
                 txt = dedup_against(txt, seen_sents, f"{name}/{tool}/{labels[r]}")
-                body = prose(txt, where=f"{name}/{tool}/{labels[r]}", force_lead=True)
+                body = bullets(txt, where=f"{name}/{tool}/{labels[r]}")
                 fh = f'<div class="factor">{body}</div>'
                 est = 16 + para_est(txt)
                 if j == 0 and not (band == "What it does" and what_rest):
@@ -656,7 +806,7 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
             txt = dedup_against(cell(r, c), seen_sents, f"{name}/{tool}/{label}")
             units.append((38 + para_est(txt),
                           f'<div class="bandlabel">{esc(label)}</div>'
-                          f'<div class="factor">{prose(txt, where=f"{name}/{tool}/{label}", force_lead=True)}</div>'))
+                          f'<div class="factor">{bullets(txt, where=f"{name}/{tool}/{label}")}</div>'))
 
         h1 = 14 + 30 + math.ceil(len(identity) / 70) * LH + 10 + LH + 10
         h1 += 24 + para_est(built, 70) + 8
@@ -699,14 +849,14 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
   </div>
   <div class="psec">
     <div class="pseclabel">Built for</div>
-    {prose(built, where=f"{name}/{tool}/Built for", with_lead=False)}
+    {bullets(built, where=f"{name}/{tool}/Built for", with_lead=False)}
   </div>
   <div class="ledger">
     <div class="lhead">Choose this if you are</div>
-    <p class="ideal">{esc(ideal_t)}</p>
+    <div class="ideal">{bullets(ideal_t, where=f"{name}/{tool}/Ideal", with_lead=False)}</div>
     <div class="pair">
-      {f'<div class="cellL"><div class="plabel">Best when</div><p>{esc(cap_first(choose["best"]))}</p></div>' if choose["best"].strip() else ''}
-      {f'<div><div class="plabel">Avoid if</div><p>{avoid_html}</p></div>' if choose["avoid"].strip() else ''}
+      {f'<div class="cellL"><div class="plabel">Best when</div>{bullets(cap_first(choose["best"]), where=f"{name}/{tool}/Best", with_lead=False)}</div>' if choose["best"].strip() else ''}
+      {f'<div><div class="plabel">Avoid if</div>{bullets(cap_first(choose["avoid"]), where=f"{name}/{tool}/Avoid", with_lead=False)}</div>' if choose["avoid"].strip() else ''}
     </div>
   </div>
   <div class="bands"><div class="tcol">{"".join(p1c1)}</div><div class="tcol">{"".join(p1c2)}</div></div>{PF}</div>
@@ -1001,6 +1151,12 @@ doc = f"""<!doctype html>
 <script>{navjs}</script>
 </body>
 </html>"""
+
+_missed = [RIVAL_EDITS[i][0][:60] for i in range(len(RIVAL_EDITS)) if i not in _RIVAL_HITS]
+if _missed:
+    print("RIVAL_EDITS never matched (%d):" % len(_missed))
+    for m in _missed:
+        print("  MISS:", m)
 
 with open(OUT, "w") as f:
     f.write(doc)
