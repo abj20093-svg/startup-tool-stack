@@ -1013,6 +1013,21 @@ for _g in ("Selling", "Building", "Operating"):
 wizard_buttons = "".join(
     f'<button type="button" data-ch="{c["s"]}"><b>{esc(c["job"])}</b><span>{esc(c["name"])}</span></button>'
     for c in WIZ)
+wizard_block = f"""
+  <div class="wizard" id="wizard">
+    <div class="wlabel">Find your tool</div>
+    <h2 class="wq" id="wq">What are you looking for?</h2>
+    <div class="wstep" id="wstep1">
+      <div class="wgrid">{wizard_buttons}</div>
+      <a class="wskip" href="#contents">I'm not sure yet &mdash; show me the full stack</a>
+    </div>
+    <div class="wstep" id="wstep2" hidden>
+      <button class="wback" id="wback" type="button">&larr; All categories</button>
+      <div class="wlist" id="wlist"></div>
+      <a class="wch" id="wchlink" href="#contents">Or browse this whole chapter</a>
+    </div>
+  </div>
+"""
 import json as _json
 wizard_json = _json.dumps([{ "s": c["s"], "q": c["job"], "tools": c["tools"] } for c in WIZ])
 
@@ -1164,19 +1179,7 @@ doc = f"""<!doctype html>
   <h1>The Startup Tool&nbsp;Stack</h1>
   <p class="byline">Last updated August 2026</p>
 
-  <div class="wizard" id="wizard">
-    <div class="wlabel">Find your tool</div>
-    <h2 class="wq" id="wq">What are you looking for?</h2>
-    <div class="wstep" id="wstep1">
-      <div class="wgrid">{wizard_buttons}</div>
-      <a class="wskip" href="#contents">I'm not sure yet &mdash; show me the full stack</a>
-    </div>
-    <div class="wstep" id="wstep2" hidden>
-      <button class="wback" id="wback" type="button">&larr; All categories</button>
-      <div class="wlist" id="wlist"></div>
-      <a class="wch" id="wchlink" href="#contents">Or browse this whole chapter</a>
-    </div>
-  </div>
+__WIZARD_BLOCK__
 
   <nav class="contents mastcontents" id="contents" aria-label="Contents">
     <h2>Contents</h2>
@@ -1208,7 +1211,10 @@ if _missed:
         print("  MISS:", m)
 
 with open(OUT, "w") as f:
-    f.write(doc)
+    f.write(doc.replace("__WIZARD_BLOCK__", ""))
+with open("toolstack_wizard.html", "w") as f:
+    f.write(doc.replace("__WIZARD_BLOCK__", wizard_block))
+print("wizard variant: toolstack_wizard.html")
 
 print(f"written: {OUT}  {len(doc)/1024:.0f} KB")
 print(f"chapters: {len(CHAPTERS)} | profiles: {len(all_tool_ids)} ids")
