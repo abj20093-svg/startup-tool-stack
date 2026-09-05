@@ -661,10 +661,12 @@ PF = ('<div class="pfoot" aria-hidden="true">The Startup Tool Stack · '
 chapter_html = []
 contents_rows = {"Selling": [], "Building": [], "Operating": []}
 jobs_html = ""
+WIZ = []
 all_tool_ids = set()
 
 chapter_nav = []
 for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, start=1):
+    WIZ_TOOLS = []
     is_ch1 = (ci == 1)
     cslug = slug(name)
     tools = [cell(hrow, c) for c in range(3, 10)]
@@ -811,6 +813,8 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
         h1 = 14 + 30 + math.ceil(len(identity) / 70) * LH + 10 + LH + 10
         h1 += 24 + para_est(built, 70) + 8
         ideal_t = strip_prefix(choose["ideal"])
+        _persona = split_sents(ideal_t)[0] if ideal_t else tool
+        WIZ_TOOLS.append([tool, tid, cap_first(_persona)])
         h1 += 34 + math.ceil(len(ideal_t) / 70) * LH
         h1 += 22 + max(math.ceil(len(choose["best"]) / 45),
                        math.ceil(len(choose["avoid"]) / 45)) * LH + 22
@@ -864,6 +868,7 @@ for ci, (group, name, hrow, frow, lrow, job, decision) in enumerate(CHAPTERS, st
 </article>"""
 
     chips = ' &middot; '.join(f'<a class="tlink" href="#{a}">{esc(t)}</a>' for t, a in tool_anchors)
+    WIZ.append({"s": cslug, "name": name, "job": job, "tools": WIZ_TOOLS})
     chapter_html.append(f"""
 <section class="chapter" id="{cslug}" data-chapter="{cslug}">
   <div class="chap-open wrap">
@@ -958,6 +963,39 @@ navjs = """
   }
   window.addEventListener('scroll', onScroll, {passive: true});
   onScroll();
+
+  /* ---- find-your-tool wizard ---- */
+  var WIZ = __WIZDATA__;
+  var w1 = document.getElementById('wstep1'), w2 = document.getElementById('wstep2');
+  var wq = document.getElementById('wq'), wlist = document.getElementById('wlist');
+  var wch = document.getElementById('wchlink');
+  if (w1 && w2) {
+    [].slice.call(document.querySelectorAll('.wgrid button[data-ch]')).forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var ch = null;
+        for (var i = 0; i < WIZ.length; i++) if (WIZ[i].s === btn.dataset.ch) ch = WIZ[i];
+        if (!ch) return;
+        wq.textContent = 'Which of these sounds most like you?';
+        wlist.innerHTML = '';
+        ch.tools.forEach(function(t){
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.innerHTML = '<span class="wp"></span><span class="wt"></span>';
+          b.querySelector('.wp').textContent = t[2];
+          b.querySelector('.wt').textContent = t[0];
+          b.addEventListener('click', function(){ location.hash = t[1]; });
+          wlist.appendChild(b);
+        });
+        wch.setAttribute('href', '#' + ch.s);
+        w1.hidden = true; w2.hidden = false;
+      });
+    });
+    var wb = document.getElementById('wback');
+    if (wb) wb.addEventListener('click', function(){
+      w2.hidden = true; w1.hidden = false;
+      wq.textContent = 'What are you looking for?';
+    });
+  }
 })();
 """
 
@@ -972,6 +1010,12 @@ for _g in ("Selling", "Building", "Operating"):
             f'<div class="navtools"><a class="navall" href="#{cs}">Chapter overview</a>'
             + "".join(f'<a href="#{a}" data-tool="{a}">{esc(t)}</a>' for t, a in tls)
             + '</div></details></li>')
+wizard_buttons = "".join(
+    f'<button type="button" data-ch="{c["s"]}"><b>{esc(c["job"])}</b><span>{esc(c["name"])}</span></button>'
+    for c in WIZ)
+import json as _json
+wizard_json = _json.dumps([{ "s": c["s"], "q": c["job"], "tools": c["tools"] } for c in WIZ])
+
 contents_html = ""
 for grp in ("Selling", "Building", "Operating"):
     trs = "".join(f'<tr><td class="cnum num">{n:02d}</td>'
@@ -1119,6 +1163,21 @@ doc = f"""<!doctype html>
   <p class="eyebrow">Tool selection for pre-seed and seed founders</p>
   <h1>The Startup Tool&nbsp;Stack</h1>
   <p class="byline">Last updated August 2026</p>
+
+  <div class="wizard" id="wizard">
+    <div class="wlabel">Find your tool</div>
+    <h2 class="wq" id="wq">What are you looking for?</h2>
+    <div class="wstep" id="wstep1">
+      <div class="wgrid">{wizard_buttons}</div>
+      <a class="wskip" href="#contents">I'm not sure yet &mdash; show me the full stack</a>
+    </div>
+    <div class="wstep" id="wstep2" hidden>
+      <button class="wback" id="wback" type="button">&larr; All categories</button>
+      <div class="wlist" id="wlist"></div>
+      <a class="wch" id="wchlink" href="#contents">Or browse this whole chapter</a>
+    </div>
+  </div>
+
   <nav class="contents mastcontents" id="contents" aria-label="Contents">
     <h2>Contents</h2>
     {contents_html}
@@ -1138,7 +1197,7 @@ doc = f"""<!doctype html>
 <main>{''.join(chapter_html)}</main>
 
 
-<script>{navjs}</script>
+<script>{navjs.replace('__WIZDATA__', wizard_json)}</script>
 </body>
 </html>"""
 
