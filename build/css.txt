@@ -342,3 +342,5 @@ a.site::after{content:"↗";font-size:.55em;vertical-align:super;margin-left:3px
 .diybox p:last-child{margin-bottom:0}
 .contents.mastcontents{min-height:0;margin-top:20px}
 .contents.mastcontents h2{font-size:22px;margin-bottom:10px}
+/* print: 15 chapters must still fit the contents on page 1 (rows 7px -> 5px padding) */
+@media print{.contents.mastcontents td{padding:5px 6px}}

@@ -1,7 +1,7 @@
 # The Startup Tool Stack
 
-A comparison guide to 84 startup tools across 14 categories, plus the internal
-build route in every category. 275 pages in print.
+A comparison guide to 90 startup tools across 15 categories, plus the internal
+build route in every category. 298 pages in print.
 
 **Live site:** https://abj20093-svg.github.io/startup-tool-stack/
 **Guided version** (asks what you need, then routes you to a tool):
@@ -17,7 +17,7 @@ Both pages update automatically about a minute after any push to `main`.
 |---|---|
 | `index.html` | The guide, exactly as a reader sees it. Self-contained. |
 | `guided.html` | Same guide with a find-your-tool questionnaire on the cover. |
-| `guide/Startup-Tool-Stack.pdf` | The print edition, 275 pages. |
+| `guide/Startup-Tool-Stack.pdf` | The print edition, 298 pages. |
 | `guide/Startup-Tool-Stack-editable.html` | Review copy: click any line to edit; a Confirm edits button collects the changes. Not for publishing. |
 | `build/` | The generator that produces all of the above. |
 
@@ -74,10 +74,10 @@ Pages settings. GitHub provisions HTTPS automatically.
 - The guide is responsive. Below 1000px the fixed rail collapses into a
   dropdown at the top.
 - Print styles are included: the rail and all controls are hidden, and the
-  document paginates to 275 pages. `guide/Startup-Tool-Stack.pdf` is that
+  document paginates to 298 pages. `guide/Startup-Tool-Stack.pdf` is that
   output.
 - Every tool name in the At a glance tables links out to the vendor's own site
-  in a new tab. 84 URLs, all verified.
+  in a new tab. 90 URLs, all verified.
 
 ---
 
@@ -104,10 +104,14 @@ PDF:
 
 ## How the build works
 
-`startup-tool-stack.xlsx` is the source of truth: 14 category blocks, seven
+`startup-tool-stack-v2.xlsx` is the source of truth: 15 category blocks, seven
 columns each (six products plus the internal build route), one row per
 comparison factor. `build_full.py` reads it and generates every page — the At
-a glance table, the 98 profiles, and the print pagination.
+a glance table, the 105 profiles, and the print pagination. The v2 workbook is
+the original `startup-tool-stack.xlsx` (kept, unchanged) with the Compliance
+Automation block appended at rows 213-227 by `add_chapter.py` from
+`compliance_chapter.json`; `compliance_sources.json` lists the source for every
+fact in that block.
 
 | File | What it does |
 |---|---|
@@ -115,6 +119,9 @@ a glance table, the 98 profiles, and the print pagination.
 | `build/fonts/embedded.css` | Inter as base64, so the HTML makes no external requests. |
 | `build/tool_urls.json` | Official vendor URL per tool. |
 | `build/variance_proposal.json` | The editorial layer: maps a source paragraph to its edited replacement. |
+| `build/add_chapter.py` | Appends a chapter JSON to a copy of the workbook and proves every original cell is unchanged. |
+| `build/check_cells.py` | Runs the build's own lead-derivation on a chapter JSON and flags shape, rival-name and sentence-split problems before a build. |
+| `build/qa_build.sh` | Builds both variants, prints the PDF and runs the ellipsis / N/A / count checks. |
 
 **The workbook is never written to.** Content edits belong in
 `variance_proposal.json` (or the rewrite maps in `build_full.py`), applied on

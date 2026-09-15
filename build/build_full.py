@@ -24,7 +24,7 @@ FONT_CSS = open(f"{HERE}/fonts/embedded.css").read()
 TOOL_URLS = {k.lower(): v for k, v in json.load(open(f"{HERE}/tool_urls.json")).items()}
 CSS_BODY = open(f"{HERE}/css.txt").read()
 
-wb = openpyxl.load_workbook(f"{PROJ}/startup-tool-stack.xlsx", data_only=True)
+wb = openpyxl.load_workbook(f"{PROJ}/startup-tool-stack-v2.xlsx", data_only=True)
 src = wb[wb.sheetnames[0]]
 
 # group, name, header_row, first_row, last_row, job label, decision line
@@ -57,6 +57,8 @@ CHAPTERS = [
      "The decision: where customer conversations land, which channels they arrive on, and what you pay per seat or per resolution."),
     ("Operating", "Workflow Automation", 200, 201, 211, "Automate workflows",
      "The decision: what connects your tools to each other, how it charges you for the work, and whether you can host it yourself."),
+    ("Operating", "Compliance Automation", 213, 214, 227, "Get SOC 2 or ISO 27001 compliant",
+     "The decision: what gets you to a SOC 2 or ISO 27001 report, whether the audit itself is included or billed separately, and what you keep paying every year to stay compliant."),
 ]
 
 # ---- coverage guard: every content row must be declared ----
@@ -66,9 +68,15 @@ for _g, _n, _h, _f, _l, _j, _d in CHAPTERS:
     for _r in range(_f, _l + 1):
         assert _r not in _declared, f"row {_r} declared twice"
         _declared.add(_r)
-_orphans = [r for r in range(1, 212) if r not in _declared and
+_orphans = [r for r in range(1, 228) if r not in _declared and
             any(src.cell(row=r, column=c).value not in (None, "") for c in range(3, 10))]
 assert not _orphans, f"uncovered source rows: {_orphans}"
+# every declared content row must be complete: an empty cell renders nothing (brief rule 2)
+for _g, _n, _h, _f, _l, _j, _d in CHAPTERS:
+    assert all(src.cell(row=_h, column=c).value not in (None, "") for c in range(3, 10)), f"{_n}: header incomplete"
+    for _r in range(_f, _l + 1):
+        _gaps = [c for c in range(3, 10) if src.cell(row=_r, column=c).value in (None, "")]
+        assert not _gaps, f"{_n} row {_r} ({src.cell(row=_r, column=2).value}): empty cells in columns {_gaps}"
 
 NA_LOG, THIN_LOG, PAGE_SPANS, DEDUP_LOG = [], [], [], []
 
@@ -494,6 +502,8 @@ def band_of(lab):
         return "Cost"
     if re.search(r"\b(integrations?|migration|lock-in|portability|self-hosting|exit|ownership|leave)\b", L):
         return "Ecosystem & exit"
+    if re.search(r"trust center|trust page", L):
+        return "What it does"
     if re.search(r"\b(maturity|track record|support|trust|reliability)\b", L):
         return "Track record"
     return "What it does"
@@ -655,7 +665,7 @@ def xlink_avoid(text_html, self_tool, tools, cslug):
 
 css = FONT_CSS + CSS_BODY
 PF = ('<div class="pfoot" aria-hidden="true">The Startup Tool Stack · '
-      'Last updated August 2026</div>')
+      'Last updated September 2026</div>')
 
 # ================================ build chapters ================================
 chapter_html = []
@@ -1155,7 +1165,7 @@ doc = f"""<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Startup Tool Stack: a field guide to 84 tools in 14 categories</title>
+<title>The Startup Tool Stack: a field guide to 90 tools in 15 categories</title>
 <style>{css}</style>
 </head>
 <body>
@@ -1177,7 +1187,7 @@ doc = f"""<!doctype html>
 <header class="mast wrap" id="finder">
   <p class="eyebrow">Tool selection for pre-seed and seed founders</p>
   <h1>The Startup Tool&nbsp;Stack</h1>
-  <p class="byline">Last updated August 2026</p>
+  <p class="byline">Last updated September 2026</p>
 
 __WIZARD_BLOCK__
 

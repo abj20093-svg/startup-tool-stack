@@ -1,0 +1,52 @@
+<script>
+(function(){
+  var SEL=['.mast h1','.howto h2','.howto h3','.howto p','.chap-open h2','.glance h3','.gtable td .glead',
+   '.gtable td .gdetail','.gcap','article.profile h4','article.profile .pl','article.profile .dt',
+   'article.profile .fb>li','article.profile .fb>li>ul>li'].join(',');
+  var orig={};
+  document.querySelectorAll(SEL).forEach(function(el,i){
+    if(el.querySelector('*'))return;
+    el.setAttribute('data-rv',''); el.dataset.i=i; el.contentEditable='true'; orig[i]=el.textContent;
+  });
+  var changed={};
+  var btn=document.createElement('button'); btn.id='sendbtn'; btn.type='button';
+  btn.innerHTML='Confirm edits <b id="sbn">0</b>'; document.body.appendChild(btn);
+  var wrap=document.createElement('div'); wrap.id='sendwrap';
+  wrap.innerHTML='<div class="cd"><h4>Your edits</h4><p class="s">Copy this into an email to Aryan, or download it.</p><textarea id="sbout" readonly></textarea><div class="ft"><button id="sbcopy" class="p" type="button">Select all &amp; copy</button><button id="sbdl" type="button">Download</button><button id="sbx" type="button">Back</button></div></div>';
+  document.body.appendChild(wrap);
+  var out=wrap.querySelector('#sbout');
+  function where(el){
+    var a=el.closest('article.profile'); if(a){var h=a.querySelector('h4');return h?h.textContent.trim():'Profile';}
+    var s=el.closest('section.chapter'); if(s){var c=s.querySelector('.chap-open h2');return c?c.textContent.trim():'Chapter';}
+    if(el.closest('.howto'))return 'The internal build option';
+    if(el.closest('.mast'))return 'Cover';
+    return 'Document';
+  }
+  document.addEventListener('input',function(e){
+    var el=e.target&&e.target.closest?e.target.closest('[data-rv]'):null; if(!el)return;
+    var i=el.dataset.i;
+    if(el.textContent===orig[i]) delete changed[i];
+    else changed[i]={w:where(el),was:orig[i],now:el.textContent};
+    var n=Object.keys(changed).length;
+    document.getElementById('sbn').textContent=n;
+    btn.classList.toggle('on',n>0);
+  });
+  btn.addEventListener('click',function(){
+    var k=Object.keys(changed), L=['EDITS TO THE STARTUP TOOL STACK','('+k.length+' changes)',''];
+    k.forEach(function(i){L.push('['+changed[i].w+']');L.push('WAS: '+changed[i].was.replace(/\s+/g,' ').trim());L.push('NOW: '+changed[i].now.replace(/\s+/g,' ').trim());L.push('');});
+    out.value=L.join('\n'); wrap.classList.add('on'); out.focus(); out.select();
+  });
+  wrap.querySelector('#sbx').addEventListener('click',function(){wrap.classList.remove('on');});
+  wrap.addEventListener('click',function(e){if(e.target===wrap)wrap.classList.remove('on');});
+  wrap.querySelector('#sbcopy').addEventListener('click',function(){
+    var b=this; out.focus(); out.select(); out.setSelectionRange(0,out.value.length);
+    var ok=false; try{ok=document.execCommand('copy');}catch(e){}
+    if(!ok&&navigator.clipboard) navigator.clipboard.writeText(out.value).then(function(){},function(){});
+    b.textContent=ok?'Copied':'Selected — press Cmd+C'; setTimeout(function(){b.textContent='Select all & copy';},2200);
+  });
+  wrap.querySelector('#sbdl').addEventListener('click',function(){
+    var a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([out.value],{type:'text/plain'}));
+    a.download='tool-stack-edits.txt'; document.body.appendChild(a); a.click(); a.remove();
+  });
+})();
+</script>
