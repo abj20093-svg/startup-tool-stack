@@ -205,7 +205,7 @@
  },
  {
   "before": "Per-contacted-prospect model gets pricey and unpredictable at high volume vs Instantly/Smartlead's flat unlimited sending; add-ons (API $20, LinkedIn $29, warmups, mailboxes) stack up; fewer built-in leads and less aggressive AI than newer rivals.",
-  "after": "Per-contacted-prospect model gets pricey and unpredictable at high volume vs Instantly/Smartlead's flat unlimited sending. Add-ons (API $20, LinkedIn $29, warmups, mailboxes) stack up, but fewer built-in leads and less aggressive AI than newer rivals."
+  "after": "Per-contacted-prospect model gets pricey and unpredictable at high volume vs Instantly/Smartlead's flat unlimited sending. Add-ons (API $20, LinkedIn $29, warmups, mailboxes) stack up. It has fewer built-in leads and less aggressive AI than newer rivals."
  },
  {
   "before": "No warmup pool, spam-testing, inbox rotation, or unified inbox. You build and own deliverability risk, which can nuke your primary domain. Breaks past small volume; unforgiving without email-infra know-how.",
@@ -592,8 +592,8 @@
   "after": "Risk is fully yours. Stripe can freeze funds or offboard you for spikes, disputes, or policy hits, and you have no MoR buffer. Mitigate by staying low-risk and diversifying, but you're one flag from a frozen balance."
  },
  {
-  "before": "$15 (\u00a315/\u20ac15) per card chargeback and $20 for PayPal, passed to the seller in addition to the original transaction amount. Paddle fights disputes on your behalf as MoR, and both the fee and the original amount are returned if it wins. Fraud and chargeback protection are bundled into the base 5% fee rather than billed separately.",
-  "after": "$15 (\u00a315/\u20ac15) per card chargeback and $20 for PayPal, passed to the seller in addition to the original transaction amount. Paddle fights disputes on your behalf as MoR, and both the fee and the original amount are returned if it wins. Fraud and chargeback protection are bundled into the base 5% fee, not billed separately."
+  "before": "$15 (£15/€15) per card chargeback and $20 for PayPal, passed to the seller in addition to the original transaction amount. Paddle fights disputes on your behalf as MoR, and both the fee and the original amount are returned if it wins. Fraud and chargeback protection are bundled into the base 5% fee rather than billed separately.",
+  "after": "$15 (£15/€15) per card chargeback and $20 for PayPal, passed to the seller in addition to the original transaction amount. Paddle fights disputes on your behalf as MoR, and both the fee and the original amount are returned if it wins. Fraud and chargeback protection are bundled into the base 5% fee, not billed separately."
  },
  {
   "before": "No per-dispute fee (vs Stripe's $15); you only lose the disputed amount if you lose. Eligible sellers get free Chargeback Protection covering up to $250/month in qualifying disputes.",
@@ -644,16 +644,16 @@
   "after": "Only 8 countries. Higher online rates than Stripe on the free plan. Weaker dunning and no usage-based billing. Account-freeze/hold risk. Thinner developer tooling for complex custom platforms."
  },
  {
-  "before": "Best when: you want the fastest no-code path to a global storefront with MoR tax handling, license keys, and built-in affiliate and email tools: 5% + 50\u00a2 plus surcharges (1.5% international cards, 1.5% PayPal, 0.5% subscriptions); now Stripe-owned so it's a polished, stable pick; choose Lemon Squeezy over Polar when you want the more turnkey storefront and affiliate features out of the box, and over Stripe when you want tax off your plate",
-  "after": "Best when: you want the fastest no-code path to a global storefront with MoR tax handling, license keys, and built-in affiliate and email tools: 5% + 50\u00a2 plus surcharges (1.5% international cards, 1.5% PayPal, 0.5% subscriptions). Now Stripe-owned so it's a polished, stable pick. Choose Lemon Squeezy over Polar when you want the more turnkey storefront and affiliate features out of the box, and over Stripe when you want tax off your plate"
+  "before": "Best when: you want the fastest no-code path to a global storefront with MoR tax handling, license keys, and built-in affiliate and email tools: 5% + 50¢ plus surcharges (1.5% international cards, 1.5% PayPal, 0.5% subscriptions); now Stripe-owned so it's a polished, stable pick; choose Lemon Squeezy over Polar when you want the more turnkey storefront and affiliate features out of the box, and over Stripe when you want tax off your plate",
+  "after": "Best when: you want the fastest no-code path to a global storefront with MoR tax handling, license keys, and built-in affiliate and email tools: 5% + 50¢ plus surcharges (1.5% international cards, 1.5% PayPal, 0.5% subscriptions). Now Stripe-owned so it's a polished, stable pick. Choose Lemon Squeezy over Polar when you want the more turnkey storefront and affiliate features out of the box, and over Stripe when you want tax off your plate"
  },
  {
   "before": "Ideal for: engineering-led teams with genuinely unusual billing needs and appetite to own the stack",
   "after": "Ideal for: engineering-led teams with unusual billing needs and appetite to own the stack"
  },
  {
-  "before": "Best when: your pricing is truly non-standard (bespoke metering, custom proration, complex entitlements) and off-the-shelf Billing/MoR products can't model it, so you build on raw Stripe primitives (PaymentIntents, webhooks, your own subscription state machine) for maximum control and lowest fees (2.9% + 30\u00a2); pick DIY over Stripe Billing/Paddle only when the logic genuinely doesn't fit their abstractions",
-  "after": "Best when: your pricing is truly non-standard (bespoke metering, custom proration, complex entitlements) and off-the-shelf Billing/MoR products can't model it, so you build on raw Stripe primitives (PaymentIntents, webhooks, your own subscription state machine) for maximum control and lowest fees (2.9% + 30\u00a2). Pick DIY over Stripe Billing/Paddle only when the logic doesn't fit their abstractions"
+  "before": "Best when: your pricing is truly non-standard (bespoke metering, custom proration, complex entitlements) and off-the-shelf Billing/MoR products can't model it, so you build on raw Stripe primitives (PaymentIntents, webhooks, your own subscription state machine) for maximum control and lowest fees (2.9% + 30¢); pick DIY over Stripe Billing/Paddle only when the logic genuinely doesn't fit their abstractions",
+  "after": "Best when: your pricing is truly non-standard (bespoke metering, custom proration, complex entitlements) and off-the-shelf Billing/MoR products can't model it, so you build on raw Stripe primitives (PaymentIntents, webhooks, your own subscription state machine) for maximum control and lowest fees (2.9% + 30¢). Pick DIY over Stripe Billing/Paddle only when the logic doesn't fit their abstractions"
  },
  {
   "before": "Best fit: When you need a real coding environment plus AI assistance and deployment, rather than a single-purpose app generator or visual builder.",
@@ -1024,8 +1024,8 @@
   "after": "Pure usage-based with no seat fee. Each running machine is billed per second. A minimal always-on machine (shared-cpu-1x, 256MB) runs about $1.94/mo, while typical production usage lands around $13-20/mo. Cost scales with how much machine time you actually run."
  },
  {
-  "before": "Flat + credit-based. Free (300 credits/mo) \u2192 Pro $20/mo flat with unlimited seats \u2192 Enterprise. Netlify moved to credit-based pricing and, on 2026-04-14, dropped per-seat charges; Pro includes 3,000 credits/month. Surface price is close to Vercel's, but the credit model changes the real cost: heavy builds and function usage draw down credits, so model your actual usage rather than trusting the sticker price.",
-  "after": "Flat + credit-based. Free (300 credits/mo) \u2192 Pro $20/mo flat with unlimited seats \u2192 Enterprise. Netlify moved to credit-based pricing and, on 2026-04-14, dropped per-seat charges. Pro includes 3,000 credits/month. Surface price is close to Vercel's, but the credit model changes the real cost. Heavy builds and function usage draw down credits, so model your actual usage, not trusting the sticker price."
+  "before": "Flat + credit-based. Free (300 credits/mo) → Pro $20/mo flat with unlimited seats → Enterprise. Netlify moved to credit-based pricing and, on 2026-04-14, dropped per-seat charges; Pro includes 3,000 credits/month. Surface price is close to Vercel's, but the credit model changes the real cost: heavy builds and function usage draw down credits, so model your actual usage rather than trusting the sticker price.",
+  "after": "Flat + credit-based. Free (300 credits/mo) → Pro $20/mo flat with unlimited seats → Enterprise. Netlify moved to credit-based pricing and, on 2026-04-14, dropped per-seat charges. Pro includes 3,000 credits/month. Surface price is close to Vercel's, but the credit model changes the real cost. Heavy builds and function usage draw down credits, so model your actual usage, not trusting the sticker price."
  },
  {
   "before": "Flat monthly VPS rent (~$4-6/mo entry Hetzner, more for RAM/CPU/disk), not usage-metered. No per-request, bandwidth (within cap), or build-minute billing. Cost is fixed and low; your TIME is the real spend, mostly upfront.",
@@ -1316,8 +1316,8 @@
   "after": "Best when: complex, high-volume workflows make per-step billing painful. One execution = one full workflow run no matter how many nodes, so a 30-step flow costs the same as a 3-step one. Cloud is $24/mo Starter or $60/mo Pro, and the Community edition is free to self-host with code nodes and AI/LLM building blocks. Choose it over Zapier/Make when your flows are step-heavy or you want to own the infrastructure, and over Activepieces when you want the more mature node ecosystem."
  },
  {
-  "before": "Best when: you want code-first automation with generous limits: Free gives 100 credits/day, Basic $29/mo, Advanced $99/mo, and billing is by execution time (~1 credit \u2248 30s at 256MB), so a typical run is about one credit regardless of steps. Choose it over Zapier/Make when you'd rather write Node/Python inline than fight a GUI, and over n8n when you want a hosted developer platform without running servers.",
-  "after": "Best when: you want code-first automation with generous limits. Free gives 100 credits/day, Basic $29/mo, Advanced $99/mo, and billing is by execution time (~1 credit \u2248 30s at 256MB), so a typical run is about one credit regardless of steps. Choose it over Zapier/Make when you'd rather write Node/Python inline than fight a GUI, and over n8n when you want a hosted developer platform without running servers."
+  "before": "Best when: you want code-first automation with generous limits: Free gives 100 credits/day, Basic $29/mo, Advanced $99/mo, and billing is by execution time (~1 credit ≈ 30s at 256MB), so a typical run is about one credit regardless of steps. Choose it over Zapier/Make when you'd rather write Node/Python inline than fight a GUI, and over n8n when you want a hosted developer platform without running servers.",
+  "after": "Best when: you want code-first automation with generous limits. Free gives 100 credits/day, Basic $29/mo, Advanced $99/mo, and billing is by execution time (~1 credit ≈ 30s at 256MB), so a typical run is about one credit regardless of steps. Choose it over Zapier/Make when you'd rather write Node/Python inline than fight a GUI, and over n8n when you want a hosted developer platform without running servers."
  },
  {
   "before": "Contacts arrive from web forms, email sync, bulk imports and marketing-capture flows, and they all land in the same records the marketing, sales and service hubs read from. Marketplace apps add further inbound sources on top of that. The constraint is the free tier: new accounts stop at 1,000 contacts, while accounts opened before September 2024 keep the old 1,000,000 ceiling. A team collecting a lot of inbound form fills will reach that limit far sooner than the old ceiling allowed.",
