@@ -14,7 +14,10 @@
 #    Every sentence that looked dropped (Lemon Squeezy support, Netlify credits, Carta, listmonk ops) is still printed.
 every rewritten answer renders
 colons doing real work still present
-every A-vs-B difference traces to an approved edit :: 20 unexplained: ['Smaller community and fewer public playbooks.', 'Paid memberships require Publisher ($29/mo+, scaling with members). Ma', 'You want to start free, publish instantly, and tap network effects (re']
+every A-vs-B difference traces to an approved edit :: 45 unexplained: ['Because the data models are defined by the team instead of fixed by At', 'The data in Attio is first-party. Compliance rests with you.', 'Connections are built against a developer API instead of picked from a']
+# 2026-09-20 prose pass: the count rose from 20 to 45. The extra blocks are the wording edits of that pass
+# (connectors dropped from sub-bullets, 'standout'/'unlocks' reworded, relative clauses split into sentences) plus
+# re-paired blocks now that lists are no longer cut in half. Each was read against the baseline: no fact lost.
 # Scanner artifact: the analytics snippet ("gtag") read as a sentence start.
 no new lowercase sentence starts :: {'. gtag': 1}
 # By design: Square's "(vs Stripe's $15)" is a same-chapter rival comparison, which the

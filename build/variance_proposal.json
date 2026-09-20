@@ -13,7 +13,7 @@
  },
  {
   "before": "Search/filter the database by firmographics, technographics, job title and intent, then export or push to CRM. Enrichment auto-fills and updates records; WebSights de-anonymizes site visitors; FormComplete enriches inbound form fills.",
-  "after": "Search/filter the database by firmographics, technographics, job title and intent, then export or push to CRM. Enrichment auto-fills and updates records. WebSights de-anonymizes site visitors, but FormComplete enriches inbound form fills."
+  "after": "Search/filter the database by firmographics, technographics, job title and intent, then export or push to CRM. Enrichment auto-fills and updates records. WebSights de-anonymizes site visitors, and FormComplete enriches inbound form fills."
  },
  {
   "before": "Manual CSV imports from Apollo/LinkedIn Sales Nav exports, form/webhook captures, or a scraper you write. No native one-click sync; you build each pipe. Fine at low volume, tedious as inflow grows.",
@@ -109,7 +109,7 @@
  },
  {
   "before": "The combination is what stands out: a free CRM to start on, and a full marketing, sales and service suite on the same platform to grow into. The free tier itself is modest. New accounts get 1,000 contacts, 2 users and 1 pipeline, and only accounts opened earlier keep the old 1,000,000-contact limit. What teams are buying is the consolidation, one vendor covering CRM, marketing and service as they grow, rather than the size of the free plan.",
-  "after": "The combination is what stands out: a free CRM to start on, and a full marketing, sales and service suite on the same platform to grow into. The free tier itself is modest. New accounts get 1,000 contacts, 2 users and 1 pipeline, and only accounts opened earlier keep the old 1,000,000-contact limit. What teams are buying is the consolidation, one vendor covering CRM, marketing and service as they grow, instead of the size of the free plan."
+  "after": "The combination is the main draw: a free CRM to start on, and a full marketing, sales and service suite on the same platform to grow into. The free tier itself is modest. New accounts get 1,000 contacts, 2 users and 1 pipeline, and only accounts opened earlier keep the old 1,000,000-contact limit. What teams are buying is the consolidation, one vendor covering CRM, marketing and service as they grow, instead of the size of the free plan."
  },
  {
   "before": "Cost and complexity both climb with scale. The free entry point is broad, but each hub added and each step up a tier raises the price and the number of moving parts, and capabilities are gated behind tiers rather than included. The breadth that consolidates a team's tooling is the same thing that makes leaving expensive.",
@@ -161,7 +161,7 @@
  },
  {
   "before": "The core strength: free built-in Auto Warmer + Deliverability AI that analyzes hundreds of signals daily and auto-swaps weak senders via Smart Sender Groups. 4.7/5 on G2 (116 reviews) with deliverability as the standout.",
-  "after": "The core strength: Free built-in Auto Warmer + Deliverability AI that analyzes hundreds of signals daily and auto-swaps weak senders via Smart Sender Groups. 4.7/5 on G2 (116 reviews) with deliverability as the standout."
+  "after": "The core strength: Free built-in Auto Warmer + Deliverability AI that analyzes hundreds of signals daily and auto-swaps weak senders via Smart Sender Groups. 4.7/5 on G2 (116 reviews) with deliverability praised most."
  },
  {
   "before": "Spintax, custom variables, and AI copy/optimization tools plus AI reply features. Competent rather than a differentiator; Salesforge/lemlist push harder on AI-written, per-prospect personalization at scale.",
@@ -181,7 +181,7 @@
  },
  {
   "before": "Native two-way sync with HubSpot and Pipedrive; read/write with Zapier, Google Sheets, Calendly, Clay, Hunter, Zoho. Full API/webhooks/MCP/CLI gated behind the $20/mo add-on rather than included.",
-  "after": "Native two-way sync with HubSpot and Pipedrive, but read/write with Zapier, Google Sheets, Calendly, Clay, Hunter, Zoho. Full API/webhooks/MCP/CLI gated behind the $20/mo add-on, not included."
+  "after": "Native two-way sync with HubSpot and Pipedrive. Read/write with Zapier, Google Sheets, Calendly, Clay, Hunter, Zoho. Full API/webhooks/MCP/CLI gated behind the $20/mo add-on, not included."
  },
  {
   "before": "Low-to-moderate. Prospects/sequences export via CSV/API; unlimited-account model means no per-inbox unwind. Warmup reputation still needs rebuilding elsewhere, but contractual lock-in is minimal.",
@@ -229,11 +229,11 @@
  },
  {
   "before": "A newsletter platform built around growth and monetization rather than plain sending: alongside the newsletter itself it runs the Boosts ad network and paid subscriptions, and takes a 0% beehiiv cut of paid-subscription revenue (only Stripe's 2.9% + $0.30 applies). Monetization and automations unlock on the Scale plan.",
-  "after": "A newsletter platform built around growth and monetization, not plain sending. Alongside the newsletter itself it runs the Boosts ad network and paid subscriptions, and takes a 0% beehiiv cut of paid-subscription revenue (only Stripe's 2.9% + $0.30 applies). Monetization and automations unlock on the Scale plan."
+  "after": "A newsletter platform built around growth and monetization, not plain sending. Alongside the newsletter itself it runs the Boosts ad network and paid subscriptions, and takes a 0% beehiiv cut of paid-subscription revenue (only Stripe's 2.9% + $0.30 applies). Monetization and automations start on the Scale plan."
  },
  {
   "before": "Built-in monetization is a core part of the product: the Boosts ad network and paid subscriptions, with a 0% beehiiv take on paid-subscription revenue (only Stripe's 2.9% + $0.30 processing applies). Both levers unlock on the Scale plan ($43/mo, annual) rather than the free tier.",
-  "after": "Built-in monetization is a core part of the product: the Boosts ad network and paid subscriptions, with a 0% beehiiv take on paid-subscription revenue (only Stripe's 2.9% + $0.30 processing applies). Both levers unlock on the Scale plan ($43/mo, annual) instead of the free tier."
+  "after": "Built-in monetization is a core part of the product: the Boosts ad network and paid subscriptions, with a 0% beehiiv take on paid-subscription revenue (only Stripe's 2.9% + $0.30 processing applies). Both levers start on the Scale plan ($43/mo, annual) instead of the free tier."
  },
  {
   "before": "Native paid subscriptions (monthly/annual), plus founding-member tiers, group/gift subscriptions and paywalled posts. Substack takes a flat 10% of subscription revenue; Stripe adds ~2.9%+$0.30, so real take is ~13% of gross earnings.",
@@ -253,7 +253,7 @@
  },
  {
   "before": "Email automations are part of the platform but gated to the Scale plan ($43/mo, annual) and above; the free Launch tier (up to 2,500 subscribers) does not include them. Automation is therefore tied to the same paid tier as monetization, so upgrading unlocks both the revenue and the workflow tooling together.",
-  "after": "Email automations are part of the platform but gated to the Scale plan ($43/mo, annual) and above. The free Launch tier (up to 2,500 subscribers) does not include them. Automation is therefore tied to the same paid tier as monetization, so upgrading unlocks both the revenue and the workflow tooling together."
+  "after": "Email automations are part of the platform but gated to the Scale plan ($43/mo, annual) and above. The free Launch tier (up to 2,500 subscribers) does not include them. Automation is therefore tied to the same paid tier as monetization, so one upgrade brings both the revenue and the workflow tooling."
  },
  {
   "before": "Newsletter and membership automations with member segmentation (tiers/labels); lighter than dedicated marketing-automation tools.",
@@ -261,7 +261,7 @@
  },
  {
   "before": "Weak. Only a basic automated welcome email; no drip sequences, no behavioral triggers, minimal list segmentation. You broadcast to everyone or to the free/paid split; it is not a marketing-automation platform.",
-  "after": "Weak. Only a basic automated welcome email, but no drip sequences, no behavioral triggers, minimal list segmentation. You broadcast to everyone or to the free/paid split. It is not a marketing-automation platform."
+  "after": "Weak. Only a basic automated welcome email. No drip sequences, no behavioral triggers, and minimal list segmentation. You broadcast to everyone or to the free/paid split. It is not a marketing-automation platform."
  },
  {
   "before": "Listmonk offers SQL-query segments and basic automations; Ghost has simpler tiers/labels. Capable for MVP but not a full journey builder: complex drip logic means scripting against the API, not clicking a flow UI.",
@@ -273,7 +273,7 @@
  },
  {
   "before": "Strong reputation aided by a strict manual account-approval/anti-spam review that keeps sender pools clean; EU data storage, ISO 27001, GDPR. Optional dedicated IP add-on on Power/Enterprise.",
-  "after": "Strong reputation aided by a strict manual account-approval/anti-spam review that keeps sender pools clean, but EU data storage, ISO 27001, GDPR. Optional dedicated IP add-on on Power/Enterprise."
+  "after": "Strong reputation aided by a strict manual account-approval/anti-spam review that keeps sender pools clean. EU data storage, ISO 27001, GDPR. Optional dedicated IP add-on on Power/Enterprise."
  },
  {
   "before": "A web-based newsletter editor tied to its newsletter site and branding customization. The sources used here describe it as newsletter-focused and easy to set up. Composition is oriented to writing and sending issues rather than product or transactional templates.",
@@ -313,7 +313,7 @@
  },
  {
   "before": "Own your list outright, escape per-subscriber pricing, and (with Ghost) get a strong editor plus native paid subscriptions, a real Substack alternative for a founder willing to self-host.",
-  "after": "Own your list outright, escape per-subscriber pricing, and (with Ghost) get a strong editor plus native paid subscriptions, a Substack alternative for a founder willing to self-host."
+  "after": "Own your list outright, escape per-subscriber pricing, and with Ghost you get a strong editor plus native paid subscriptions, a Substack alternative for a founder willing to self-host."
  },
  {
   "before": "Creator pricing climbs with list size ($39/mo at 1,000 contacts, $89 at 5,000, ~$119 at 10,000), so costs rise as the audience grows past the free tier. It is also a marketing-email tool: the documented feature set does not cover transactional or product email, limiting it to audience marketing.",
@@ -337,7 +337,7 @@
  },
  {
   "before": "Best when: you want built-in referral programs, the Boosts ad network, paid subscriptions, and cross-recommendations to grow, and you'd rather pay a flat fee than share revenue; Launch is free to 2,500 subscribers; Scale (from $43/mo annual) unlocks monetization, automations and Boosts (custom domains come on every plan); Max (from $96/mo annual) adds team and multi-publication features; Enterprise is custom for 100,000+ subscribers.",
-  "after": "Best when: you want built-in referral programs, the Boosts ad network, paid subscriptions, and cross-recommendations to grow, and you'd rather pay a flat fee than share revenue. Launch is free to 2,500 subscribers. Scale (from $43/mo annual) unlocks monetization, automations and Boosts (custom domains come on every plan). Max (from $96/mo annual) adds team and multi-publication features. Enterprise is custom for 100,000+ subscribers."
+  "after": "Best when: you want built-in referral programs, the Boosts ad network, paid subscriptions, and cross-recommendations to grow, and you'd rather pay a flat fee than share revenue. Launch is free to 2,500 subscribers. Scale (from $43/mo annual) adds monetization, automations and Boosts (custom domains come on every plan). Max (from $96/mo annual) adds team and multi-publication features. Enterprise is custom for 100,000+ subscribers."
  },
  {
   "before": "Best when: you want visual automations, tagging, a free tier up to 10k subscribers, and creator commerce (products, referral system). Pick over Mailchimp/MailerLite because creator tooling and deliverability are stronger; Creator from $39/mo (1k subs), Creator Pro from $79 adds subscriber scoring and referrals.",
@@ -381,7 +381,7 @@
  },
  {
   "before": "Free covers one brand and 20 published posts a month but excludes LinkedIn and X. Starter runs ~$20-36/mo for up to 10 brands; Advanced from ~$53/mo for up to 50 brands (annual billing ~24% less). X/Twitter is a $10/mo add-on per account (grandfathered $5/mo for accounts added before 13 July 2026). Pricing scales per brand.",
-  "after": "Free covers one brand and 20 published posts a month but excludes LinkedIn and X. Starter runs ~$20-36/mo for up to 10 brands, but Advanced from ~$53/mo for up to 50 brands (annual billing ~24% less). X/Twitter is a $10/mo add-on per account (grandfathered $5/mo for accounts added before 13 July 2026). Pricing scales per brand."
+  "after": "Free covers one brand and 20 published posts a month but excludes LinkedIn and X. Starter runs ~$20-36/mo for up to 10 brands, and Advanced starts at ~$53/mo for up to 50 brands (annual billing ~24% less). X/Twitter is a $10/mo add-on per account (grandfathered $5/mo for accounts added before 13 July 2026). Pricing scales per brand."
  },
  {
   "before": "Auto-publishes to the supported major networks on schedule rather than sending manual reminders to post. Scheduling works against the queue. The free tier holds 10 scheduled posts per channel, refillable as they go out. Publishing is hands-off within those limits.",
@@ -537,7 +537,7 @@
  },
  {
   "before": "Native invoicing and quotes are part of the billing layer, both covered within the 0.7% fee alongside recurring and usage charges. Invoices are generated inside Stripe rather than through a separate tool, keeping billing documents in the same system as payments.",
-  "after": "Native invoicing and quotes are part of the billing layer, both covered within the 0.7% fee alongside recurring and usage charges. Invoices are generated inside Stripe instead of through a separate tool, keeping billing documents in the same system as payments."
+  "after": "Native invoicing and quotes are part of the billing layer, both covered within the 0.7% fee alongside recurring and usage charges. Invoices are generated inside Stripe instead of through a separate tool, so billing documents stay in the same system as payments."
  },
  {
   "before": "Tax-compliant invoices are generated by Paddle as the seller of record. The invoice reflects Paddle as legal seller and carries the tax it collects and remits. Invoicing is therefore tied to the Merchant-of-Record role; the merchant does not issue it.",
@@ -553,7 +553,7 @@
  },
  {
   "before": "Up to 21 payment methods including PayPal, with subscriptions, newer usage-based billing, a customer portal, failed-payment recovery/dunning and fraud prevention. Automated software license-key issuance is a standout for selling code. Subscription depth is narrower than Stripe's, and the toolset is aimed at simple digital-product billing rather than enterprise contracts.",
-  "after": "Up to 21 payment methods including PayPal, with subscriptions, newer usage-based billing, a customer portal, failed-payment recovery/dunning and fraud prevention. Automated software license-key issuance is a standout for selling code. Subscription depth is narrower than Stripe's, and the toolset is aimed at simple digital-product billing instead of enterprise contracts."
+  "after": "Up to 21 payment methods including PayPal, with subscriptions, newer usage-based billing, a customer portal, failed-payment recovery/dunning and fraud prevention. Automated software license-key issuance is a strong point for selling code. Subscription depth is narrower than Stripe's, and the toolset is aimed at simple digital-product billing instead of enterprise contracts."
  },
  {
   "before": "Recurring runs through App Store/Play in-app purchases (end-user methods = whatever the stores accept, incl. Apple/Google Pay); RevenueCat manages subscription state, entitlements and paywalls on top.",
@@ -625,7 +625,7 @@
  },
  {
   "before": "Central risk: users are being migrated toward Stripe Managed Payments; some features won't carry over and new development has slowed; effectively a forced migration.",
-  "after": "Central risk: users are being migrated toward Stripe Managed Payments. Some features won't carry over and new development has slowed, but effectively a forced migration."
+  "after": "Central risk: users are being migrated toward Stripe Managed Payments. Some features won't carry over and new development has slowed, so it is effectively a forced migration."
  },
  {
   "before": "Onboarding is easy. Leaving is the hard part: you own the customer/card data (PCI scope) and Stripe helps export tokens to another processor. Migrating off your own custom billing logic later is a full re-engineering project.",
@@ -677,7 +677,7 @@
  },
  {
   "before": "A hosted, running web application: visual pages, a relational database, server-side workflows, and API connectors, all managed inside Bubble. It produces no source code; your app lives entirely in Bubble's proprietary runtime.",
-  "after": "A hosted, running web application: visual pages, a relational database, server-side workflows, and API connectors, all managed inside Bubble. It produces no source code, but your app lives entirely in Bubble's proprietary runtime."
+  "after": "A hosted, running web application: visual pages, a relational database, server-side workflows, and API connectors, all managed inside Bubble. It produces no source code. Your app lives entirely in Bubble's proprietary runtime."
  },
  {
   "before": "Per Lovable's own terms you own the generated code and any AI output. It's standard React and exportable to GitHub on paid plans. The catch is Lovable Cloud: because it also hosts your backend/database, leaving means re-homing that backend, so the front end is portable but the bundled stack creates soft lock-in.",
@@ -685,7 +685,7 @@
  },
  {
   "before": "Low lock-in by design: output is standard React/Vite with no proprietary format, GitHub auto-sync mirrors it to a repo, and you can download and self-host anywhere or deploy to Netlify. Nothing ties the code to Bolt, so the exit ramp is essentially free.",
-  "after": "Low lock-in by design. Output is standard React/Vite with no proprietary format, GitHub auto-sync mirrors it to a repo, and you can download and self-host anywhere or deploy to Netlify. Nothing ties the code to Bolt, so the exit ramp is essentially free."
+  "after": "Low lock-in by design. Output is standard React/Vite with no proprietary format, GitHub auto-sync mirrors it to a repo, and you can download and self-host anywhere or deploy to Netlify. Nothing ties the code to Bolt, so leaving costs almost nothing."
  },
  {
   "before": "The catch: no exportable source code. The app is locked to Bubble's proprietary runtime and hosting. Migrating off means a full rebuild elsewhere. Data is exportable (CSV/API). The UI and logic are not. Weakest exit ramp of the group.",
@@ -737,7 +737,7 @@
  },
  {
   "before": "Primarily web apps, APIs and static sites, which is the core of what it builds and hosts. A separate mobile app product exists in Replit's lineup, but the mainstream path here is web rather than native mobile.",
-  "after": "Primarily web apps, APIs and static sites, which is the core of what it builds and hosts. A separate mobile app product exists in Replit's lineup, but the mainstream path here is web, not native mobile."
+  "after": "Primarily web apps, APIs and static sites. That is the core of what it builds and hosts. A separate mobile app product exists in Replit's lineup, but the mainstream path here is web, not native mobile."
  },
  {
   "before": "Both, since it writes any framework: Next.js for web, React Native/Expo or Swift for mobile. But mobile means real build tooling, signing, and app-store review; the AI writes code, not your Apple approval.",
@@ -745,7 +745,7 @@
  },
  {
   "before": "Bounded by the in-browser WebContainers runtime and by token budget, which can climb steeply on complex apps. The escape hatch is portability: download the standard React/Vite code, or push via GitHub auto-sync into a real dev environment to go past what the browser build handles.",
-  "after": "Bounded by the in-browser WebContainers runtime and by token budget, which can climb steeply on complex apps. The escape hatch is portability. Download the standard React/Vite code, or push via GitHub auto-sync into a dev environment to go past what the browser build handles."
+  "after": "Bounded by the in-browser WebContainers runtime and by token budget. The token budget can climb steeply on complex apps. The escape hatch is portability. Download the standard React/Vite code, or push via GitHub auto-sync into a dev environment to go past what the browser build handles."
  },
  {
   "before": "A higher ceiling than pure prompt builders because you get a full IDE with real code access, a built-in database and real deploy infra (autoscale or reserved VM). The tradeoff is more hands-on work, and going bigger leans on managing that infrastructure yourself.",
@@ -757,7 +757,7 @@
  },
  {
   "before": "Essentially none on capability: it's real code. It scales as far as your architecture and skill do. The ceiling is human: your ability to review, test, and maintain what an eager AI happily over-generates.",
-  "after": "Essentially none on capability. It's real code. It scales as far as your architecture and skill do. The ceiling is human: your ability to review, test, and maintain what an eager AI happily over-generates."
+  "after": "Almost none on capability. It's real code. It scales as far as your architecture and skill do. The ceiling is human: your ability to review, test, and maintain what an eager AI happily over-generates."
  },
  {
   "before": "Zero lock-in paired with an instant, install-free in-browser full-stack runtime (WebContainers): the app builds and runs client-side as you prompt, output is standard React/Vite, and GitHub auto-sync plus Netlify deploy let you export and host anywhere.",
@@ -769,7 +769,7 @@
  },
  {
   "before": "Soft lock-in via Lovable Cloud, which hosts the bundled backend even though the React front end is exportable; credit burn that scales with iteration (~0.5-1.5 credits per message); web only, with no native mobile. Generated apps also still need your own security review for AI-code risks.",
-  "after": "Soft lock-in via Lovable Cloud, which hosts the bundled backend even though the React front end is exportable. Credit burn that scales with iteration (~0.5-1.5 credits per message), but web only, with no native mobile. Generated apps also still need your own security review for AI-code risks."
+  "after": "Soft lock-in via Lovable Cloud. It hosts the bundled backend even though the React front end is exportable. Credit burn scales with iteration (~0.5-1.5 credits per message). It is web only, with no native mobile. Generated apps also still need your own security review for AI-code risks."
  },
  {
   "before": "Unpredictable token-based billing that has reportedly reached $1,000+ on complex apps, with caps that changed twice in early 2026; bounded by the in-browser WebContainers runtime; web only, no native mobile. Generated code still needs review before shipping.",
@@ -789,7 +789,7 @@
  },
  {
   "before": "Best when: you want Agent 3 to build autonomously WHILE you retain a real dev environment (terminal, packages, databases, deployments, collaboration) so you can graduate from prompting to actual coding without leaving; Core $20/mo includes ~$25 usage credits, Agent 3 runs up to 200 min autonomously. Pick Replit over Lovable/Bolt when you want a genuine IDE plus hosting, not just a prompt-to-app rail, and over v0 which is UI-only",
-  "after": "Best when: you want Agent 3 to build autonomously WHILE you retain a dev environment (terminal, packages, databases, deployments, collaboration) so you can graduate from prompting to actual coding without leaving; Core $20/mo includes ~$25 usage credits, Agent 3 runs up to 200 min autonomously. Pick Replit over Lovable/Bolt when you want a genuine IDE plus hosting, not just a prompt-to-app rail, and over v0 which is UI-only"
+  "after": "Best when: you want Agent 3 to build autonomously while you retain a dev environment (terminal, packages, databases, deployments, collaboration) so you can graduate from prompting to actual coding without leaving; Core $20/mo includes ~$25 usage credits, Agent 3 runs up to 200 min autonomously. Pick Replit over Lovable/Bolt when you want a genuine IDE plus hosting, not just a prompt-to-app rail, and over v0 which is UI-only"
  },
  {
   "before": "Best when: you want to generate clean, production-ready React + shadcn/ui + Tailwind components from prompts or screenshots and paste them into an existing Next.js codebase. The cleanest frontend output of this group; Plus $30/user/mo (the old $20 Premium is legacy-only); pick v0 over Lovable/Bolt/Replit when you specifically want UI scaffolding to drop into your own stack, not a full generated app you must then own, and over Bubble/FlutterFlow which are whole-app platforms",
@@ -853,7 +853,7 @@
  },
  {
   "before": "libSQL is SQLite-compatible; local database files can be read with standard SQLite tooling, keeping the data itself portable. The edge sync layer and the hosted service are Turso-specific, so it is the embedded-replica setup rather than the data that ties you to the platform.",
-  "after": "libSQL is SQLite-compatible. Local database files can be read with standard SQLite tooling, keeping the data itself portable. The edge sync layer and the hosted service are Turso-specific, so it is the embedded-replica setup, not the data that ties you to the platform."
+  "after": "libSQL is SQLite-compatible. Local database files can be read with standard SQLite tooling, so the data itself stays portable. The edge sync layer and the hosted service are Turso-specific, so it is the embedded-replica setup, not the data that ties you to the platform."
  },
  {
   "before": "Open-sourced in 2024 with self-hosting available since early 2025, running under Docker with data in either SQLite or Postgres. That combination hedges lock-in for a code-first platform: the backend logic and its store can be moved off the vendor cloud onto self-managed infrastructure.",
@@ -869,7 +869,7 @@
  },
  {
   "before": "Provides reactive, realtime data out of the box through a code-first TypeScript model, so query results sync to clients as data changes without extra wiring. For realtime and AI apps built in TypeScript, having reactivity as a default rather than an add-on is the standout.",
-  "after": "Provides reactive, realtime data out of the box through a code-first TypeScript model, so query results sync to clients as data changes without extra wiring. For realtime and AI apps built in TypeScript, having reactivity as a default instead of an add-on is the standout."
+  "after": "Provides reactive, realtime data out of the box through a code-first TypeScript model, so query results sync to clients as data changes without extra wiring. For realtime and AI apps built in TypeScript, having reactivity as a default instead of an add-on is the main advantage."
  },
  {
   "before": "No self-hosting and proprietary throughout, giving it the highest lock-in here, and its Blaze plan bills per operation, so usage-based charges can surprise as volume grows. Both constraints stem from the closed, Google-hosted model rather than being configurable away.",
@@ -937,7 +937,7 @@
  },
  {
   "before": "Available on higher plans but not the product's primary focus, which is developer-oriented hosted auth and pre-built UI. Enterprise SSO is present rather than the specialty. Teams whose main need is SAML/SCIM at scale are not its core audience.",
-  "after": "Available on higher plans but not the product's primary focus, which is developer-oriented hosted auth and pre-built UI. Enterprise SSO is present, not the specialty. Teams whose main need is SAML/SCIM at scale are not its core audience."
+  "after": "Available on higher plans but not the product's primary focus. That focus is developer-oriented hosted auth and pre-built UI. Enterprise SSO is present, not the specialty. Teams whose main need is SAML/SCIM at scale are not its core audience."
  },
  {
   "before": "Ships with built-in organizations and multi-tenant primitives as part of the hosted service, so team and tenant structures are provided rather than modeled from scratch. This aligns with its developer-oriented, drop-in positioning.",
@@ -1001,7 +1001,7 @@
  },
  {
   "before": "A front-end/edge cloud (PaaS) optimized for Next.js/React. It serves static sites alongside serverless and edge functions running on Fluid Compute, which bills only during actual code execution rather than while a function sits idle waiting on I/O, the platform's main efficiency lever.",
-  "after": "A front-end/edge cloud (PaaS) optimized for Next.js/React. It serves static sites alongside serverless and edge functions running on Fluid Compute, which bills only during actual code execution instead of while a function sits idle waiting on I/O, the platform's main efficiency lever."
+  "after": "A front-end/edge cloud (PaaS) optimized for Next.js/React. It serves static sites alongside serverless and edge functions running on Fluid Compute. It bills only during actual code execution instead of while a function sits idle waiting on I/O, the platform's main efficiency lever."
  },
  {
   "before": "A raw Linux server you configure end-to-end: OS, runtime, reverse proxy, TLS, and deploys. Coolify/Dokku add a Heroku-like layer on top; bare Docker+Caddy is even more hands-on. No platform abstracting the box away.",
@@ -1025,7 +1025,7 @@
  },
  {
   "before": "Flat + credit-based. Free (300 credits/mo) → Pro $20/mo flat with unlimited seats → Enterprise. Netlify moved to credit-based pricing and, on 2026-04-14, dropped per-seat charges; Pro includes 3,000 credits/month. Surface price is close to Vercel's, but the credit model changes the real cost: heavy builds and function usage draw down credits, so model your actual usage rather than trusting the sticker price.",
-  "after": "Flat + credit-based. Free (300 credits/mo) → Pro $20/mo flat with unlimited seats → Enterprise. Netlify moved to credit-based pricing and, on 2026-04-14, dropped per-seat charges. Pro includes 3,000 credits/month. Surface price is close to Vercel's, but the credit model changes the real cost. Heavy builds and function usage draw down credits, so model your actual usage, not trusting the sticker price."
+  "after": "Flat + credit-based. Free (300 credits/mo) → Pro $20/mo flat with unlimited seats → Enterprise. Netlify moved to credit-based pricing and, on 2026-04-14, dropped per-seat charges. Pro includes 3,000 credits/month. Surface price is close to Vercel's, but the credit model changes the real cost. Heavy builds and function usage draw down credits, so model your actual usage instead of trusting the sticker price."
  },
  {
   "before": "Flat monthly VPS rent (~$4-6/mo entry Hetzner, more for RAM/CPU/disk), not usage-metered. No per-request, bandwidth (within cap), or build-minute billing. Cost is fixed and low; your TIME is the real spend, mostly upfront.",
@@ -1061,7 +1061,7 @@
  },
  {
   "before": "Free tier: 300 credits/month, custom domains, and HTTPS; crucially, it allows commercial use, unlike Vercel's Hobby tier. Everything draws from the same credit pool (bandwidth at 20 credits/GB, so ~15GB if spent entirely on bandwidth), which can throttle teams that deploy frequently or run busy functions.",
-  "after": "Free tier: 300 credits/month, custom domains, and HTTPS. Crucially, it allows commercial use, unlike Vercel's Hobby tier. Everything draws from the same credit pool (bandwidth at 20 credits/GB, so ~15GB if spent entirely on bandwidth), which can throttle teams that deploy frequently or run busy functions."
+  "after": "Free tier: 300 credits/month, custom domains, and HTTPS. It allows commercial use, unlike Vercel's Hobby tier. Everything draws from the same credit pool (bandwidth at 20 credits/GB, so ~15GB if spent entirely on bandwidth), which can throttle teams that deploy frequently or run busy functions."
  },
  {
   "before": "Zero-config for Next.js: connect a Git repo and a push triggers a build and deploy with no pipeline to assemble. The tailored path is strongest inside the Next.js/React lane the platform is optimized around.",
@@ -1101,7 +1101,7 @@
  },
  {
   "before": "Low app lock-in: the deployed unit is a standard Docker container; the application moves to any container host. What is Fly-specific is the machine and region orchestration, not the app itself.",
-  "after": "Low app lock-in. The deployed unit is a standard Docker container, but the application moves to any container host. What is Fly-specific is the machine and region orchestration, not the app itself."
+  "after": "Low app lock-in. The deployed unit is a standard Docker container, so the application moves to any container host. What is Fly-specific is the machine and region orchestration, not the app itself."
  },
  {
   "before": "Lower lock-in than Vercel: it's framework-agnostic; standard apps move cleanly to another host or self-hosting. You'll hit some friction only if you depend on Netlify-specific features (Blobs storage, identity/auth, split-testing), which have no drop-in equivalent elsewhere.",
@@ -1241,11 +1241,11 @@
  },
  {
   "before": "It stands out on simplicity: it is the easiest to set up here, built around a shared inbox with an easy import and metered AI Answers at $0.75 per resolution. The appeal is a low-configuration shared-inbox desk for small teams.",
-  "after": "It stands out on simplicity. It is the easiest to set up here, built around a shared inbox with an easy import and metered AI Answers at $0.75 per resolution. The appeal is a low-configuration shared-inbox desk for small teams."
+  "after": "Its strength is simplicity. It is the easiest to set up here, built around a shared inbox with an easy import and metered AI Answers at $0.75 per resolution. The appeal is a low-configuration shared-inbox desk for small teams."
  },
  {
   "before": "Its standout is open-source (MIT) data ownership: self-hosting is free beyond infrastructure, AI is included in the base, and it positions as an alternative to Intercom, Zendesk and Salesforce Service Cloud for teams that can self-host.",
-  "after": "Its standout is open-source (MIT) data ownership. Self-hosting is free beyond infrastructure, AI is included in the base, and it positions as an alternative to Intercom, Zendesk and Salesforce Service Cloud for teams that can self-host."
+  "after": "Its main advantage is open-source (MIT) data ownership. Self-hosting is free beyond infrastructure, AI is included in the base, and it positions as an alternative to Intercom, Zendesk and Salesforce Service Cloud for teams that can self-host."
  },
  {
   "before": "Ideal for an early team with a technical member: near-zero per-seat cost, full data ownership (good for privacy-sensitive users), and no vendor lock-in while volume is low.",
@@ -1297,7 +1297,7 @@
  },
  {
   "before": "Its standout is being AI-native: models do the substantive work across the workflow, with OpenAI, Anthropic or Google models pluggable into any node. For automations whose core task is interpretation, generation or extraction, the model-first design fits better than bolting AI onto a rule engine.",
-  "after": "Its standout is being AI-native. Models do the substantive work across the workflow, with OpenAI, Anthropic or Google models pluggable into any node. For automations whose core task is interpretation, generation or extraction, the model-first design fits better than bolting AI onto a rule engine."
+  "after": "What sets it apart is being AI-native. Models do the substantive work across the workflow, with OpenAI, Anthropic or Google models pluggable into any node. For automations whose core task is interpretation, generation or extraction, the model-first design fits better than bolting AI onto a rule engine."
  },
  {
   "before": "Best for a technical team running high automation volume or handling sensitive data: massive cost savings vs per-task SaaS, no vendor limits, and complete control over logic and where data lives.",
@@ -1329,11 +1329,11 @@
  },
  {
   "before": "Free for 3 users and 50,000 records, then Plus at $35/user/mo annual ($44 monthly) and Pro at $79/user/mo annual ($99 monthly), both raised ~July 2026. The less obvious cost is the hybrid model: per-seat pricing is layered with usage-based credits, so spend tracks headcount and consumption together instead of seats alone, making bills harder to predict as usage scales.",
-  "after": "Free for 3 users and 50,000 records, then Plus at $35/user/mo annual ($44 monthly) and Pro at $79/user/mo annual ($99 monthly), both raised ~July 2026. The less obvious cost is the hybrid model. Per-seat pricing is layered with usage-based credits, so spend tracks headcount and consumption together instead of seats alone, making bills harder to predict as usage scales."
+  "after": "Free for 3 users and 50,000 records, then Plus at $35/user/mo annual ($44 monthly) and Pro at $79/user/mo annual ($99 monthly), both raised ~July 2026. The less obvious cost is the hybrid model. Per-seat pricing is layered with usage-based credits, so spend tracks headcount and consumption together instead of seats alone, which makes bills harder to predict as usage scales."
  },
  {
   "before": "Easiest exit of the group: it's your DB, export to CSV/SQL anytime, no contractual lock-in. Import is manual CSV mapping. Moving between Airtable/Notion/EspoCRM is straightforward since you control the schema.",
-  "after": "Easiest exit of the group. It's your DB, export to CSV/SQL anytime, no contractual lock-in. Import is manual CSV mapping. Moving between Airtable/Notion/EspoCRM is straightforward since you control the schema."
+  "after": "Easiest exit of the group. It's your DB. Export to CSV/SQL anytime, with no contractual lock-in. Import is manual CSV mapping. Moving between Airtable/Notion/EspoCRM is straightforward since you control the schema."
  },
  {
   "before": "Expensive, quote-gated, 3-seat minimum and add-on-heavy: a poor fit pre-revenue. Annual lock-in, aggressive renewals, thinner international/SMB data, and privacy/compliance overhead. Cheaper tools (Apollo, Clay) suffice for early prospecting.",
@@ -1401,7 +1401,7 @@
  },
  {
   "before": "Free and shared clusters auto-pause after prolonged inactivity and must be resumed, whereas dedicated M10+ clusters run continuously and do not pause. Idle behavior therefore tracks the tier: the free M0 can sleep, while paid dedicated capacity stays on.",
-  "after": "Free and shared clusters auto-pause after prolonged inactivity and must be resumed, whereas dedicated M10+ clusters run continuously and do not pause. Idle behavior therefore tracks the tier. The free M0 can sleep, while paid dedicated capacity stays on."
+  "after": "Free and shared clusters auto-pause after prolonged inactivity and must be resumed. Dedicated M10+ clusters run continuously and do not pause. Idle behavior therefore tracks the tier. The free M0 can sleep, while paid dedicated capacity stays on."
  },
  {
   "before": "Newer than the incumbents but funded, and its codebase was open-sourced in 2024, which is a community hedge: if the company's direction changed, the self-hostable code remains available. Maturity is lower, but the open source acts as a fallback.",
@@ -1445,7 +1445,7 @@
  },
  {
   "before": "A steeper learning curve than Zapier: the visual canvas, routers, filters and operation model all take time to grasp. Once learned, it expresses more complex logic than a linear builder, so the added ramp-up buys more capability, better suited to builders willing to invest time in the tool.",
-  "after": "A steeper learning curve than Zapier. The visual canvas, routers, filters and operation model all take time to grasp. Once learned, it expresses more complex logic than a linear builder, so the added ramp-up buys more capability, better suited to builders willing to invest time in the tool."
+  "after": "A steeper learning curve than Zapier. The visual canvas, routers, filters and operation model all take time to grasp. Once learned, it expresses more complex logic than a linear builder, so the added ramp-up buys more capability. It suits builders willing to invest time in the tool."
  },
  {
   "before": "Cloud-only and serverless, with no official self-hosted/open-source runtime like n8n or Activepieces. Data flows through Pipedream's managed infrastructure: great for convenience, weaker for on-prem or strict data-residency requirements.",
@@ -1481,7 +1481,7 @@
  },
  {
   "before": "Self-service centres on the native Hugo AI agent, which is reported to resolve up to ~60% of repetitive questions using each plan's bundled AI credits ($5, $25, $75). Repetitive queries are deflected by Hugo, drawing down credits instead of incurring per-outcome charges.",
-  "after": "Self-service centers on the native Hugo AI agent, which is reported to resolve up to ~60% of repetitive questions using each plan's bundled AI credits ($5, $25, $75). Repetitive queries are deflected by Hugo, drawing down credits instead of incurring per-outcome charges."
+  "after": "Self-service centers on the native Hugo AI agent. It is reported to resolve up to ~60% of repetitive questions using each plan's bundled AI credits ($5, $25, $75). Repetitive queries are deflected by Hugo, drawing down credits instead of incurring per-outcome charges."
  },
  {
   "before": "Customization is simple, and the desk is organised around a shared inbox instead of heavy SLA configuration. Ticketing exists but is lighter than a full ticket system, matching the email-first, small-team positioning.",
@@ -1533,7 +1533,7 @@
  },
  {
   "before": "Launch is free up to 2,500 subscribers. Scale is $43/mo (annual) and is the plan that unlocks monetization (Boosts ads, paid subscriptions) and automations; custom domains are included on every plan, and branding removal comes only with Max or Enterprise. Max is $96/mo, and Enterprise is custom for 100,000+ subscribers.",
-  "after": "Launch is free up to 2,500 subscribers. Scale is $43/mo (annual) and is the plan that unlocks monetization (Boosts ads, paid subscriptions) and automations. Custom domains are included on every plan, and branding removal comes only with Max or Enterprise. Max is $96/mo, and Enterprise is custom for 100,000+ subscribers."
+  "after": "Launch is free up to 2,500 subscribers. Scale is $43/mo (annual) and is the plan that adds monetization (Boosts ads, paid subscriptions) and automations. Custom domains are included on every plan, and branding removal comes only with Max or Enterprise. Max is $96/mo, and Enterprise is custom for 100,000+ subscribers."
  },
  {
   "before": "Generally solid on a managed shared infrastructure with no setup required; handles sending reputation for you. But you cannot use your own sending domain/IP or deeply tune deliverability the way dedicated ESPs allow.",
@@ -1581,7 +1581,7 @@
  },
  {
   "before": "A working React/Tailwind web app plus a bundled Lovable Cloud (Supabase-style) backend, with Stripe integration available. All code is visible and editable by chat, and per Lovable's own terms 'you own your code' and any AI output; GitHub export is unlocked on paid plans.",
-  "after": "A working React/Tailwind web app plus a bundled Lovable Cloud (Supabase-style) backend, with Stripe integration available. All code is visible and editable by chat, and per Lovable's own terms 'you own your code' and any AI output. GitHub export is unlocked on paid plans."
+  "after": "A working React/Tailwind web app plus a bundled Lovable Cloud (Supabase-style) backend, with Stripe integration available. All code is visible and editable by chat, and per Lovable's own terms 'you own your code' and any AI output. GitHub export is available on paid plans."
  },
  {
   "before": "Good for web MVPs, internal tools and landing pages; because all code is visible and exportable to GitHub (paid), complex or custom logic can eventually be hand-coded in the exported React repo, though doing so means working around the Lovable Cloud backend it bundles.",
@@ -1757,7 +1757,7 @@
  },
  {
   "before": "Fast for front-end and UI generation, especially inside a Next.js/Vercel workflow, and the permanent free tier (~$5 of tokens/mo, roughly 3-8 prompts/day) lets you generate immediately. Deploying to Vercel from the generated code is quick given the native integration.",
-  "after": "Fast for front-end and UI generation, especially inside a Next.js/Vercel workflow, and the permanent free tier (~$5 of tokens/mo, roughly 3-8 prompts/day) generates immediately. Deploying to Vercel from the generated code is quick given the native integration."
+  "after": "Fast for front-end and UI generation and at its best inside a Next.js/Vercel workflow. The permanent free tier (~$5 of tokens/mo, roughly 3-8 prompts/day) generates immediately. Deploying to Vercel from the generated code is quick given the native integration."
  },
  {
   "before": "Permanent free tier worth ~$5 of tokens/mo (roughly 3-8 prompts/day). Paid plans from $30/mo (Plus; the old $20 Premium tier is closed to new signups). Generation is metered by a token/credit system that resets monthly, and the caps have moved over time, so the effective prompts-per-day you get can shift between periods.",
@@ -1786,5 +1786,257 @@
  {
   "before": "The core advantage: data never leaves your server, no third party sees your workflows or credentials, which is strong for privacy/compliance. Trade-off: you own uptime, security patches, backups and scaling. Your automation is only as reliable as your box.",
   "after": "The core advantage: data never leaves your server, no third party sees the workflows or credentials, which is strong for privacy/compliance. Trade-off: you own uptime, security patches, backups and scaling. The automation is only as reliable as the box it runs on."
+ },
+ {
+  "before": "The largest free subscriber ceiling here, up to 10,000 subscribers free, combined with automation-first sequences. For a creator who wants to build and nurture a sizable audience before paying, and to run branching automations once they do, that free-tier depth plus workflow tooling is the standout.",
+  "after": "The largest free subscriber ceiling here, up to 10,000 subscribers free, combined with automation-first sequences. For a creator who wants to build and nurture a sizable audience before paying, and to run branching automations once they do, that free-tier depth plus workflow tooling is the reason to pick it."
+ },
+ {
+  "before": "A writing-first workflow for X and LinkedIn, plus Threads, Bluesky and Mastodon, built around a distraction-free thread editor with AI. It stands out for composing text content, not visual planning or bulk operations.",
+  "after": "A writing-first workflow for X and LinkedIn, plus Threads, Bluesky and Mastodon, built around a distraction-free thread editor with AI. It is strongest at composing text content, not visual planning or bulk operations."
+ },
+ {
+  "before": "Bulk and batch scheduling of up to 500 posts via CSV, with content recycling, at low per-account pricing from $5/mo. Its standout is high-volume queue-building across multiple accounts, not composing or analytics depth.",
+  "after": "Bulk and batch scheduling of up to 500 posts via CSV, with content recycling, at low per-account pricing from $5/mo. Its strength is high-volume queue-building across multiple accounts, not composing or analytics depth."
+ },
+ {
+  "before": "Its standout is breadth: the widest API and product suite, the lowest headline processing rate here, and the deepest third-party integration ecosystem (Shopify, most SaaS billing and accounting tools). Add strong docs, 100+ payment methods and a full native Billing engine, and it is one of the most flexible options in the group.",
+  "after": "Its main strength is breadth: the widest API and product suite, the lowest headline processing rate here, and the deepest third-party integration ecosystem (Shopify, most SaaS billing and accounting tools). Add strong docs, 100+ payment methods and a full native Billing engine, and it is one of the most flexible options in the group."
+ },
+ {
+  "before": "The only pick here that produces genuine native mobile apps (real iOS/Android and web from one project) while still handing you clean, fully-owned Flutter/Dart you can export from the Basic plan and develop anywhere. Native output plus code ownership is the standout.",
+  "after": "The only pick here that produces genuine native mobile apps (real iOS/Android and web from one project) while still handing you clean, fully-owned Flutter/Dart you can export from the Basic plan and develop anywhere. Native output plus code ownership is the main draw."
+ },
+ {
+  "before": "Stands out for the breadth of its enterprise identity feature set and protocol support, spanning B2C and B2B with adaptive MFA, attack protection, and SSO/SCIM. It covers the widest range of identity requirements of this group.",
+  "after": "Its strength is the breadth of its enterprise identity feature set and protocol support, spanning B2C and B2B with adaptive MFA, attack protection, and SSO/SCIM. It covers the widest range of identity requirements of this group."
+ },
+ {
+  "before": "Broad: magic links, email/SMS/WhatsApp OTP, passkeys/WebAuthn, passwords, OAuth, TOTP, and M2M tokens. Standout protection is built-in device fingerprinting/fraud (10k fingerprints free, then $0.005 each).",
+  "after": "Broad: magic links, email/SMS/WhatsApp OTP, passkeys/WebAuthn, passwords, OAuth, TOTP, and M2M tokens. The strongest protection feature is built-in device fingerprinting/fraud (10k fingerprints free, then $0.005 each)."
+ },
+ {
+  "before": "Excellent and framework-agnostic: Git-based deploys, preview URLs, a mature plugin ecosystem, and vercel.json-equivalent config via netlify.toml. Its built-in forms, identity/auth, and split-testing remove entire categories of extra setup. The standout for Astro/Hugo/SvelteKit and any multi-framework or static workflow.",
+  "after": "Excellent and framework-agnostic: Git-based deploys, preview URLs, a mature plugin ecosystem, and vercel.json-equivalent config via netlify.toml. Its built-in forms, identity/auth, and split-testing remove entire categories of extra setup. The best fit for Astro/Hugo/SvelteKit and any multi-framework or static workflow."
+ },
+ {
+  "before": "Core accounting and unlimited invoicing free at the Starter tier ($0/mo), and it's the easiest tool here to set up. For freelancers and very small businesses under $500K revenue that want working books at no software cost, that's the standout.",
+  "after": "Core accounting and unlimited invoicing free at the Starter tier ($0/mo), and it's the easiest tool here to set up. For freelancers and very small businesses under $500K revenue that want working books at no software cost, that's the main draw."
+ },
+ {
+  "before": "A free-forever plan (under $50K revenue) that already includes bank reconciliation and 50+ reports, plus deep integration across the wider Zoho app suite. For micro-businesses wanting real accounting at no cost within one ecosystem, that combination stands out.",
+  "after": "A free-forever plan (under $50K revenue) that already includes bank reconciliation and 50+ reports, plus deep integration across the wider Zoho app suite. For micro-businesses wanting real accounting at no cost within one ecosystem, that combination is its main advantage."
+ },
+ {
+  "before": "Its distinguishing element is the Fin AI agent operating across chat, email, in-app and social, billed per outcome at $0.99. The standout is a messaging-first suite where an AI agent handles front-line conversations, backed by deep customization.",
+  "after": "Its distinguishing element is the Fin AI agent operating across chat, email, in-app and social, billed per outcome at $0.99. Its core is a messaging-first suite where an AI agent handles front-line conversations, backed by deep customization."
+ },
+ {
+  "before": "Its standout is classic ticketing depth (SLAs, routing and reporting with deep configuration) combined with a free program for up to 2 agents (currently a 6-month term). It is full ticketing that a very small team can start on at no cost for that period.",
+  "after": "Its strength is classic ticketing depth (SLAs, routing and reporting with deep configuration) combined with a free program for up to 2 agents (currently a 6-month term). It is full ticketing that a very small team can start on at no cost for that period."
+ },
+ {
+  "before": "Its standout is reach: 9,000+ app integrations, the most of the group, paired with a low-friction setup for non-technical users. When the priority is connecting to a specific SaaS product with minimal effort, the odds of a ready-made integration existing are highest here of any tool compared.",
+  "after": "Its main strength is reach: 9,000+ app integrations, the most of the group, paired with a low-friction setup for non-technical users. When the priority is connecting to a specific SaaS product with minimal effort, the odds of a ready-made integration existing are highest here of any tool compared."
+ },
+ {
+  "before": "Its standout is visual automation at a low entry price (Core is $12/mo for 10,000 credits, formerly 'operations'), so complex, multi-branch scenarios are reachable on a modest budget. The per-step credit model gives useful run headroom per dollar for workflows that aren't excessively step-heavy on each run.",
+  "after": "Its strength is visual automation at a low entry price (Core is $12/mo for 10,000 credits, formerly 'operations'), so complex, multi-branch scenarios are reachable on a modest budget. The per-step credit model gives useful run headroom per dollar for workflows that aren't excessively step-heavy on each run."
+ },
+ {
+  "before": "Its standout is free, unlimited self-hosted executions combined with developer-grade flexibility: custom-code nodes, branching and full debugging. For a technical team, run volume costs nothing when self-hosted and few no-code limits apply, trading infrastructure effort for capability and control.",
+  "after": "Its main advantage is free, unlimited self-hosted executions combined with developer-grade flexibility: custom-code nodes, branching and full debugging. For a technical team, run volume costs nothing when self-hosted and few no-code limits apply, trading infrastructure effort for capability and control."
+ },
+ {
+  "before": "Its standout is the combination of a permissive MIT open-source license, free self-hosting, and 700+ integrations, plus agent tooling via MCP. It offers open-source data control without the steepest developer curve, positioning itself between no-code simplicity and fully developer-oriented tools.",
+  "after": "Its advantage is the combination of a permissive MIT open-source license, free self-hosting, and 700+ integrations, plus agent tooling via MCP. It offers open-source data control without the steepest developer curve, and sits between no-code simplicity and fully developer-oriented tools."
+ },
+ {
+  "before": "Best when: you're sending tens of thousands of emails across dozens of domains and want unlimited email accounts plus free warmup on every plan. Pick over per-inbox rivals because Growth is $47 (1k leads/5k emails) and Hypergrowth $97 unlocks 25k leads/100k emails plus the Unibox, a ~10x drop in cost per 1k emails.",
+  "after": "Best when: you're sending tens of thousands of emails across dozens of domains and want unlimited email accounts plus free warmup on every plan. Pick over per-inbox rivals because Growth is $47 (1k leads/5k emails) and Hypergrowth $97 includes 25k leads/100k emails plus the Unibox, a ~10x drop in cost per 1k emails."
+ },
+ {
+  "before": "Growth centers on the Boosts ad network, which connects newsletters to acquire subscribers, alongside the newsletter site (custom domains come on every plan, including free Launch). Boosts sits with the monetization tooling on the Scale plan ($43/mo, annual), so the same tier that unlocks revenue also unlocks the paid growth lever.",
+  "after": "Growth centers on the Boosts ad network. It connects newsletters to acquire subscribers, alongside the newsletter site (custom domains come on every plan, including free Launch). Boosts sits with the monetization tooling on the Scale plan ($43/mo, annual), so revenue and the paid growth lever arrive on the same tier."
+ },
+ {
+  "before": "No free plan; 7-day trial (no card). Current plans: Flexible $6/mo for 1 channel (+$6/mo per additional channel) and Full $19/mo with all channels included; annual billing available. Full unlocks the advanced analytics and engagement tools.",
+  "after": "No free plan; 7-day trial (no card). Current plans: Flexible $6/mo for 1 channel (+$6/mo per additional channel) and Full $19/mo with all channels included; annual billing available. Full adds the advanced analytics and engagement tools."
+ },
+ {
+  "before": "Best when: value and inventory drive the pick: free under $50K annual revenue, Standard $15/mo, Professional $40/mo (unlocks inventory), scaling to $120 Elite and $240 Ultimate, with tight Zoho CRM/Inventory/Mail integration; choose it over Wave when you want more usable free functionality and inventory that Wave lacks, and over QuickBooks when you'd rather stay inside Zoho's suite than pay QBO's higher, recently-raised tiers.",
+  "after": "Best when: value and inventory drive the pick: free under $50K annual revenue, Standard $15/mo, Professional $40/mo (adds inventory), scaling to $120 Elite and $240 Ultimate, with tight Zoho CRM/Inventory/Mail integration; choose it over Wave when you want more usable free functionality and inventory that Wave lacks, and over QuickBooks when you'd rather stay inside Zoho's suite than pay QBO's higher, recently-raised tiers."
+ },
+ {
+  "before": "Skills/omnichannel routing, triggers/automations, SLA policies with breach alerts, and Explore analytics for dashboards. Custom SLAs, advanced routing and richer reporting unlock on Growth/Professional and above.",
+  "after": "Skills/omnichannel routing, triggers/automations, SLA policies with breach alerts, and Explore analytics for dashboards. Custom SLAs, advanced routing and richer reporting start on Growth/Professional and above."
+ },
+ {
+  "before": "The cheapest global static hosting here (unlimited sites and unlimited bandwidth with no egress fees and no commercial-use restriction), served from Cloudflare's global edge, so traffic-driven bandwidth bills essentially do not apply.",
+  "after": "The cheapest global static hosting here (unlimited sites and unlimited bandwidth with no egress fees and no commercial-use restriction), served from Cloudflare's global edge, so traffic-driven bandwidth bills do not apply in practice."
+ },
+ {
+  "before": "Free tier covers 25,000 MAU and notably includes SSO, SCIM and AI features. Paid plans step up sharply: Essentials B2C $35/mo, Essentials B2B $150/mo, Professional B2C $240/mo, Professional B2B $800/mo, jumps that startups describe as a 'growth penalty'.",
+  "after": "Free tier covers 25,000 MAU and includes SSO, SCIM and AI features. Paid plans step up sharply: Essentials B2C $35/mo, Essentials B2B $150/mo, Professional B2C $240/mo, Professional B2B $800/mo, jumps that startups describe as a 'growth penalty'."
+ },
+ {
+  "before": "Not a true product-analytics tool: clunky behavioral analysis, data sampling, no replay, no native experimentation, and a notably steep GA4 learning curve.",
+  "after": "Not a true product-analytics tool: clunky behavioral analysis, data sampling, no replay, no native experimentation, and a steep GA4 learning curve."
+ },
+ {
+  "before": "Integrates with the modern startup stack (notably Stripe and bank connections), not a broad third-party marketplace. The focus is the tools startups already run, which suits its target users but is narrower than the incumbents' ecosystems.",
+  "after": "Integrates with the modern startup stack (including Stripe and bank connections), not a broad third-party marketplace. The focus is the tools startups already run, which suits its target users but is narrower than the incumbents' ecosystems."
+ },
+ {
+  "before": "Conditional multi-step sequences with A/B testing and reply detection, but uses a bucket-then-schedule model (add prospects to a bucket, then a schedule feeds the campaign), which is capable but less intuitive than one-click adding.",
+  "after": "Conditional multi-step sequences with A/B testing and reply detection. It uses a bucket-then-schedule model (add prospects to a bucket, then a schedule feeds the campaign), which is capable but less intuitive than one-click adding."
+ },
+ {
+  "before": "A writing-first scheduler built around text networks: X, LinkedIn, Threads, Bluesky and Mastodon. Rather than a visual calendar, it centers a thread and post editor. The free tier covers one social set and 15 posts a month, positioning it for individual writers before per-social-set paid upgrades.",
+  "after": "A writing-first scheduler built around text networks: X, LinkedIn, Threads, Bluesky and Mastodon. Rather than a visual calendar, it centers a thread and post editor. The free tier covers one social set and 15 posts a month, which suits individual writers until they need per-social-set paid upgrades."
+ },
+ {
+  "before": "Sells globally as the Merchant of Record and pays out across a broad set of geographies: bank transfer to ~79 countries and PayPal to 200+ countries/regions, roughly 279+ in total. Seller signup is self-serve with KYC and quick to go live, making it practical for indie founders in most places to start selling internationally.",
+  "after": "Sells globally as the Merchant of Record and pays out across a broad set of geographies: bank transfer to ~79 countries and PayPal to 200+ countries/regions, roughly 279+ in total. Seller signup is self-serve with KYC and quick to go live, so indie founders in most places can start selling internationally."
+ },
+ {
+  "before": "One dashboard fronts Postgres plus auth, storage, realtime and edge functions, so the pieces share a single database rather than separate services. pgvector is available in the same Postgres instance for storing and querying embeddings, keeping vector search alongside relational data instead of a bolt-on service.",
+  "after": "One dashboard fronts Postgres plus auth, storage, realtime and edge functions, so the pieces share a single database rather than separate services. pgvector is available in the same Postgres instance for storing and querying embeddings, so vector search sits alongside relational data instead of a bolt-on service."
+ },
+ {
+  "before": "Proprietary in its data model, Security Rules and indexing, with no self-hosted equivalent to move to. Data can be exported via gcloud, but the rules, triggers and auth around it have no portable form and require a rewrite elsewhere, making this the highest-lock-in option here.",
+  "after": "Proprietary in its data model, Security Rules and indexing, with no self-hosted equivalent to move to. Data can be exported via gcloud, but the rules, triggers and auth around it have no portable form and require a rewrite elsewhere. That makes this the highest-lock-in option here."
+ },
+ {
+  "before": "Supports passwords, social and passwordless sign-in, integrated with Postgres row-level security so authorization is enforced in the database. Security is tied to the RLS model, not a separate policy layer, keeping auth and data rules in one place.",
+  "after": "Supports passwords, social and passwordless sign-in, integrated with Postgres row-level security so authorization is enforced in the database. Security is tied to the RLS model, not a separate policy layer, so auth and data rules stay in one place."
+ },
+ {
+  "before": "Very easy Git-based deploys with automatic runtime detection, so a standard app builds and ships without much configuration. It runs from containers or native runtimes, keeping the setup step light for common full-stack stacks.",
+  "after": "Very easy Git-based deploys with automatic runtime detection, so a standard app builds and ships without much configuration. It runs from containers or native runtimes, which keeps setup light for common full-stack stacks."
+ },
+ {
+  "before": "Its defining feature: retroactive autocapture of every click, pageview, and form interaction, letting you define events after the fact with no code changes or replays lost.",
+  "after": "Its defining feature: retroactive autocapture of every click, pageview, and form interaction, so you can define events after the fact with no code changes or replays lost."
+ },
+ {
+  "before": "Chat, email, in-app messaging and social. The in-app channel is central to its messaging-first positioning, letting conversations run inside the product as well as over email and social, all managed from a single support workspace.",
+  "after": "Chat, email, in-app messaging and social. The in-app channel is central to its messaging-first positioning, so conversations run inside the product as well as over email and social, all managed from a single support workspace."
+ },
+ {
+  "before": "The bundled AI credits ($5, $25, $75) draw down with use. Heavy Hugo usage can exhaust a plan's allowance, making heavy usage a real cost risk. Integrations are modest rather than an extensive marketplace, and customization is chat-first.",
+  "after": "The bundled AI credits ($5, $25, $75) draw down with use. Heavy Hugo usage can exhaust a plan's allowance, which is a real cost risk. Integrations are modest rather than an extensive marketplace, and customization is chat-first."
+ },
+ {
+  "before": "Live chat, email and omni-channel. It presents as an omnichannel desk covering live chat and email plus additional channels, all run on infrastructure you self-host or take on its cloud, keeping channel data under your control.",
+  "after": "Live chat, email and omni-channel. It presents as an omnichannel desk covering live chat and email plus additional channels, all run on infrastructure you self-host or take on its cloud, so channel data stays under your control."
+ },
+ {
+  "before": "Setup requires engineering to self-host, so going live is an infrastructure task, not a sign-up. Migration benefits from open-source portability, meaning your data and deployment stay under your control, but standing it up and maintaining it needs technical capacity.",
+  "after": "Setup requires engineering to self-host, so going live is an infrastructure task, not a sign-up. Migration benefits from open-source portability, because your data and deployment stay under your control, but standing it up and maintaining it needs technical capacity."
+ },
+ {
+  "before": "Costs are credit-based and tied to AI model usage. Heavier model work consumes credits faster and makes spend less predictable than flat per-task pricing. It is also cloud-only with no self-hosting, meaning data, including inputs sent to AI models, must pass through the vendor's infrastructure.",
+  "after": "Costs are credit-based and tied to AI model usage. Heavier model work consumes credits faster and makes spend less predictable than flat per-task pricing. It is also cloud-only with no self-hosting, so data, including inputs sent to AI models, must pass through the vendor's infrastructure."
+ },
+ {
+  "before": "Contacts and campaign data export easily via CSV/API, meaning your list isn't locked. But rebuilding automations, templates, segments and integrations elsewhere is real work, creating practical switching friction as your setup deepens.",
+  "after": "Contacts and campaign data export easily via CSV/API, so your list isn't locked. But rebuilding automations, templates, segments and integrations elsewhere is real work, which creates practical switching friction as your setup deepens."
+ },
+ {
+  "before": "An all-in-one B2B sales platform that bundles a 240M+ contact database with enrichment and outreach sequencing in a single tool. The free tier is $0 and usable for solo prospecting, though mobile numbers and export credits are capped and are where Apollo directs upgrades.",
+  "after": "An all-in-one B2B sales platform that bundles a 240M+ contact database with enrichment and outreach sequencing in a single tool. The free tier is $0 and usable for solo prospecting. But mobile numbers and export credits are capped and are where Apollo directs upgrades."
+ },
+ {
+  "before": "Business accounts can be created in ~46 countries, while you can charge customers globally in 135+ presentment currencies plus a wide range of local payment methods. That makes it broad for accepting payments worldwide, though the set of countries you can actually operate an account from is narrower than its currency reach.",
+  "after": "Business accounts can be created in ~46 countries. You can charge customers globally in 135+ presentment currencies plus a wide range of local payment methods. That makes it broad for accepting payments worldwide, though the set of countries you can actually operate an account from is narrower than its currency reach."
+ },
+ {
+  "before": "Fast agentic building via the AI Agent, though the full IDE surface adds a little overhead versus a pure prompt box. Each Agent task lands as a checkpoint, and one-click deploys mean you can move from build to hosted quickly once the prototype is running.",
+  "after": "Fast agentic building via the AI Agent. But the full IDE surface adds a little overhead versus a pure prompt box. Each Agent task lands as a checkpoint, and one-click deploys mean you can move from build to hosted quickly once the prototype is running."
+ },
+ {
+  "before": "Delivers a full Postgres backend (database, auth, storage, realtime and edge functions) from one dashboard without stitching separate services together, while keeping the data in standard Postgres. The combination of a familiar SQL core and a bundled feature set is its main differentiator.",
+  "after": "Delivers a full Postgres backend (database, auth, storage, realtime and edge functions) from one dashboard without stitching separate services together, and keeps the data in standard Postgres. The combination of a familiar SQL core and a bundled feature set is its main differentiator."
+ },
+ {
+  "before": "Low-latency edge reads via embedded SQLite replicas kept next to the application, which fits read-heavy edge and serverless apps. It also has among the cheapest entry pricing here, with a $4.99/mo Developer tier offering unlimited databases above the free tier.",
+  "after": "Low-latency edge reads via embedded SQLite replicas kept next to the application. That fits read-heavy edge and serverless apps. It also has among the cheapest entry pricing here, with a $4.99/mo Developer tier offering unlimited databases above the free tier."
+ },
+ {
+  "before": "Dedicated M10+ clusters carry an uptime SLA with service credits, while the free and shared tiers do not. The exact current SLA percentage is not documented in the sources used here, though the tiered-SLA structure itself is.",
+  "after": "Dedicated M10+ clusters carry an uptime SLA with service credits. The free and shared tiers do not. The exact current SLA percentage is not documented in the sources used here, though the tiered-SLA structure itself is."
+ },
+ {
+  "before": "Available but not the platform's enterprise-SSO strength, which lies in Postgres and RLS integration, not in enterprise connectors. Teams needing SAML/SCIM as a primary requirement fall outside its main design focus.",
+  "after": "Available but not the platform's enterprise-SSO strength. Its strength lies in Postgres and RLS integration, not in enterprise connectors. Teams needing SAML/SCIM as a primary requirement fall outside its main design focus."
+ },
+ {
+  "before": "Users live in your own Supabase Postgres database, which keeps the data close to you, though the auth itself remains tied to Supabase. Portability of the underlying user records is better than a fully external store, but you are still bound to the Supabase platform.",
+  "after": "Users live in your own Supabase Postgres database. That keeps the data close to you, though the auth itself remains tied to Supabase. Portability of the underlying user records is better than a fully external store, but you are still bound to the Supabase platform."
+ },
+ {
+  "before": "An enterprise-readiness platform combining AuthKit for core authentication with per-connection SSO/SAML and Directory Sync (SCIM). The design separates everyday auth from the enterprise connectors, which are provisioned and billed one connection at a time instead of by user volume.",
+  "after": "An enterprise-readiness platform combining AuthKit for core authentication with per-connection SSO/SAML and Directory Sync (SCIM). The design separates everyday auth from the enterprise connectors. Those are provisioned and billed one connection at a time instead of by user volume."
+ },
+ {
+  "before": "Standards-based on SAML and SCIM, which aids portability, with the enterprise side billed per connection. Reliance on open standards keeps migration friction lower than proprietary flows would, consistent with its connection-based model.",
+  "after": "Standards-based on SAML and SCIM. That aids portability, with the enterprise side billed per connection. Reliance on open standards keeps migration friction lower than proprietary flows would, consistent with its connection-based model."
+ },
+ {
+  "before": "No per-MAU pricing and no cliff, which is the exact reason to DIY. You pay only compute/DB you already run. Escapes the brutal auth-SaaS jump where free tiers end and MAU billing balloons. Cost is engineering time, mostly one-time.",
+  "after": "No per-MAU pricing and no cliff. That is the exact reason to DIY. You pay only compute/DB you already run. Escapes the brutal auth-SaaS jump where free tiers end and MAU billing balloons. Cost is engineering time, mostly one-time."
+ },
+ {
+  "before": "Built for: frontend and full-stack JS/TS teams, especially Next.js users, wanting zero-config Git deploys, preview environments, and edge/serverless functions.",
+  "after": "Built for: frontend and full-stack JS/TS teams (especially Next.js users) wanting zero-config Git deploys, preview environments, and edge/serverless functions."
+ },
+ {
+  "before": "Effectively none for static assets, which are served straight from the edge. Workers run on an always-warm edge runtime instead of spinning up per request. The edge-compute path avoids the cold-start penalty seen on scale-to-zero container hosts.",
+  "after": "Effectively none for static assets. They are served straight from the edge. Workers run on an always-warm edge runtime instead of spinning up per request. The edge-compute path avoids the cold-start penalty seen on scale-to-zero container hosts."
+ },
+ {
+  "before": "Strong funnels, retention, and Flows plus behavioral cohorts, though cohorts and some advanced properties are gated off the free plan and require Growth+.",
+  "after": "Strong funnels, retention, and Flows plus behavioral cohorts. But cohorts and some advanced properties are gated off the free plan and require Growth+."
+ },
+ {
+  "before": "The Delaware-only state of formation is the main structural constraint, though founders can now choose either a C-Corp or an LLC. Ongoing cost is modest but not zero (a $100/year agent renewal applies from year two), and the continuing legal document library is lighter than a documents-first platform.",
+  "after": "The Delaware-only state of formation is the main structural constraint. But founders can now choose either a C-Corp or an LLC. Ongoing cost is modest but not zero (a $100/year agent renewal applies from year two), and the continuing legal document library is lighter than a documents-first platform."
+ },
+ {
+  "before": "An incorporation platform that combines LLC or C-Corp formation with ongoing compliance, bookkeeping and tax services, and is usable by non-resident founders. Formation runs $399 one-time with lifetime support, while compliance and tax functions are sold as separate recurring add-ons rather than included in the base.",
+  "after": "An incorporation platform that combines LLC or C-Corp formation with ongoing compliance, bookkeeping and tax services, and is usable by non-resident founders. Formation runs $399 one-time with lifetime support. Compliance and tax functions are sold as separate recurring add-ons rather than included in the base."
+ },
+ {
+  "before": "Produces standard accounting reports from a platform accountants and diligence teams already recognize, which reduces friction during reviews. Deep accounting features across tiers support the reporting depth investors expect as a company grows.",
+  "after": "Produces standard accounting reports from a platform accountants and diligence teams already recognize. That reduces friction during reviews. Deep accounting features across tiers support the reporting depth investors expect as a company grows."
+ },
+ {
+  "before": "Automation is limited to receipt scanning, which extracts data from captured receipts. Beyond that the automation footprint is minimal, consistent with its core-accounting-only scope and free positioning.",
+  "after": "Automation is limited to receipt scanning. It extracts data from captured receipts. Beyond that the automation footprint is minimal, consistent with its core-accounting-only scope and free positioning."
+ },
+ {
+  "before": "Full accounting accessed via web and mobile, and the free plan explicitly allows 1 user plus 1 accountant, so accountant access is built into even the no-cost tier. Fewer US accountants use it than QuickBooks, which can add friction when handing books to an outside CPA.",
+  "after": "Full accounting accessed via web and mobile, and the free plan explicitly allows 1 user plus 1 accountant, so accountant access is built into even the no-cost tier. Fewer US accountants use it than QuickBooks. That can add friction when handing books to an outside CPA."
+ },
+ {
+  "before": "Fewer US accountants use it than QuickBooks, which can add friction when handing off to an outside CPA, and its value is strongest inside the Zoho ecosystem rather than as a standalone tool. The free plan is also capped at 1 user, 1 accountant and 1,000 invoices/year.",
+  "after": "Fewer US accountants use it than QuickBooks. That can add friction when handing off to an outside CPA, and its value is strongest inside the Zoho ecosystem rather than as a standalone tool. The free plan is also capped at 1 user, 1 accountant and 1,000 invoices/year."
+ },
+ {
+  "before": "Self-service is driven by the Fin AI agent, which handles front-line queries and is billed at $0.99 per outcome (resolution, handoff or disqualification). Deflection comes from Fin resolving conversations across the channels, with each automated resolution counting as a paid outcome.",
+  "after": "Self-service is driven by the Fin AI agent. It handles front-line queries and is billed at $0.99 per outcome (resolution, handoff or disqualification). Deflection comes from Fin resolving conversations across the channels, with each automated resolution counting as a paid outcome."
+ },
+ {
+  "before": "Per-task, per-action-step billing means cost rises directly with execution volume, which can get expensive for high-throughput or multi-step automations. It is also cloud-only with no self-hosting. Teams needing data-residency control or volume-independent pricing will hit its structural limits.",
+  "after": "Per-task, per-action-step billing means cost rises directly with execution volume. That can get expensive for high-throughput or multi-step automations. It is also cloud-only with no self-hosting. Teams needing data-residency control or volume-independent pricing will hit its structural limits."
+ },
+ {
+  "before": "A fair-code (Sustainable Use License), node-based automation platform. The self-hosted Community Edition is free with unlimited executions, while managed Cloud plans are metered by execution count. Combines a large catalog of built-in nodes with custom-code nodes, and runs either self-hosted or on cloud.",
+  "after": "A fair-code (Sustainable Use License), node-based automation platform. The self-hosted Community Edition is free with unlimited executions. Managed Cloud plans are metered by execution count. Combines a large catalog of built-in nodes with custom-code nodes, and runs either self-hosted or on cloud."
+ },
+ {
+  "before": "A visual canvas oriented around AI steps, which keeps building AI workflows approachable for those comfortable with prompting and model behavior. The learning curve centers on designing effective model-driven nodes rather than wiring deterministic logic. It suits AI-first builders over rule-based ones.",
+  "after": "A visual canvas oriented around AI steps. That keeps building AI workflows approachable for those comfortable with prompting and model behavior. The learning curve centers on designing effective model-driven nodes rather than wiring deterministic logic. It suits AI-first builders over rule-based ones."
  }
 ]

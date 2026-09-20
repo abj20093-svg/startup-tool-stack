@@ -149,7 +149,8 @@ RIVAL_EDITS = [
  ("solid but fewer points of presence than Vercel (100+) or Cloudflare (300+), so users", "solid but a modest network by CDN standards, so users"),
  ("Surface price is close to Vercel's, but", "Surface price is in line with this group, but"),
  ("more predictable than Vercel's bandwidth/invocation overages", "more predictable than bandwidth- and invocation-metered billing"),
- ("it allows commercial use, unlike Vercel's Hobby tier", "its free tier allows commercial use"),
+ ("t allows commercial use, unlike Vercel's Hobby tier", "ts free tier allows commercial use"),   # matches "it" and "It"
+ ("and notably includes SSO", "and includes SSO"),   # wording only; reaches the At a glance price cell, which bypasses the editorial map
  ("Lower lock-in than Vercel.", "Lock-in is low."),
  ("allows commercial use (unlike Vercel), and background functions", "allows commercial use, and background functions"),
  ("Slower serverless cold starts (~3s) and far fewer edge locations (16+) than Vercel.", "Slower serverless cold starts (~3s) and a small edge network (16+ locations)."),
@@ -311,6 +312,31 @@ def _ok_lead(s):
         return False
     return True
 
+_LIST_STOP = re.compile(r"^(?:with|without|which|who|so|but|though|although|while|whereas|because|since|"
+                        r"where|when|that|not|no|including|then|all|each|both|plus|making|giving|letting|"
+                        r"keeping|meaning|especially|typically|often|usually|as|for|from|on|in|at|via|per|to|"
+                        r"if|unless|until|after|before|it|this|these|you|there)\b", re.I)
+_FINITE = re.compile(r"\b(?:is|are|was|were|be|been|has|have|had|can|could|will|would|may|might|must|do|does|did|"
+                     r"gets?|runs?|needs?|costs?|makes?|takes?|adds?|lets?|keeps?|works?|offers?|lacks?|starts?|"
+                     r"comes?|uses?|pays?|owns?|handles?|supports?|requires?|includes?|remains?|means?|gives?|"
+                     r"ships?|covers?|scales?|charges?|limits?|allows?|sits?|lives?|stays?|grows?)\b", re.I)
+
+def _inside_list(left, right):
+    """True when a boundary falls between two items of a comma list
+    ('Connects to Stripe, Brex, Mercury | Ramp, Gusto, Expensify'). Cutting there
+    leaves a truncated lead and a sub-bullet that starts mid-list."""
+    r = re.sub(r"^(?:and|or)\s+", "", right.strip())
+    if _LIST_STOP.match(r):
+        return False
+    item_r = re.split(r",\s+|\s+(?:and|or)\s+|\s+\(", r, 1)[0]
+    item_l = re.split(r"[,:]\s+", left.strip())[-1]
+    ok = lambda it, n: 0 < len(it.split()) <= n and not _FINITE.search(it)
+    if ok(item_r, 4) and ok(item_l, 5):
+        return True
+    # the rest of the sentence is nothing but short items: '..., referrals, and audience analytics'
+    tail = [it for it in re.split(r",\s+(?:and\s+|or\s+)?|\s+(?:and|or)\s+", r) if it]
+    return len(tail) >= 2 and all(ok(it, 4) for it in tail)
+
 def derive_lead(text, where=""):
     """Return (lead, delimiter, rest). Lead is lifted verbatim and is grammatically whole."""
     t = re.sub(r"\s+", " ", text.strip())
@@ -351,15 +377,22 @@ def derive_lead(text, where=""):
     if len(core) < 60 and _ok_lead(core):
         return finish(core, term or ".", "")
 
-    best = None
+    best = legacy = None
     for m in re.finditer(r"\s+—\s+|:\s+|;\s+|,\s+(?=and |but |so |which |though |while |with )|,\s+", core):
         left, right = core[:m.start()].strip(), core[m.end():].strip()
         if len(left) < 28 or not _ok_lead(left):
             continue
         d = m.group(0).strip()
         d = d if d in (":", ";", ",") else ","
+        if legacy is None:
+            legacy = (left, d, right)
+        if d == "," and _inside_list(left, right):
+            continue                  # never cut a list in half
         best = (left, d, right)   # first complete phrase wins: a lead is the claim, not the list
         break
+    # keeping a list whole must not produce a wall of bold text
+    if legacy and len(best[0] if best else core) > 170:
+        best = legacy
     if best:
         return finish(best[0], best[1], best[2])
     return finish(core, term or ".", "")   # no clean boundary: the whole claim leads
@@ -428,6 +461,22 @@ def _split_semis(s):
     parts.append(s[start:])
     return parts
 
+_CONNECTOR = re.compile(r"^(?:and so|and also|and|plus|so|also),?\s+(?=[^\s(])", re.I)
+_PLAN_PLUS = re.compile(r"^Plus\s+(?:\$|lists\b|and Pro\b|plan\b|tier\b|is\b|at\b|costs?\b|adds?\b|from\b|includes?\b|runs?\b)")
+_BARE_VERB = re.compile(r"^(?:is|was|has|can|does|will|takes|connects|bends|completes|answers|uses|keeps|runs|"
+                        r"offers|supports|handles|includes|integrates|ships|covers|gets)\b", re.I)
+
+def _detach(seg):
+    """A sub-bullet that continues the lead's sentence opens on its connector
+    ('and white-label portals', 'so cost tracks seats'). Standing alone as a
+    bullet it reads better without it. 'Plus' the plan name is left alone."""
+    if _PLAN_PLUS.match(seg):
+        return seg
+    out = _CONNECTOR.sub("", seg, count=1)
+    if out != seg and _BARE_VERB.match(out):      # 'and is used through...' keeps its subject
+        out = "It " + out[:1].lower() + out[1:]
+    return out
+
 def _sub_items(rest):
     items = []
     for s in split_sents(rest or ""):
@@ -437,7 +486,7 @@ def _sub_items(rest):
                 continue
             if seg[-1] not in ".!?":
                 seg += "."
-            items.append(cap_first(seg))
+            items.append(cap_first(_detach(seg)))
     return items
 
 def bullets(t, where="", with_lead=True):
