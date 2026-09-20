@@ -341,7 +341,7 @@
  },
  {
   "before": "Best when: you want visual automations, tagging, a free tier up to 10k subscribers, and creator commerce (products, referral system). Pick over Mailchimp/MailerLite because creator tooling and deliverability are stronger; Creator from $39/mo (1k subs), Creator Pro from $79 adds subscriber scoring and referrals.",
-  "after": "Best when: you want visual automations, tagging, a free tier up to 10k subscribers, and creator commerce (products, referral system). Pick over Mailchimp/MailerLite because creator tooling and deliverability are stronger, but Creator from $39/mo (1k subs), Creator Pro from $79 adds subscriber scoring and referrals."
+  "after": "Best when: you want visual automations, tagging, a free tier up to 10k subscribers, and creator commerce (products, referral system). Pick over Mailchimp/MailerLite because creator tooling and deliverability are stronger. Creator from $39/mo (1k subs), Creator Pro from $79 adds subscriber scoring and referrals."
  },
  {
   "before": "Best when: you want a full website + newsletter + paid memberships you fully own and to keep 100% of subscription revenue (only Stripe fees). Pick over Substack/beehiiv once you earn more than ~$290/mo, where Ghost Pro's flat fee beats Substack's 10%; Starter $18 (free members only), Publisher $29 (paid memberships), Business $199.",
@@ -349,7 +349,7 @@
  },
  {
   "before": "Best when: you want to start free, publish instantly, and tap network effects (recommendations, Notes, discovery) with no monthly fee; pick over beehiiv/Ghost when reach and simplicity matter and you'd rather trade 10% of revenue than pay for or manage anything; you keep ~$8.40 on a $10 sub after fees.",
-  "after": "Best when: you want to start free, publish instantly, and tap network effects (recommendations, Notes, discovery) with no monthly fee. Pick over beehiiv/Ghost when reach and simplicity matter and you'd rather trade 10% of revenue than pay for or manage anything, but you keep ~$8.40 on a $10 sub after fees."
+  "after": "Best when: you want to start free, publish instantly, and tap network effects (recommendations, Notes, discovery) with no monthly fee. Pick over beehiiv/Ghost when reach and simplicity matter and you'd rather trade 10% of revenue than pay for or manage anything. You keep ~$8.40 on a $10 sub after fees."
  },
  {
   "before": "Best when: you need broad integrations, landing pages, and multichannel marketing on a single well-known platform and want CRM, ads, and ecommerce under one roof rather than a pure email tool; pick over MailerLite/Kit when breadth of integrations and template library matters most; Essentials from $13, Standard from $20 (500 contacts).",

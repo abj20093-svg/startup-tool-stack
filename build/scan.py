@@ -26,11 +26,11 @@ def _p(n):
     a = os.path.join(HERE, n)
     return a if os.path.exists(a) else os.path.join(PROJECT, n)
 
-PROJECT = "/Users/aryanbhardwaj/Downloads/Startup Decode Lead Magnet"
+PROJECT = HERE
 A_HTML = "toolstack_full.html"
 B_HTML = "toolstack_varied.html"
 MAP = "variance_proposal.json"
-XLSX = "/Users/aryanbhardwaj/Downloads/Startup Decode Lead Magnet/startup-tool-stack.xlsx"
+XLSX = os.path.join(HERE, "startup-tool-stack.xlsx")
 XLSX_SHA = "63bd8183"
 
 # Regions the brief puts out of scope for prose edits.  Stripped before the

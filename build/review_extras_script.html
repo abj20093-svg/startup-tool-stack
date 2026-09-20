@@ -3,10 +3,15 @@
   var SEL=['.mast h1','.howto h2','.howto h3','.howto p','.chap-open h2','.glance h3','.gtable td .glead',
    '.gtable td .gdetail','.gcap','article.profile h4','article.profile .pl','article.profile .dt',
    'article.profile .fb>li','article.profile .fb>li>ul>li'].join(',');
-  var orig={};
-  document.querySelectorAll(SEL).forEach(function(el,i){
-    if(el.querySelector('*'))return;
-    el.setAttribute('data-rv',''); el.dataset.i=i; el.contentEditable='true'; orig[i]=el.textContent;
+  var orig={}, n=0;
+  function arm(el){el.setAttribute('data-rv',''); el.dataset.i=n; el.contentEditable='true'; orig[n]=el.textContent; n++;}
+  document.querySelectorAll(SEL).forEach(function(el){
+    if(!el.querySelector('*')){arm(el);return;}
+    /* mixed content: child elements are armed by their own selectors, so wrap the loose text beside them */
+    [].slice.call(el.childNodes).forEach(function(nd){
+      if(nd.nodeType!==3||!nd.nodeValue.trim())return;
+      var sp=document.createElement('span'); sp.textContent=nd.nodeValue; el.replaceChild(sp,nd); arm(sp);
+    });
   });
   var changed={};
   var btn=document.createElement('button'); btn.id='sendbtn'; btn.type='button';

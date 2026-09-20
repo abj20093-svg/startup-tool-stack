@@ -143,6 +143,9 @@ ul.fb{list-style:none;margin:0;padding:0}
 .runhead{display:none}
 .pfoot{font-weight:400;display:none}
 
+/* long slash-joined tokens (HubSpot/Salesforce/...) must wrap on phones; screen only, so print pagination is untouched */
+@media screen and (max-width:700px){body{overflow-wrap:anywhere}}
+
 /* filtered-out state */
 .hidden-by-filter{display:none}
 .dim-by-filter{opacity:.35}

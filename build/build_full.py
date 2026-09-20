@@ -11,7 +11,6 @@ import os
 import re
 import openpyxl
 
-PROJ = "/Users/aryanbhardwaj/Downloads/Startup Decode Lead Magnet"
 HERE = os.path.dirname(os.path.abspath(__file__))
 VARIANT = os.environ.get("VARIANT") == "varied"
 OUT = f"{HERE}/toolstack_varied.html" if VARIANT else f"{HERE}/toolstack_full.html"
@@ -24,7 +23,7 @@ FONT_CSS = open(f"{HERE}/fonts/embedded.css").read()
 TOOL_URLS = {k.lower(): v for k, v in json.load(open(f"{HERE}/tool_urls.json")).items()}
 CSS_BODY = open(f"{HERE}/css.txt").read()
 
-wb = openpyxl.load_workbook(f"{PROJ}/startup-tool-stack-v2.xlsx", data_only=True)
+wb = openpyxl.load_workbook(f"{HERE}/startup-tool-stack-v2.xlsx", data_only=True)
 src = wb[wb.sheetnames[0]]
 
 # group, name, header_row, first_row, last_row, job label, decision line
@@ -911,12 +910,18 @@ navjs = """
 (function(){
   var rail = document.querySelector('.siderail');
   var groups = [].slice.call(document.querySelectorAll('.navgrp[data-chapter]'));
+  /* the nav list is rendered twice (side rail + mobile menu): the rail scroll
+     follows the rail's own group, and a tool highlight goes on both copies */
   var byChapter = {};
-  groups.forEach(function(g){ byChapter[g.getAttribute('data-chapter')] = g; });
+  groups.forEach(function(g){ if (rail && rail.contains(g)) byChapter[g.getAttribute('data-chapter')] = g; });
   var toolLinks = {};
   [].slice.call(document.querySelectorAll('.navtools a[data-tool]')).forEach(function(a){
-    toolLinks[a.getAttribute('data-tool')] = a;
+    var k = a.getAttribute('data-tool');
+    (toolLinks[k] = toolLinks[k] || []).push(a);
   });
+  function markTool(id, on){
+    (toolLinks[id] || []).forEach(function(a){ a.classList.toggle('is-here', on); });
+  }
 
   /* ---- scroll spy: which chapter and which tool are on screen ---- */
   var chapters = [].slice.call(document.querySelectorAll('section.chapter'));
@@ -940,9 +945,9 @@ navjs = """
   }
   function setTool(id){
     if (id === curTool) return;
-    if (curTool && toolLinks[curTool]) toolLinks[curTool].classList.remove('is-here');
+    if (curTool) markTool(curTool, false);
     curTool = id;
-    if (id && toolLinks[id]) toolLinks[id].classList.add('is-here');
+    if (id) markTool(id, true);
   }
 
   if ('IntersectionObserver' in window) {
@@ -1222,7 +1227,7 @@ if _missed:
 
 with open(OUT, "w") as f:
     f.write(doc.replace("__WIZARD_BLOCK__", ""))
-with open("toolstack_wizard.html", "w") as f:
+with open(f"{HERE}/toolstack_wizard.html", "w") as f:
     f.write(doc.replace("__WIZARD_BLOCK__", wizard_block))
 print("wizard variant: toolstack_wizard.html")
 

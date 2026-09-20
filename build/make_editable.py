@@ -4,6 +4,10 @@
 The review copy is a fragment (no <html>/<head>/<body>): <title> + <style>
 from the build, the review <style>, the body content, then the review
 <script>. The two extras live beside this script as review_extras_*.html.
+
+The fragment is ONLY for the artifact host, which supplies its own <head>.
+Anywhere else (GitHub Pages, a file opened from disk) it renders in quirks
+mode with no viewport, so publish the make_local.py-wrapped copy there.
 usage: /usr/bin/python3 make_editable.py toolstack_varied.html toolstack-sync.html
 """
 import os, sys

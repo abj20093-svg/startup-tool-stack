@@ -152,6 +152,9 @@ ul.fb{list-style:none;margin:0;padding:0}
 .runhead{display:none}
 .pfoot{font-weight:400;display:none}
 
+/* long slash-joined tokens (HubSpot/Salesforce/...) must wrap on phones; screen only, so print pagination is untouched */
+@media screen and (max-width:700px){body{overflow-wrap:anywhere}}
+
 /* filtered-out state */
 .hidden-by-filter{display:none}
 .dim-by-filter{opacity:.35}
@@ -775,7 +778,7 @@ a.site::after{content:"↗";font-size:.55em;vertical-align:super;margin-left:3px
     <div class="lhead">Choose this if you are</div>
     <div class="ideal"><ul class="fb"><li>Creators and solo founders monetizing an audience via automations and digital products: non-technical, US/global, list-building focused.</li></ul></div>
     <div class="pair">
-      <div class="pcell go"><div class="plabel">Best when</div><ul class="fb"><li>You want visual automations, tagging, a free tier up to 10k subscribers, and creator commerce (products, referral system).</li></ul></div>
+      <div class="pcell go"><div class="plabel">Best when</div><ul class="fb"><li>You want visual automations, tagging, a free tier up to 10k subscribers, and creator commerce (products, referral system).<ul><li>Creator from $39/mo (1k subs), Creator Pro from $79 adds subscriber scoring and referrals.</li></ul></li></ul></div>
       <div class="pcell stop"><div class="plabel">Avoid if</div><ul class="fb"><li>You're highly price-sensitive at small list sizes (the 2025 hike pushed Creator to a ~$33+ minimum) or want an owned blog/site.</li></ul></div>
     </div>
   </div>
@@ -835,7 +838,7 @@ a.site::after{content:"↗";font-size:.55em;vertical-align:super;margin-left:3px
     <div class="lhead">Choose this if you are</div>
     <div class="ideal"><ul class="fb"><li>Writers and solo founders who want zero-setup paid newsletters plus built-in discovery: non-technical, US/global, audience-first.</li></ul></div>
     <div class="pair">
-      <div class="pcell go"><div class="plabel">Best when</div><ul class="fb"><li>You want to start free, publish instantly, and tap network effects (recommendations, Notes, discovery) with no monthly fee.</li></ul></div>
+      <div class="pcell go"><div class="plabel">Best when</div><ul class="fb"><li>You want to start free, publish instantly, and tap network effects (recommendations, Notes, discovery) with no monthly fee.<ul><li>You keep ~$8.40 on a $10 sub after fees.</li></ul></li></ul></div>
       <div class="pcell stop"><div class="plabel">Avoid if</div><ul class="fb"><li>Your list is large and paid (10% of revenue dwarfs a flat SaaS fee) or you want to own your platform, data, and design.</li></ul></div>
     </div>
   </div>
@@ -2785,12 +2788,18 @@ a.site::after{content:"↗";font-size:.55em;vertical-align:super;margin-left:3px
 (function(){
   var rail = document.querySelector('.siderail');
   var groups = [].slice.call(document.querySelectorAll('.navgrp[data-chapter]'));
+  /* the nav list is rendered twice (side rail + mobile menu): the rail scroll
+     follows the rail's own group, and a tool highlight goes on both copies */
   var byChapter = {};
-  groups.forEach(function(g){ byChapter[g.getAttribute('data-chapter')] = g; });
+  groups.forEach(function(g){ if (rail && rail.contains(g)) byChapter[g.getAttribute('data-chapter')] = g; });
   var toolLinks = {};
   [].slice.call(document.querySelectorAll('.navtools a[data-tool]')).forEach(function(a){
-    toolLinks[a.getAttribute('data-tool')] = a;
+    var k = a.getAttribute('data-tool');
+    (toolLinks[k] = toolLinks[k] || []).push(a);
   });
+  function markTool(id, on){
+    (toolLinks[id] || []).forEach(function(a){ a.classList.toggle('is-here', on); });
+  }
 
   /* ---- scroll spy: which chapter and which tool are on screen ---- */
   var chapters = [].slice.call(document.querySelectorAll('section.chapter'));
@@ -2814,9 +2823,9 @@ a.site::after{content:"↗";font-size:.55em;vertical-align:super;margin-left:3px
   }
   function setTool(id){
     if (id === curTool) return;
-    if (curTool && toolLinks[curTool]) toolLinks[curTool].classList.remove('is-here');
+    if (curTool) markTool(curTool, false);
     curTool = id;
-    if (id && toolLinks[id]) toolLinks[id].classList.add('is-here');
+    if (id) markTool(id, true);
   }
 
   if ('IntersectionObserver' in window) {

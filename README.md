@@ -121,7 +121,7 @@ fact in that block.
 | `build/variance_proposal.json` | The editorial layer: maps a source paragraph to its edited replacement. |
 | `build/add_chapter.py` | Appends a chapter JSON to a copy of the workbook and proves every original cell is unchanged. |
 | `build/check_cells.py` | Runs the build's own lead-derivation on a chapter JSON and flags shape, rival-name and sentence-split problems before a build. |
-| `build/qa_build.sh` | Builds both variants, prints the PDF and runs the ellipsis / N/A / count checks. |
+| `build/qa_build.sh` | Builds both variants, prints the PDF, and fails on any ellipsis / N/A / count / cell-check / new scanner finding. |
 
 **The workbook is never written to.** Content edits belong in
 `variance_proposal.json` (or the rewrite maps in `build_full.py`), applied on
