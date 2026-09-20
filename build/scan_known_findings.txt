@@ -4,7 +4,13 @@
 #
 # scan.py predates the bullet layout (Sept 2026): it matches whole edited paragraphs,
 # but the build now splits them into lead + nested bullets and scrubs rival names, so
-# the three whole-paragraph checks below misfire. Not reconciled one by one.
+# the three whole-paragraph checks below misfire.
+# Reconciled by hand on 2026-09-20, no fact lost in any of them:
+#  - rewritten answers: 2 of 8 (Attio, Pipedrive) are split across lead + sub-bullet; every sentence is on the page.
+#  - colons: 'A consequence of scale-to-zero' is now a bold lead bullet, so its colon renders as a full stop.
+#  - 21 unexplained blocks: 8 are rival-name rewrites made on purpose, 10 are approved punctuation or wording edits
+#    the scanner mis-pairs, 3 only look shorter because the rest of the sentence sits in a nested bullet.
+#    Every sentence that looked dropped (Lemon Squeezy support, Netlify credits, Carta, listmonk ops) is still printed.
 every rewritten answer renders
 colons doing real work still present
 every A-vs-B difference traces to an approved edit :: 21 unexplained: ['Smaller community and fewer public playbooks.', 'Per-contacted-prospect model gets pricey and unpredictable at high vol', 'Paid memberships require Publisher ($29/mo+, scaling with members). Ma']
