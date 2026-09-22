@@ -42,31 +42,39 @@ grep -o "<title>[^<]*</title>" toolstack_varied.html
 echo "== compliance chapter pages in PDF =="
 grep -n "Compliance Automation" "$TXT" | head -3
 
-# scan.py compares the edited build against the baseline. Findings listed in
-# scan_known_findings.txt are reported but tolerated; anything new fails the run.
+# scan.py compares the edited build against the baseline and writes every failing
+# check with its COMPLETE detail to scan_findings.json. A finding is tolerated only
+# while its whole detail is identical to the pinned copy in scan_known_findings.json
+# (which also records why each one is accepted). A new finding, or any change inside
+# a known one (one more lost figure, one more unexplained block), fails the run.
 echo "== integrity scan (scan.py) =="
 /usr/bin/python3 scan.py >"$LOG" 2>&1 || true
-/usr/bin/python3 - "$LOG" scan_known_findings.txt <<'PY' || FAIL=1
-import sys
-out = open(sys.argv[1], encoding="utf-8").read()
-known = [l.rstrip("\n") for l in open(sys.argv[2], encoding="utf-8") if l.strip() and not l.startswith("#")]
-if "FINDINGS:" not in out:
-    print("  FAIL  scan.py did not finish:\n" + out[-600:]); sys.exit(1)
-lines, found = out.splitlines(), []
-for i, l in enumerate(lines):
-    if l.startswith("  FAIL  "):
-        k = l[8:]
-        if i + 1 < len(lines) and lines[i + 1].startswith("          "):
-            k += " :: " + lines[i + 1].strip()
-        found.append(k)
-for f in found:
-    print(("  known " if f in known else "  NEW   ") + f[:150])
-for k in known:
-    if k not in found:
-        print("  note  no longer reported, remove from scan_known_findings.txt: " + k[:110])
-new = [f for f in found if f not in known]
-print("  %d known, %d new" % (len(found) - len(new), len(new)))
-sys.exit(1 if new else 0)
+grep -q "FINDINGS:" "$LOG" || { echo "  FAIL  scan.py did not finish:"; tail -12 "$LOG"; FAIL=1; }
+/usr/bin/python3 - scan_findings.json scan_known_findings.json <<'PY' || FAIL=1
+import json, sys
+found = json.load(open(sys.argv[1], encoding="utf-8"))
+known = json.load(open(sys.argv[2], encoding="utf-8"))
+bad = 0
+for name, detail in found.items():
+    k = known.get(name)
+    if k is None:
+        print("  NEW     " + name); bad += 1
+    elif k["detail"] != detail:
+        print("  CHANGED " + name)
+        if isinstance(detail, list) and isinstance(k["detail"], list):
+            for x in sorted(set(detail) - set(k["detail"])): print("      + " + str(x)[:120])
+            for x in sorted(set(k["detail"]) - set(detail)): print("      - " + str(x)[:120])
+        else:
+            print("      now " + str(detail)[:160]); print("      was " + str(k["detail"])[:160])
+        bad += 1
+    else:
+        n = len(detail) if isinstance(detail, (list, dict)) else ""
+        print("  known   %s%s" % (name, " (%s items)" % n if n != "" else ""))
+for name in known:
+    if name not in found and not name.startswith("_"):
+        print("  note    no longer reported, drop from scan_known_findings.json: " + name)
+print("  %d known, %d new or changed" % (len(found) - bad, bad))
+sys.exit(1 if bad else 0)
 PY
 
 if [ $FAIL = 1 ]; then echo "QA FAILED"; exit 1; fi

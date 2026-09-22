@@ -1,0 +1,310 @@
+[
+ {
+  "tool": "Manual DIY",
+  "fac": "Setup & migration",
+  "kind": "DEFECT FIX from my previous pass",
+  "find": "Gmail shared inbox. Minutes: Self-hosted",
+  "rep": "Gmail shared inbox: minutes. Self-hosted"
+ },
+ {
+  "tool": "HubSpot CRM",
+  "fac": "How leads & contacts get in",
+  "kind": "punctuation only",
+  "find": "free tier: new accounts",
+  "rep": "free tier. New accounts"
+ },
+ {
+  "tool": "Manual DIY",
+  "fac": "Compliance & data sourcing",
+  "kind": "punctuation only",
+  "find": "full liability: no vendor",
+  "rep": "full liability. No vendor"
+ },
+ {
+  "tool": "Attio",
+  "fac": "Pricing & tier-gating",
+  "kind": "punctuation only",
+  "find": "hybrid model: per-seat",
+  "rep": "hybrid model. Per-seat"
+ },
+ {
+  "tool": "Manual DIY",
+  "fac": "Migration",
+  "kind": "import & exit)   (punctuation only",
+  "find": "of the group: it's your DB",
+  "rep": "of the group. It's your DB"
+ },
+ {
+  "tool": "Zoominfo",
+  "fac": "Limitations",
+  "kind": "punctuation only",
+  "find": "add-on-heavy: a poor fit",
+  "rep": "add-on-heavy, a poor fit"
+ },
+ {
+  "tool": "Manual DIY",
+  "fac": "Personalization & AI",
+  "kind": "bridge words added",
+  "find": "Strong upside: call an LLM",
+  "rep": "The strong upside is that you can call an LLM"
+ },
+ {
+  "tool": "beehiiv",
+  "fac": "Integrations",
+  "kind": "punctuation only",
+  "find": "network and Stripe: Stripe underpins",
+  "rep": "network and Stripe. Stripe underpins"
+ },
+ {
+  "tool": "beehiiv",
+  "fac": "Limitations",
+  "kind": "punctuation only",
+  "find": "annual): the free Launch",
+  "rep": "annual). The free Launch"
+ },
+ {
+  "tool": "Manual DIY",
+  "fac": "Auto-publish vs manual reminders",
+  "kind": "punctuation only",
+  "find": "is the point: cron fires",
+  "rep": "is the point. Cron fires"
+ },
+ {
+  "tool": "Manual DIY",
+  "fac": "Auto-publish vs manual reminders",
+  "kind": "bridge words added",
+  "find": "But no fallback: if a token",
+  "rep": "But there is no fallback. If a token"
+ },
+ {
+  "tool": "Manual DIY",
+  "fac": "Content recycling & bulk scheduling",
+  "kind": "punctuation only",
+  "find": "actually wins: it's just data",
+  "rep": "actually wins. It's just data"
+ },
+ {
+  "tool": "Manual DIY",
+  "fac": "Merchant of Record",
+  "kind": "who handles tax)   (punctuation only",
+  "find": "shields you: you register",
+  "rep": "shields you. You register"
+ },
+ {
+  "tool": "Stripe",
+  "fac": "Needs a separate payment processor?",
+  "kind": "punctuation only",
+  "find": "is the processor: billing runs",
+  "rep": "is the processor. Billing runs"
+ },
+ {
+  "tool": "RevenueCat",
+  "fac": "Subscription lifecycle",
+  "kind": "punctuation only",
+  "find": "underlying stores: renewals",
+  "rep": "underlying stores. Renewals"
+ },
+ {
+  "tool": "Polar",
+  "fac": "Approval & onboarding",
+  "kind": "punctuation only",
+  "find": "by design: API-first",
+  "rep": "by design. API-first"
+ },
+ {
+  "tool": "Lemon Squeezy",
+  "fac": "Approval & onboarding",
+  "kind": "punctuation only",
+  "find": "reach for it: you can set up",
+  "rep": "reach for it. You can set up"
+ },
+ {
+  "tool": "Stripe",
+  "fac": "Holds & shutdowns",
+  "kind": "punctuation only",
+  "find": "high-risk accounts: independent",
+  "rep": "high-risk accounts. Independent"
+ },
+ {
+  "tool": "Lemon Squeezy",
+  "fac": "Holds & shutdowns",
+  "kind": "punctuation only",
+  "find": "risk is high: support has",
+  "rep": "risk is high. Support has"
+ },
+ {
+  "tool": "Manual DIY",
+  "fac": "Chargeback / dispute costs",
+  "kind": "bridge words added",
+  "find": "them directly: ~$15 per dispute",
+  "rep": "them directly, at ~$15 per dispute"
+ },
+ {
+  "tool": "Lemon Squeezy",
+  "fac": "Setup & engineering effort",
+  "kind": "punctuation only",
+  "find": "easiest here: a hosted checkout",
+  "rep": "easiest here. A hosted checkout"
+ },
+ {
+  "tool": "Replit",
+  "fac": "Code ownership & exit ramp",
+  "kind": "punctuation only",
+  "find": "tie is hosting: the integrated",
+  "rep": "tie is hosting. The integrated"
+ },
+ {
+  "tool": "Manual DIY",
+  "fac": "Pricing & credit burn",
+  "kind": "punctuation only",
+  "find": "learned skill: vague prompts",
+  "rep": "learned skill. Vague prompts"
+ },
+ {
+  "tool": "Bolt.new",
+  "fac": "The ceiling",
+  "kind": "punctuation only",
+  "find": "is portability: download the",
+  "rep": "is portability. Download the"
+ },
+ {
+  "tool": "Lovable",
+  "fac": "Where it stands out",
+  "kind": "punctuation only",
+  "find": "services together: you describe",
+  "rep": "services together. You describe"
+ },
+ {
+  "tool": "Firebase",
+  "fac": "Idle behavior",
+  "kind": "pausing & cold starts)   (punctuation only",
+  "find": "database itself: Firestore is",
+  "rep": "database itself. Firestore is"
+ },
+ {
+  "tool": "MongoDB Atlas",
+  "fac": "Idle behavior",
+  "kind": "pausing & cold starts)   (punctuation only",
+  "find": "tracks the tier: the free M0",
+  "rep": "tracks the tier. The free M0"
+ },
+ {
+  "tool": "Convex",
+  "fac": "Maturity, community & support",
+  "kind": "punctuation only",
+  "find": "community hedge: if the company",
+  "rep": "community hedge. If the company"
+ },
+ {
+  "tool": "Better Auth",
+  "fac": "Setup speed & pre-built UI",
+  "kind": "punctuation only",
+  "find": "hosted options: you wire",
+  "rep": "hosted options. You wire"
+ },
+ {
+  "tool": "Clerk",
+  "fac": "Where it stands out",
+  "kind": "punctuation only",
+  "find": "pre-built UI: drop-in",
+  "rep": "pre-built UI. Drop-in"
+ },
+ {
+  "tool": "Manual DIY",
+  "fac": "Limitations",
+  "kind": "punctuation only",
+  "find": "heavy and unforgiving: one mistake",
+  "rep": "heavy and unforgiving. One mistake"
+ },
+ {
+  "tool": "Netlify",
+  "fac": "Pricing model",
+  "kind": "punctuation only",
+  "find": "the real cost: heavy builds",
+  "rep": "the real cost. Heavy builds"
+ },
+ {
+  "tool": "Fly.io",
+  "fac": "Free tier",
+  "kind": "and catches)   (punctuation only",
+  "find": "free option: the trial is",
+  "rep": "free option. The trial is"
+ },
+ {
+  "tool": "Railway",
+  "fac": "Where it stands out",
+  "kind": "punctuation only",
+  "find": "zero economics: services idle",
+  "rep": "zero economics. Services idle"
+ },
+ {
+  "tool": "Manual DIY",
+  "fac": "Limitations",
+  "kind": "punctuation only",
+  "find": "the ops team: security patches",
+  "rep": "the ops team. Security patches"
+ },
+ {
+  "tool": "Statsig",
+  "fac": "Limitations",
+  "kind": "punctuation only",
+  "find": "is in flux: OpenAI acquired",
+  "rep": "is in flux. OpenAI acquired"
+ },
+ {
+  "tool": "QuickBooks Online",
+  "fac": "Accountant fit, geography & access",
+  "kind": "punctuation only",
+  "find": "accountant default: Most bookkeepers",
+  "rep": "accountant default. Most bookkeepers"
+ },
+ {
+  "tool": "QuickBooks Online",
+  "fac": "Limitations",
+  "kind": "punctuation only",
+  "find": "high and rising: increases took",
+  "rep": "high and rising. Increases took"
+ },
+ {
+  "tool": "Freshdesk",
+  "fac": "Ticketing, routing, SLAs & reporting",
+  "kind": "punctuation only",
+  "find": "of the product: SLAs, routing",
+  "rep": "of the product. SLAs, routing"
+ },
+ {
+  "tool": "Freshdesk",
+  "fac": "Shared inbox & collaboration",
+  "kind": "punctuation only",
+  "find": "around tickets: with deep",
+  "rep": "around tickets. With deep"
+ },
+ {
+  "tool": "n8n",
+  "fac": "Logic, complexity, error handling & debugging",
+  "kind": "bridge words added",
+  "find": "here for logic: branching, custom-code",
+  "rep": "here for logic, with branching, custom-code"
+ },
+ {
+  "tool": "Gumloop",
+  "fac": "AI capabilities",
+  "kind": "punctuation only",
+  "find": "by design: you plug",
+  "rep": "by design. You plug"
+ },
+ {
+  "tool": "Make",
+  "fac": "Ease of use & learning curve",
+  "kind": "punctuation only",
+  "find": "than Zapier: the visual canvas",
+  "rep": "than Zapier. The visual canvas"
+ },
+ {
+  "tool": "Pipedream",
+  "fac": "Self-hosting & data control",
+  "kind": "punctuation only",
+  "find": "managed infrastructure: great for",
+  "rep": "managed infrastructure. Great for"
+ }
+]

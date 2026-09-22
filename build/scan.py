@@ -84,12 +84,17 @@ def blocks(path):
 
 
 findings = []
+REPORT = {}      # every failing check -> its complete detail, written to scan_findings.json
 
 
-def check(name, ok, detail=""):
+def check(name, ok, detail="", full=None):
+    """`detail` is the short printed line; `full` is the complete, stable detail
+    (a sorted list or dict) that qa_build.sh pins in scan_known_findings.json,
+    so a finding is only 'known' while its entire content is unchanged."""
     print(("  pass  " if ok else "  FAIL  ") + name + (("\n          " + detail) if detail and not ok else ""))
     if not ok:
         findings.append(name)
+        REPORT[name] = full if full is not None else (detail or True)
 
 
 a_doc, b_doc = open(_p(A_HTML)).read(), open(_p(B_HTML)).read()
@@ -103,8 +108,9 @@ check("no 'Not applicable' form-field answers remain", "Not applicable" not in B
 na = " ".join(v for k, v in edits.items() if k.startswith("N/A"))
 check("no slash shorthand in the rewritten answers",
       not re.findall(r"\b[a-z]{3,}/[a-z]{3,}\b", na), str(re.findall(r"\b[a-z]{3,}/[a-z]{3,}\b", na)))
-check("every rewritten answer renders",
-      all(v in Bp for k, v in edits.items() if k.startswith("N/A")))
+_na_missing = sorted(v for k, v in edits.items() if k.startswith("N/A") and v not in Bp)
+check("every rewritten answer renders", not _na_missing,
+      "%d not verbatim: %s" % (len(_na_missing), [m[:60] for m in _na_missing[:3]]), full=_na_missing)
 
 print("PROSE PASS")
 try:
@@ -115,10 +121,11 @@ except FileNotFoundError:
 if converted is not None:
     left = [f for f in converted if f in Bp]             # in-scope text only
     check("all converted colons gone from in-scope prose", not left, str(left[:4]))
-check("colons doing real work still present",
-      all(s in Bp for s in ["Upside: no first-query", "Trade-off: you own uptime", "Four tiers:",
-                            "Stripe's schedule:", "A consequence of scale-to-zero:",
-                            "Flat per-service pricing:", "Text networks only:", "Recurring: franchise tax"]))
+_colon_missing = sorted(s for s in ["Upside: no first-query", "Trade-off: you own uptime", "Four tiers:",
+                                     "Stripe's schedule:", "A consequence of scale-to-zero:",
+                                     "Flat per-service pricing:", "Text networks only:", "Recurring: franchise tax"]
+                        if s not in Bp)
+check("colons doing real work still present", not _colon_missing, str(_colon_missing), full=_colon_missing)
 dbl = lambda s: len(re.findall(r"[A-Za-z]{4,}:\s+[^.!?]{0,60}:\s", s))
 check("no double-colon sentences beyond the baseline", dbl(Bp) <= dbl(Ap), "B=%d A=%d" % (dbl(Bp), dbl(Ap)))
 stubs = sorted({st for b, a in edits.items()
@@ -131,7 +138,7 @@ check("no orphaned label stubs created", not stubs, str(stubs))
 # four of its own (abbreviations, and pgvector, which really is lowercase).
 low = lambda s: collections.Counter(re.findall(r"[.!?]\s+[a-z]{2,}\w*", s))
 new_low = dict(low(Bp) - low(Ap))
-check("no new lowercase sentence starts", not new_low, str(new_low))
+check("no new lowercase sentence starts", not new_low, str(new_low), full=dict(sorted(new_low.items())))
 check("no em dashes anywhere in the document", "\u2014" not in b_doc and "&mdash;" not in b_doc,
       "%d in file" % (b_doc.count("\u2014") + b_doc.count("&mdash;")))
 
@@ -142,7 +149,7 @@ print("CONTENT INTEGRITY")
 fig = lambda s: collections.Counter(
     x.rstrip(".,;:") for x in re.findall(r"\$[\d,.]+|\b\d[\d,.]*\s?%|\b\d[\d,.]*(?:k|K|M|GB)\b", s))
 lost = dict(fig(A) - fig(B))
-check("no figures lost", not lost, str(lost))
+check("no figures lost", not lost, str(lost), full=dict(sorted(lost.items())))
 for label, pattern in (("Avoid-if blocks", EXCLUDED[0]),
                        ("Methodology", EXCLUDED[1]), ("How to use this", EXCLUDED[2])):
     check("%s byte-identical to baseline" % label, region(A_HTML, pattern) == region(B_HTML, pattern))
@@ -154,9 +161,10 @@ unexplained = [b for tag, i1, i2, j1, j2 in sm.get_opcodes() if tag != "equal"
                for b in bb[j1:j2]
                if not any(f and (f in norm(b) or norm(b) in f) for f in finals)]
 check("every A-vs-B difference traces to an approved edit", not unexplained,
-      "%d unexplained: %s" % (len(unexplained), [u[:70] for u in unexplained[:3]]))
+      "%d unexplained: %s" % (len(unexplained), [u[:70] for u in unexplained[:3]]), full=sorted(unexplained))
 sha = hashlib.sha256(open(XLSX, "rb").read()).hexdigest()
 check("source xlsx unmodified", sha.startswith(XLSX_SHA), sha[:16])
 
 print("\nFINDINGS: %d %s" % (len(findings), findings or ""))
+json.dump(REPORT, open(os.path.join(HERE, "scan_findings.json"), "w", encoding="utf-8"), indent=1, ensure_ascii=False, sort_keys=True)
 sys.exit(len(findings))

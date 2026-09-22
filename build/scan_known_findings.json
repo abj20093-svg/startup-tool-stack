@@ -1,0 +1,78 @@
+{
+ "_readme": "Findings scan.py reports that are accepted, pinned to their COMPLETE detail. qa_build.sh fails on any finding not listed here and on any change inside a listed one. To accept a change: read every new item against the baseline, then copy scan_findings.json's detail here with a reason.",
+ "colons doing real work still present": {
+  "why": "'A consequence of scale-to-zero' is now a bold lead bullet, so its colon renders as a full stop. Wording intact. Checked 2026-09-20.",
+  "detail": [
+   "A consequence of scale-to-zero:"
+  ]
+ },
+ "every A-vs-B difference traces to an approved edit": {
+  "why": "Scanner matches whole edited paragraphs, but the build splits them into lead + nested bullets and scrubs rival names, so it mis-pairs blocks. Every block here was read against the baseline on 2026-09-20 (review fixes + prose pass): rival-name rewrites made on purpose, approved punctuation/wording edits, and sentences that only look shorter because the rest sits in a nested bullet. No fact lost. Any block added to this list needs the same check.",
+  "detail": [
+   "A library handles hashing, sessions/JWTs. OAuth flows while you store users in your Postgres/MySQL.",
+   "Alongside the newsletter itself it runs the Boosts ad network and paid subscriptions. It takes a 0% beehiiv cut of paid-subscription revenue (only Stripe's 2.9% + $0.30 applies).",
+   "As MoR it absorbs chargeback risk but can hold or review accounts. Day-to-day holds are rarely reported, yet transition risk is high.",
+   "Because the data models are defined by the team instead of fixed by Attio, follow-up rules can reference whatever fields that team created. The AI works against the same structure.",
+   "Connections are built against a developer API instead of picked from a prebuilt catalog. Incoming data maps into the custom data model.",
+   "Contacts and campaign data export easily via CSV/API. Your list isn't locked.",
+   "Delivers a full Postgres backend (database, auth, storage, realtime and edge functions) from one dashboard without stitching separate services together. It keeps the data in standard Postgres.",
+   "Enterprise SSO and SCIM are billed separately per connection ($125 each at the entry tier, and a connection needing both is billed twice). Costs add up as the number of enterprise customers grows instead of staying flat.",
+   "Free tier: 300 credits/month, custom domains, and HTTPS. Its free tier allows commercial use.",
+   "Frontend and full-stack JS/TS teams (especially Next.js users) wanting zero-config Git deploys, preview environments, and edge/serverless functions. Best fit: Next.js and modern frontend apps where developer experience, per-PR previews, and a global CDN matter more than raw infra control.",
+   "GDPR/data-ownership rules or principle demand analytics on infrastructure you control. Choose this when ownership and privacy outweigh convenience.",
+   "Hobby is free but ships hard caps (100GB bandwidth, 1M invocations, 4h Active CPU and 360 GB-hr memory per month). Hitting any one cap stops the project serving until the next month, not auto-billing overage.",
+   "It covers fundamentals, not deep reporting, a known tradeoff for Buffer's simplicity.",
+   "It runs as a managed identity layer instead of a library. The user store and auth flows live on Clerk's infrastructure and integrate through its Next.js/React SDKs.",
+   "Its defining feature: retroactive autocapture of every click, pageview, and form interaction. You can define events after the fact with no code changes or replays lost.",
+   "Its main advantage is open-source (MIT) data ownership. Self-hosting is free beyond infrastructure, AI is included in the base, and it positions as a self-hosted alternative to the big hosted suites for teams that can self-host.",
+   "Its main advantage is open-source (MIT) data ownership. Self-hosting is free beyond infrastructure, AI is included in the base, and it positions as a self-hosted alternative to the big hosted suites for teams that can self-host.",
+   "Its strength is visual automation at a low entry price (Core is $12/mo for 10,000 credits, formerly 'operations'). Complex, multi-branch scenarios are reachable on a modest budget.",
+   "Lock-in is low. It's framework-agnostic.",
+   "Native to the Stripe ecosystem and its APIs. Integrations run through Stripe's own platform instead of external connectors.",
+   "Newer than the incumbents but funded. Its codebase was open-sourced in 2024, which is a community hedge.",
+   "No per-dispute fee, but you only lose the disputed amount if you lose. Eligible sellers get free Chargeback Protection covering up to $250/month in qualifying disputes.",
+   "No persistent backend or provisioned database, and SSR support is clunkier, so the latest Next.js features tend to arrive late here.",
+   "Only 8 countries. Online rates on the free plan are at the high end of this group.",
+   "Own your list outright, escape per-subscriber pricing. With Ghost you get a strong editor plus native paid subscriptions, a Substack alternative for a founder willing to self-host.",
+   "Paid memberships require Publisher ($29/mo+, scaling with members). Marketing automation is light, and it is not a transactional-email tool.",
+   "Pipedrive has been in the sales CRM market a long time and is widely used. Its feature set and support base are settled instead of fast-changing.",
+   "Pipedrive is a pipeline CRM rather than a data vendor. You bring the contacts.",
+   "Relational database running standard PostgreSQL. Ordinary SQL, constraints and Postgres tooling all apply, with the pgvector extension available for storing and querying embeddings alongside application data, not in a separate vector service.",
+   "Self-hosted broadcasting. You own the list and the sending.",
+   "Self-serve onboarding with KYC handled via Stripe. Developer-friendly by design.",
+   "Setup is moderate because of the depth of its ticketing configuration. Migration is a standard import.",
+   "Ships with built-in organizations and multi-tenant primitives as part of the hosted service. Team and tenant structures are provided instead of modeled from scratch.",
+   "Slower than the fastest host here. Serverless cold starts run ~3s+, edge function cold starts ~28ms, and average TTFB ~90ms in 2026 benchmarks.",
+   "Smaller community and fewer public playbooks.",
+   "Solid acquisition toolkit, but there is no built-in discovery or referral network.",
+   "Subscription depth is narrow, and the toolset is aimed at simple digital-product billing instead of enterprise contracts.",
+   "Surface price is in line with this group, but the credit model changes the real cost.",
+   "The Agent works in billable 'checkpoints'. There is real code access, a built-in database, and one-click deploys (autoscale or reserved VM).",
+   "The cheapest integrated auth at scale for Supabase users. 100K MAU is included in the $25/mo Pro plan ($0.00325/MAU only above 100K), a fraction of per-user pricing at that scale, while keeping users in your own Postgres with RLS integration. Cost and database integration are its distinguishing points.",
+   "The data in Attio is first-party. Compliance rests with you.",
+   "You eat them directly, at ~$15 per dispute plus the lost amount. Assemble the evidence yourself.",
+   "You need broad integrations, landing pages, and multichannel marketing on a single well-known platform and want CRM, ads, and ecommerce under one roof instead of a pure email tool. Essentials from $13, Standard from $20 (500 contacts).",
+   "You want to start free, publish instantly, and tap network effects (recommendations, Notes, discovery) with no monthly fee. You keep ~$8.40 on a $10 sub after fees.",
+   "You've already formed and need equity managed properly. Carta Launch is free up to 25 stakeholders and $1M raised, then custom-quoted paid early-stage tiers (no public flat monthly price like \"$599/mo\"; standalone 409As from ~$3,500) as you grow."
+  ]
+ },
+ "every rewritten answer renders": {
+  "why": "Scanner predates the bullet layout: these two rewritten N/A answers (Attio, Pipedrive) are split across a bold lead and a sub-bullet. Every sentence is on the page. Checked by hand 2026-09-20.",
+  "detail": [
+   "Pipedrive is a pipeline CRM rather than a data vendor, so you bring the contacts.",
+   "The data in Attio is first-party, and compliance rests with you."
+  ]
+ },
+ "no figures lost": {
+  "why": "By design: Square's '(vs Stripe's $15)' is a same-chapter rival comparison, which the build rewrites to stand alone. Stripe's own profile still carries the $15 dispute fee.",
+  "detail": {
+   "$15": 1
+  }
+ },
+ "no new lowercase sentence starts": {
+  "why": "Scanner artifact: the analytics snippet ('gtag') read as a sentence start.",
+  "detail": {
+   ". gtag": 1
+  }
+ }
+}
