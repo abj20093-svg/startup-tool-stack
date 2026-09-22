@@ -66,9 +66,7 @@ a:hover{color:var(--violet-dim)}
 .contents td{font-weight:600;padding:7px 6px;border-bottom:1px solid var(--border);font-family:var(--sans);font-size:15px;vertical-align:baseline}
 .contents td.cnum{width:44px;color:var(--violet);font-weight:600}
 .contents td.soon{color:var(--slate)}
-.contents tr:hover td{background:var(--off)}
-.contents td a{text-decoration:none;color:var(--ink);display:block}
-.contents td a:hover{color:var(--violet)}
+/* the contents list is a plain table of contents: no hover state, no links (the rail navigates) */
 
 /* ---------- chapter ---------- */
 .chapter{padding-top:8px}

@@ -1098,7 +1098,7 @@ wizard_json = _json.dumps([{ "s": c["s"], "q": c["job"], "tools": c["tools"] } f
 contents_html = ""
 for grp in ("Selling", "Building", "Operating"):
     trs = "".join(f'<tr><td class="cnum num">{n:02d}</td>'
-                  f'<td><a href="#{s}">{esc(nm)}</a></td></tr>'
+                  f'<td>{esc(nm)}</td></tr>'
                   for n, nm, s in contents_rows[grp])
     contents_html += (f'<div class="grp"><span class="eyebrow">{grp}</span>'
                       f'<table>{trs}</table></div>')
