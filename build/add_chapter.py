@@ -13,14 +13,16 @@ Chapter JSON shape:
    "tools": [6 vendor names..., "Manual DIY"],
    "rows": [{"label": "Built for", "cells": [7 strings]}, ...]}
 
-usage: /usr/bin/python3 add_chapter.py compliance_chapter.json
+usage: /usr/bin/python3 add_chapter.py compliance_chapter.json                      (original -> v2)
+       /usr/bin/python3 add_chapter.py banking_chapter.json startup-tool-stack-v2.xlsx startup-tool-stack-v3.xlsx
 """
 import copy, json, sys, os
 import openpyxl
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-SRC = os.path.join(HERE, "startup-tool-stack.xlsx")
-DST = os.path.join(HERE, "startup-tool-stack-v2.xlsx")
+SRC = os.path.join(HERE, sys.argv[2] if len(sys.argv) > 2 else "startup-tool-stack.xlsx")
+DST = os.path.join(HERE, sys.argv[3] if len(sys.argv) > 3 else "startup-tool-stack-v2.xlsx")
+assert SRC != DST and not SRC.endswith("startup-tool-stack.xlsx") or DST.endswith("-v2.xlsx"), "the original workbook is never written"
 ch = json.load(open(sys.argv[1], encoding="utf-8"))
 assert len(ch["tools"]) == 7 and ch["tools"][-1] == "Manual DIY", ch["tools"]
 for r in ch["rows"]:

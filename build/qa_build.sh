@@ -4,8 +4,8 @@
 # usage: ./qa_build.sh   (from the project folder)
 set -e
 cd "$(dirname "$0")"
-EXPECT_PROFILES=105   # bump both when a chapter is added
-EXPECT_CHAPTERS=15
+EXPECT_PROFILES=112   # bump both when a chapter is added
+EXPECT_CHAPTERS=16
 FAIL=0
 gate() {  # gate <label> <actual> <expected>
   if [ "$2" = "$3" ]; then printf "  pass  %s: %s\n" "$1" "$2"
@@ -15,8 +15,10 @@ TXT=$(mktemp -t varied-pdf); LOG=$(mktemp -t qa-log)
 trap 'rm -f "$TXT" "$LOG"' EXIT
 
 echo "== chapter cells (check_cells.py) =="
-if /usr/bin/python3 check_cells.py compliance_chapter.json >"$LOG" 2>&1; then echo "  pass  compliance_chapter.json"
-else echo "  FAIL  compliance_chapter.json"; tail -15 "$LOG"; FAIL=1; fi
+for CH in compliance_chapter.json banking_chapter.json; do
+  if /usr/bin/python3 check_cells.py "$CH" >"$LOG" 2>&1; then echo "  pass  $CH"
+  else echo "  FAIL  $CH"; tail -15 "$LOG"; FAIL=1; fi
+done
 
 # Order matters: both variants write toolstack_wizard.html, and the deployed
 # guided page is the VARIED one, so the varied build must run last.

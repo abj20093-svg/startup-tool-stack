@@ -23,7 +23,7 @@ FONT_CSS = open(f"{HERE}/fonts/embedded.css").read()
 TOOL_URLS = {k.lower(): v for k, v in json.load(open(f"{HERE}/tool_urls.json")).items()}
 CSS_BODY = open(f"{HERE}/css.txt").read()
 
-wb = openpyxl.load_workbook(f"{HERE}/startup-tool-stack-v2.xlsx", data_only=True)
+wb = openpyxl.load_workbook(f"{HERE}/startup-tool-stack-v3.xlsx", data_only=True)
 src = wb[wb.sheetnames[0]]
 
 # group, name, header_row, first_row, last_row, job label, decision line
@@ -58,6 +58,8 @@ CHAPTERS = [
      "The decision: what connects your tools to each other, how it charges you for the work, and whether you can host it yourself."),
     ("Operating", "Compliance Automation", 213, 214, 227, "Get SOC 2 or ISO 27001 compliant",
      "The decision: what gets you to a SOC 2 or ISO 27001 report, whether the audit itself is included or billed separately, and what you keep paying every year to stay compliant."),
+    ("Operating", "Business Banking", 229, 230, 243, "Open a business bank account",
+     "The decision: where your company's cash sits, what it earns while it sits there, and how much of it is insured if the bank behind the app fails."),
 ]
 
 # ---- coverage guard: every content row must be declared ----
@@ -546,7 +548,7 @@ def band_of(lab):
     L = lab.lower()
     if re.search(r"pricing models it handles|payment methods|legal support", L):
         return "What it does"
-    if re.search(r"\b(pricing|price|fees?|costs?|free tier|overage|credit burn|chargeback|dispute)\b", L):
+    if re.search(r"\b(pricing|price|fees?|costs?|free tier|overage|credit burn|chargeback|dispute|yield)\b", L):
         return "Cost"
     if re.search(r"\b(integrations?|migration|lock-in|portability|self-hosting|exit|ownership|leave)\b", L):
         return "Ecosystem & exit"
@@ -1219,7 +1221,7 @@ doc = f"""<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Startup Tool Stack: a field guide to 90 tools in 15 categories</title>
+<title>The Startup Tool Stack: a field guide to 96 tools in 16 categories</title>
 <style>{css}</style>
 </head>
 <body>
