@@ -51,6 +51,12 @@ h1 span{color:var(--violet)}
 .comparison-website{display:block;font-size:12px;color:var(--violet);margin-top:15px}.comparison-table .secondary{font-size:11px;padding:9px 12px}.comparison-mobile-hint{display:none}
 @media(max-width:760px){.compare-hint{display:block;max-width:none;text-align:left;margin-top:12px}.tools-heading{display:block}.comparison-table{min-width:720px}.comparison-table th:first-child{width:125px;position:sticky;left:0;z-index:1}.comparison-table th,.comparison-table td{padding:17px 14px}.comparison-mobile-hint{display:block;font-size:11px;color:var(--muted);margin-top:12px}}
 .comparison-table .tool-icon{width:43px}
+/* Progressive category feed: append without moving existing cards. */
+.browse-instruction{font-size:12px;color:var(--muted);margin:4px 0 16px}
+.feed-toolbar{position:sticky;top:76px;z-index:12;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 0;background:rgba(247,246,252,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);margin-bottom:25px}
+#feed-progress{font-size:12px;color:var(--violet-dim)}.feed-toolbar .secondary{font-size:12px;color:var(--violet-dim);border-color:#d9d2ee}
+.feed-category{border-top:1px solid #ddd6ed;margin-top:65px;padding-top:20px}.feed-loader{padding:48px 0 10px;text-align:center;min-height:140px}.feed-loader p{font-size:13px;color:var(--muted);margin-bottom:16px}
+@media(max-width:760px){.feed-toolbar{top:66px;gap:10px;padding:10px 0}#feed-progress{font-size:10px}.feed-toolbar .secondary{font-size:10px;padding:10px 12px}.feed-category{margin-top:40px;padding-top:12px}.feed-loader{padding-top:32px}}
 </style>
 </head>
 <body>
@@ -71,9 +77,13 @@ h1 span{color:var(--violet)}
 <section class="explorer" id="explore"><div class="shell">
 <div class="section-heading"><div><p class="eyebrow">START WITH WHAT YOU NEED</p><h2>Your next move,<br>made simpler.</h2></div><p>You don’t need every tool.<br>Just the right one for the job.</p></div>
 <div class="discovery-bar"><div class="segment" role="group" aria-label="Filter categories"><button data-group="All" aria-pressed="true">All tools</button><button data-group="Building" aria-pressed="false">Building</button><button data-group="Selling" aria-pressed="false">Selling</button><button data-group="Operating" aria-pressed="false">Operating</button></div><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find a tool or category" aria-label="Find a tool or category"><kbd>/</kbd></label></div>
+<p class="browse-instruction">Scroll to browse every category, or jump straight to one below.</p>
 <div class="category-grid" id="categories"></div>
 <div id="results-status" class="results-status" role="status" aria-live="polite"></div>
-<section id="tool-section" aria-labelledby="category-title"><div class="tools-heading"><div><p class="eyebrow" id="category-group"></p><h3 id="category-title"></h3><p id="category-description"></p></div><div class="compare-hint">Select up to 3 tools<br>to see them side by side.</div></div><div class="tool-grid" id="tools"></div></section>
+<div class="feed-toolbar" id="feed-toolbar"><span id="feed-progress"></span><button id="feed-reset" class="secondary" title="Collapse loaded categories and clear search, filters, and comparisons">↑ Back to start · Reset</button></div>
+<div id="feed-announcement" class="sr-only" role="status" aria-live="polite"></div>
+<section id="tool-section" aria-labelledby="category-title"><div class="tools-heading"><div><p class="eyebrow" id="category-group"></p><h3 id="category-title"></h3><p id="category-description"></p></div><div class="compare-hint">Select up to 3 tools<br>to see them side by side.</div></div><div class="tool-grid" id="tools"></div><div id="more-categories"></div></section>
+<div class="feed-loader" id="feed-loader"><p id="feed-message"></p><button class="secondary" id="load-more">Load next category ↓</button><button class="secondary" id="feed-bottom-reset" hidden>↑ Back to start · Reset</button></div>
 <div id="empty" hidden><h3>No tools found.</h3><p>Try a tool name, category, or a different search.</p><button class="secondary" id="reset">Clear filters</button></div>
 </div></section>
 <section class="source-intro shell" id="approach" aria-labelledby="build-route-title"><details><summary id="build-route-title">Why every chapter ends with an internal build</summary><div class="section-body" id="original-intro"><p>Every chapter closes with a seventh option: an internal build, standing the capability up yourself instead of buying it. With AI tools like Claude and Codex, a founder can now get a working version of almost anything in this guide.</p><p>An internal build covers a wide range. It can be a spreadsheet you keep by hand, a script against an API, a self-hosted open-source app, or a full custom build with an AI agent writing most of the code.</p><p>We include it in every comparison because the real question is no longer whether you can build it. It is whether the result is reliable, what it costs you in setup and upkeep, and when that trade beats paying for a product. The internal build pages weigh exactly that.</p></div></details></section>
@@ -96,17 +106,56 @@ const hue=t=>t.name.split('').reduce((a,c)=>a+c.charCodeAt(0),0)%360;
 const icon=t=>`<span class="tool-icon" style="--hue:${hue(t)}" aria-hidden="true">${esc(initials(t))}</span>`;
 const short=s=>{const match=s.match(/^(.+?[.!?])(?:\s+[A-Z]|$)/);return match?match[1]:s;};
 function filterCategories(){return categories.filter(c=>(group==='All'||c.group===group)&&(!query||(c.name+' '+c.group).toLowerCase().includes(query)||c.tools.some(t=>t.name.toLowerCase().includes(query))));}
+function toolCards(list){
+ return list.map(t=>`<article class="tool-card ${t.name==='Internal build'?'internal-card':''} ${selected.has(t.id)?'selected':''}" id="card-${t.id}"><div class="tool-top">${icon(t)}<label class="select-tool"><input type="checkbox" data-select="${t.id}" ${selected.has(t.id)?'checked':''} ${selected.size>=3&&!selected.has(t.id)?'disabled':''} aria-label="Compare ${esc(t.name)} in ${esc(t.category)}">Compare</label></div><h4>${esc(t.name)}</h4><p class="tool-fit">${esc(short(t.fit))}</p><div class="tool-price"><span class="field-label">Starting price</span><strong>${esc(t.price)}</strong></div><div class="tool-points"><div><span class="field-label benefit-label">Why it stands out</span><p>${esc(short(t.benefit))}</p></div><div><span class="field-label tradeoff-label">The trade-off</span><p>${esc(t.tradeoff||'Read the full profile for limitations.')}</p></div></div><div class="tool-bottom">${t.url?`<a class="detail-button" href="${esc(t.url)}" target="_blank" rel="noopener noreferrer" aria-label="Explore ${esc(t.name)} website (opens a new tab)">Explore ${esc(t.name)} <span aria-hidden="true">↗</span></a><button class="vendor-link" data-detail="${t.id}">Read full profile</button>`:`<button class="detail-button" data-detail="${t.id}">Explore the build route <span aria-hidden="true">→</span></button>`}</div></article>`).join('');
+}
+let feedQueue=[],loadedCount=0,feedObserver=null,resetUntil=0;
 function render(){
  const visible=filterCategories();if(!visible.some(c=>c.id===active))active=visible[0]?.id||'';
- $('categories').innerHTML=visible.map(c=>`<button class="category" data-category="${c.id}" aria-pressed="${c.id===active}"><small>${esc(c.group)} <span aria-hidden="true">/</span> 07 options</small><b>${esc(c.name)}</b></button>`).join('');
- let list=query?allTools.filter(t=>(group==='All'||t.group===group)&&(t.name+' '+t.category+' '+t.group).toLowerCase().includes(query)):allTools.filter(t=>t.categoryId===active);
- const c=categories.find(c=>c.id===active);$('tool-section').hidden=!list.length;$('empty').hidden=!!list.length;
- $('category-title').textContent=query?'A few possibilities.':c?.name||'';
- $('category-group').textContent=query?'YOUR SEARCH RESULTS':c?.group||'';
- $('category-description').textContent=query?`${list.length} matching options across the guide.`:'Six tools. One internal-build route. A choice that fits you.';
- $('results-status').textContent=query?`${list.length} results for “${query}”`:'';
- $('tools').innerHTML=list.map(t=>`<article class="tool-card ${t.name==='Internal build'?'internal-card':''} ${selected.has(t.id)?'selected':''}" id="card-${t.id}"><div class="tool-top">${icon(t)}<label class="select-tool"><input type="checkbox" data-select="${t.id}" ${selected.has(t.id)?'checked':''} ${selected.size>=3&&!selected.has(t.id)?'disabled':''} aria-label="Compare ${esc(t.name)} in ${esc(t.category)}">Compare</label></div><h4>${esc(t.name)}</h4><p class="tool-fit">${esc(short(t.fit))}</p><div class="tool-price"><span class="field-label">Starting price</span><strong>${esc(t.price)}</strong></div><div class="tool-points"><div><span class="field-label benefit-label">Why it stands out</span><p>${esc(short(t.benefit))}</p></div><div><span class="field-label tradeoff-label">The trade-off</span><p>${esc(t.tradeoff||'Read the full profile for limitations.')}</p></div></div><div class="tool-bottom">${t.url?`<a class="detail-button" href="${esc(t.url)}" target="_blank" rel="noopener noreferrer" aria-label="Explore ${esc(t.name)} website (opens a new tab)">Explore ${esc(t.name)} <span aria-hidden="true">↗</span></a><button class="vendor-link" data-detail="${t.id}">Read full profile</button>`:`<button class="detail-button" data-detail="${t.id}">Explore the build route <span aria-hidden="true">→</span></button>`}</div></article>`).join('');
- syncSelection();
+ $('categories').innerHTML=visible.map(c=>`<button class="category" data-category="${c.id}" aria-pressed="${c.id===active}"><small>${esc(c.group)} <span aria-hidden="true">/</span> ${c.tools.length} options</small><b>${esc(c.name)}</b></button>`).join('');
+ let ordered=visible;
+ if(!query){const i=visible.findIndex(c=>c.id===active);if(i>0)ordered=[...visible.slice(i),...visible.slice(0,i)];}
+ feedQueue=ordered.map(c=>({category:c,tools:allTools.filter(t=>t.categoryId===c.id&&(!query||(t.name+' '+t.category+' '+t.group).toLowerCase().includes(query)))})).filter(item=>item.tools.length);
+ loadedCount=0;feedObserver?.disconnect();$('more-categories').innerHTML='';
+ const first=feedQueue[0];$('tool-section').hidden=!first;$('empty').hidden=!!first;
+ $('feed-toolbar').hidden=!first;$('feed-loader').hidden=!first;
+ const matches=feedQueue.reduce((n,item)=>n+item.tools.length,0);
+ $('results-status').textContent=query?`${matches} results for “${query}”`:'';
+ $('category-title').textContent=first?.category.name||'';
+ $('category-group').textContent=first?.category.group||'';
+ $('category-description').textContent=query?`${first?.tools.length||0} matching options in this category.`:'Six tools. One internal-build route. Keep scrolling to explore the next category.';
+ $('tools').innerHTML=first?toolCards(first.tools):'';
+ if(first)loadedCount=1;
+ updateFeed();syncSelection();
+}
+function updateFeed(){
+ const count=feedQueue.slice(0,loadedCount).reduce((n,item)=>n+item.tools.length,0);
+ $('feed-progress').textContent=`${loadedCount} of ${feedQueue.length} categories · ${count} options shown`;
+ const next=feedQueue[loadedCount];
+ $('load-more').hidden=!next;
+ $('load-more').textContent=next?`Load next: ${next.category.name} ↓`:'';
+ $('feed-message').textContent=next?'Keep scrolling — the next category loads automatically.':query?'You’ve reached the end of these results.':'You’ve explored every category in this view.';
+ $('feed-bottom-reset').hidden=!!next;
+ feedObserver?.disconnect();if(next)feedObserver?.observe($('feed-loader'));
+}
+function loadNextCategory(){
+ if(Date.now()<resetUntil||document.querySelector('dialog[open]'))return;
+ const next=feedQueue[loadedCount];if(!next)return;
+ feedObserver?.disconnect();
+ $('more-categories').insertAdjacentHTML('beforeend',`<section class="feed-category" aria-labelledby="feed-title-${next.category.id}"><div class="tools-heading"><div><p class="eyebrow">${esc(next.category.group)} · CATEGORY ${loadedCount+1} OF ${feedQueue.length}</p><h3 id="feed-title-${next.category.id}">${esc(next.category.name)}</h3><p>${query?`${next.tools.length} matching options.`:'Six tools and an internal-build option.'}</p></div></div><div class="tool-grid">${toolCards(next.tools)}</div></section>`);
+ loadedCount++;updateFeed();syncSelection();
+ $('feed-announcement').textContent=`Loaded ${next.category.name}. ${loadedCount} of ${feedQueue.length} categories shown.`;
+}
+function resetFeed(){
+ feedObserver?.disconnect();resetUntil=Date.now()+800;
+ document.querySelectorAll('dialog[open]').forEach(d=>d.close());
+ selected.clear();group='All';query='';active=categories[0].id;$('search').value='';
+ document.querySelectorAll('[data-group]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.group==='All')));
+ document.querySelectorAll('details[open]').forEach(d=>d.open=false);
+ render();history.replaceState(null,'','#explore');
+ $('explore').setAttribute('tabindex','-1');$('explore').focus({preventScroll:true});
+ $('explore').scrollIntoView({behavior:'instant',block:'start'});
+ $('feed-announcement').textContent='Back to the beginning. Extra categories, search, filters, and comparison selections cleared.';
 }
 function shortlistCategory(){return selected.size?byId.get([...selected][0]).categoryId:null;}
 function selectionReason(id){
@@ -191,6 +240,14 @@ document.querySelectorAll('dialog').forEach(d=>d.addEventListener('click',e=>{if
 document.addEventListener('keydown',e=>{if(e.key==='/'&&!e.ctrlKey&&!e.metaKey&&!document.querySelector('dialog[open]')&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)){e.preventDefault();$('search').focus();}});
 function preparePrint(){if($('print-content').children.length)return;$('print-content').innerHTML=`<h1>The Startup Tool Stack</h1><p>90 tools · 15 categories · Research updated September 2026</p><h2>${esc(document.getElementById("build-route-title").textContent)}</h2>${document.getElementById("original-intro").innerHTML}${allTools.map(t=>`<article><p>${esc(t.category)}</p><h2>${esc(t.name)}</h2><p>${esc(t.fit)}</p><h3>Starting price</h3><p>${esc(t.price)} ${esc(t.priceDetail)}</p><h3>Main benefit</h3><p>${esc(t.benefit)}</p>${t.sections.map(s=>`<h3>${esc(s.title)}</h3>${s.html}`).join('')}</article>`).join('')}`;}
 window.addEventListener('beforeprint',preparePrint);
+if('IntersectionObserver' in window){
+ feedObserver=new IntersectionObserver(entries=>{
+  if(entries.some(e=>e.isIntersecting)&&window.scrollY>0)loadNextCategory();
+ },{rootMargin:'0px 0px 300px 0px',threshold:0});
+}
+$('load-more').addEventListener('click',loadNextCategory);
+$('feed-reset').addEventListener('click',resetFeed);
+$('feed-bottom-reset').addEventListener('click',resetFeed);
 render();
 if(location.hash.startsWith('#tool-'))showProfile(location.hash.slice(1));
 </script>
