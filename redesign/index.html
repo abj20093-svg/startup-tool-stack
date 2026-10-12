@@ -72,6 +72,8 @@ h1 span{color:var(--violet)}
 @media(max-width:420px){.stage-row{grid-template-columns:1fr}}
 
 .use-tool{display:none}
+
+.hero-search{min-width:min(440px,100%)}.hero-search input{font-size:15px}.stack-tile{text-decoration:none;color:inherit;cursor:pointer}.stack-tile:hover{filter:brightness(1.04)}.stage{scroll-margin-top:90px}
 </style>
 </head>
 <body>
@@ -79,19 +81,19 @@ h1 span{color:var(--violet)}
 <header class="nav"><a class="brand" href="#"><span class="brand-mark" aria-hidden="true">≋</span> DECODE<span class="brand-divider"></span><span class="brand-sub">The Tool Stack</span></a><nav aria-label="Main"><a href="#explore">Explore tools</a><a href="#build-route-title" class="about-link">Build or buy</a><button class="nav-compare" id="open-compare">Compare <span id="compare-count">0</span></button></nav></header>
 <main>
 <section class="hero shell">
-<div class="hero-copy"><h1>Less searching.<br><span>More building.</span></h1><p class="hero-description">The ten hours of tab-hopping you were about to do, already done. 96 tools across 16 decisions, every fact dated and sourced.</p><div class="hero-actions"><a href="#explore" class="primary">Find your stack <span aria-hidden="true">↗</span></a><a href="#build-route-title" class="text-link">Build or buy? <span aria-hidden="true">→</span></a></div></div>
+<div class="hero-copy"><h1>Less searching.<br><span>More building.</span></h1><p class="hero-description">The ten hours of tab-hopping you were about to do, already done. 96 tools across 16 decisions, every fact dated and sourced.</p><div class="hero-actions"><label class="search hero-search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="What do you need? Try “payments” or “Mercury”" aria-label="Search a tool or a job"><kbd>/</kbd></label></div></div>
 <div class="stack-art" aria-label="Your stack connects building, selling, and operating">
 <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-<div class="stack-tile tile-back"><span class="tile-icon">↗</span><div><b>Selling</b></div><span class="tile-count">30 tools</span></div>
-<div class="stack-tile tile-middle"><span class="tile-icon">⌘</span><div><b>Operating</b></div><span class="tile-count">30 tools</span></div>
-<div class="stack-tile tile-front"><span class="tile-icon">&lt;/&gt;</span><div><b>Building</b></div><span class="tile-count">30 tools</span></div>
+<a class="stack-tile tile-back" href="#stage-selling"><span class="tile-icon">↗</span><div><b>Selling</b></div><span class="tile-count">5 decisions</span></a>
+<a class="stack-tile tile-middle" href="#stage-operating"><span class="tile-icon">⌘</span><div><b>Operating</b></div><span class="tile-count">6 decisions</span></a>
+<a class="stack-tile tile-front" href="#stage-building"><span class="tile-icon">&lt;/&gt;</span><div><b>Building</b></div><span class="tile-count">5 decisions</span></a>
 
 </div>
 </section>
 <div class="principles shell"><span>Trade-offs, not rankings</span><span>An internal-build option in every category</span></div>
 <section class="explorer" id="explore"><div class="shell">
 <div class="section-heading"><div><h2>What do you need to do?</h2></div></div>
-<div class="discovery-bar"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find a tool or category" aria-label="Find a tool or category"><kbd>/</kbd></label></div>
+
 
 <div class="category-grid" id="categories"></div>
 <div id="results-status" class="results-status" role="status" aria-live="polite"></div>
@@ -128,7 +130,7 @@ let feedQueue=[],loadedCount=0,feedObserver=null,resetUntil=0;
 function render(){
  const visible=filterCategories();if(!visible.some(c=>c.id===active))active=visible[0]?.id||'';
  const STAGES={Selling:'Find and bill customers',Building:'Ship the product',Operating:'Run the company'};
- $('categories').innerHTML=Object.keys(STAGES).map(g=>{const cs=visible.filter(c=>c.group===g);if(!cs.length)return '';return `<div class="stage"><div class="stage-head"><b>${g}</b><span>${STAGES[g]}</span></div><div class="stage-row">${cs.map(c=>`<button class="category" data-category="${c.id}" aria-pressed="${c.id===active}"><b>${esc(c.job||c.name)}</b><small>${esc(c.name)}</small><span class="cat-cta">${c.id===active?'Showing below':`See ${c.tools.length} options`}</span></button>`).join('')}</div></div>`;}).join('');
+ $('categories').innerHTML=Object.keys(STAGES).map(g=>{const cs=visible.filter(c=>c.group===g);if(!cs.length)return '';return `<div class="stage" id="stage-${g.toLowerCase()}"><div class="stage-head"><b>${g}</b><span>${STAGES[g]}</span></div><div class="stage-row">${cs.map(c=>`<button class="category" data-category="${c.id}" aria-pressed="${c.id===active}"><b>${esc(c.job||c.name)}</b><small>${esc(c.name)}</small><span class="cat-cta">${c.id===active?'Showing below':`See ${c.tools.length} options`}</span></button>`).join('')}</div></div>`;}).join('');
  let ordered=visible;
  if(!query){const i=visible.findIndex(c=>c.id===active);if(i>0)ordered=[...visible.slice(i),...visible.slice(0,i)];}
  feedQueue=ordered.map(c=>({category:c,tools:allTools.filter(t=>t.categoryId===c.id&&(!query||(t.name+' '+t.category+' '+t.group).toLowerCase().includes(query)))})).filter(item=>item.tools.length);
