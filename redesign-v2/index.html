@@ -189,7 +189,7 @@ function render(){
  $('results-status').textContent=query?`${matches} results for “${query}”`:'';
  $('category-title').textContent=first?.category.name||'';
  $('category-group').textContent=first?.category.group||'';
- $('category-description').textContent=query?`${first?.tools.length||0} matching options in this category.`:'Six tools. One internal-build route. Keep scrolling to explore the next category.';
+ $('category-description').textContent=query?`${first?.tools.length||0} matching options in this category.`:'';
  $('tools').innerHTML=first?toolCards(first.tools):'';
  if(first)loadedCount=1;
  updateFeed();syncSelection();
@@ -200,7 +200,7 @@ function updateFeed(){
  const next=feedQueue[loadedCount];
  $('load-more').hidden=!next;
  $('load-more').textContent=next?`Load next: ${next.category.name} ↓`:'';
- $('feed-message').textContent=next?'Keep scrolling — the next category loads automatically.':query?'You’ve reached the end of these results.':'You’ve explored every category in this view.';
+ $('feed-message').textContent=next?'':query?'No more results.':'';
  $('feed-bottom-reset').hidden=!!next;
  feedObserver?.disconnect();if(next)feedObserver?.observe($('feed-loader'));
 }
@@ -208,7 +208,7 @@ function loadNextCategory(){
  if(Date.now()<resetUntil||document.querySelector('dialog[open]'))return;
  const next=feedQueue[loadedCount];if(!next)return;
  feedObserver?.disconnect();
- $('more-categories').insertAdjacentHTML('beforeend',`<section class="feed-category" aria-labelledby="feed-title-${next.category.id}"><div class="tools-heading"><div><p class="eyebrow">${esc(next.category.group)} · CATEGORY ${loadedCount+1} OF ${feedQueue.length}</p><h3 id="feed-title-${next.category.id}">${esc(next.category.name)}</h3><p>${query?`${next.tools.length} matching options.`:'Six tools and an internal-build option.'}</p></div></div><div class="tool-grid">${toolCards(next.tools)}</div></section>`);
+ $('more-categories').insertAdjacentHTML('beforeend',`<section class="feed-category" aria-labelledby="feed-title-${next.category.id}"><div class="tools-heading"><div><p class="eyebrow">${esc(next.category.group)} · CATEGORY ${loadedCount+1} OF ${feedQueue.length}</p><h3 id="feed-title-${next.category.id}">${esc(next.category.name)}</h3><p>${query?`${next.tools.length} matching options.`:''}</p></div></div><div class="tool-grid">${toolCards(next.tools)}</div></section>`);
  loadedCount++;updateFeed();syncSelection();
  $('feed-announcement').textContent=`Loaded ${next.category.name}. ${loadedCount} of ${feedQueue.length} categories shown.`;
 }
