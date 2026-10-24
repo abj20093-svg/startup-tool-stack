@@ -356,12 +356,16 @@ if(location.hash.startsWith('#tool-'))showProfile(location.hash.slice(1));
  }
  function relabelFeed(){
   const names=feedQueue.slice(0,loadedCount).map(i=>i.category.name);
+  const ann=$('feed-announcement');if(/\d+ of \d+ categories/.test(ann.textContent))ann.textContent=`Loaded ${names[names.length-1]}.`;
+  document.querySelectorAll('.tool-bottom').forEach(b=>{const v=b.querySelector('.vendor-link');if(v&&b.firstElementChild!==v)b.prepend(v);});
   if(names.length)$('feed-progress').textContent=names.length===1?`Showing ${names[0]}`:`Showing ${names[0]} through ${names[names.length-1]}`;
   document.querySelectorAll('#more-categories .eyebrow').forEach(e=>{e.textContent=e.textContent.split(' · ')[0];});
  }
  const _profile=showProfile;window.showProfile=function(id){_profile(id);const acts=$('profile-content').querySelector('.profile-actions');if(acts&&byId.has(id)){const b=document.createElement('button');b.className='use-tool profile-use';b.dataset.use=id;acts.prepend(b);}renderStack();};
  const _render=render;window.render=function(){_render();renderStack();relabelFeed();};
  const _load=loadNextCategory;window.loadNextCategory=function(){_load();renderStack();relabelFeed();};
+ // the Load next button was bound to the original function before this wrapper existed; rebind it
+ const lm=$('load-more'),lm2=lm.cloneNode(true);lm.replaceWith(lm2);lm2.addEventListener('click',()=>loadNextCategory());
  document.addEventListener('click',e=>{
   const use=e.target.closest('[data-use]');if(!use)return;
   const t=byId.get(use.dataset.use);
