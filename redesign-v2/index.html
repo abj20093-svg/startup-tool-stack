@@ -146,7 +146,7 @@ h1 span{color:var(--violet)}
 <header class="nav"><a class="brand" href="#"><span class="brand-mark" aria-hidden="true">≋</span> DECODE<span class="brand-divider"></span><span class="brand-sub">The Tool Stack</span></a><nav aria-label="Main"><a href="#explore">Explore tools</a><a href="#build-route-title" class="about-link">Build or buy</a><button class="nav-compare" id="open-compare">Compare <span id="compare-count">0</span></button></nav></header>
 <main>
 <section class="hero shell">
-<div class="hero-copy"><h1>Less searching.<br><span>More building.</span></h1><p class="hero-description">The research is done. Compare each decision, pick a tool, and keep your stack.</p><div class="hero-actions"><label class="search hero-search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="What do you need? Try “payments” or “Mercury”" aria-label="Search a tool or a job"><kbd>/</kbd></label></div></div>
+<div class="hero-copy"><h1>Less searching.<br><span>More building.</span></h1><p class="hero-description">The research is done. Compare each decision, pick a tool, and keep your stack.</p><div class="hero-actions" hidden><label class="search hero-search"><input id="search" type="search" aria-label="Search a tool or a job"></label></div></div>
 <div class="stack-art" aria-label="Your stack connects building, selling, and operating">
 <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
 <a class="stack-tile tile-back" href="#stage-selling"><span class="tile-icon">↗</span><div><b>Selling</b></div><span class="tile-count">Find and bill customers</span></a>
@@ -378,8 +378,7 @@ if(location.hash.startsWith('#tool-'))showProfile(location.hash.slice(1));
   if(!ok){const ta=document.createElement('textarea');ta.value=text;ta.readOnly=true;ta.className='stack-text';$('stack-strip').after(ta);ta.select();}
   setTimeout(()=>{b.textContent='Copy my stack';},2200);
  });
- if(matchMedia('(max-width:480px)').matches)$('search').placeholder='Try “payments” or “Mercury”';
- renderStack();relabelFeed();
+  renderStack();relabelFeed();
 })();
 </script>
 </body></html>
