@@ -147,6 +147,11 @@ h1 span{color:var(--violet)}
 .v2 .more-btn{width:38px;height:38px;border-radius:50%;border:1px solid #d9d2ee;background:#fff;display:grid;place-items:center;color:var(--violet-dim);transition:background .15s,border-color .15s,transform .15s}
 .v2 .more-btn:hover{background:var(--soft);border-color:#b7acea;transform:translateY(1px)}
 .v2 .internal-card .more-btn{background:#f6f3fc}
+/* 3 Nov 2026, item 3: hero sub-header, action step, call to action */
+.v2 .hero-description{font-size:19px;color:var(--muted);margin-top:4px}
+.v2 .hero-step{font-size:14px;color:var(--muted-soft);margin-top:10px}
+.v2 .hero-cta{margin-top:26px}.v2 .hero-cta .primary{gap:12px;padding:14px 24px;font-size:14px}
+@media(max-width:760px){.v2 .hero-description{font-size:17px}.v2 .hero-cta{margin-top:22px}}
 </style>
 </head>
 <body class="v2">
@@ -154,7 +159,7 @@ h1 span{color:var(--violet)}
 <header class="nav"><a class="brand" href="#"><span class="brand-mark" aria-hidden="true">≋</span> DECODE<span class="brand-divider"></span><span class="brand-sub">The Tool Stack</span></a><nav aria-label="Main"><button class="nav-compare" id="open-compare">Compare <span id="compare-count">0</span></button></nav></header>
 <main>
 <section class="hero shell">
-<div class="hero-copy"><h1>Less searching.<br><span>More building.</span></h1><div class="hero-actions" hidden><label class="search hero-search"><input id="search" type="search" aria-label="Search a tool or a job"></label></div></div>
+<div class="hero-copy"><h1>Less searching.<br><span>More building.</span></h1><p class="hero-description">The tool decisions every founder makes, already researched.</p><p class="hero-step">Choose what you need to do below.</p><div class="hero-cta"><a class="primary" href="#explore">Build my stack <span aria-hidden="true">→</span></a></div><div class="hero-actions" hidden><label class="search hero-search"><input id="search" type="search" aria-label="Search a tool or a job"></label></div></div>
 <div class="stack-art" aria-label="Your stack connects building, selling, and operating">
 <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
 <a class="stack-tile tile-back" href="#stage-selling"><span class="tile-icon">↗</span><div><b>Selling</b></div></a>
