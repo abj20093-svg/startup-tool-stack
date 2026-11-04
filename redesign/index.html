@@ -120,7 +120,7 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const initials=t=>t.name==='Internal build'?'⌘':t.name.split(/\s+/).map(w=>w[0]).slice(0,2).join('');
 const hue=t=>t.name.split('').reduce((a,c)=>a+c.charCodeAt(0),0)%360;
-const icon=t=>`<span class="tool-icon" style="--hue:${hue(t)}" aria-hidden="true">${esc(initials(t))}</span>`;
+const icon=t=>`<span class="tool-icon" data-tool="${t.id}" style="--hue:${hue(t)}" aria-hidden="true">${esc(initials(t))}</span>`;
 const short=s=>{const match=s.match(/^(.+?[.!?])(?:\s+[A-Z]|$)/);return match?match[1]:s;};
 function filterCategories(){return categories.filter(c=>(group==='All'||c.group===group)&&(!query||(c.name+' '+c.group).toLowerCase().includes(query)||c.tools.some(t=>t.name.toLowerCase().includes(query))));}
 function toolCards(list){
