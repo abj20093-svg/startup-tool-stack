@@ -87,7 +87,7 @@ h1 span{color:var(--violet)}
 .v2 .profile-use[aria-pressed=true]{background:var(--soft);color:var(--violet-dim);border-color:#c9c1ee}
 .v2 .use-tool[aria-pressed=true]{background:var(--violet);border-color:var(--violet);color:#fff}
 .v2 .tool-bottom{gap:16px;flex-wrap:nowrap;justify-content:flex-start}
-.v2 .vendor-link{order:-1}.v2 .tool-card a.detail-button{white-space:nowrap}
+
 /* a decision you have settled */
 .v2 .category.picked{border-color:#b7acea;background:#fbfaff}
 .v2 .cat-pick{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:12px;font-weight:600;color:var(--violet-dim);min-width:0}
@@ -130,8 +130,7 @@ h1 span{color:var(--violet)}
 .v2 .feed-toolbar .secondary{white-space:nowrap}
 @media(max-width:760px){
  .v2 #feed-progress{font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
- .v2 .tool-bottom{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:12px;row-gap:0;padding-top:20px}
- .v2 .tool-bottom .vendor-link{grid-column:1;grid-row:1;justify-self:start}.v2 .tool-bottom .use-tool{grid-column:2;grid-row:1;margin-left:0}.v2 .tool-bottom .detail-button{grid-column:1/-1;grid-row:2;justify-self:start;padding-top:4px}
+ .v2 .tool-bottom{padding-top:20px}
  .v2 .tile-count{display:none}
  .v2 .stack-tile{width:280px}
 }
@@ -141,6 +140,13 @@ h1 span{color:var(--violet)}
 @media(min-width:761px){.v2 .hero-description{white-space:nowrap}}
 /* 3 Nov 2026: no repeated call-to-action on the decision cards; the card itself is the control */
 .v2 .category{min-height:0;padding:16px 18px;gap:3px}.v2 .category:hover{border-color:var(--violet);transform:none}.v2 .category:hover b{color:var(--violet-dim)}
+/* 3 Nov 2026, item 2: linked names, chevron for the full brief */
+.v2 .tool-card h4 a{color:inherit;text-decoration:none;border-bottom:1.5px solid transparent;transition:border-color .15s,color .15s}
+.v2 .tool-card h4 a:hover{color:var(--violet-dim);border-bottom-color:#c9c1ee}
+.v2 .tool-bottom{justify-content:space-between;align-items:center}
+.v2 .more-btn{width:38px;height:38px;border-radius:50%;border:1px solid #d9d2ee;background:#fff;display:grid;place-items:center;color:var(--violet-dim);transition:background .15s,border-color .15s,transform .15s}
+.v2 .more-btn:hover{background:var(--soft);border-color:#b7acea;transform:translateY(1px)}
+.v2 .internal-card .more-btn{background:#f6f3fc}
 </style>
 </head>
 <body class="v2">
@@ -341,7 +347,21 @@ if(location.hash.startsWith('#tool-'))showProfile(location.hash.slice(1));
  const KEY='decode-stack-v1';let stack={};try{stack=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){stack={};}
  const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(stack));}catch(e){}};
  const pickFor=id=>byId.has(stack[id])?byId.get(stack[id]):null;
+ const CHEVRON='<svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+ function dressCards(){
+  document.querySelectorAll('.tool-card').forEach(card=>{
+   if(card.dataset.dressed)return;card.dataset.dressed='1';
+   const id=card.id.replace(/^card-/,'');const t=byId.get(id);if(!t)return;
+   const h=card.querySelector('h4');
+   if(t.url&&h)h.innerHTML=`<a href="${esc(t.url)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(t.name)} website (opens a new tab)">${esc(t.name)}</a>`;
+   const bottom=card.querySelector('.tool-bottom');if(!bottom)return;
+   bottom.querySelector('a.detail-button')?.remove();
+   const old=bottom.querySelector('.vendor-link,button.detail-button');
+   if(old){const b=document.createElement('button');b.className='more-btn';b.dataset.detail=id;b.setAttribute('aria-label',`Full profile: ${t.name}`);b.title='Full profile';b.innerHTML=CHEVRON;old.replaceWith(b);}
+  });
+ }
  function renderStack(){
+  dressCards();
   document.querySelectorAll('[data-category]').forEach(b=>{
    const c=categories.find(x=>x.id===b.dataset.category);const t=pickFor(c.id);
    b.classList.toggle('picked',!!t);
@@ -353,13 +373,12 @@ if(location.hash.startsWith('#tool-'))showProfile(location.hash.slice(1));
   const picks=categories.map(c=>pickFor(c.id)).filter(Boolean);
   $('stack-strip').hidden=!picks.length;
   $('stack-names').textContent=picks.map(t=>t.name).join(' · ');
-  document.querySelectorAll('.tool-card a.detail-button').forEach(a=>{a.innerHTML='Website <span aria-hidden="true">↗</span>';});
   document.querySelectorAll('[data-use]').forEach(b=>{const t=byId.get(b.dataset.use);const on=stack[t.categoryId]===t.id;b.setAttribute('aria-pressed',String(on));b.textContent=on?'In your stack':'Use this';});
  }
  function relabelFeed(){
   const names=feedQueue.slice(0,loadedCount).map(i=>i.category.name);
   const ann=$('feed-announcement');if(/\d+ of \d+ categories/.test(ann.textContent))ann.textContent=`Loaded ${names[names.length-1]}.`;
-  document.querySelectorAll('.tool-bottom').forEach(b=>{const v=b.querySelector('.vendor-link');if(v&&b.firstElementChild!==v)b.prepend(v);});
+
   if(names.length)$('feed-progress').textContent=names.length===1?`Showing ${names[0]}`:`Showing ${names[0]} through ${names[names.length-1]}`;
   document.querySelectorAll('#more-categories .eyebrow').forEach(e=>{e.textContent=e.textContent.split(' · ')[0];});
  }
