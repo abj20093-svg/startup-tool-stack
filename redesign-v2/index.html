@@ -379,6 +379,7 @@ if(location.hash.startsWith('#tool-'))showProfile(location.hash.slice(1));
   dressCards();
   document.querySelectorAll('[data-category]').forEach(b=>{
    const c=categories.find(x=>x.id===b.dataset.category);const t=pickFor(c.id);
+   const nm=b.querySelector('b'),jb=b.querySelector('small');if(nm&&jb&&c.job&&nm.textContent!==c.name){nm.textContent=c.name;jb.textContent=c.job;}
    b.classList.toggle('picked',!!t);
    const tail=b.querySelector('.cat-cta,.cat-pick');const span=document.createElement('span');
    if(t){span.className='cat-pick';span.innerHTML=`${icon(t)}<span>Your pick: ${esc(t.name)}</span>`;swapIcons(span);}
