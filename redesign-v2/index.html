@@ -139,6 +139,8 @@ h1 span{color:var(--violet)}
 
 .v2 .hero-description{font-size:17px;max-width:none}
 @media(min-width:761px){.v2 .hero-description{white-space:nowrap}}
+/* 3 Nov 2026: no repeated call-to-action on the decision cards; the card itself is the control */
+.v2 .category{min-height:0;padding:16px 18px;gap:3px}.v2 .category:hover{border-color:var(--violet);transform:none}.v2 .category:hover b{color:var(--violet-dim)}
 </style>
 </head>
 <body class="v2">
@@ -345,7 +347,7 @@ if(location.hash.startsWith('#tool-'))showProfile(location.hash.slice(1));
    b.classList.toggle('picked',!!t);
    const tail=b.querySelector('.cat-cta,.cat-pick');const span=document.createElement('span');
    if(t){span.className='cat-pick';span.innerHTML=`${icon(t)}<span>Your pick: ${esc(t.name)}</span>`;}
-   else{span.className='cat-cta';span.textContent='See the options';}
+   else{tail?.remove();return;}
    tail?tail.replaceWith(span):b.append(span);
   });
   const picks=categories.map(c=>pickFor(c.id)).filter(Boolean);
