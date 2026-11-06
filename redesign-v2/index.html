@@ -160,6 +160,8 @@ h1 span{color:var(--violet)}
 .v2 .comparison-table .tool-icon.has-logo{width:43px}
 /* 3 Nov 2026: no compare hint line; the script still writes to it, so it stays in the DOM but never shows */
 .v2 .compare-hint{display:none!important}
+/* 5 Nov 2026: stack builder removed at the user's request; the shared script still renders the button, so hide it */
+.v2 .use-tool,.v2 .profile-use,.v2 .stack-strip,.v2 .cat-pick{display:none!important}
 </style>
 </head>
 <body class="v2">
@@ -177,7 +179,6 @@ h1 span{color:var(--violet)}
 </section>
 <section class="explorer" id="explore"><div class="shell">
 <div class="section-heading"><div><h2>What do you need to do?</h2></div></div>
-<div class="stack-strip" id="stack-strip" hidden><div class="stack-strip-copy"><span class="stack-label">Your stack</span><span id="stack-names"></span></div><div class="stack-strip-actions"><button class="secondary" id="copy-stack">Copy my stack</button><button class="text-link" id="clear-stack">Start over</button></div></div>
 <div class="category-grid" id="categories"></div>
 <div id="results-status" class="results-status" role="status" aria-live="polite"></div>
 <div class="feed-toolbar" id="feed-toolbar"><span id="feed-progress"></span><button id="feed-reset" class="secondary" title="Collapse loaded categories and clear search, filters, and comparisons">↑ Back to start</button></div>
@@ -356,10 +357,7 @@ if(location.hash.startsWith('#tool-'))showProfile(location.hash.slice(1));
 <script>
 (function(){
  'use strict';
- // v2 only: "Use this" on every card keeps one pick per decision. Picks show on the decision list, never as empty slots.
- const KEY='decode-stack-v1';let stack={};try{stack=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){stack={};}
- const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(stack));}catch(e){}};
- const pickFor=id=>byId.has(stack[id])?byId.get(stack[id]):null;
+ // v2 only: category-first decision cards, vendor logos, chevron for the full brief, no counts in the feed labels.
  const CHEVRON='<svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
  function swapIcons(root){
   (root||document).querySelectorAll('.tool-icon[data-tool]:not(.has-logo)').forEach(el=>{const t=byId.get(el.dataset.tool);if(!t||!t.logo)return;el.classList.add('has-logo');el.removeAttribute('style');el.innerHTML=`<img src="${t.logo}" alt="" loading="lazy" decoding="async">`;});
@@ -377,53 +375,28 @@ if(location.hash.startsWith('#tool-'))showProfile(location.hash.slice(1));
    if(old){const b=document.createElement('button');b.className='more-btn';b.dataset.detail=id;b.setAttribute('aria-label',`Full profile: ${t.name}`);b.title='Full profile';b.innerHTML=CHEVRON;old.replaceWith(b);}
   });
  }
- function renderStack(){
-  dressCards();
+ function dressCategories(){
   document.querySelectorAll('[data-category]').forEach(b=>{
-   const c=categories.find(x=>x.id===b.dataset.category);const t=pickFor(c.id);
+   const c=categories.find(x=>x.id===b.dataset.category);if(!c)return;
    const nm=b.querySelector('b'),jb=b.querySelector('small');if(nm&&jb&&c.job&&nm.textContent!==c.name){nm.textContent=c.name;jb.textContent=c.job;}
-   b.classList.toggle('picked',!!t);
-   const tail=b.querySelector('.cat-cta,.cat-pick');const span=document.createElement('span');
-   if(t){span.className='cat-pick';span.innerHTML=`${icon(t)}<span>Your pick: ${esc(t.name)}</span>`;swapIcons(span);}
-   else{tail?.remove();return;}
-   tail?tail.replaceWith(span):b.append(span);
+   b.querySelector('.cat-cta')?.remove();
   });
-  const picks=categories.map(c=>pickFor(c.id)).filter(Boolean);
-  $('stack-strip').hidden=!picks.length;
-  $('stack-names').textContent=picks.map(t=>t.name).join(' · ');
-  document.querySelectorAll('[data-use]').forEach(b=>{const t=byId.get(b.dataset.use);const on=stack[t.categoryId]===t.id;b.setAttribute('aria-pressed',String(on));b.textContent=on?'In your stack':'Use this';});
  }
  function relabelFeed(){
   const names=feedQueue.slice(0,loadedCount).map(i=>i.category.name);
   const ann=$('feed-announcement');if(/\d+ of \d+ categories/.test(ann.textContent))ann.textContent=`Loaded ${names[names.length-1]}.`;
-
   if(names.length)$('feed-progress').textContent=names.length===1?`Showing ${names[0]}`:`Showing ${names[0]} through ${names[names.length-1]}`;
   document.querySelectorAll('#more-categories .eyebrow').forEach(e=>{e.textContent=e.textContent.split(' · ')[0];});
  }
- const _profile=showProfile;window.showProfile=function(id){_profile(id);swapIcons($('profile-content'));const acts=$('profile-content').querySelector('.profile-actions');if(acts&&byId.has(id)){const b=document.createElement('button');b.className='use-tool profile-use';b.dataset.use=id;acts.prepend(b);}renderStack();};
+ const after=()=>{dressCards();dressCategories();relabelFeed();};
+ const _profile=showProfile;window.showProfile=function(id){_profile(id);swapIcons($('profile-content'));};
  const _cmp=showComparison;window.showComparison=function(){_cmp();swapIcons($('comparison-content'));};
  ['open-compare','compare-selected'].forEach(id=>{const b=$(id),c=b.cloneNode(true);b.replaceWith(c);c.addEventListener('click',()=>showComparison());});
- const _render=render;window.render=function(){_render();renderStack();relabelFeed();};
- const _load=loadNextCategory;window.loadNextCategory=function(){_load();renderStack();relabelFeed();};
+ const _render=render;window.render=function(){_render();after();};
+ const _load=loadNextCategory;window.loadNextCategory=function(){_load();after();};
  // the Load next button was bound to the original function before this wrapper existed; rebind it
  const lm=$('load-more'),lm2=lm.cloneNode(true);lm.replaceWith(lm2);lm2.addEventListener('click',()=>loadNextCategory());
- document.addEventListener('click',e=>{
-  const use=e.target.closest('[data-use]');if(!use)return;
-  const t=byId.get(use.dataset.use);
-  if(stack[t.categoryId]===t.id)delete stack[t.categoryId];else stack[t.categoryId]=t.id;
-  save();renderStack();
-  $('feed-announcement').textContent=stack[t.categoryId]?`${t.name} is now your pick for ${t.category}.`:`${t.name} removed from your stack.`;
- });
- $('clear-stack').addEventListener('click',()=>{stack={};save();renderStack();});
- $('copy-stack').addEventListener('click',async()=>{
-  const lines=categories.filter(c=>pickFor(c.id)).map(c=>{const t=pickFor(c.id);return `${c.job||c.name}: ${t.name}${t.price?' ('+t.price+')':''}`;});
-  const text=`My startup stack\n\n${lines.join('\n')}\n\nFrom DECODE's Startup Tool Stack, research dated October 2026.`;
-  let ok=false;try{await navigator.clipboard.writeText(text);ok=true;}catch(e){}
-  const b=$('copy-stack');b.textContent=ok?'Copied':'Select and copy:';
-  if(!ok){const ta=document.createElement('textarea');ta.value=text;ta.readOnly=true;ta.className='stack-text';$('stack-strip').after(ta);ta.select();}
-  setTimeout(()=>{b.textContent='Copy my stack';},2200);
- });
-  renderStack();relabelFeed();
+ after();
 })();
 </script>
 </body></html>
