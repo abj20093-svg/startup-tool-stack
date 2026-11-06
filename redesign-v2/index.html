@@ -162,20 +162,22 @@ h1 span{color:var(--violet)}
 .v2 .compare-hint{display:none!important}
 /* 5 Nov 2026: stack builder removed at the user's request; the shared script still renders the button, so hide it */
 .v2 .use-tool,.v2 .profile-use,.v2 .stack-strip,.v2 .cat-pick{display:none!important}
+/* 5 Nov 2026: hero = headline + looping product demo (user chose the real recording) */
+.v2 .hero.demo-hero{display:block;min-height:0;padding-block:64px 56px;text-align:center}
+.v2 .demo-hero h1{margin:0 auto 10px;font-size:clamp(44px,5vw,72px)}
+.v2 .demo-hero .hero-description{margin:0 auto 6px;white-space:normal}.v2 .demo-hero .hero-step{margin:0 auto 34px}
+.v2 .demo-media{max-width:960px;margin:0 auto;border-radius:18px;overflow:hidden;border:1px solid #e3deef;box-shadow:0 40px 90px -40px #3a2d8a66;background:#fff;aspect-ratio:16/10}
+.v2 .demo-media video{display:block;width:100%;height:100%;object-fit:cover}
+@media(max-width:760px){.v2 .hero.demo-hero{padding-block:44px 36px}.v2 .demo-hero .hero-step{margin-bottom:24px}.v2 .demo-media{border-radius:12px}}
 </style>
 </head>
 <body class="v2">
 <a class="skip" href="#explore">Skip to the tools</a>
 <header class="nav"><a class="brand" href="#"><span class="brand-mark" aria-hidden="true">≋</span> DECODE<span class="brand-divider"></span><span class="brand-sub">The Tool Stack</span></a><nav aria-label="Main"><button class="nav-compare" id="open-compare">Compare <span id="compare-count">0</span></button></nav></header>
 <main>
-<section class="hero shell">
+<section class="hero shell demo-hero">
 <div class="hero-copy"><h1>Less searching.<br><span>More building.</span></h1><p class="hero-description">Compare. Pick. Build.</p><p class="hero-step">One tool per decision.</p><div class="hero-actions" hidden><label class="search hero-search"><input id="search" type="search" aria-label="Search a tool or a job"></label></div></div>
-<div class="stack-art" aria-label="Your stack connects building, selling, and operating">
-<div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-<a class="stack-tile tile-back" href="#stage-selling"><span class="tile-icon">↗</span><div><b>Selling</b></div></a>
-<a class="stack-tile tile-middle" href="#stage-operating"><span class="tile-icon">⌘</span><div><b>Operating</b></div></a>
-<a class="stack-tile tile-front" href="#stage-building"><span class="tile-icon">&lt;/&gt;</span><div><b>Building</b></div></a>
-</div>
+<div class="demo-media"><video id="demo-video" src="demo.mp4" poster="demo-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="A short loop showing the page: choose a decision, open a tool brief, tick two tools and compare them"></video></div>
 </section>
 <section class="explorer" id="explore"><div class="shell">
 <div class="section-heading"><div><h2>What do you need to do?</h2></div></div>
@@ -396,6 +398,7 @@ if(location.hash.startsWith('#tool-'))showProfile(location.hash.slice(1));
  const _load=loadNextCategory;window.loadNextCategory=function(){_load();after();};
  // the Load next button was bound to the original function before this wrapper existed; rebind it
  const lm=$('load-more'),lm2=lm.cloneNode(true);lm.replaceWith(lm2);lm2.addEventListener('click',()=>loadNextCategory());
+ const dv=$('demo-video');if(dv&&matchMedia('(prefers-reduced-motion: reduce)').matches){dv.removeAttribute('autoplay');dv.pause();}
  after();
 })();
 </script>
