@@ -236,6 +236,63 @@ h1 span{color:var(--violet)}
 @media(max-width:760px){.v2 .feed-toolbar{top:146px}}
 /* phone: the chip strip must scroll inside its column, never widen the page */
 @media(max-width:1000px){.v2 .explorer-grid{grid-template-columns:minmax(0,1fr)}.v2 .rail{min-width:0;max-width:100%}.v2 .category-grid{max-width:100%}}
+/* --- 7 Nov 2026 (v3 explorer): stage tabs -> category gallery -> tool panel --- */
+.v2 .explorer{padding-top:64px}
+.v2 .explorer-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:28px;flex-wrap:wrap}
+.v2 .head-search{width:min(340px,100%);background:#fff;border:1px solid var(--line);border-radius:999px;padding:11px 16px}.v2 .head-search input{font-size:14px}.v2 .head-search kbd{display:inline-block}
+.v2 .stage-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:26px}
+.v2 .stage-tab{display:grid;gap:3px;text-align:left;padding:16px 18px;border:1px solid var(--line);border-radius:16px;background:#fff;transition:border-color .15s,background .15s,transform .15s}
+.v2 .stage-tab b{font-size:18px;letter-spacing:-.02em}.v2 .stage-tab span{font-size:13px;color:var(--muted)}
+.v2 .stage-tab:hover{border-color:#b7acea;transform:translateY(-1px)}
+.v2 .stage-tab[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}.v2 .stage-tab[aria-pressed=true] span{color:#c9c3e6}
+.v2 .deck{display:grid;grid-template-columns:320px minmax(0,1fr);gap:28px;align-items:start}
+/* gallery tiles */
+.v2 .gallery{display:block;position:sticky;top:92px}
+.v2 .gallery .stage{margin:0}.v2 .gallery .stage-head{display:none}.v2 .gallery .stage-row{display:flex;flex-direction:column;gap:10px}
+.v2 .gallery .category{display:grid;grid-template-columns:40px 1fr;grid-template-areas:"ico name" "ico job" "marks marks";column-gap:12px;row-gap:2px;align-items:center;padding:14px 16px 12px;min-height:0;border:1px solid var(--line);border-radius:16px;background:#fff;text-align:left;transition:border-color .18s,transform .18s,box-shadow .18s}
+.v2 .gallery .cat-ico{grid-area:ico;width:40px;height:40px;border-radius:12px;background:var(--soft);border:0;color:var(--violet-dim)}
+.v2 .gallery .category b{grid-area:name;font-size:15px;font-weight:600;letter-spacing:-.01em;line-height:1.2}
+.v2 .gallery .category small{grid-area:job;display:block;font-size:12.5px;color:var(--muted);line-height:1.3}
+.v2 .gallery .cat-marks{grid-area:marks;display:flex;gap:4px;margin-top:10px;padding-top:10px;border-top:1px solid #f0edf6}
+.v2 .gallery .cat-marks img{width:22px;height:22px;border-radius:6px;border:1px solid #eceaf3;background:#fff;transition:transform .18s}
+.v2 .gallery .category:hover{border-color:#b7acea;transform:translateY(-2px);box-shadow:0 16px 36px -24px #3a2d8a66}
+.v2 .gallery .category:hover .cat-marks img{transform:translateY(-1px)}
+.v2 .gallery .category[aria-pressed=true]{border-color:var(--violet);box-shadow:0 0 0 1px var(--violet),0 18px 40px -26px #5b4cdb99;background:#fbfaff}
+.v2 .gallery .category[aria-pressed=true] .cat-ico{background:var(--violet);color:#fff}
+.v2 .gallery .category[aria-pressed=true] b{color:var(--violet-dim)}
+/* panel */
+.v2 .panel{min-width:0;background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px 28px 22px}
+.v2 .panel.swap #tool-section{animation:panelin .32s ease-out}
+@keyframes panelin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.v2 #tool-section{scroll-margin-top:220px}
+.v2 .tools-heading{margin:0 0 20px;padding-bottom:18px;border-bottom:1px solid var(--line)}.v2 .tools-heading h3{font-size:28px;margin:4px 0 8px}
+.v2 .tools-heading p:not(.eyebrow){font-size:14px;max-width:62ch}
+.v2 .tool-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.v2 .tool-card{padding:20px 20px 18px;border-radius:16px}
+.v2 .tool-top{margin-bottom:14px}.v2 .tool-card h4{font-size:20px;margin-bottom:6px}.v2 .tool-fit{margin-bottom:14px}
+.v2 .tool-price{padding:12px 0;margin-bottom:14px}.v2 .tool-points>div+div{margin-top:12px}.v2 .tool-bottom{padding-top:16px}
+.v2 .more-btn{width:auto;height:40px;border-radius:999px;padding:0 14px 0 16px;display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--violet-dim);background:#fff;border:1px solid #d9d2ee}
+.v2 .more-btn:hover{background:var(--soft);border-color:var(--violet);transform:none}
+.v2 .tool-card.selected .tool-icon::after{animation:pop .3s ease-out}
+@keyframes pop{0%{transform:scale(.4)}70%{transform:scale(1.15)}100%{transform:scale(1)}}
+.v2 .panel-nav{display:flex;justify-content:space-between;gap:12px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.v2 .panel-nav .secondary{color:var(--violet-dim);border-color:#d9d2ee}.v2 .panel-nav .primary{gap:10px;padding:12px 18px;font-size:13px}
+.v2 .panel-nav button[hidden]{display:none}
+.v2 #more-categories{display:none}
+@media(max-width:1000px){
+ .v2 .explorer-head{margin-bottom:18px}.v2 .stage-tabs{gap:8px;margin-bottom:16px}.v2 .stage-tab{padding:12px 12px}.v2 .stage-tab b{font-size:15px}.v2 .stage-tab span{display:none}
+ .v2 .deck{grid-template-columns:minmax(0,1fr);gap:16px}
+ .v2 .gallery{position:static;max-width:100%}.v2 .gallery .stage{display:contents}
+ .v2 .gallery .stage-row{flex-direction:row;overflow-x:auto;gap:10px;padding:4px 2px 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch}.v2 .gallery .stage-row::-webkit-scrollbar{display:none}
+ .v2 .gallery .category{flex:0 0 220px;grid-template-columns:34px 1fr;padding:12px 14px 10px}.v2 .gallery .cat-ico{width:34px;height:34px}
+ .v2 .gallery .cat-marks img{width:18px;height:18px}
+ .v2 .panel{padding:18px 16px 16px;border-radius:18px}.v2 #tool-section{scroll-margin-top:84px}
+ .v2 .tool-grid{grid-template-columns:1fr}
+ .v2 .panel-nav{flex-direction:column}.v2 .panel-nav button{width:100%;justify-content:center}
+}
+@media(prefers-reduced-motion:reduce){.v2 .panel.swap #tool-section,.v2 .tool-card.selected .tool-icon::after{animation:none}}
+.v2 .feed-toolbar,.v2 .feed-loader{display:none!important}
+.v2 .panel .results-status{min-height:0;margin:0}.v2 .panel .results-status:not(:empty){margin-bottom:12px}
 </style>
 </head>
 <body class="v2">
@@ -247,18 +304,21 @@ h1 span{color:var(--violet)}
 <div class="demo-media"><video id="demo-video" src="demo.mp4" poster="demo-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="A short loop showing the page: choose a decision, open a tool brief, tick two tools and compare them"></video></div>
 </section>
 <section class="explorer" id="explore"><div class="shell">
-<div class="section-heading"><div><h2>What do you need to do?</h2></div></div>
-<div class="explorer-grid">
-<aside class="rail" id="rail" aria-label="Decisions">
-<label class="search rail-search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search tools or jobs" aria-label="Search a tool or a job"><kbd>/</kbd></label>
-<div class="category-grid" id="categories"></div>
-<button class="surprise" id="surprise" type="button">Surprise me <span aria-hidden="true">→</span></button>
-</aside>
-<div class="canvas">
+<div class="explorer-head"><h2>What do you need to do?</h2><label class="search head-search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search tools or jobs" aria-label="Search a tool or a job"><kbd>/</kbd></label></div>
+<div class="stage-tabs" aria-label="Stage"><button class="stage-tab" data-group="Selling" aria-pressed="false"><b>Selling</b><span>Find and bill customers</span></button><button class="stage-tab" data-group="Building" aria-pressed="false"><b>Building</b><span>Ship the product</span></button><button class="stage-tab" data-group="Operating" aria-pressed="false"><b>Operating</b><span>Run the company</span></button><button data-group="All" aria-pressed="false" hidden id="group-all">All</button></div>
+<div class="deck">
+<div class="gallery" id="categories" aria-label="Decisions in this stage"></div>
+<div class="panel" id="panel">
 <div id="results-status" class="results-status" role="status" aria-live="polite"></div>
-<div class="feed-toolbar" id="feed-toolbar"><span id="feed-progress"></span><button id="feed-reset" class="secondary" title="Collapse loaded categories and clear search, filters, and comparisons">↑ Back to start</button></div>
+<div class="feed-toolbar" id="feed-toolbar" hidden><span id="feed-progress"></span><button id="feed-reset" class="secondary">↑ Back to start</button></div>
 <div id="feed-announcement" class="sr-only" role="status" aria-live="polite"></div>
-<section id="tool-section" aria-labelledby="category-title"><div class="tools-heading"><div><p class="eyebrow" id="category-group"></p><h3 id="category-title"></h3><p id="category-description"></p></div><div class="compare-hint">Tick up to 3 to compare.</div></div><div class="tool-grid" id="tools"></div><div id="more-categories"></div></section>
+<section id="tool-section" aria-labelledby="category-title"><div class="tools-heading"><div><p class="eyebrow" id="category-group"></p><h3 id="category-title"></h3><p id="category-description"></p></div><div class="compare-hint"></div></div><div class="tool-grid" id="tools"></div><div id="more-categories"></div></section>
+<div class="panel-nav"><button class="secondary" id="prev-cat" type="button"></button><button class="primary" id="next-cat" type="button"></button></div>
+<div class="feed-loader" id="feed-loader" hidden><p id="feed-message"></p><button class="secondary" id="load-more">Load next category ↓</button><button class="secondary" id="feed-bottom-reset" hidden>↑ Back to start</button></div>
+<div id="empty" hidden><h3>No tools found.</h3><p>Try a tool name, category, or a different search.</p><button class="secondary" id="reset">Clear filters</button></div>
+</div>
+</div>
+</div></section>
 <div class="feed-loader" id="feed-loader"><p id="feed-message"></p><button class="secondary" id="load-more">Load next category ↓</button><button class="secondary" id="feed-bottom-reset" hidden>↑ Back to start</button></div>
 <div id="empty" hidden><h3>No tools found.</h3><p>Try a tool name, category, or a different search.</p><button class="secondary" id="reset">Clear filters</button></div>
 </div>
@@ -452,7 +512,7 @@ if(location.hash.startsWith('#tool-'))showProfile(location.hash.slice(1));
    const bottom=card.querySelector('.tool-bottom');if(!bottom)return;
    bottom.querySelector('a.detail-button')?.remove();
    const old=bottom.querySelector('.vendor-link,button.detail-button');
-   if(old){const b=document.createElement('button');b.className='more-btn';b.dataset.detail=id;b.setAttribute('aria-label',`Full profile: ${t.name}`);b.title='Full profile';b.innerHTML=CHEVRON;old.replaceWith(b);}
+   if(old){const b=document.createElement('button');b.className='more-btn';b.dataset.detail=id;b.setAttribute('aria-label',`Open the full profile of ${t.name}`);b.innerHTML='Open profile <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M7 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';old.replaceWith(b);}
   });
  }
  const ICONS={
@@ -478,40 +538,53 @@ if(location.hash.startsWith('#tool-'))showProfile(location.hash.slice(1));
   document.querySelectorAll('[data-category]').forEach(b=>{
    const c=categories.find(x=>x.id===b.dataset.category);if(!c)return;
    if(b.dataset.dressed)return;b.dataset.dressed='1';
-   b.querySelector('.cat-cta')?.remove();b.querySelector('small')?.remove();
-   const nm=b.querySelector('b');if(nm)nm.textContent=c.name;
-   b.title=c.job||c.name;
+   b.querySelector('.cat-cta')?.remove();
+   const nm=b.querySelector('b'),jb=b.querySelector('small');if(nm)nm.textContent=c.name;if(jb)jb.textContent=c.job||'';
    b.insertAdjacentHTML('afterbegin',ico(c.id));
    const marks=c.tools.filter(t=>t.logo).slice(0,6).map(t=>`<img src="${t.logo}" alt="" loading="lazy" decoding="async">`).join('');
    b.insertAdjacentHTML('beforeend',`<span class="cat-marks" aria-hidden="true">${marks}</span>`);
   });
  }
- // scroll-spy: the rail follows whichever category is in view
- let spy=null;
- function watchSections(){
-  spy?.disconnect();if(!('IntersectionObserver' in window))return;
-  spy=new IntersectionObserver(entries=>{
-   const hit=entries.find(e=>e.isIntersecting);if(!hit)return;
-   const id=hit.target.id==='tool-section'?(feedQueue[0]?.category.id):hit.target.getAttribute('aria-labelledby')?.replace(/^feed-title-/,'');
-   if(!id)return;
-   document.querySelectorAll('[data-category]').forEach(b=>{const on=b.dataset.category===id;b.setAttribute('aria-pressed',String(on));if(on&&b.scrollIntoViewIfNeeded)b.scrollIntoViewIfNeeded(false);});
-  },{rootMargin:'-35% 0px -55% 0px',threshold:0});
-  document.querySelectorAll('#tool-section, #more-categories .feed-category').forEach(el=>spy.observe(el));
+ // stage -> gallery -> panel flow
+ const STAGES=['Selling','Building','Operating'];
+ const currentGroup=()=>document.querySelector('.stage-tab[aria-pressed=true]')?.dataset.group;
+ const tiles=()=>[...document.querySelectorAll('#categories [data-category]')];
+ function panelNav(){
+  const ids=tiles().map(b=>b.dataset.category);const cur=document.querySelector('#categories [data-category][aria-pressed=true]')?.dataset.category;const i=ids.indexOf(cur);
+  const name=id=>categories.find(c=>c.id===id)?.name||'';const g=currentGroup();const gi=STAGES.indexOf(g);
+  const prev=$('prev-cat'),next=$('next-cat');
+  if(i>0){prev.hidden=false;prev.innerHTML=`<span aria-hidden="true">←</span> ${esc(name(ids[i-1]))}`;}else if(gi>0){prev.hidden=false;prev.innerHTML=`<span aria-hidden="true">←</span> Back to ${STAGES[gi-1]}`;}else prev.hidden=true;
+  if(i>=0&&i<ids.length-1){next.hidden=false;next.innerHTML=`Next: ${esc(name(ids[i+1]))} <span aria-hidden="true">→</span>`;}else if(gi>=0&&gi<STAGES.length-1){next.hidden=false;next.innerHTML=`On to ${STAGES[gi+1]} <span aria-hidden="true">→</span>`;}else next.hidden=true;
+  if(query){prev.hidden=true;next.hidden=true;}
  }
+ function go(dir){
+  const ids=tiles().map(b=>b.dataset.category);const cur=document.querySelector('#categories [data-category][aria-pressed=true]')?.dataset.category;const i=ids.indexOf(cur);const id=ids[i+dir];
+  if(id){document.querySelector(`#categories [data-category="${id}"]`).click();return;}
+  const gi=STAGES.indexOf(currentGroup());const ng=STAGES[gi+dir];if(!ng)return;
+  document.querySelector(`.stage-tab[data-group="${ng}"]`).click();
+  if(dir<0){const all=tiles();all[all.length-1]?.click();}else{$('tool-section').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});}
+ }
+ $('prev-cat').addEventListener('click',()=>go(-1));$('next-cat').addEventListener('click',()=>go(1));
+ function swapIn(){const p=$('panel');p.classList.remove('swap');void p.offsetWidth;p.classList.add('swap');}
+ // search looks across every stage; clearing it returns to the stage you were on
+ let lastGroup='Selling';
+ $('search').addEventListener('input',e=>{const q=e.target.value.trim();if(q&&currentGroup()){lastGroup=currentGroup();$('group-all').click();}else if(!q&&!currentGroup()){document.querySelector(`.stage-tab[data-group="${lastGroup}"]`).click();}});
+ document.addEventListener('click',e=>{const t=e.target.closest('.stage-tab');if(t)lastGroup=t.dataset.group;});
+ const rs=$('reset'),rs2=rs.cloneNode(true);rs.replaceWith(rs2);rs2.addEventListener('click',()=>{const i=$('search');i.value='';i.dispatchEvent(new Event('input'));i.focus();});
  // shortlist dock: three slots, filled with the chosen logos
  const _sync=syncSelection;window.syncSelection=function(){_sync();
   const picks=[...selected].map(id=>byId.get(id));const names=$('dock-names');
   let slots=document.getElementById('dock-slots');if(!slots){slots=document.createElement('span');slots.id='dock-slots';slots.setAttribute('aria-hidden','true');names.before(slots);}
   slots.innerHTML=[0,1,2].map(i=>picks[i]?`<span class="slot filled">${picks[i].logo?`<img src="${picks[i].logo}" alt="">`:esc(initials(picks[i]))}</span>`:'<span class="slot"></span>').join('');
  };
- $('surprise').addEventListener('click',()=>{const t=allTools.filter(t=>t.url)[Math.floor(Math.random()*allTools.filter(t=>t.url).length)];showProfile(t.id);});
+
  function relabelFeed(){
   const names=feedQueue.slice(0,loadedCount).map(i=>i.category.name);
   const ann=$('feed-announcement');if(/\d+ of \d+ categories/.test(ann.textContent))ann.textContent=`Loaded ${names[names.length-1]}.`;
   if(names.length)$('feed-progress').textContent=names.length===1?`Showing ${names[0]}`:`Showing ${names[0]} through ${names[names.length-1]}`;
   document.querySelectorAll('#more-categories .eyebrow').forEach(e=>{e.textContent=e.textContent.split(' · ')[0];});
  }
- const after=()=>{dressCards();dressCategories();relabelFeed();watchSections();syncSelection();};
+ const after=()=>{dressCards();dressCategories();relabelFeed();panelNav();syncSelection();swapIn();};
  const _profile=showProfile;window.showProfile=function(id){_profile(id);swapIcons($('profile-content'));};
  const _cmp=showComparison;window.showComparison=function(){_cmp();swapIcons($('comparison-content'));};
  ['open-compare','compare-selected'].forEach(id=>{const b=$(id),c=b.cloneNode(true);b.replaceWith(c);c.addEventListener('click',()=>showComparison());});
@@ -520,6 +593,7 @@ if(location.hash.startsWith('#tool-'))showProfile(location.hash.slice(1));
  // the Load next button was bound to the original function before this wrapper existed; rebind it
  const lm=$('load-more'),lm2=lm.cloneNode(true);lm.replaceWith(lm2);lm2.addEventListener('click',()=>loadNextCategory());
  const dv=$('demo-video');if(dv&&matchMedia('(prefers-reduced-motion: reduce)').matches){dv.removeAttribute('autoplay');dv.pause();}
+ document.querySelector('.stage-tab[data-group="Selling"]').click();
  after();
 })();
 </script>
