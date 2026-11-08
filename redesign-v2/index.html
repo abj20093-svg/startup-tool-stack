@@ -181,6 +181,61 @@ h1 span{color:var(--violet)}
 .v2 .internal-card .tool-fit{color:var(--muted)}.v2 .internal-card .more-btn{background:#fff}
 .v2 .demo-hero .hero-description{margin-bottom:40px}
 @media(max-width:760px){.v2 .demo-hero .hero-description{margin-bottom:26px}}
+/* --- 7 Nov 2026: discovery rail + canvas (adapted from a menu-filters-canvas pattern) --- */
+.v2 .explorer{padding-top:72px}
+.v2 .explorer-grid{display:grid;grid-template-columns:280px minmax(0,1fr);gap:44px;align-items:start}
+.v2 .rail{position:sticky;top:92px;max-height:calc(100vh - 108px);overflow:auto;padding-right:6px;scrollbar-width:thin}
+.v2 .rail-search{display:flex;width:100%;margin:0 0 18px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.v2 .rail-search input{font-size:14px}.v2 .rail-search kbd{display:inline-block}
+.v2 .category-grid{display:block}
+.v2 .stage{margin:0 0 18px}.v2 .stage-head{display:flex;align-items:baseline;gap:10px;margin:0 0 6px;border:0;padding:6px 10px 0}
+.v2 .stage-head b{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--violet-dim)}.v2 .stage-head span{font-size:12px;color:var(--muted-soft)}
+.v2 .stage-row{display:flex;flex-direction:column;gap:2px}
+.v2 .category{display:flex;flex-direction:row;align-items:center;gap:12px;min-height:44px;padding:9px 10px;border:1px solid transparent;border-radius:12px;background:transparent;text-align:left;cursor:pointer;transition:background .15s,border-color .15s,transform .15s}
+.v2 .category b{font-size:14.5px;font-weight:550;letter-spacing:-.01em;line-height:1.2;flex:1 1 auto;min-width:0}
+.v2 .cat-ico{display:grid;place-items:center;width:34px;height:34px;flex:0 0 auto;border-radius:10px;background:#fff;border:1px solid var(--line);color:var(--violet-dim);transition:background .15s,color .15s,border-color .15s}
+.v2 .cat-marks{display:flex;gap:3px;flex:0 0 auto}.v2 .cat-marks img{width:14px;height:14px;border-radius:4px;border:1px solid #eceaf3;background:#fff;opacity:.9}
+.v2 .category:hover{background:#fff;border-color:#e3deef;transform:none}.v2 .category:hover b{color:var(--ink)}
+.v2 .category[aria-pressed=true]{background:var(--violet);border-color:var(--violet);box-shadow:0 8px 24px -12px #5b4cdb99}
+.v2 .category[aria-pressed=true] b{color:#fff}.v2 .category[aria-pressed=true] .cat-ico{background:#ffffff22;border-color:#ffffff33;color:#fff}.v2 .category[aria-pressed=true] .cat-marks img{opacity:1;border-color:transparent}
+.v2 .surprise{display:inline-flex;align-items:center;gap:8px;margin:6px 10px 10px;font-size:13px;font-weight:550;color:var(--violet-dim);padding:10px 0;border-bottom:1px solid transparent}
+.v2 .surprise:hover{border-bottom-color:var(--violet)}
+/* canvas */
+.v2 .canvas{min-width:0}
+.v2 .feed-toolbar{margin:0 0 22px;top:76px}
+.v2 .tools-heading{margin:10px 0 22px}.v2 .tools-heading h3{font-size:30px}
+.v2 .tool-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.v2 .tool-card{padding:24px 26px 22px;transition:transform .2s,box-shadow .25s,border-color .25s}
+.v2 .tool-card:hover{transform:translateY(-2px);box-shadow:0 18px 40px -24px #3a2d8a55;border-color:#c9c1ee}
+.v2 .tool-top{margin-bottom:18px}
+.v2 .tool-icon.has-logo{width:52px;min-width:52px;height:52px;border-radius:14px}.v2 .tool-icon.has-logo img{width:36px;height:36px;border-radius:8px}
+.v2 .tool-card h4{font-size:22px;margin-bottom:8px}
+.v2 .tool-card.selected{border-color:var(--violet);box-shadow:0 0 0 1px var(--violet),0 18px 40px -24px #3a2d8a66}
+.v2 .tool-card.selected .tool-icon{position:relative}
+.v2 .tool-card.selected .tool-icon::after{content:"✓";position:absolute;right:-6px;top:-6px;width:20px;height:20px;border-radius:50%;background:var(--violet);color:#fff;font-size:12px;font-weight:700;display:grid;place-items:center;border:2px solid #fff}
+.v2 .select-tool{font-size:12px;color:var(--muted)}
+.v2 .feed-category{margin-top:48px}.v2 .feed-category::before{margin-bottom:28px}
+/* dock */
+.v2 .compare-dock{padding:12px 14px 12px 16px;gap:14px}
+.v2 #dock-slots{display:inline-flex;gap:6px;vertical-align:middle;margin-right:12px}
+.v2 #dock-slots .slot{width:30px;height:30px;border-radius:50%;border:1.5px dashed #c9c1ee;display:grid;place-items:center;background:#fff;font-size:10px;font-weight:650;color:var(--violet-dim)}
+.v2 #dock-slots .slot.filled{border:1px solid var(--line)}.v2 #dock-slots .slot img{width:20px;height:20px;border-radius:5px}
+.v2 .compare-dock>div{display:flex;align-items:center;gap:0}.v2 .dock-label{display:none}.v2 #dock-names{font-size:13px}
+@media(max-width:1000px){
+ .v2 .explorer-grid{grid-template-columns:1fr;gap:16px}
+ .v2 .rail{position:sticky;top:66px;max-height:none;overflow:visible;padding:10px 0 8px;background:var(--paper);z-index:11}
+ .v2 .rail-search{margin-bottom:10px}
+ .v2 .category-grid{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px;-webkit-overflow-scrolling:touch}.v2 .category-grid::-webkit-scrollbar{display:none}
+ .v2 .stage{margin:0;display:contents}.v2 .stage-head{display:none}.v2 .stage-row{flex-direction:row;gap:6px}
+ .v2 .category{flex:0 0 auto;min-height:40px;padding:6px 12px 6px 6px;border-color:var(--line);background:#fff;border-radius:999px}
+ .v2 .category b{font-size:13px;white-space:nowrap}.v2 .cat-ico{width:28px;height:28px;border-radius:50%}.v2 .cat-ico svg{width:16px;height:16px}.v2 .cat-marks{display:none}
+ .v2 .surprise{display:none}
+ .v2 .feed-toolbar{top:150px}
+ .v2 .tool-grid{grid-template-columns:1fr}
+}
+@media(max-width:760px){.v2 .feed-toolbar{top:146px}}
+/* phone: the chip strip must scroll inside its column, never widen the page */
+@media(max-width:1000px){.v2 .explorer-grid{grid-template-columns:minmax(0,1fr)}.v2 .rail{min-width:0;max-width:100%}.v2 .category-grid{max-width:100%}}
 </style>
 </head>
 <body class="v2">
@@ -188,16 +243,27 @@ h1 span{color:var(--violet)}
 <header class="nav"><a class="brand" href="#"><span class="brand-mark" aria-hidden="true">≋</span> DECODE<span class="brand-divider"></span><span class="brand-sub">The Tool Stack</span></a><nav aria-label="Main"><button class="nav-compare" id="open-compare">Compare <span id="compare-count">0</span></button></nav></header>
 <main>
 <section class="hero shell demo-hero">
-<div class="hero-copy"><h1>Less searching.<br><span>More building.</span></h1><p class="hero-description">Compare. Pick. Build.</p><div class="hero-actions" hidden><label class="search hero-search"><input id="search" type="search" aria-label="Search a tool or a job"></label></div></div>
+<div class="hero-copy"><h1>Less searching.<br><span>More building.</span></h1><p class="hero-description">Compare. Pick. Build.</p></div>
 <div class="demo-media"><video id="demo-video" src="demo.mp4" poster="demo-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="A short loop showing the page: choose a decision, open a tool brief, tick two tools and compare them"></video></div>
 </section>
 <section class="explorer" id="explore"><div class="shell">
 <div class="section-heading"><div><h2>What do you need to do?</h2></div></div>
+<div class="explorer-grid">
+<aside class="rail" id="rail" aria-label="Decisions">
+<label class="search rail-search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search tools or jobs" aria-label="Search a tool or a job"><kbd>/</kbd></label>
 <div class="category-grid" id="categories"></div>
+<button class="surprise" id="surprise" type="button">Surprise me <span aria-hidden="true">→</span></button>
+</aside>
+<div class="canvas">
 <div id="results-status" class="results-status" role="status" aria-live="polite"></div>
 <div class="feed-toolbar" id="feed-toolbar"><span id="feed-progress"></span><button id="feed-reset" class="secondary" title="Collapse loaded categories and clear search, filters, and comparisons">↑ Back to start</button></div>
 <div id="feed-announcement" class="sr-only" role="status" aria-live="polite"></div>
 <section id="tool-section" aria-labelledby="category-title"><div class="tools-heading"><div><p class="eyebrow" id="category-group"></p><h3 id="category-title"></h3><p id="category-description"></p></div><div class="compare-hint">Tick up to 3 to compare.</div></div><div class="tool-grid" id="tools"></div><div id="more-categories"></div></section>
+<div class="feed-loader" id="feed-loader"><p id="feed-message"></p><button class="secondary" id="load-more">Load next category ↓</button><button class="secondary" id="feed-bottom-reset" hidden>↑ Back to start</button></div>
+<div id="empty" hidden><h3>No tools found.</h3><p>Try a tool name, category, or a different search.</p><button class="secondary" id="reset">Clear filters</button></div>
+</div>
+</div>
+</div></section>
 <div class="feed-loader" id="feed-loader"><p id="feed-message"></p><button class="secondary" id="load-more">Load next category ↓</button><button class="secondary" id="feed-bottom-reset" hidden>↑ Back to start</button></div>
 <div id="empty" hidden><h3>No tools found.</h3><p>Try a tool name, category, or a different search.</p><button class="secondary" id="reset">Clear filters</button></div>
 </div></section>
@@ -389,20 +455,63 @@ if(location.hash.startsWith('#tool-'))showProfile(location.hash.slice(1));
    if(old){const b=document.createElement('button');b.className='more-btn';b.dataset.detail=id;b.setAttribute('aria-label',`Full profile: ${t.name}`);b.title='Full profile';b.innerHTML=CHEVRON;old.replaceWith(b);}
   });
  }
+ const ICONS={
+  'crm-lead-gen':'<circle cx="9" cy="8" r="3"/><path d="M3 19c0-3 3-5 6-5s6 2 6 5"/><circle cx="17" cy="7" r="2.5"/><path d="M21 18c0-2.5-2-4-4-4"/>',
+  'email-sequencing':'<rect x="3" y="6" width="14" height="11" rx="1.5"/><path d="M3 7l7 5 7-5M19 12h3m-1.5-1.5L22 12l-1.5 1.5"/>',
+  'newsletter-marketing-campaigns':'<path d="M5 4h11v16H5zM8 8h5M8 11h5M8 14h3M16 8h3v10a2 2 0 0 1-4 0"/>',
+  'social-media-scheduling':'<path d="M4 5h12v8H9l-4 3zM18 10h3v9h-9v-3"/>',
+  'payments-billing':'<rect x="2" y="6" width="20" height="12" rx="2"/><path d="M2 10h20M6 15h4"/>',
+  'app-building':'<rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><path d="M16.5 13v7M13 16.5h7"/>',
+  'databases-backend':'<ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/>',
+  'authentication':'<circle cx="8" cy="12" r="4"/><path d="M12 12h9m-3 0v3m-3-3v2"/>',
+  'hosting':'<path d="M7 17h10a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.2 10.5 3.5 3.5 0 0 0 7 17z"/>',
+  'product-analytics-experimentation':'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
+  'incorporation-formation':'<path d="M4 20h16M6 20V8l6-4 6 4v12M10 20v-5h4v5M9 11h.01M15 11h.01"/>',
+  'bookkeeping-accounting':'<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/>',
+  'customer-support-helpdesk':'<path d="M4 13a8 8 0 0 1 16 0M4 13v4a2 2 0 0 0 2 2h1v-6H4zM20 13v4a2 2 0 0 1-2 2h-1v-6h3zM13 21h2"/>',
+  'workflow-automation':'<circle cx="5" cy="12" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 12h4c2 0 3-1 3-3V6h3M11 12c2 0 3 1 3 3v3h3"/>',
+  'compliance-automation':'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6zM9 12l2 2 4-4"/>',
+  'business-banking':'<path d="M3 10l9-6 9 6M5 10v8M9 10v8M15 10v8M19 10v8M3 20h18"/>'
+ };
+ const ico=id=>`<span class="cat-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${ICONS[id]||'<circle cx="12" cy="12" r="8"/>'}</svg></span>`;
  function dressCategories(){
   document.querySelectorAll('[data-category]').forEach(b=>{
    const c=categories.find(x=>x.id===b.dataset.category);if(!c)return;
-   const nm=b.querySelector('b'),jb=b.querySelector('small');if(nm&&jb&&c.job&&nm.textContent!==c.name){nm.textContent=c.name;jb.textContent=c.job;}
-   b.querySelector('.cat-cta')?.remove();
+   if(b.dataset.dressed)return;b.dataset.dressed='1';
+   b.querySelector('.cat-cta')?.remove();b.querySelector('small')?.remove();
+   const nm=b.querySelector('b');if(nm)nm.textContent=c.name;
+   b.title=c.job||c.name;
+   b.insertAdjacentHTML('afterbegin',ico(c.id));
+   const marks=c.tools.filter(t=>t.logo).slice(0,6).map(t=>`<img src="${t.logo}" alt="" loading="lazy" decoding="async">`).join('');
+   b.insertAdjacentHTML('beforeend',`<span class="cat-marks" aria-hidden="true">${marks}</span>`);
   });
  }
+ // scroll-spy: the rail follows whichever category is in view
+ let spy=null;
+ function watchSections(){
+  spy?.disconnect();if(!('IntersectionObserver' in window))return;
+  spy=new IntersectionObserver(entries=>{
+   const hit=entries.find(e=>e.isIntersecting);if(!hit)return;
+   const id=hit.target.id==='tool-section'?(feedQueue[0]?.category.id):hit.target.getAttribute('aria-labelledby')?.replace(/^feed-title-/,'');
+   if(!id)return;
+   document.querySelectorAll('[data-category]').forEach(b=>{const on=b.dataset.category===id;b.setAttribute('aria-pressed',String(on));if(on&&b.scrollIntoViewIfNeeded)b.scrollIntoViewIfNeeded(false);});
+  },{rootMargin:'-35% 0px -55% 0px',threshold:0});
+  document.querySelectorAll('#tool-section, #more-categories .feed-category').forEach(el=>spy.observe(el));
+ }
+ // shortlist dock: three slots, filled with the chosen logos
+ const _sync=syncSelection;window.syncSelection=function(){_sync();
+  const picks=[...selected].map(id=>byId.get(id));const names=$('dock-names');
+  let slots=document.getElementById('dock-slots');if(!slots){slots=document.createElement('span');slots.id='dock-slots';slots.setAttribute('aria-hidden','true');names.before(slots);}
+  slots.innerHTML=[0,1,2].map(i=>picks[i]?`<span class="slot filled">${picks[i].logo?`<img src="${picks[i].logo}" alt="">`:esc(initials(picks[i]))}</span>`:'<span class="slot"></span>').join('');
+ };
+ $('surprise').addEventListener('click',()=>{const t=allTools.filter(t=>t.url)[Math.floor(Math.random()*allTools.filter(t=>t.url).length)];showProfile(t.id);});
  function relabelFeed(){
   const names=feedQueue.slice(0,loadedCount).map(i=>i.category.name);
   const ann=$('feed-announcement');if(/\d+ of \d+ categories/.test(ann.textContent))ann.textContent=`Loaded ${names[names.length-1]}.`;
   if(names.length)$('feed-progress').textContent=names.length===1?`Showing ${names[0]}`:`Showing ${names[0]} through ${names[names.length-1]}`;
   document.querySelectorAll('#more-categories .eyebrow').forEach(e=>{e.textContent=e.textContent.split(' · ')[0];});
  }
- const after=()=>{dressCards();dressCategories();relabelFeed();};
+ const after=()=>{dressCards();dressCategories();relabelFeed();watchSections();syncSelection();};
  const _profile=showProfile;window.showProfile=function(id){_profile(id);swapIcons($('profile-content'));};
  const _cmp=showComparison;window.showComparison=function(){_cmp();swapIcons($('comparison-content'));};
  ['open-compare','compare-selected'].forEach(id=>{const b=$(id),c=b.cloneNode(true);b.replaceWith(c);c.addEventListener('click',()=>showComparison());});
