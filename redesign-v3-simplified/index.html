@@ -327,6 +327,9 @@ h1 span{color:var(--violet)}
 
 /* 23 Nov 2026, simplified copy only: the fuller benefit text shown under Main benefit keeps its bullets, without extra gaps */
 .v2 .benefit-full>ul{margin:0}
+
+/* 23 Nov 2026: the tool name in a comparison column was an h3 inside a th, which is invalid HTML; it is a div with the h3's exact styles */
+.v2 .comparison-table th .cmp-name{display:block;font-size:21px;font-weight:700;line-height:1.12;letter-spacing:-.035em;margin:13px 0 8px}
 </style>
 </head>
 <body class="v2">
@@ -339,9 +342,9 @@ h1 span{color:var(--violet)}
 </section>
 <section class="explorer" id="explore"><div class="shell">
 <div class="explorer-head"><h2>What do you need to do?</h2><label class="search head-search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search tools or jobs" aria-label="Search a tool or a job"><kbd>/</kbd></label></div>
-<div class="stage-tabs" aria-label="Stage"><button class="stage-tab" data-group="Selling" aria-pressed="false"><b>Selling</b><span>Find and bill customers</span></button><button class="stage-tab" data-group="Building" aria-pressed="false"><b>Building</b><span>Ship the product</span></button><button class="stage-tab" data-group="Operating" aria-pressed="false"><b>Operating</b><span>Run the company</span></button><button data-group="All" aria-pressed="false" hidden id="group-all">All</button></div>
+<div class="stage-tabs" role="group" aria-label="Stage"><button class="stage-tab" data-group="Selling" aria-pressed="false"><b>Selling</b><span>Find and bill customers</span></button><button class="stage-tab" data-group="Building" aria-pressed="false"><b>Building</b><span>Ship the product</span></button><button class="stage-tab" data-group="Operating" aria-pressed="false"><b>Operating</b><span>Run the company</span></button><button data-group="All" aria-pressed="false" hidden id="group-all">All</button></div>
 <div class="deck">
-<div class="gallery" id="categories" aria-label="Decisions in this stage"></div>
+<div class="gallery" id="categories" role="group" aria-label="Decisions in this stage"></div>
 <div class="panel" id="panel">
 <div id="results-status" class="results-status" role="status" aria-live="polite"></div>
 <div class="feed-toolbar" id="feed-toolbar" hidden><span id="feed-progress"></span><button id="feed-reset" class="secondary">↑ Back to start</button></div>
@@ -353,19 +356,11 @@ h1 span{color:var(--violet)}
 </div>
 </div>
 </div></section>
-<div class="feed-loader" id="feed-loader"><p id="feed-message"></p><button class="secondary" id="load-more">Load next category ↓</button><button class="secondary" id="feed-bottom-reset" hidden>↑ Back to start</button></div>
-<div id="empty" hidden><h3>No tools found.</h3><p>Try a tool name, category, or a different search.</p><button class="secondary" id="reset">Clear filters</button></div>
-</div>
-</div>
-</div></section>
-<div class="feed-loader" id="feed-loader"><p id="feed-message"></p><button class="secondary" id="load-more">Load next category ↓</button><button class="secondary" id="feed-bottom-reset" hidden>↑ Back to start</button></div>
-<div id="empty" hidden><h3>No tools found.</h3><p>Try a tool name, category, or a different search.</p><button class="secondary" id="reset">Clear filters</button></div>
-</div></section>
 <section class="source-intro shell" id="approach" aria-labelledby="build-route-title" hidden><!-- 23 Nov 2026: hidden at the user's request. Its one-line summary now sits in the Starting price box of each in-house option (INHOUSE_NOTE in the script). Kept in the page because the shared print code reads it. --><!-- 23 Nov 2026: shown in full (no + toggle) and the guide's word for each of the sixteen sections reworded to "decision" at the user's request; the text is otherwise the guide's intro, copied here instead of the build placeholders --><div class="intro-box"><h2 id="build-route-title">Why every decision ends with building it in-house</h2><div class="section-body" id="original-intro"><p>Every decision closes with a seventh option: building it in-house, standing the capability up yourself instead of buying it. With AI tools like Claude and Codex, a founder can now get a working version of almost anything in this guide.</p><p>Building in-house covers a wide range. It can be a spreadsheet you keep by hand, a script against an API, a self-hosted open-source app, or a full custom build with an AI agent writing most of the code.</p><p>We include it in every comparison because the real question is no longer whether you can build it. It is whether the result is reliable, what it costs you in setup and upkeep, and when that trade beats paying for a product. The in-house pages weigh exactly that.</p></div></div></section>
 </main>
 <footer class="shell"><span>DECODE <span class="footer-light">/ The Startup Tool Stack</span></span><span>Research updated October 2026</span></footer>
 <div class="compare-dock" id="dock" hidden><div><span class="dock-label">YOUR SHORTLIST</span><span id="dock-names"></span></div><button class="text-link" id="clear-selection">Clear</button><button class="primary" id="compare-selected">Compare tools <span aria-hidden="true">→</span></button></div>
-<dialog id="profile-dialog" aria-modal="true" aria-labelledby="profile-title"><div class="dialog-toolbar"><span class="eyebrow"></span><button class="close" aria-label="Close tool details" data-close>×</button></div><div id="profile-content"></div></dialog>
+<dialog id="profile-dialog" aria-modal="true"><div class="dialog-toolbar"><span class="eyebrow"></span><button class="close" aria-label="Close tool details" data-close>×</button></div><div id="profile-content"></div></dialog>
 <dialog id="comparison-dialog" class="comparison-dialog" aria-modal="true" aria-labelledby="comparison-title"><div class="dialog-toolbar"><div><h2 id="comparison-title">Your shortlist.</h2></div><button class="close" aria-label="Close comparison" data-close>×</button></div><div id="comparison-content"></div></dialog>
 <div id="print-content"></div>
 <noscript><p class="shell">Enable JavaScript to search and compare tools, or <a href="https://abj20093-svg.github.io/startup-tool-stack/">read the full guide</a>.</p></noscript>
@@ -660,13 +655,19 @@ if(location.hash.startsWith('#tool-'))showProfile(location.hash.slice(1));
  }
  // 23 Nov 2026: the build-route note that sat at the foot of the page, as one line in the Starting price box of each in-house option (user request).
  const INHOUSE_NOTE='Every decision has this option: you run it yourself, so weigh setup and upkeep against paying for a product.';
- const _profile=showProfile;window.showProfile=function(id){_profile(id);const pt=byId.get(id);if(pt&&isInhouse(pt))$('profile-content').querySelector('.profile-price')?.insertAdjacentHTML('beforeend',`<p class="inhouse-note">${esc(INHOUSE_NOTE)}</p>`);
+ const _profile=showProfile;window.showProfile=function(id){_profile(id);
+  // the dialog is named by the profile's own title, which only exists once a profile has been drawn
+  if($('profile-title'))$('profile-dialog').setAttribute('aria-labelledby','profile-title');
+  const pt=byId.get(id);if(pt&&isInhouse(pt))$('profile-content').querySelector('.profile-price')?.insertAdjacentHTML('beforeend',`<p class="inhouse-note">${esc(INHOUSE_NOTE)}</p>`);
   // simplified copy: "At a glance" no longer repeats the dedicated "Choose this if you are" section, and shows the fuller benefit text where there is one
   if(pt){const labels=[...$('profile-content').querySelectorAll('.summary-label')],lab=n=>labels.find(h=>h.textContent.trim()===n);
    const w=lab(WHO);if(w&&pt.sections.some(s=>s.title===WHO)){w.nextElementSibling?.remove();w.remove();}
    const b=lab('Main benefit')?.nextElementSibling;if(b&&pt.benefitHtml){const d=document.createElement('div');d.className='benefit-full';d.innerHTML=pt.benefitHtml;b.replaceWith(d);}}
   expand($('profile-content'));swapIcons($('profile-content'));};
- const _cmp=showComparison;window.showComparison=function(){_cmp();expand($('comparison-content'));swapIcons($('comparison-content'));};
+ const _cmp=showComparison;window.showComparison=function(){_cmp();
+  // a heading is not allowed inside a table header cell, and the cell is already the column's header: same text, same look, valid markup
+  $('comparison-content').querySelectorAll('thead th h3').forEach(h=>{const d=document.createElement('div');d.className='cmp-name';d.textContent=h.textContent;h.replaceWith(d);});
+  expand($('comparison-content'));swapIcons($('comparison-content'));};
  ['open-compare','compare-selected'].forEach(id=>{const b=$(id),c=b.cloneNode(true);b.replaceWith(c);c.addEventListener('click',()=>showComparison());});
  // the header Compare button is hidden, so after Clear the focus goes to the first Compare tick instead of to it
  $('clear-selection').addEventListener('click',()=>{document.querySelector('#tools [data-select]')?.focus({preventScroll:true});});
